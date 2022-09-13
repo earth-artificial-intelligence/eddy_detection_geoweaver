@@ -1,0 +1,31 @@
+[{
+  "history_id" : "shkwvu2t7zl",
+  "history_input" : "# Write first python in Geoweaver\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"eddy_paths.py\", line 2, in <module>\n    data_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\nNameError: name 'os' is not defined\n",
+  "history_begin_time" : 1663076954306,
+  "history_end_time" : 1663076956388,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "1oezam4sde3",
+  "history_input" : "# Write first python in Geoweaver\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\1oezam4sde3\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663034967633,
+  "history_end_time" : 1663034969299,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "8i4kxlxitf5",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1662472579862,
+  "history_end_time" : 1662472580311,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},]

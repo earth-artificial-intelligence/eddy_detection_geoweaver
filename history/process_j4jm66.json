@@ -1,0 +1,11 @@
+[{
+  "history_id" : "xygjwg1qhlq",
+  "history_input" : "# northern pacific (32x32 degree -> 128x128 pixels)\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)\n",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\xygjwg1qhlq\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663034980863,
+  "history_end_time" : 1663034982835,
+  "history_notes" : null,
+  "history_process" : "j4jm66",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},]

@@ -1,0 +1,21 @@
+[{
+  "history_id" : "yjo6zdwdedy",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\5vaJh6KHjNvavx69NM2iB5fHU7\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663076939184,
+  "history_end_time" : 1663076942434,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "3teh131a524",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\ja3rMDrwZsSkXIJKrMMUem6Fxb\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663034965976,
+  "history_end_time" : 1663034967012,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},]

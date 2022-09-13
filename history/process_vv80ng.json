@@ -1,0 +1,11 @@
+[{
+  "history_id" : "9hgaqgj3jpe",
+  "history_input" : "import logging\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 2019), range(1, 13), [1, 10, 20, 30], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 13), [1, 10, 20, 30], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\9hgaqgj3jpe\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663034976686,
+  "history_end_time" : 1663034977787,
+  "history_notes" : null,
+  "history_process" : "vv80ng",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},]
