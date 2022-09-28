@@ -1,0 +1,131 @@
+[{
+  "history_id" : "qzrm324m6es",
+  "history_input" : "#Run the training loop for prescribed num_epochs\nfrom eddy_import import *\nfrom eddy_train_utils import add_hparams\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_loop.py\", line 6, in <module>\n    loss, opt, sched = loss_fn, optimizer, scheduler\nNameError: name 'loss_fn' is not defined\n",
+  "history_begin_time" : 1664371890543,
+  "history_end_time" : 1664371911689,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "y5szmw6ycni",
+  "history_input" : "#Run the training loop for prescribed num_epochs\nfrom eddy_import import *\nfrom eddy_train_utils import add_hparams\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\y5szmw6ycni\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371263726,
+  "history_end_time" : 1664371264000,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "0sp1r1zrjkb",
+  "history_input" : "#Run the training loop for prescribed num_epochs\nfrom eddy_import import *\nfrom eddy_train_utils import add_hparams\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_loop.py\", line 6, in <module>\n    loss, opt, sched = loss_fn, optimizer, scheduler\nNameError: name 'loss_fn' is not defined\n",
+  "history_begin_time" : 1664370754098,
+  "history_end_time" : 1664370764707,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "kv820h727h7",
+  "history_input" : "#Run the training loop for prescribed num_epochs\nfrom eddy_import import *\nfrom eddy_train_utils import add_hparams\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_loop.py\", line 6, in <module>\n    loss, opt, sched = loss_fn, optimizer, scheduler\nNameError: name 'loss_fn' is not defined\n",
+  "history_begin_time" : 1664364324022,
+  "history_end_time" : 1664364333858,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "4uioyy4365l",
+  "history_input" : "#Run the training loop for prescribed num_epochs\nfrom eddy_import import *\nfrom eddy_train_utils import add_hparams\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_loop.py\", line 6, in <module>\n    loss, opt, sched = loss_fn, optimizer, scheduler\nNameError: name 'loss_fn' is not defined\n",
+  "history_begin_time" : 1664310012298,
+  "history_end_time" : 1664310023127,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "13d8bh3gao6",
+  "history_input" : "#Run the training loop for prescribed num_epochs\nfrom eddy_import import *\nfrom eddy_train_utils import add_hparams\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_loop.py\", line 3, in <module>\n    from eddy_train_utils import add_hparams\nModuleNotFoundError: No module named 'eddy_train_utils'\n",
+  "history_begin_time" : 1664305228064,
+  "history_end_time" : 1664305238067,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ogsdeofqg67",
+  "history_input" : "#Run the training loop for prescribed num_epochs\nfrom eddy_import import *\nfrom eddy_train_utils import add_hparams\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_loop.py\", line 3, in <module>\n    from eddy_train_utils import add_hparams\nModuleNotFoundError: No module named 'eddy_train_utils'\n",
+  "history_begin_time" : 1664280898994,
+  "history_end_time" : 1664280906972,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "zsuoar1yzsj",
+  "history_input" : "#Run the training loop for prescribed num_epochs\nfrom eddy_import import *\nfrom eddy_train_utils import add_hparams\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_loop.py\", line 3, in <module>\n    from eddy_train_utils import add_hparams\nModuleNotFoundError: No module named 'eddy_train_utils'\n",
+  "history_begin_time" : 1664279923468,
+  "history_end_time" : 1664279930975,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wvgi3skw0o0",
+  "history_input" : "from eddy_train_utils import add_hparams\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\wvgi3skw0o0\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663038351207,
+  "history_end_time" : 1663038352766,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "yaqrn3sk4hn",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754687,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jcss0vx8j01",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754698,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gtwnm8wnepv",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084927,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "6gos8ru90xt",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373327185,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

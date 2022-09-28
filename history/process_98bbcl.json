@@ -1,0 +1,141 @@
+[{
+  "history_id" : "jmkgchpjetd",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664371718282,
+  "history_end_time" : 1664371728714,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4om0tbqe02g",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\4om0tbqe02g\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371243996,
+  "history_end_time" : 1664371245062,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "vadd4p5knzh",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664370965871,
+  "history_end_time" : 1664370976607,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6lv3qxqq8ty",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664370557799,
+  "history_end_time" : 1664370580478,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "u0mlz5x6ebh",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664364193273,
+  "history_end_time" : 1664364206562,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yk1aib7juy7",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664309906519,
+  "history_end_time" : 1664309914666,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "71pb507i6va",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664305086970,
+  "history_end_time" : 1664305099237,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xywolqwjhaq",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664280798535,
+  "history_end_time" : 1664280806393,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fpqmg4qwfb4",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664280725794,
+  "history_end_time" : 1664280753270,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "50q3q35as6j",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664280725181,
+  "history_end_time" : 1664280753267,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "15tejx4u9jv",
+  "history_input" : "#setting the NPZ file paths\nfrom eddy_import import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1664279815747,
+  "history_end_time" : 1664279823197,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9ww5xgzoqn0",
+  "history_input" : "data_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\9ww5xgzoqn0\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663038330346,
+  "history_end_time" : 1663038331575,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "f3vruu0la7j",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084388,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rmdxjkhl2lg",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373326125,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

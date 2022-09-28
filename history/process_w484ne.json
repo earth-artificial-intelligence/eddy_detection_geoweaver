@@ -1,0 +1,131 @@
+[{
+  "history_id" : "7y43mbfsrqz",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1664371887538,
+  "history_end_time" : 1664371889800,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "sbdpf66hbzc",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\sbdpf66hbzc\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371263160,
+  "history_end_time" : 1664371263470,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "3dntv6z39ag",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1664370752328,
+  "history_end_time" : 1664370753641,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "arbv7hvgxpp",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1664364322041,
+  "history_end_time" : 1664364323456,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3urfyxl1cre",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1664310009726,
+  "history_end_time" : 1664310011571,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wqp6e030mc3",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1664305226035,
+  "history_end_time" : 1664305227601,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "23bf03g3zyo",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1664280897637,
+  "history_end_time" : 1664280898774,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "t6xogedsvgl",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1664279921521,
+  "history_end_time" : 1664279923002,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "r2astdnp6u5",
+  "history_input" : "from IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\r2astdnp6u5\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663038349404,
+  "history_end_time" : 1663038350704,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "l70wyz9svkb",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754659,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "r5m9dxx3nt2",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754673,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zta0c1anthq",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084885,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "pnenz2pmxba",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373327103,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

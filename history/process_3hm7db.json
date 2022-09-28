@@ -1,0 +1,151 @@
+[{
+  "history_id" : "6des82dirkx",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664371703863,
+  "history_end_time" : 1664371717894,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "k65mxs1ajql",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\k65mxs1ajql\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371237702,
+  "history_end_time" : 1664371243078,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "fpj4nm1u3c1",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664370954318,
+  "history_end_time" : 1664370965115,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pbq5739hz50",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664370506575,
+  "history_end_time" : 1664370557615,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "49bcinv35hw",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664364182287,
+  "history_end_time" : 1664364192652,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6umhabidvsc",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664309897681,
+  "history_end_time" : 1664309905878,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "t74pfgk6bha",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664305072999,
+  "history_end_time" : 1664305086309,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "uwxw4ufqkcl",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664280789956,
+  "history_end_time" : 1664280797816,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1ns9j4885i6",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664280715078,
+  "history_end_time" : 1664280753264,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "9a9dg2t9jbn",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664280714431,
+  "history_end_time" : 1664280753261,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "onei430nmtg",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664279806909,
+  "history_end_time" : 1664279815118,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fKpLmNqhYOSp",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664223452575,
+  "history_end_time" : 1664223477193,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "f7mttm2nqj4",
+  "history_input" : "num_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\f7mttm2nqj4\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663038327400,
+  "history_end_time" : 1663038329555,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "h1rvigyqt2u",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084305,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zmxaujoyp5r",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373325992,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

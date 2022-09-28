@@ -1,4 +1,5 @@
-# Write first python in Geoweaver
+# setting the vmin and vmax using the eddy 'plot_variable' method
+from eddy_paths import *
 from copy import deepcopy
 
 ax, m = plot_variable(
@@ -18,3 +19,5 @@ ax, m = plot_variable(
     vmin=-0.15,
     vmax=0.15,
 )
+plt.show()
+

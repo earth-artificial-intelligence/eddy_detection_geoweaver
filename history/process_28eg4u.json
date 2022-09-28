@@ -1,0 +1,151 @@
+[{
+  "history_id" : "okwju26ppnd",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 4, in <module>\n    train_loader.dataset.plot_sample(N=3)\nNameError: name 'train_loader' is not defined\n",
+  "history_begin_time" : 1664371772495,
+  "history_end_time" : 1664371805501,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "idj20q6pcfc",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\idj20q6pcfc\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371252773,
+  "history_end_time" : 1664371253064,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "0yx60q6l78j",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\0yx60q6l78j\\get_eddy_dataloader.py\", line 9, in <module>\n    from sklearn.model_selection import train_test_split\nModuleNotFoundError: No module named 'sklearn'\n",
+  "history_begin_time" : 1664371005292,
+  "history_end_time" : 1664371022955,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "571i9z61ad8",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\571i9z61ad8\\get_eddy_dataloader.py\", line 9, in <module>\n    from sklearn.model_selection import train_test_split\nModuleNotFoundError: No module named 'sklearn'\n",
+  "history_begin_time" : 1664370644635,
+  "history_end_time" : 1664370663462,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ga8kqefssc3",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\ga8kqefssc3\\get_eddy_dataloader.py\", line 9, in <module>\n    from sklearn.model_selection import train_test_split\nModuleNotFoundError: No module named 'sklearn'\n",
+  "history_begin_time" : 1664364238747,
+  "history_end_time" : 1664364249360,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "eu5v2xo1p26",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\eu5v2xo1p26\\get_eddy_dataloader.py\", line 9, in <module>\n    from sklearn.model_selection import train_test_split\nModuleNotFoundError: No module named 'sklearn'\n",
+  "history_begin_time" : 1664309938502,
+  "history_end_time" : 1664309947483,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "el9b3s4kbzy",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\el9b3s4kbzy\\get_eddy_dataloader.py\", line 4, in <module>\n    from data_utils import get_eddy_dataloader\nModuleNotFoundError: No module named 'data_utils'\n",
+  "history_begin_time" : 1664305137022,
+  "history_end_time" : 1664305147518,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "hvaernfniu6",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\hvaernfniu6\\get_eddy_dataloader.py\", line 4, in <module>\n    from data_utils import get_eddy_dataloader\nModuleNotFoundError: No module named 'data_utils'\n",
+  "history_begin_time" : 1664280831887,
+  "history_end_time" : 1664280839110,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "twO09MjPAvId",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\twO09MjPAvId\\get_eddy_dataloader.py\", line 4, in <module>\n    from data_utils import get_eddy_dataloader\nModuleNotFoundError: No module named 'data_utils'\n",
+  "history_begin_time" : 1664280244265,
+  "history_end_time" : 1664280252738,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "uzvn8wzrr4r",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 3, in <module>\n    train_loader.dataset.plot_sample(N=3)\nNameError: name 'train_loader' is not defined\n",
+  "history_begin_time" : 1664279849372,
+  "history_end_time" : 1664279857925,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "lp9kqqchtqb",
+  "history_input" : "train_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\lp9kqqchtqb\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663038336419,
+  "history_end_time" : 1663038336931,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wfhjno6bf1y",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754366,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "cuga2pr23ea",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754385,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7d1nm2k3qzd",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084529,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rbu0hqridjn",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373326444,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

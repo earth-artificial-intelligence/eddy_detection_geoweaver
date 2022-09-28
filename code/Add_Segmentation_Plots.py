@@ -1,3 +1,8 @@
+#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis
+from eddy_plots import *
+from eddy_paths import *
+from copy import deepcopy
+
 g, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)
 ax, m = plot_variable(
     g_filtered, "adt", "Detected Eddies on ADT (m)", vmin=-0.15, vmax=0.15, cmap="Greys"

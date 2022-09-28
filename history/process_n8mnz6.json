@@ -1,0 +1,151 @@
+[{
+  "history_id" : "2hmnm7f7dx7",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"learning_rate.py\", line 8, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'model' is not defined\n",
+  "history_begin_time" : 1664371833213,
+  "history_end_time" : 1664371843116,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "kicb88lhtc8",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\kicb88lhtc8\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371258335,
+  "history_end_time" : 1664371259459,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "iq8bgw5y2m0",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "",
+  "history_begin_time" : 1664371057089,
+  "history_end_time" : 1664371077543,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "okhh8u7a365",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"learning_rate.py\", line 8, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'model' is not defined\n",
+  "history_begin_time" : 1664370702410,
+  "history_end_time" : 1664370715208,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "qncf3i0v4dw",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"learning_rate.py\", line 8, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'model' is not defined\n",
+  "history_begin_time" : 1664364274308,
+  "history_end_time" : 1664364284294,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "4c26cj44alp",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"learning_rate.py\", line 8, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'model' is not defined\n",
+  "history_begin_time" : 1664309968236,
+  "history_end_time" : 1664309977712,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "x4ccjx9iu38",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"learning_rate.py\", line 8, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'model' is not defined\n",
+  "history_begin_time" : 1664305174349,
+  "history_end_time" : 1664305188288,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "n54b1hnv13u",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"learning_rate.py\", line 8, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'model' is not defined\n",
+  "history_begin_time" : 1664280860200,
+  "history_end_time" : 1664280869764,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "IYH3KlX8Mtve",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"learning_rate.py\", line 8, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'model' is not defined\n",
+  "history_begin_time" : 1664280398938,
+  "history_end_time" : 1664280408197,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "pu9d7sk9590",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"learning_rate.py\", line 7, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'torch' is not defined\n",
+  "history_begin_time" : 1664279881550,
+  "history_end_time" : 1664279889085,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "akbia0fsooz",
+  "history_input" : "# learning rate for use in OneCycle scheduler\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\akbia0fsooz\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663038343560,
+  "history_end_time" : 1663038344322,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "0nagiqpsje0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754472,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "72qgelgz2dx",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754574,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "q571tmpdvkv",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084676,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4yhunpoknta",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373326782,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

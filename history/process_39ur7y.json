@@ -1,4 +1,464 @@
 [{
+  "history_id" : "fq5s99n7n7l",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\6Kx9szB8ZF1QpjRCRZTzJkqi69\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664372229674,
+  "history_end_time" : 1664373328899,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "o1pxw68v6ao",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\6Kx9szB8ZF1QpjRCRZTzJkqi69\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664372082911,
+  "history_end_time" : 1664372085561,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "6o6df3n0xum",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\6Kx9szB8ZF1QpjRCRZTzJkqi69\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371653461,
+  "history_end_time" : 1664371663207,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "uxe061yv9hk",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\P4OaZnpVS1vjtJPH2OiLt1rPev\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371274143,
+  "history_end_time" : 1664371274401,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "pyrmyzbuoae",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\qj8k3VaCugm8hnh9froIeEsMBc\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664370933090,
+  "history_end_time" : 1664370934538,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "oljk2x3b5l3",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\uU8OeOYa8KSKZg4Q1o4DfmWK0f\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664370453729,
+  "history_end_time" : 1664370459470,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "6f1ezml5lhw",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\uU8OeOYa8KSKZg4Q1o4DfmWK0f\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664363370706,
+  "history_end_time" : 1664364123143,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "o60shek4bdy",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\uU8OeOYa8KSKZg4Q1o4DfmWK0f\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664362573637,
+  "history_end_time" : 1664363357356,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fa7dj3mt2xu",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\UgwofPmrGIslx55bpY9us0cLmW\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664334039619,
+  "history_end_time" : 1664362462497,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "stetq8f1yid",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\fdxR0SeR0HHiFAFfJcNdOBUDQy\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664327871475,
+  "history_end_time" : 1664333647938,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "tjxm75cq2us",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\MXA3oGWyAazmcHqnHsYFBi8x6G\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664327397732,
+  "history_end_time" : 1664327829356,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mjazdyu3ab9",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\MXA3oGWyAazmcHqnHsYFBi8x6G\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664326962796,
+  "history_end_time" : 1664326963052,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "thf1yp4walb",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\heyVK9YkPizi8QD4Nncd8oXk1I\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664326769484,
+  "history_end_time" : 1664326771961,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "nvweq0gegfl",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\heyVK9YkPizi8QD4Nncd8oXk1I\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664326243018,
+  "history_end_time" : 1664326244974,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ojppzf0vhxu",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\bom0fjguBuWx0Hih6kMnaKr2Fs\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664325200819,
+  "history_end_time" : 1664325202168,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "4madaguupwl",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\bom0fjguBuWx0Hih6kMnaKr2Fs\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664325177650,
+  "history_end_time" : 1664325180251,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "t47o6qy6adb",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\bom0fjguBuWx0Hih6kMnaKr2Fs\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664324671538,
+  "history_end_time" : 1664324672686,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wklx34us4qd",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\W9DX1mSTKIlTf5mTkApDwFKb0g\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664324412471,
+  "history_end_time" : 1664324415029,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "t7gbrmtyrx2",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\W9DX1mSTKIlTf5mTkApDwFKb0g\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664324278121,
+  "history_end_time" : 1664324280079,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "q7wmsxvz2e0",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\Wi37QokIqUm5cmBBYKV0U2TRtS\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664324180917,
+  "history_end_time" : 1664324237735,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "x8ya5pncekl",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\Wi37QokIqUm5cmBBYKV0U2TRtS\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664323988881,
+  "history_end_time" : 1664324117046,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "nq2gl81glzs",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\Wi37QokIqUm5cmBBYKV0U2TRtS\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664309371691,
+  "history_end_time" : 1664309374205,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9w4hcgeh3es",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\Wi37QokIqUm5cmBBYKV0U2TRtS\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664308994269,
+  "history_end_time" : 1664308996445,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "r6kqahuth0h",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\Wi37QokIqUm5cmBBYKV0U2TRtS\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664304786333,
+  "history_end_time" : 1664304789128,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "5idxle0y18i",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\Wi37QokIqUm5cmBBYKV0U2TRtS\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664304359567,
+  "history_end_time" : 1664304371394,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "susmvtbvb3l",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\7UC64kt9qvLgrCA4RC84lQy5wv\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664279577678,
+  "history_end_time" : 1664279579290,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "2fjo3q3ek5q",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\YVgtKzl1f5IfCZLsYod9ibtx2c\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664279412336,
+  "history_end_time" : 1664279413352,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9u8gv391eqt",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\YVgtKzl1f5IfCZLsYod9ibtx2c\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664279401124,
+  "history_end_time" : 1664279406361,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fnoloyixy08",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\YVgtKzl1f5IfCZLsYod9ibtx2c\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664278956941,
+  "history_end_time" : 1664278958111,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "sac02jebeal",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\CTD91R13nqR1ccV3X1RWC7PnVb\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664278439202,
+  "history_end_time" : 1664278441008,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "00nnw2cmn42",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\CTD91R13nqR1ccV3X1RWC7PnVb\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664278149135,
+  "history_end_time" : 1664278150359,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "pg3gyerbbcj",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\CTD91R13nqR1ccV3X1RWC7PnVb\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664277036070,
+  "history_end_time" : 1664277038734,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "comihhizell",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\CTD91R13nqR1ccV3X1RWC7PnVb\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664276417422,
+  "history_end_time" : 1664276420663,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9sugsdxnxyb",
+  "history_input" : "# Dependencies Installation Script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\CTD91R13nqR1ccV3X1RWC7PnVb\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664216848259,
+  "history_end_time" : 1664216849836,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "89ml2nao4mh",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\CTD91R13nqR1ccV3X1RWC7PnVb\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664211481844,
+  "history_end_time" : 1664211486888,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "80pauapqlw7",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\uXzazZTZO1VCCl9TOKM3RzgjXg\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663682010126,
+  "history_end_time" : 1663682037185,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "dqlaa3gt68q",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\SUKFH9t7tf8EW5uwN3Zu6T0QZm\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663680882538,
+  "history_end_time" : 1663680895931,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "2chh9rayr90",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\IzNDXWiVWgIFUFqBv6mQHnxAr4\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663679416127,
+  "history_end_time" : 1663679417313,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "0t79f8giop0",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\IzNDXWiVWgIFUFqBv6mQHnxAr4\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663678042857,
+  "history_end_time" : 1663678044184,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "qo8jc6mjrph",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\lKatXXxJ5LHQtQSLnwCQYnL7OO\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663677893025,
+  "history_end_time" : 1663677894578,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ctm8nxlcjxd",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\1ELaCagTgP5p55mVQAhy2tA6N8\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663677698927,
+  "history_end_time" : 1663677706071,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "z941ntmfrbe",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\Ier82aguGbVJeN9BFbCjnoErha\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663183472029,
+  "history_end_time" : 1663183472746,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "h63ep4ncsgk",
+  "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
+  "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\QsjxTLhkVZAIIiXMF9m3BV9FSE\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663183363058,
+  "history_end_time" : 1663183364023,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "xm6y7p6fyhg",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1663182760535,
+  "history_end_time" : 1663182760745,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "hrkhc4lc2bc",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1663182728774,
+  "history_end_time" : 1663182729090,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "g1t0hy0lq21",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1663182662764,
+  "history_end_time" : 1663182666372,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "yjo6zdwdedy",
   "history_input" : "#!/bin/bash\n#write your bash script\npip install torch torchvision torchaudio matplotlib tensorboard torchmetrics seaborn opencv-python tqdm pandas\n",
   "history_output" : "Cannot run program \"bash.exe\" (in directory \"C:\\Users\\user\\gw-workspace\\5vaJh6KHjNvavx69NM2iB5fHU7\"): CreateProcess error=2, The system cannot find the file specified",
@@ -18,4 +478,14 @@
   "history_process" : "39ur7y",
   "host_id" : "100001",
   "indicator" : "Failed"
+},{
+  "history_id" : "2bm47gwkp6c",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664324597717,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
 },]

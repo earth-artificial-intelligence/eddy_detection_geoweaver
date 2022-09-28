@@ -1,3 +1,5 @@
+#Defining the subset arrays, converting the latitude and longitude range into indices in numpy, latitude range to str and longitude range to str.
+from eddy_import import *
 def subset_arrays(
     masks,
     var,

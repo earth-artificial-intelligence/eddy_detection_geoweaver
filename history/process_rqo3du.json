@@ -1,0 +1,151 @@
+[{
+  "history_id" : "cm0pxumbzxf",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"pixel_training.py\", line 6, in <module>\n    train_masks = train_loader.dataset.masks.copy()\nNameError: name 'train_loader' is not defined\n",
+  "history_begin_time" : 1664371740976,
+  "history_end_time" : 1664371757361,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "mmqo4dxp5im",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\mmqo4dxp5im\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371251192,
+  "history_end_time" : 1664371251729,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ytiveg6g0n4",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "",
+  "history_begin_time" : 1664370988188,
+  "history_end_time" : 1664370989779,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "snly8wvzd40",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"pixel_training.py\", line 4, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\snly8wvzd40\\get_eddy_dataloader.py\", line 9, in <module>\n    from sklearn.model_selection import train_test_split\nModuleNotFoundError: No module named 'sklearn'\n",
+  "history_begin_time" : 1664370590604,
+  "history_end_time" : 1664370616294,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "3czzfln42ac",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"pixel_training.py\", line 4, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\3czzfln42ac\\get_eddy_dataloader.py\", line 9, in <module>\n    from sklearn.model_selection import train_test_split\nModuleNotFoundError: No module named 'sklearn'\n",
+  "history_begin_time" : 1664364215820,
+  "history_end_time" : 1664364227559,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "hze0fsrnrzm",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"pixel_training.py\", line 4, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\hze0fsrnrzm\\get_eddy_dataloader.py\", line 9, in <module>\n    from sklearn.model_selection import train_test_split\nModuleNotFoundError: No module named 'sklearn'\n",
+  "history_begin_time" : 1664309920717,
+  "history_end_time" : 1664309930402,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "o0k19pgbxvp",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"pixel_training.py\", line 4, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\o0k19pgbxvp\\get_eddy_dataloader.py\", line 4, in <module>\n    from data_utils import get_eddy_dataloader\nModuleNotFoundError: No module named 'data_utils'\n",
+  "history_begin_time" : 1664305112413,
+  "history_end_time" : 1664305124841,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "fpu9ro9eagg",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"pixel_training.py\", line 4, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\fpu9ro9eagg\\get_eddy_dataloader.py\", line 4, in <module>\n    from data_utils import get_eddy_dataloader\nModuleNotFoundError: No module named 'data_utils'\n",
+  "history_begin_time" : 1664280815486,
+  "history_end_time" : 1664280823791,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "veebz0bys4j",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "",
+  "history_begin_time" : 1664280744640,
+  "history_end_time" : 1664280754328,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fbt81apuofw",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Running",
+  "history_begin_time" : 1664280743947,
+  "history_end_time" : 1664280753474,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "P1r3QYR7PwqF",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"pixel_training.py\", line 4, in <module>\n    from get_eddy_dataloader import *\n  File \"C:\\Users\\user\\gw-workspace\\P1r3QYR7PwqF\\get_eddy_dataloader.py\", line 4, in <module>\n    from data_utils import get_eddy_dataloader\nModuleNotFoundError: No module named 'data_utils'\n",
+  "history_begin_time" : 1664280187359,
+  "history_end_time" : 1664280195149,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "l9ic6286tjt",
+  "history_input" : "#Looking at the distribution of class frequencies to identify class imbalances\n\nfrom eddy_import import *\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"pixel_training.py\", line 5, in <module>\n    train_masks = train_loader.dataset.masks.copy()\nNameError: name 'train_loader' is not defined\n",
+  "history_begin_time" : 1664279832306,
+  "history_end_time" : 1664279840249,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "59py20vpq1i",
+  "history_input" : "import numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\59py20vpq1i\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663038333624,
+  "history_end_time" : 1663038334359,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "0m55gos3af1",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084411,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "iqunwn9ba6x",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373326186,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

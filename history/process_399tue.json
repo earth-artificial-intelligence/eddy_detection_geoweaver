@@ -1,0 +1,141 @@
+[{
+  "history_id" : "pfanuexwgyn",
+  "history_input" : "#Segmentation Model:\n\nfrom eddy_import import *\nimport torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"pytorch.py\", line 5, in <module>\n    from models.eddynet import EddyNet\nModuleNotFoundError: No module named 'models'\n",
+  "history_begin_time" : 1664371805914,
+  "history_end_time" : 1664371821101,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "vst66cs50iv",
+  "history_input" : "#Segmentation Model:\n\nfrom eddy_import import *\nimport torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\vst66cs50iv\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371253762,
+  "history_end_time" : 1664371254220,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "joifxj6n1j1",
+  "history_input" : "#Segmentation Model:\n\nfrom eddy_import import *\nimport torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"pytorch.py\", line 5, in <module>\n    from models.eddynet import EddyNet\nModuleNotFoundError: No module named 'models'\n",
+  "history_begin_time" : 1664371023194,
+  "history_end_time" : 1664371039662,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ilhgw4ytx2f",
+  "history_input" : "#Segmentation Model:\n\nfrom eddy_import import *\nimport torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"pytorch.py\", line 5, in <module>\n    from models.eddynet import EddyNet\nModuleNotFoundError: No module named 'models'\n",
+  "history_begin_time" : 1664370663520,
+  "history_end_time" : 1664370681704,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wjigc1tq8rj",
+  "history_input" : "#Segmentation Model:\n\nfrom eddy_import import *\nimport torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"pytorch.py\", line 5, in <module>\n    from models.eddynet import EddyNet\nModuleNotFoundError: No module named 'models'\n",
+  "history_begin_time" : 1664364249999,
+  "history_end_time" : 1664364261165,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "mfk79dfs2lq",
+  "history_input" : "#Segmentation Model:\n\nfrom eddy_import import *\nimport torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"pytorch.py\", line 5, in <module>\n    from models.eddynet import EddyNet\nModuleNotFoundError: No module named 'models'\n",
+  "history_begin_time" : 1664309947512,
+  "history_end_time" : 1664309957135,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "r3suqzzpp28",
+  "history_input" : "#Segmentation Model:\n\nfrom eddy_import import *\nimport torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"pytorch.py\", line 5, in <module>\n    from models.eddynet import EddyNet\nModuleNotFoundError: No module named 'models'\n",
+  "history_begin_time" : 1664305148456,
+  "history_end_time" : 1664305161178,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "assdxwyldbb",
+  "history_input" : "#Segmentation Model:\n\nfrom eddy_import import *\nimport torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"pytorch.py\", line 5, in <module>\n    from models.eddynet import EddyNet\nModuleNotFoundError: No module named 'models'\n",
+  "history_begin_time" : 1664280839768,
+  "history_end_time" : 1664280849100,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ob0i3u3dnbe",
+  "history_input" : "#Segmentation Model:\n\nfrom eddy_import import *\nimport torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"pytorch.py\", line 5, in <module>\n    from models.eddynet import EddyNet\nModuleNotFoundError: No module named 'models'\n",
+  "history_begin_time" : 1664279858502,
+  "history_end_time" : 1664279870425,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "rd4vsaauj0k",
+  "history_input" : "import torch\nfrom models.eddynet import EddyNet\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\rd4vsaauj0k\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663038338006,
+  "history_end_time" : 1663038338328,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "sijmsn6l001",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754403,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "kzj0ft1nfqz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754424,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ty2t67jyu0l",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084556,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "k2t61hdr0ax",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373326639,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

@@ -1,3 +1,7 @@
+#Code for generating the masks in parallel and getting dates and files
+
+from eddy_import import *
+from eddy_plots import *
 import multiprocessing
 
 

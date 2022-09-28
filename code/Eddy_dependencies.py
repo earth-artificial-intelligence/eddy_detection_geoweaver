@@ -1,4 +1,4 @@
-# Write first python in Geoweaver
+#eddy dependencies
 def start_axes(title):
     fig = plt.figure(figsize=(13, 5))
     ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])

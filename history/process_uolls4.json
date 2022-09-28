@@ -1,4 +1,474 @@
 [{
+  "history_id" : "4tr62dxgdsp",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664372229933,
+  "history_end_time" : 1664373328904,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "uks9ybfdbev",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664372086032,
+  "history_end_time" : 1664372087743,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ofr3g8tjt2v",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664371653462,
+  "history_end_time" : 1664371664797,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "j7e3ilj7c52",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\j7e3ilj7c52\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371275471,
+  "history_end_time" : 1664371275703,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "zpkor069g6y",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664370964958,
+  "history_end_time" : 1664370966550,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "82mv6r74u8m",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664370555128,
+  "history_end_time" : 1664370562219,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "6hak57f4lts",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664363370498,
+  "history_end_time" : 1664364121603,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7o12j1iae17",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664362572975,
+  "history_end_time" : 1664363355969,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "o043219qtoz",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664334039594,
+  "history_end_time" : 1664362449571,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "w7x4ean5f6d",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664327872055,
+  "history_end_time" : 1664333594906,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "psg2wmgfk3s",
+  "history_input" : "#eddy dependencies\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664327397635,
+  "history_end_time" : 1664327828082,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rtc2rn0vpqk",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664326846120,
+  "history_end_time" : 1664326848946,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rrfouyph9lx",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664326769054,
+  "history_end_time" : 1664326771124,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "f83v4g0stcu",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664326066058,
+  "history_end_time" : 1664326069210,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1zcd5qbg63j",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664325195336,
+  "history_end_time" : 1664325199770,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ru8zjbzkj58",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664325177656,
+  "history_end_time" : 1664325180041,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qysz27pt8wm",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664324667417,
+  "history_end_time" : 1664324670357,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qwkcs9orye8",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664324424227,
+  "history_end_time" : 1664324426454,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "r1rihajs7dc",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664324412677,
+  "history_end_time" : 1664324415341,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ztdjpc8f6z0",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664324277511,
+  "history_end_time" : 1664324279257,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "aat8zxpfyky",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664324180966,
+  "history_end_time" : 1664324236601,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "atoyterd6mz",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664323987277,
+  "history_end_time" : 1664324115916,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "l6nl4yd0jg8",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664309371309,
+  "history_end_time" : 1664309375381,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ck5o3cp8aoa",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664308994255,
+  "history_end_time" : 1664308998907,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b8eaebru9xu",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664304785309,
+  "history_end_time" : 1664304788870,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "684qphd56oq",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664304354923,
+  "history_end_time" : 1664304402217,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "jv3jh5esj4m",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664279577678,
+  "history_end_time" : 1664279579524,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "lpym6mrmgoo",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664279411829,
+  "history_end_time" : 1664279413658,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gu1wf1jrwbd",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664279401104,
+  "history_end_time" : 1664279406137,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "sxotbc6lytj",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664278955935,
+  "history_end_time" : 1664278958024,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bl98kk8qrn2",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664278438074,
+  "history_end_time" : 1664278442837,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e8xfpclbefl",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664278148229,
+  "history_end_time" : 1664278151915,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "eu5cz8vevy3",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664277036426,
+  "history_end_time" : 1664277037734,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0o0jgwy2gea",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664276415324,
+  "history_end_time" : 1664276422802,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2mb0plkiz52",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664216847297,
+  "history_end_time" : 1664216851231,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8z9szkox4yl",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1664211480844,
+  "history_end_time" : 1664211489275,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0i8gqxziu26",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1663682010126,
+  "history_end_time" : 1663682038086,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hmvpos704iq",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1663680891056,
+  "history_end_time" : 1663680894254,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "flcodzlcqce",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1663679415128,
+  "history_end_time" : 1663679417573,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qq65b3ifkiu",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1663678042406,
+  "history_end_time" : 1663678044343,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8gbuug2j46v",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1663677893025,
+  "history_end_time" : 1663677896269,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "chzf77oh4gl",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1663677698927,
+  "history_end_time" : 1663677707040,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "eljm2kxeslt",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1663183471610,
+  "history_end_time" : 1663183473880,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7qo580r672j",
+  "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
+  "history_output" : "",
+  "history_begin_time" : 1663183363058,
+  "history_end_time" : 1663183366126,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6n8jykvm4e0",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1663182760318,
+  "history_end_time" : 1663182760783,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "yauamdxnx22",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1663182728643,
+  "history_end_time" : 1663182729024,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "gn2me8mms5h",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1663182661752,
+  "history_end_time" : 1663182666582,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "csqek0xh39h",
   "history_input" : "# Write first python in Geoweaver\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m",
   "history_output" : "",
@@ -28,4 +498,14 @@
   "history_process" : "uolls4",
   "host_id" : "100001",
   "indicator" : "Failed"
+},{
+  "history_id" : "mg2kn4gfbdz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664324597618,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
 },]

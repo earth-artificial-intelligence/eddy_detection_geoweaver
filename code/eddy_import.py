@@ -1,4 +1,5 @@
-# Write first python in Geoweaver
+# Importing the required libraries for eddy workflow
+from eddy_import import *
 import os
 from datetime import datetime
 

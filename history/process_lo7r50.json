@@ -1,0 +1,141 @@
+[{
+  "history_id" : "kxtabgeduwz",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to C:\\Users\\user\\tensorboard\\2022-09-28_09-31\n======================================================================\n",
+  "history_begin_time" : 1664371856241,
+  "history_end_time" : 1664371871342,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ikbaa6kza2u",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\ikbaa6kza2u\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1664371261514,
+  "history_end_time" : 1664371262086,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "vzx7edw2ewn",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to C:\\Users\\user\\tensorboard\\2022-09-28_09-18\n======================================================================\n",
+  "history_begin_time" : 1664371098670,
+  "history_end_time" : 1664371110856,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "vonjt99pane",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to C:\\Users\\user\\tensorboard\\2022-09-28_09-12\n======================================================================\n",
+  "history_begin_time" : 1664370726449,
+  "history_end_time" : 1664370737791,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0kqwzfkpydl",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to C:\\Users\\user\\tensorboard\\2022-09-28_07-25\n======================================================================\n",
+  "history_begin_time" : 1664364295424,
+  "history_end_time" : 1664364306906,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4unxhydkz15",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to C:\\Users\\user\\tensorboard\\2022-09-27_16-19\n======================================================================\n",
+  "history_begin_time" : 1664309987826,
+  "history_end_time" : 1664309997623,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "adf51g2jchz",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to C:\\Users\\user\\tensorboard\\2022-09-27_15-00\n======================================================================\n",
+  "history_begin_time" : 1664305200452,
+  "history_end_time" : 1664305214786,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "l96cat3pwaf",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to C:\\Users\\user\\tensorboard\\2022-09-27_08-14\n======================================================================\n",
+  "history_begin_time" : 1664280878915,
+  "history_end_time" : 1664280888197,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "t8gf6rx0j3o",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to C:\\Users\\user\\tensorboard\\2022-09-27_07-58\n======================================================================\n",
+  "history_begin_time" : 1664279903230,
+  "history_end_time" : 1664279913419,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hixxbxv189p",
+  "history_input" : "import datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "Cannot run program \"python3.8\" (in directory \"C:\\Users\\user\\gw-workspace\\hixxbxv189p\"): CreateProcess error=2, The system cannot find the file specified",
+  "history_begin_time" : 1663038346372,
+  "history_end_time" : 1663038347340,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "xsvxqrz8mpf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754606,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gwbj3y9kv6z",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664280754618,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "llyracmieuv",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084804,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "b57sn4hb74p",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373326982,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

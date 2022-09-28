@@ -1,6 +1,9 @@
-# Write first python in Geoweaver
+# code to identify eddies, generate segmentation mask from the file and generate segmetation masks
+from eddy_import import *
 from matplotlib.path import Path
 from py_eddy_tracker.poly import create_vertice
+from copy import deepcopy
+from eddy_paths import *
 
 
 def generate_segmentation_mask_from_file(
