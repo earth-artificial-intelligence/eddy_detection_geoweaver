@@ -99,9 +99,9 @@ def lon_range_to_str(lon_range):
     lon_end = f"{lon_end}E" if lon_end >= 0 else f"{abs(lon_end)}W"
     return f"{lon_start}-{lon_end}"
 
-
 def lat_range_to_str(lat_range):
     lat_start, lat_end = lat_range
     lat_start = f"{lat_start}N" if lat_start >= 0 else f"{abs(lat_start)}S"
     lat_end = f"{lat_end}N" if lat_end >= 0 else f"{abs(lat_end)}S"
     return f"{lat_start}-{lat_end}"
+  

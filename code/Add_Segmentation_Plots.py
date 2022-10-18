@@ -16,7 +16,10 @@ cyclonic.display(
 ax.legend()
 update_axes(ax)
 
+plt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches ="tight")
+
 # Plot segmentation mask
 mask = generate_segmentation_mask(
     g_filtered, anticyclonic, cyclonic, -180, 0, plot=True
 )
+plt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches ="tight")

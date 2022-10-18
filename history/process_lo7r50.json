@@ -1,4 +1,44 @@
 [{
+  "history_id" : "pho6XxAfjJLm",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-18_08-59\n==============================================================================\n",
+  "history_begin_time" : 1666097939515,
+  "history_end_time" : 1666097946218,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "hqjmg9ox8tu",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/hqjmg9ox8tu/tensorboard_logger.py\", line 6, in <module>\n    from torch.utils.tensorboard import SummaryWriter\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1665015471879,
+  "history_end_time" : 1665015474008,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "gnjh13c68lu",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/gnjh13c68lu/tensorboard_logger.py\", line 6, in <module>\n    from torch.utils.tensorboard import SummaryWriter\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976259934,
+  "history_end_time" : 1664976261963,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "12akpwhdb48",
+  "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/12akpwhdb48/tensorboard_logger.py\", line 6, in <module>\n    from torch.utils.tensorboard import SummaryWriter\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976160678,
+  "history_end_time" : 1664976162882,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "kxtabgeduwz",
   "history_input" : "#Tensor Logger\n#We use the tensor logger to log our loss and metrics throughout the training process.\nfrom eddy_import import *\n\nimport datetime\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)",
   "history_output" : "======================================================================\nWriting Tensorboard logs to C:\\Users\\user\\tensorboard\\2022-09-28_09-31\n======================================================================\n",
@@ -99,6 +139,26 @@
   "host_id" : "100001",
   "indicator" : "Failed"
 },{
+  "history_id" : "llyracmieuv",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084804,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "b57sn4hb74p",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373326982,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
   "history_id" : "xsvxqrz8mpf",
   "history_input" : null,
   "history_output" : null,
@@ -119,21 +179,71 @@
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "llyracmieuv",
+  "history_id" : "52gfq4pz956",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664372084804,
+  "history_end_time" : 1665096317652,
   "history_notes" : null,
   "history_process" : "lo7r50",
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "b57sn4hb74p",
+  "history_id" : "tqe4tyntlg0",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664373326982,
+  "history_end_time" : 1665244616254,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "b3kimfd79ae",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665245508265,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0yy5c5xon1w",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665253906559,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "31s07hd72s6",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665454136897,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "24sxwbf7nku",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665492179697,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "8q9h8ue5iup",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665757921494,
   "history_notes" : null,
   "history_process" : "lo7r50",
   "host_id" : "100001",

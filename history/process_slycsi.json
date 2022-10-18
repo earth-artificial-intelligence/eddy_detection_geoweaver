@@ -1,4 +1,64 @@
 [{
+  "history_id" : "cRFBjvC7y8sm",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1666093096708,
+  "history_end_time" : 1666093107203,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "OgVCoK1S5Yvl",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1665493298345,
+  "history_end_time" : 1665493301665,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "507kalyc9dd",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/507kalyc9dd/imports_trainEvaluateEddyModel.py\", line 11, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1665015434016,
+  "history_end_time" : 1665015436185,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "rfr528k8w4p",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/rfr528k8w4p/imports_trainEvaluateEddyModel.py\", line 11, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976222056,
+  "history_end_time" : 1664976224083,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ddkby3536yn",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/ddkby3536yn/imports_trainEvaluateEddyModel.py\", line 11, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976121275,
+  "history_end_time" : 1664976123315,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "31FxMMtRynx3",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/31FxMMtRynx3/imports_trainEvaluateEddyModel.py\", line 2, in <module>\n    from eddy_import import *\n  File \"/Users/lakshmichetana/gw-workspace/31FxMMtRynx3/eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1664891801664,
+  "history_end_time" : 1664891817750,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
   "history_id" : "rkc3iv5h2ol",
   "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
   "history_output" : "",
@@ -144,6 +204,76 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1664373325485,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zgfu3xgilzx",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665096316854,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lr6ocbdylip",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665244615590,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ssai8c6z0pa",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665245508139,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "irvjqj5gmgr",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665253906397,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "2rtrbxzy90c",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665454136741,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4s4iz0krtw7",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665492179541,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4x8tcvjbbty",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665757920506,
   "history_notes" : null,
   "history_process" : "slycsi",
   "host_id" : "100001",

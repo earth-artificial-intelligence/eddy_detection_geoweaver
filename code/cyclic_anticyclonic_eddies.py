@@ -22,3 +22,5 @@ for cnt in contours:
     area += cv2.contourArea(cnt)
 area /= len(contours)
 print(f"Average contour area: {area:.2f} sq. pixels")
+      
+plt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches ="tight")

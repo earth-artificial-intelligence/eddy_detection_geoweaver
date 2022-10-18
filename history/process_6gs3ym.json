@@ -1,4 +1,124 @@
 [{
+  "history_id" : "csk0b56pi75",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665754740069,
+  "history_end_time" : 1665757922987,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "9qq6nxh3ah3",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665488495409,
+  "history_end_time" : 1665492179724,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "muqp9xtlgy1",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665418703630,
+  "history_end_time" : 1665454136909,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wy143ueorm2",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665245533568,
+  "history_end_time" : 1665253906606,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "13xltv9nzyx",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665244638231,
+  "history_end_time" : 1665245508378,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vd9oq6smupj",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665181360660,
+  "history_end_time" : 1665244616280,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hvhezya5p4c",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665180984628,
+  "history_end_time" : 1665181356947,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "n27nj5g5ran",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665096326647,
+  "history_end_time" : 1665096329038,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zs7krs17rw6",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665089273372,
+  "history_end_time" : 1665096317663,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4c4453ddwzp",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1665015397903,
+  "history_end_time" : 1665015402663,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "akspf4lqndg",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1664976190313,
+  "history_end_time" : 1664976192415,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ge2gku40p4n",
+  "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1664976068109,
+  "history_end_time" : 1664976068475,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "tc4tgtsq1ex",
   "history_input" : "# Importing the required libraries for eddy workflow\nfrom eddy_import import *\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
   "history_output" : "",

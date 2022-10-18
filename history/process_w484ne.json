@@ -1,4 +1,44 @@
 [{
+  "history_id" : "Lu41fjZFG7uq",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"/Users/lakshmichetana/gw-workspace/Lu41fjZFG7uq/analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1666098269243,
+  "history_end_time" : 1666098269351,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "ccat59sukbt",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"/Users/lakshmichetana/gw-workspace/ccat59sukbt/analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1665015479118,
+  "history_end_time" : 1665015479234,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "0lsjkookcei",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"/Users/lakshmichetana/gw-workspace/0lsjkookcei/analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1664976268036,
+  "history_end_time" : 1664976268138,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "n09prdl5d08",
+  "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
+  "history_output" : "  File \"/Users/lakshmichetana/gw-workspace/n09prdl5d08/analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1664976167957,
+  "history_end_time" : 1664976168045,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "7y43mbfsrqz",
   "history_input" : "#Analyze training curves in TensorBoard\n\nfrom eddy_import import *\nfrom IPython.display import display, HTML\ndisplay(HTML(\"<style>.container { width:100% !important; }</style>\"))\n\n%load_ext tensorboard\n%tensorboard --bind_all --logdir $writer.log_dir --port=6008  # the default is 6006 but we set it to 6009 to avoid conflicts with other notebooks",
   "history_output" : "  File \"analyzeTrainingCurve.py\", line 7\n    %load_ext tensorboard\n    ^\nSyntaxError: invalid syntax\n",
@@ -89,6 +129,26 @@
   "host_id" : "100001",
   "indicator" : "Failed"
 },{
+  "history_id" : "zta0c1anthq",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084885,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "pnenz2pmxba",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373327103,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
   "history_id" : "l70wyz9svkb",
   "history_input" : null,
   "history_output" : null,
@@ -109,21 +169,71 @@
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "zta0c1anthq",
+  "history_id" : "0xzz6pz9ad7",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664372084885,
+  "history_end_time" : 1665096317658,
   "history_notes" : null,
   "history_process" : "w484ne",
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "pnenz2pmxba",
+  "history_id" : "byyv92onstr",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664373327103,
+  "history_end_time" : 1665244616255,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qhyh8bi6n46",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665245508269,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "nhaj0ovp364",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665253906579,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rdlyicp8hsw",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665454136904,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "x8w7799r6ty",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665492179704,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0zt7c05plwi",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665757921531,
   "history_notes" : null,
   "history_process" : "w484ne",
   "host_id" : "100001",

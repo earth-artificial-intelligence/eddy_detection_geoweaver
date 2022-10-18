@@ -1,4 +1,54 @@
 [{
+  "history_id" : "wF3L02SIhgvM",
+  "history_input" : "#loss function\nimport torch\nfrom eddy_import import *\nloss_fn = torch.nn.CrossEntropyLoss()\n# TODO (homework): Try \n# loss_fn = torch.nn.CrossEntropyLoss(weight=torch.Tensor(total_pixels/class_frequency))",
+  "history_output" : "",
+  "history_begin_time" : 1666095573970,
+  "history_end_time" : 1666095578900,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "pxQGyo2ciRU8",
+  "history_input" : "#loss function\nimport torch\nfrom eddy_import import *\nloss_fn = torch.nn.CrossEntropyLoss()",
+  "history_output" : "",
+  "history_begin_time" : 1665496103765,
+  "history_end_time" : 1665496106230,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "mp40qu2nnlo",
+  "history_input" : "#loss function\nimport torch\nfrom eddy_import import *\nloss_fn = torch.nn.CrossEntropyLoss()",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/mp40qu2nnlo/loss_function.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1665015462790,
+  "history_end_time" : 1665015462865,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "sy8omvhkwc0",
+  "history_input" : "#loss function\nimport torch\nfrom eddy_import import *\nloss_fn = torch.nn.CrossEntropyLoss()",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/sy8omvhkwc0/loss_function.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976249499,
+  "history_end_time" : 1664976249595,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "bmtkammt24b",
+  "history_input" : "#loss function\nimport torch\nfrom eddy_import import *\nloss_fn = torch.nn.CrossEntropyLoss()",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/bmtkammt24b/loss_function.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976150510,
+  "history_end_time" : 1664976150576,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "2f5ynalmi64",
   "history_input" : "#loss function\nimport torch\nfrom eddy_import import *\nloss_fn = torch.nn.CrossEntropyLoss()",
   "history_output" : "",
@@ -109,6 +159,26 @@
   "host_id" : "100001",
   "indicator" : "Failed"
 },{
+  "history_id" : "4bk8mhdnh2e",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084654,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "s9wl1621gu6",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373326731,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
   "history_id" : "8yfsjgs6y7y",
   "history_input" : null,
   "history_output" : null,
@@ -129,21 +199,71 @@
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "4bk8mhdnh2e",
+  "history_id" : "ww1co0dzgos",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664372084654,
+  "history_end_time" : 1665096317651,
   "history_notes" : null,
   "history_process" : "nilvzu",
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "s9wl1621gu6",
+  "history_id" : "e1ljns7hqvc",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664373326731,
+  "history_end_time" : 1665244616249,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vraxz8torbh",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665245508258,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "v4xna3vku1k",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665253906532,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "e78tvs9axwk",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665454136894,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ppaw4n46ub5",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665492179667,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7xr5e76rl4x",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665757921380,
   "history_notes" : null,
   "history_process" : "nilvzu",
   "host_id" : "100001",

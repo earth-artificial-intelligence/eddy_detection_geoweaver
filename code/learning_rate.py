@@ -1,5 +1,6 @@
 # learning rate for use in OneCycle scheduler
 from eddy_import import *
+from pytorch import *
 import torch
 
 initial_lr = 1e-6

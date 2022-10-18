@@ -170,4 +170,3 @@ def _ntuple(n):
 
 
 _pair = _ntuple(2)
-Footer

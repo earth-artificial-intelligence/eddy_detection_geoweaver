@@ -1,4 +1,54 @@
 [{
+  "history_id" : "5E3vZD3QNXOW",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)\n\nplt.savefig(\"/Users/lakshmichetana/ML_eddies_Output/datasetPlots\",bbox=\"tight\")",
+  "history_output" : "/Users/lakshmichetana/gw-workspace/5E3vZD3QNXOW/training_dataset.py:6: MatplotlibDeprecationWarning: savefig() got unexpected keyword argument \"bbox\" which is no longer supported as of 3.3 and will become an error in 3.6\n  plt.savefig(\"/Users/lakshmichetana/ML_eddies_Output/datasetPlots\",bbox=\"tight\")\nRead 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1666094442595,
+  "history_end_time" : 1666094448403,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "L1B8MV9SDhVA",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)\n\nplt.savefig(\"/Users/lakshmichetana/ML_eddies_Output/datasetPlots\",bbox=\"tight\")",
+  "history_output" : "/Users/lakshmichetana/gw-workspace/L1B8MV9SDhVA/training_dataset.py:6: MatplotlibDeprecationWarning: savefig() got unexpected keyword argument \"bbox\" which is no longer supported as of 3.3 and will become an error in 3.6\n  plt.savefig(\"/Users/lakshmichetana/ML_eddies_Output/datasetPlots\",bbox=\"tight\")\nRead 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1665494603861,
+  "history_end_time" : 1665494607300,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "r9m95k8rfl8",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/r9m95k8rfl8/training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/r9m95k8rfl8/get_eddy_dataloader.py\", line 6, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1665015455658,
+  "history_end_time" : 1665015457715,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "6aic5pwgupy",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/6aic5pwgupy/training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/6aic5pwgupy/get_eddy_dataloader.py\", line 6, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976242360,
+  "history_end_time" : 1664976244455,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "aawp3j8z0vn",
+  "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/aawp3j8z0vn/training_dataset.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/aawp3j8z0vn/get_eddy_dataloader.py\", line 6, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976143077,
+  "history_end_time" : 1664976145444,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "okwju26ppnd",
   "history_input" : "#Using plot_sample to visualize the dataset we just loaded.\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\ntrain_loader.dataset.plot_sample(N=3)",
   "history_output" : "Traceback (most recent call last):\n  File \"training_dataset.py\", line 4, in <module>\n    train_loader.dataset.plot_sample(N=3)\nNameError: name 'train_loader' is not defined\n",
@@ -144,6 +194,76 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1664373326444,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fpthtfqz93v",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665096317635,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "r5hl1dvbtd1",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665244616135,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jdxutx8xwrx",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665245508246,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "99zdyaew2hn",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665253906519,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1vidgm8010a",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665454136893,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "dtm7nqzsfap",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665492179615,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "951nt8d8m0v",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665757921070,
   "history_notes" : null,
   "history_process" : "28eg4u",
   "host_id" : "100001",

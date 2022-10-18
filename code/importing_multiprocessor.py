@@ -4,7 +4,7 @@ from eddy_import import *
 from eddy_plots import *
 import multiprocessing
 
-
+pool = multiprocessing.Pool(processes=2)
 def generate_masks_in_parallel(
     files,
     dates,
@@ -14,7 +14,7 @@ def generate_masks_in_parallel(
     high_pass_wavelength_km=700,
     x_offset=-180,
     y_offset=0,
-    num_processes=8,
+    num_processes=1,
     plot=False,
     save=True,
 ):
@@ -22,7 +22,7 @@ def generate_masks_in_parallel(
         (file, date, ssh_var, u_var, v_var, high_pass_wavelength_km, x_offset, y_offset)
         for file, date in zip(files, dates)
     ]
-    pool = multiprocessing.Pool(processes=num_processes)
+    #pool = multiprocessing.Pool(processes=num_processes)
     results = pool.starmap(generate_segmentation_mask_from_file, args)
 
     vars_ = []

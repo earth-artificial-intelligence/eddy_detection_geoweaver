@@ -1,4 +1,44 @@
 [{
+  "history_id" : "6ezIYggdDVQH",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\n  warnings.warn(\n\nStream closed",
+  "history_begin_time" : 1666101713562,
+  "history_end_time" : 1666101985599,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "x3f0k059k7d",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/x3f0k059k7d/cyclic_anticyclonic_eddies.py\", line 4, in <module>\n    from animation import *\n  File \"/Users/lakshmichetana/gw-workspace/x3f0k059k7d/animation.py\", line 3, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1665015487773,
+  "history_end_time" : 1665015489982,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "0fkqr0r9m77",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/0fkqr0r9m77/cyclic_anticyclonic_eddies.py\", line 4, in <module>\n    from animation import *\n  File \"/Users/lakshmichetana/gw-workspace/0fkqr0r9m77/animation.py\", line 3, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976278289,
+  "history_end_time" : 1664976280353,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "he1c39fzvlr",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/he1c39fzvlr/cyclic_anticyclonic_eddies.py\", line 4, in <module>\n    from animation import *\n  File \"/Users/lakshmichetana/gw-workspace/he1c39fzvlr/animation.py\", line 3, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976177308,
+  "history_end_time" : 1664976179395,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "2fp1m6c3zd8",
   "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")",
   "history_output" : "Traceback (most recent call last):\n  File \"cyclic_anticyclonic_eddies.py\", line 4, in <module>\n    from animation import *\n  File \"C:\\Users\\user\\gw-workspace\\2fp1m6c3zd8\\animation.py\", line 7, in <module>\n    model.eval()\nNameError: name 'model' is not defined\n",
@@ -99,6 +139,26 @@
   "host_id" : "100001",
   "indicator" : "Failed"
 },{
+  "history_id" : "i06gpib9bim",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372085037,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "i57tkakfitd",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373327340,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
   "history_id" : "vdkiei7dslj",
   "history_input" : null,
   "history_output" : null,
@@ -119,21 +179,71 @@
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "i06gpib9bim",
+  "history_id" : "da5lpopbeky",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664372085037,
+  "history_end_time" : 1665096317662,
   "history_notes" : null,
   "history_process" : "kaedp2",
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "i57tkakfitd",
+  "history_id" : "t75mla0dzkw",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664373327340,
+  "history_end_time" : 1665244616265,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "kbjksunijgr",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665245508348,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "noankx2sugj",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665253906594,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "e4po4nyzdld",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665454136906,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qt492oizuac",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665492179714,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "de2lom82lk1",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665757921913,
   "history_notes" : null,
   "history_process" : "kaedp2",
   "host_id" : "100001",

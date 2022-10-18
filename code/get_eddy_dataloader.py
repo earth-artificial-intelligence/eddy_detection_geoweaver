@@ -1,5 +1,7 @@
 #Data utils code
 import os
+from file_paths import *
+from declaring_epochs_size import *
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -13,6 +15,15 @@ from tqdm.auto import tqdm
 
 torch.manual_seed(42)
 
+from data_utils import get_eddy_dataloader
+
+# set binary = false if we want to distinguish between cyclonic and anticyclonic
+binary = False
+num_classes = 2 if binary else 3
+train_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)
+val_loader, _ = get_eddy_dataloader(
+    val_file, binary=binary, batch_size=batch_size, shuffle=False
+)
 
 def get_eddy_dataloader(
     files, binary=False, transform=None, batch_size=32, shuffle=True, val_split=0

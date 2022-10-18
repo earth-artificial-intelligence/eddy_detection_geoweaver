@@ -1,5 +1,7 @@
 #Evaluate model on training and validation sets
 from eddy_import import *
+from pytorch import *
+from trainingModel import *
 import torch
 from matplotlib.animation import ArtistAnimation
 
@@ -39,3 +41,5 @@ with torch.no_grad():
     
 animation.save(os.path.join(tensorboard_dir, "val_predictions.gif"), writer="pillow")
 HTML(animation.to_jshtml())
+
+plt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches ="tight")

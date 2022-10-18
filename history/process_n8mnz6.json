@@ -1,4 +1,54 @@
 [{
+  "history_id" : "PkM1fuG0WIYn",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nfrom pytorch import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1666097625961,
+  "history_end_time" : 1666097633528,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "CcJiaeEpa6Jw",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/CcJiaeEpa6Jw/learning_rate.py\", line 8, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'model' is not defined\n",
+  "history_begin_time" : 1666096019507,
+  "history_end_time" : 1666096025340,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "27mez9vrie8",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/27mez9vrie8/learning_rate.py\", line 3, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1665015464506,
+  "history_end_time" : 1665015466707,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "lhyqk30xxr2",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/lhyqk30xxr2/learning_rate.py\", line 3, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976251671,
+  "history_end_time" : 1664976253880,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "d790ny73o43",
+  "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/d790ny73o43/learning_rate.py\", line 3, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976152399,
+  "history_end_time" : 1664976154612,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "2hmnm7f7dx7",
   "history_input" : "# learning rate for use in OneCycle scheduler\nfrom eddy_import import *\nimport torch\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)",
   "history_output" : "Traceback (most recent call last):\n  File \"learning_rate.py\", line 8, in <module>\n    optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nNameError: name 'model' is not defined\n",
@@ -144,6 +194,76 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1664373326782,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ur1s5ty8dvm",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665096317651,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "parsdlsrx04",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665244616250,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gx7atmhb8hl",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665245508261,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3rdxh6poonn",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665253906536,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ttajftl28t8",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665454136895,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "i4ufsdxre3l",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665492179670,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "o0nonlfch07",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665757921425,
   "history_notes" : null,
   "history_process" : "n8mnz6",
   "host_id" : "100001",

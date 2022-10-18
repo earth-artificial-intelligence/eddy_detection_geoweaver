@@ -1,4 +1,44 @@
 [{
+  "history_id" : "fA9HWcSZe3TZ",
+  "history_input" : "#Defining and using the get_metrics function\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\n\nimport torchmetrics\ndef get_metrics(N, sync=False):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n#         torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy\n#             average=\"micro\",\n#             dist_sync_on_step=sync,\n#             num_classes=N,\n#         ),\n        torchmetrics.F1Score(\n            average=\"none\",  # return F1 for each class\n            dist_sync_on_step=sync,\n            num_classes=N,\n        )\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\ntrain_metrics, val_metrics = get_metrics(num_classes)",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1666097691431,
+  "history_end_time" : 1666097697676,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "26dggd2ivyy",
+  "history_input" : "#Defining and using the get_metrics function\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\n\nimport torchmetrics\ndef get_metrics(N, sync=False):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n#         torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy\n#             average=\"micro\",\n#             dist_sync_on_step=sync,\n#             num_classes=N,\n#         ),\n        torchmetrics.F1Score(\n            average=\"none\",  # return F1 for each class\n            dist_sync_on_step=sync,\n            num_classes=N,\n        )\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\ntrain_metrics, val_metrics = get_metrics(num_classes)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/26dggd2ivyy/metrics.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/26dggd2ivyy/get_eddy_dataloader.py\", line 6, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1665015467931,
+  "history_end_time" : 1665015470118,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "tp1fty29gdd",
+  "history_input" : "#Defining and using the get_metrics function\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\n\nimport torchmetrics\ndef get_metrics(N, sync=False):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n#         torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy\n#             average=\"micro\",\n#             dist_sync_on_step=sync,\n#             num_classes=N,\n#         ),\n        torchmetrics.F1Score(\n            average=\"none\",  # return F1 for each class\n            dist_sync_on_step=sync,\n            num_classes=N,\n        )\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\ntrain_metrics, val_metrics = get_metrics(num_classes)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/tp1fty29gdd/metrics.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/tp1fty29gdd/get_eddy_dataloader.py\", line 6, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976255749,
+  "history_end_time" : 1664976257922,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "syowzyv0ngy",
+  "history_input" : "#Defining and using the get_metrics function\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\n\nimport torchmetrics\ndef get_metrics(N, sync=False):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n#         torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy\n#             average=\"micro\",\n#             dist_sync_on_step=sync,\n#             num_classes=N,\n#         ),\n        torchmetrics.F1Score(\n            average=\"none\",  # return F1 for each class\n            dist_sync_on_step=sync,\n            num_classes=N,\n        )\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\ntrain_metrics, val_metrics = get_metrics(num_classes)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/syowzyv0ngy/metrics.py\", line 3, in <module>\n    from get_eddy_dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/syowzyv0ngy/get_eddy_dataloader.py\", line 6, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1664976156660,
+  "history_end_time" : 1664976158757,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "pvorb4dcmpa",
   "history_input" : "#Defining and using the get_metrics function\nfrom eddy_import import *\nfrom get_eddy_dataloader import *\n\nimport torchmetrics\ndef get_metrics(N, sync=False):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n#         torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy\n#             average=\"micro\",\n#             dist_sync_on_step=sync,\n#             num_classes=N,\n#         ),\n        torchmetrics.F1Score(\n            average=\"none\",  # return F1 for each class\n            dist_sync_on_step=sync,\n            num_classes=N,\n        )\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\ntrain_metrics, val_metrics = get_metrics(num_classes)",
   "history_output" : "Traceback (most recent call last):\n  File \"metrics.py\", line 46, in <module>\n    train_metrics, val_metrics = get_metrics(num_classes)\nNameError: name 'num_classes' is not defined\n",
@@ -109,6 +149,26 @@
   "host_id" : "100001",
   "indicator" : "Failed"
 },{
+  "history_id" : "drbalhtm1v9",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664372084790,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "eawmapd179h",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1664373326894,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
   "history_id" : "md27pwb0bo8",
   "history_input" : null,
   "history_output" : null,
@@ -129,21 +189,71 @@
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "drbalhtm1v9",
+  "history_id" : "vvi78rxv8o2",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664372084790,
+  "history_end_time" : 1665096317652,
   "history_notes" : null,
   "history_process" : "af1vb9",
   "host_id" : "100001",
   "indicator" : "Stopped"
 },{
-  "history_id" : "eawmapd179h",
+  "history_id" : "83obto6qe53",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1664373326894,
+  "history_end_time" : 1665244616253,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0da2qyfq7iq",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665245508263,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rjeppyqxjhk",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665253906541,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fpf9617i8b9",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665454136896,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "w29n5uuoy7y",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665492179681,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0ky9p5yp4k2",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665757921465,
   "history_notes" : null,
   "history_process" : "af1vb9",
   "host_id" : "100001",

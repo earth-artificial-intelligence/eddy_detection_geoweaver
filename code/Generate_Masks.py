@@ -4,6 +4,8 @@ from importing_multiprocessor import *
 from eddy_paths import *
 from eddy_plots import *
 import logging
+
+print("setting the logger level")
 logging.getLogger("pet").setLevel(logging.ERROR)
 
 # enter the AVISO filename pattern
@@ -26,3 +28,5 @@ test_dates, test_files = get_dates_and_files(
 test_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(
     test_files, test_dates
 )
+
+print("end of generate masks process")

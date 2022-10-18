@@ -1,4 +1,54 @@
 [{
+  "history_id" : "wckwdeebutYF",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1666093281963,
+  "history_end_time" : 1666093285538,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "j7jog3x9QPO2",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1665493377725,
+  "history_end_time" : 1665493379881,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "d30ns86txg1",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1665015438173,
+  "history_end_time" : 1665015440262,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cirbbz63muc",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664976225415,
+  "history_end_time" : 1664976227655,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vynz7tmc211",
+  "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
+  "history_output" : "",
+  "history_begin_time" : 1664976124664,
+  "history_end_time" : 1664976126984,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
   "history_id" : "6des82dirkx",
   "history_input" : "#defining the number of epochs and batch size\nfrom eddy_import import *\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256  # can lower this if you get an out of memory error",
   "history_output" : "",
@@ -144,6 +194,76 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1664373325992,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qh43iuu5vsm",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665096317606,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "59appam52te",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665244615783,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "tya4as6xz98",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665245508193,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4b6xbszbzbd",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665253906458,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "60fawlo506v",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665454136873,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "m0uxzoyfe0o",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665492179580,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "pgbk2lumvsf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1665757921025,
   "history_notes" : null,
   "history_process" : "3hm7db",
   "host_id" : "100001",
