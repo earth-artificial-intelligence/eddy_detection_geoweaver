@@ -106,7 +106,7 @@
   "id" : "ohe0x9",
   "name" : "animation",
   "description" : null,
-  "code" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "code" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
   "lang" : "python",
   "owner" : "111111",
   "confidential" : "FALSE"
@@ -231,14 +231,6 @@
   "owner" : "111111",
   "confidential" : "FALSE"
 },{
-  "id" : "vv80ng",
-  "name" : "Generate_Masks",
-  "description" : null,
-  "code" : "#getting the test dates and files of training sets from 1998 - 2018 and from training set 2019 and also setting the logging level as ERROR\nfrom eddy_import import *\nfrom importing_multiprocessor import *\nfrom eddy_paths import *\nfrom eddy_plots import *\nimport logging\n\nprint(\"setting the logger level\")\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 2019), range(1, 13), [1, 10, 20, 30], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 13), [1, 10, 20, 30], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)\n\nprint(\"end of generate masks process\")",
-  "lang" : "python",
-  "owner" : "111111",
-  "confidential" : "FALSE"
-},{
   "id" : "hia9os",
   "name" : "Plot_Train_Test_Subset",
   "description" : null,
@@ -251,6 +243,14 @@
   "name" : "Eddy_Dataloader",
   "description" : null,
   "code" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "lang" : "python",
+  "owner" : "111111",
+  "confidential" : "FALSE"
+},{
+  "id" : "w12psf",
+  "name" : "Generate_Masks2",
+  "description" : "python",
+  "code" : "#getting the test dates and files of training sets from 1998 - 2018 and from training set 2019 and also setting the logging level as ERROR\nfrom eddy_import import *\nfrom importing_multiprocessor import *\nfrom eddy_paths import *\nfrom eddy_plots import *\nimport logging\n\nprint(\"setting the logger level\")\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 2019), range(1, 13), [1, 10, 20, 30], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 13), [1, 10, 20, 30], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)\n\nprint(\"end of generate masks process\")",
   "lang" : "python",
   "owner" : "111111",
   "confidential" : "FALSE"

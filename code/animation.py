@@ -2,6 +2,8 @@
 from eddy_import import *
 from pytorch import *
 from trainingModel import *
+from tensorboard_logger import *
+from IPython.display import display, HTML
 import torch
 from matplotlib.animation import ArtistAnimation
 
