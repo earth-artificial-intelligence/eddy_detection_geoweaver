@@ -3,15 +3,17 @@ from eddy_paths import *
 from copy import deepcopy
 from matplotlib import pyplot as plt
 
+#updated the vmin and vmax to -1 and 1
 ax, m = plot_variable(
     g,
     "adt",
     f"ADT (m) before high-pass filter",
-    vmin=-0.15,
-    vmax=0.15,
+    vmin=-1,
+    vmax=1,
 )
 plt.savefig('/Users/lakshmichetana/ML_eddies_Output/ADT(m)_before_high-pass_filter.png', bbox_inches ="tight")
-wavelength_km = 700
+#updated wavelength covered kilometers to 500 from 700
+wavelength_km = 500
 
 g_filtered = deepcopy(g)
 
@@ -20,8 +22,8 @@ ax, m = plot_variable(
     g_filtered,
     "adt",
     f"ADT (m) filtered (Final: {wavelength_km} km)",
-    vmin=-0.15,
-    vmax=0.15,
+    vmin=-1,
+    vmax=1,
 )
 
 plt.savefig('/Users/lakshmichetana/ML_eddies_Output/ADT(m)-filtered.png', bbox_inches ="tight")

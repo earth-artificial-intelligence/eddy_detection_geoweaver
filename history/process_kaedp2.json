@@ -1,4 +1,24 @@
 [{
+  "history_id" : "lLQSXYnVKMSN",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-28_11-20\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1666970448460,
+  "history_end_time" : 1666970750957,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "wAcKB5HBejHj",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-25_11-58\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1666713483819,
+  "history_end_time" : 1666713732107,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
   "history_id" : "6ezIYggdDVQH",
   "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
   "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\n  warnings.warn(\n\nStream closed",
@@ -244,6 +264,26 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1665757921913,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "2rt8ejkm57w",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667091234787,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wibbnv3zz92",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667091390321,
   "history_notes" : null,
   "history_process" : "kaedp2",
   "host_id" : "100001",

@@ -1,0 +1,21 @@
+[{
+  "history_id" : "cg035orgp83",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\n\nfrom eddy_import import *\nimport numpy as np\n\nfrom get_eddy_dataloader import *\n\nimport torch\nfrom eddynet import EddyNet\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(\"/Users/lakshmichetana/ML_eddies_Output/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1667091390535,
+  "history_end_time" : 1667091391380,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "84cr2nolwdr",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667091236116,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]
