@@ -1,0 +1,321 @@
+[{
+  "history_id" : "urz1c0g2yk5",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960597,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "tubc085b7qf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960600,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "yho83xn130d",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954399,
+  "history_end_time" : 1666715960601,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mz521e8wdl0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960601,
+  "history_notes" : null,
+  "history_process" : "rqo3du",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "6yc2r2t2beh",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960602,
+  "history_notes" : null,
+  "history_process" : "ljp3lh",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "33xxkon0u6m",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960603,
+  "history_notes" : null,
+  "history_process" : "28eg4u",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gj3fmn00u65",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960603,
+  "history_notes" : null,
+  "history_process" : "399tue",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "6yeca60s8g6",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960604,
+  "history_notes" : null,
+  "history_process" : "nilvzu",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "66r6pl3qe30",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960605,
+  "history_notes" : null,
+  "history_process" : "n8mnz6",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "xtf07grg9mu",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960605,
+  "history_notes" : null,
+  "history_process" : "af1vb9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "bopb69rvcb3",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960606,
+  "history_notes" : null,
+  "history_process" : "lo7r50",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "aokwswki81j",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954426,
+  "history_end_time" : 1666715960607,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lmfbkatnic7",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960607,
+  "history_notes" : null,
+  "history_process" : "sv4c0f",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "31127b871xe",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960607,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "np584leisnk",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960608,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "scnzlmrnlm9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954446,
+  "history_end_time" : 1666715960609,
+  "history_notes" : null,
+  "history_process" : "nzmtjk",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "79brjqfg6o3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954448,
+  "history_end_time" : 1666715960609,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "kq7ptc3ojir",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954449,
+  "history_end_time" : 1666715960609,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5pcqum04z1g",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\nfrom eddy_paths import *\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\nwavelength_km = 700\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/joe/gw-workspace/5pcqum04z1g/Eddy_plotvariable.py\", line 2, in <module>\n    from eddy_paths import *\n  File \"/Users/joe/gw-workspace/5pcqum04z1g/eddy_paths.py\", line 2, in <module>\n    from eddy_import import *\n  File \"/Users/joe/gw-workspace/5pcqum04z1g/eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1666715955367,
+  "history_end_time" : 1666715960609,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mno418keduf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960609,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lmhmhsmsbhd",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960610,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wkfrt9r5gwp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954462,
+  "history_end_time" : 1666715960610,
+  "history_notes" : null,
+  "history_process" : "l9f2t3",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ryovkzlalwa",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960610,
+  "history_notes" : null,
+  "history_process" : "4o6voy",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4dq2bx128qy",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954465,
+  "history_end_time" : 1666715960611,
+  "history_notes" : null,
+  "history_process" : "j4jm66",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "r0ultp2avef",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954466,
+  "history_end_time" : 1666715960611,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f3eiw93muya",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954466,
+  "history_end_time" : 1666715960611,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f2z8j23488n",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954466,
+  "history_end_time" : 1666715960611,
+  "history_notes" : null,
+  "history_process" : "oc42ub",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "pj4sdqlqzsw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954467,
+  "history_end_time" : 1666715960611,
+  "history_notes" : null,
+  "history_process" : "bzgeyy",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0vyjqlvcok2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954467,
+  "history_end_time" : 1666715960611,
+  "history_notes" : null,
+  "history_process" : "bomi2j",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ot5zri05drn",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960612,
+  "history_notes" : null,
+  "history_process" : "hia9os",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "dkq4c048gcu",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960612,
+  "history_notes" : null,
+  "history_process" : "o8ujvl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0ct5tc7aboz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960613,
+  "history_notes" : null,
+  "history_process" : "w12psf",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+}]
