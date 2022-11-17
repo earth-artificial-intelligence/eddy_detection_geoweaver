@@ -1,5 +1,6 @@
 # setting the vmin and vmax using the eddy 'plot_variable' method
-from eddy_paths import *
+#from eddy_paths import *
+from eddy_paths import figOutputFolder, plot_variable, g
 from copy import deepcopy
 from matplotlib import pyplot as plt
 
@@ -11,7 +12,7 @@ ax, m = plot_variable(
     vmin=-1,
     vmax=1,
 )
-plt.savefig('/Users/lakshmichetana/ML_eddies_Output/ADT(m)_before_high-pass_filter.png', bbox_inches ="tight")
+plt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches ="tight")
 #updated wavelength covered kilometers to 500 from 700
 wavelength_km = 500
 
@@ -26,5 +27,5 @@ ax, m = plot_variable(
     vmax=1,
 )
 
-plt.savefig('/Users/lakshmichetana/ML_eddies_Output/ADT(m)-filtered.png', bbox_inches ="tight")
+plt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches ="tight")
 

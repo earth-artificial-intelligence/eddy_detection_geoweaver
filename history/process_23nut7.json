@@ -1,4 +1,574 @@
 [{
+  "history_id" : "mo6cn9qisw6",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668659941714,
+  "history_end_time" : 1668659945042,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "stgcy9xhyqs",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668659552722,
+  "history_end_time" : 1668659937657,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rscabjoeij7",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668657107722,
+  "history_end_time" : 1668659548553,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "x84h9m56bxy",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668628447667,
+  "history_end_time" : 1668628451387,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1471znrp0lo",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668624225399,
+  "history_end_time" : 1668624228719,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3i3ir2fy7h7",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668623875970,
+  "history_end_time" : 1668623879475,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "147aonwt0fj",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668623443701,
+  "history_end_time" : 1668623447125,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7xmobsiehsn",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668623285032,
+  "history_end_time" : 1668623428596,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3dq0m76mmmh",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668623195261,
+  "history_end_time" : 1668623198570,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yrndpw3csps",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668623060346,
+  "history_end_time" : 1668623191188,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5wv0kbio2k5",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668622991369,
+  "history_end_time" : 1668623057320,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "979po77uywn",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668622934520,
+  "history_end_time" : 1668622988819,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "62czjyxg2dp",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668621794057,
+  "history_end_time" : 1668621797239,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "h85smetunf0",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668620780022,
+  "history_end_time" : 1668621623245,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "dgo7e5v2v07",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668619676392,
+  "history_end_time" : 1668620774901,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ckwhg97ed9t",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "",
+  "history_begin_time" : 1668619501552,
+  "history_end_time" : 1668619503741,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "my0ro0h7rtb",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "",
+  "history_begin_time" : 1668619487966,
+  "history_end_time" : 1668619496003,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1rjf6xel5ro",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "",
+  "history_begin_time" : 1668619431407,
+  "history_end_time" : 1668619433669,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jf1rnacumuu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668618475709,
+  "history_end_time" : 1668619427424,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "a3lfdzse340",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176502,
+  "history_end_time" : 1668617178347,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "isa3jryzkoz",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668614586840,
+  "history_end_time" : 1668614586840,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nudpqnzzxug",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668613041876,
+  "history_end_time" : 1668613059645,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "55le92mor67",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668606689730,
+  "history_end_time" : 1668611987868,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "q3zthkn2qhs",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668602171169,
+  "history_end_time" : 1668606680238,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "w9y5jsz0eyh",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667848842728,
+  "history_end_time" : 1667848842728,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "crsnipwgtgh",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667848671817,
+  "history_end_time" : 1667848802715,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "plf5gex4dwx",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667835946163,
+  "history_end_time" : 1667835946163,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "4ic30a38tgq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667834754397,
+  "history_end_time" : 1667834755667,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jxxib6voyr7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667833562581,
+  "history_end_time" : 1667834752614,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fsq3yroq0u6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667656271465,
+  "history_end_time" : 1667656271465,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "y9gi39w12u9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667654259199,
+  "history_end_time" : 1667656266944,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "x6a6psz9s1t",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667652444650,
+  "history_end_time" : 1667652444650,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "xeohzes7iog",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667578123132,
+  "history_end_time" : 1667578123132,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "fzbjmn1qt0f",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667567849263,
+  "history_end_time" : 1667578113300,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "akveo1a83c0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667567845346,
+  "history_end_time" : 1667567845346,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vtd47f6clr5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667566836881,
+  "history_end_time" : 1667567844464,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "djh334a3i8w",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667566406600,
+  "history_end_time" : 1667566406600,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "m2g0ou9t5y6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667564943769,
+  "history_end_time" : 1667566400513,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lvkhv8mm246",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667524735801,
+  "history_end_time" : 1667562870439,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jqlgvx3ffgq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667188267827,
+  "history_end_time" : 1667188267827,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tz3se2e4ub8",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667187373659,
+  "history_end_time" : 1667188257035,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "sc6feyxva2j",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667187034112,
+  "history_end_time" : 1667187364180,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "eoe7xowhlmt",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667186333395,
+  "history_end_time" : 1667186333395,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ufg06gr9fez",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667186213046,
+  "history_end_time" : 1667186314342,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lbj5p71vgn4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667186212814,
+  "history_end_time" : 1667186212814,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "xwuvph8rwed",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667185556583,
+  "history_end_time" : 1667186204424,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "53mqhud0wb6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667185421083,
+  "history_end_time" : 1667185421083,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "6rtpoudz3lo",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667185410495,
+  "history_end_time" : 1667185419414,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "v1do4eba40s",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667184378576,
+  "history_end_time" : 1667185392921,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "j3b7cvi63ci",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667184365791,
+  "history_end_time" : 1667184373434,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fmdoy1kee3x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667184279345,
+  "history_end_time" : 1667184298770,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "44tlxmd01i5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667184189659,
+  "history_end_time" : 1667184270205,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "as3hnaaxh1l",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667180717067,
+  "history_end_time" : 1667180717067,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "drvb26mujb1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667180445902,
+  "history_end_time" : 1667180628891,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rrjz5npzbxx",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667180388543,
+  "history_end_time" : 1667180438835,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rkhmd1vsvk8",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667180305868,
+  "history_end_time" : 1667180359940,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qt60z2pdceq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667180257727,
+  "history_end_time" : 1667180257727,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
   "history_id" : "8hk4sm9cq1w",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -14,6 +584,26 @@
   "history_output" : "Skipped",
   "history_begin_time" : 1667085498464,
   "history_end_time" : 1667091234819,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "kq7ptc3ojir",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715954449,
+  "history_end_time" : 1666715960609,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "c9tpxjgw3f9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666715918476,
+  "history_end_time" : 1666715941356,
   "history_notes" : null,
   "history_process" : "23nut7",
   "host_id" : "100001",

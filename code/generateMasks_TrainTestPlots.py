@@ -59,5 +59,5 @@ test_subset = subset_arrays(
     save_folder=test_folder,
 )
 
-plt.savefig('/Users/lakshmichetana/ML_eddies_Output/Train_Test_Subset_Img.png', bbox_inches ="tight")
+plt.savefig(f'{figOutputFolder}/Train_Test_Subset_Img.png', bbox_inches ="tight")
 

@@ -1,4 +1,244 @@
 [{
+  "history_id" : "vmavwwcc9ej",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1668660164382,
+  "history_end_time" : 1668660168952,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ZJdyCYnPW04S",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1668629041993,
+  "history_end_time" : 1668629046328,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "stycip8s64d",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1668628627782,
+  "history_end_time" : 1668628632119,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "54pic8jgyq1",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1668624427537,
+  "history_end_time" : 1668624431958,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "i2k5m93965t",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1668624082944,
+  "history_end_time" : 1668624087820,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "3prrwkksmay",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/3prrwkksmay/animation.py\", line 3, in <module>\n    from pytorch import *\n  File \"/Users/lakshmichetana/gw-workspace/3prrwkksmay/pytorch.py\", line 4, in <module>\n    from Eddy_Dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/3prrwkksmay/Eddy_Dataloader.py\", line 9, in <module>\n    val_loader, _ = get_eddy_dataloader(\n  File \"/Users/lakshmichetana/gw-workspace/3prrwkksmay/data_utils.py\", line 34, in get_eddy_dataloader\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n  File \"/Users/lakshmichetana/gw-workspace/3prrwkksmay/data_utils.py\", line 47, in get_eddy_dataset\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n  File \"/Users/lakshmichetana/gw-workspace/3prrwkksmay/data_utils.py\", line 82, in read_npz_files\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/gw-workspace/3prrwkksmay/data_utils.py\", line 82, in <listcomp>\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py\", line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz'\n",
+  "history_begin_time" : 1668623684360,
+  "history_end_time" : 1668623689206,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wgec13qu3d9",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/wgec13qu3d9/animation.py\", line 3, in <module>\n    from pytorch import *\n  File \"/Users/lakshmichetana/gw-workspace/wgec13qu3d9/pytorch.py\", line 4, in <module>\n    from Eddy_Dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/wgec13qu3d9/Eddy_Dataloader.py\", line 9, in <module>\n    val_loader, _ = get_eddy_dataloader(\n  File \"/Users/lakshmichetana/gw-workspace/wgec13qu3d9/data_utils.py\", line 34, in get_eddy_dataloader\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n  File \"/Users/lakshmichetana/gw-workspace/wgec13qu3d9/data_utils.py\", line 47, in get_eddy_dataset\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n  File \"/Users/lakshmichetana/gw-workspace/wgec13qu3d9/data_utils.py\", line 82, in read_npz_files\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/gw-workspace/wgec13qu3d9/data_utils.py\", line 82, in <listcomp>\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py\", line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-993f590b-4b06-4822-9239-e83745a79dc7/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz'\n",
+  "history_begin_time" : 1668621941862,
+  "history_end_time" : 1668621946465,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "me2rf1dyfd9",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/me2rf1dyfd9/animation.py\", line 3, in <module>\n    from pytorch import *\n  File \"/Users/lakshmichetana/gw-workspace/me2rf1dyfd9/pytorch.py\", line 4, in <module>\n    from Eddy_Dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/me2rf1dyfd9/Eddy_Dataloader.py\", line 9, in <module>\n    val_loader, _ = get_eddy_dataloader(\n  File \"/Users/lakshmichetana/gw-workspace/me2rf1dyfd9/data_utils.py\", line 34, in get_eddy_dataloader\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n  File \"/Users/lakshmichetana/gw-workspace/me2rf1dyfd9/data_utils.py\", line 47, in get_eddy_dataset\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n  File \"/Users/lakshmichetana/gw-workspace/me2rf1dyfd9/data_utils.py\", line 82, in read_npz_files\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/gw-workspace/me2rf1dyfd9/data_utils.py\", line 82, in <listcomp>\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py\", line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-993f590b-4b06-4822-9239-e83745a79dc7/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz'\n",
+  "history_begin_time" : 1668619507769,
+  "history_end_time" : 1668619512346,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "66es8fnkvg4",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/66es8fnkvg4/animation.py\", line 3, in <module>\n    from pytorch import *\n  File \"/Users/lakshmichetana/gw-workspace/66es8fnkvg4/pytorch.py\", line 4, in <module>\n    from Eddy_Dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/66es8fnkvg4/Eddy_Dataloader.py\", line 9, in <module>\n    val_loader, _ = get_eddy_dataloader(\n  File \"/Users/lakshmichetana/gw-workspace/66es8fnkvg4/data_utils.py\", line 34, in get_eddy_dataloader\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n  File \"/Users/lakshmichetana/gw-workspace/66es8fnkvg4/data_utils.py\", line 47, in get_eddy_dataset\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n  File \"/Users/lakshmichetana/gw-workspace/66es8fnkvg4/data_utils.py\", line 82, in read_npz_files\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/gw-workspace/66es8fnkvg4/data_utils.py\", line 82, in <listcomp>\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py\", line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-993f590b-4b06-4822-9239-e83745a79dc7/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz'\n",
+  "history_begin_time" : 1668614710352,
+  "history_end_time" : 1668614714698,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "lv5z5ffez3c",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "",
+  "history_begin_time" : 1667848854224,
+  "history_end_time" : 1667848863525,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ugf9wjsmerr",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-11-05_08-59\n==============================================================================\n",
+  "history_begin_time" : 1667653192215,
+  "history_end_time" : 1667653444640,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "su38b2s6knw",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-11-04_12-21\n==============================================================================\n",
+  "history_begin_time" : 1667578869441,
+  "history_end_time" : 1667579111178,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hw8iq8lb0x5",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-11-04_09-08\n==============================================================================\n",
+  "history_begin_time" : 1667567283782,
+  "history_end_time" : 1667567603469,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "spxh9n7gnp9",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-31_00-04\n==============================================================================\n",
+  "history_begin_time" : 1667189055896,
+  "history_end_time" : 1667189351134,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "x09fvk2g7z3",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "",
+  "history_begin_time" : 1667186542787,
+  "history_end_time" : 1667186619268,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xs7uee14z2c",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-30_23-18\n==============================================================================\n",
+  "history_begin_time" : 1667186322449,
+  "history_end_time" : 1667186619204,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "lacfvvclwcv",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1667186278760,
+  "history_end_time" : 1667186312331,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3z7sgwqno7v",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-30_23-17\n==============================================================================\n",
+  "history_begin_time" : 1667186244057,
+  "history_end_time" : 1667186541479,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mEjYjnQQ3jsB",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-30_22-27\n==============================================================================\n",
+  "history_begin_time" : 1667183275157,
+  "history_end_time" : 1667183569941,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "x2cpc26e2h9",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"animation.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\x2cpc26e2h9\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180728138,
+  "history_end_time" : 1667180729110,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "0cqxm4dirnb",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"animation.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\0cqxm4dirnb\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180460305,
+  "history_end_time" : 1667180628882,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "htqi1hxy2eb",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"animation.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\htqi1hxy2eb\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180398753,
+  "history_end_time" : 1667180438820,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7agctybgu4t",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"animation.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\7agctybgu4t\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180316802,
+  "history_end_time" : 1667180359937,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "af3mvext9et",
+  "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"animation.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\af3mvext9et\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180286973,
+  "history_end_time" : 1667180287965,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "da7x1h06wXo3",
   "history_input" : "#Evaluate model on training and validation sets\nfrom eddy_import import *\nfrom pytorch import *\nfrom trainingModel import *\nfrom tensorboard_logger import *\nfrom IPython.display import display, HTML\nimport torch\nfrom matplotlib.animation import ArtistAnimation\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities, \n        # so choose the channels (0, 1, or 2) with the highest prob. \n        preds = preds.argmax(dim=1)\n        \n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n    \nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\nHTML(animation.to_jshtml())\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches =\"tight\")",
   "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nRead 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-28_11-03\n==============================================================================\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-28_11-03\n==============================================================================\nTraining:   0%|          | 0/5 [00:00<?, ?epoch(s)/s]\nTraining:   0%|          | 0/5 [03:00<?, ?epoch(s)/s, train_accuracy=0.24409133, val_accuracy=0.13963155]\nTraining:  20%|██        | 1/5 [03:00<12:02, 180.56s/epoch(s), train_accuracy=0.24409133, val_accuracy=0.13963155]\nTraining:  20%|██        | 1/5 [05:28<12:02, 180.56s/epoch(s), train_accuracy=0.24418917, val_accuracy=0.13963155]\nTraining:  40%|████      | 2/5 [05:28<08:04, 161.64s/epoch(s), train_accuracy=0.24418917, val_accuracy=0.13963155]\nTraining:  40%|████      | 2/5 [08:02<08:04, 161.64s/epoch(s), train_accuracy=0.24487045, val_accuracy=0.13963155]\nTraining:  60%|██████    | 3/5 [08:02<05:15, 157.92s/epoch(s), train_accuracy=0.24487045, val_accuracy=0.13963155]\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
@@ -354,6 +594,326 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1667091390317,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "31127b871xe",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960607,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vamvtlj8gav",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715941349,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "n3baob4a273",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184270202,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5981j3s65ij",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184298767,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "8avn3e1zzkp",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184373432,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "irgh5ovx629",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667185392919,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "8cl6lwuhnk4",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667185419413,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ahuvjh0wbta",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667186204400,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "2m8dbw2w33x",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667187364178,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zli5w8jdeb6",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667188257034,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vxdlk2kaiaf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667562870391,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "710jxw98lda",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667566400493,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hsbf8nk6qzs",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667567844451,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "uhw85q26h1q",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667578113241,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "i53zwyx4opd",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667656266905,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "18ytrepbbsm",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667834752319,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0e12d8htjn1",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667834755580,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "y5eqfliaikz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667848802669,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u3tba3fmffy",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668606680154,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gtlqyh7vtl7",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668611987860,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "uotd2cs98ca",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668613059630,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "w95fzwje1gf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617178343,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "otrk6m8j1kk",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668619427410,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wyaw6plh050",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668619495990,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "xze9fh245pe",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668620774896,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4jje4yl6yvk",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668621623239,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "uya8slwlzz2",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668622988817,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wam5vka6554",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668623057318,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "nkfr2ervdqu",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668623191179,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "eyxa3kqvaq5",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668623428589,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "9fs59gp3n53",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668659548549,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u6xq9b6squ5",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668659937655,
   "history_notes" : null,
   "history_process" : "ohe0x9",
   "host_id" : "100001",

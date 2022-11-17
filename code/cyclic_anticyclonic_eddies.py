@@ -23,4 +23,4 @@ for cnt in contours:
 area /= len(contours)
 print(f"Average contour area: {area:.2f} sq. pixels")
       
-plt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches ="tight")
+plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches ="tight")

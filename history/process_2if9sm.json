@@ -1,4 +1,554 @@
 [{
+  "history_id" : "y651t3c1e4w",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668659963260,
+  "history_end_time" : 1668660022087,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qeswg0i3774",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668659573948,
+  "history_end_time" : 1668659939675,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "b0ores9cnd6",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668657128215,
+  "history_end_time" : 1668659549574,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "20w4j5nyxr3",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668628468341,
+  "history_end_time" : 1668628522148,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hfcx4a4pk8e",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668624245702,
+  "history_end_time" : 1668624310090,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "51z91n67c8k",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668623897686,
+  "history_end_time" : 1668623956251,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dfnx50gzghf",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668623465444,
+  "history_end_time" : 1668623535678,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7dffratrkju",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668623306780,
+  "history_end_time" : 1668623431631,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vchlyf8u3j2",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668623211619,
+  "history_end_time" : 1668623264969,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nlriluz4tza",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668623077696,
+  "history_end_time" : 1668623193261,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "50sjfvk36qw",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1668623007230,
+  "history_end_time" : 1668623057363,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1doksstm1k5",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1668622950732,
+  "history_end_time" : 1668622988871,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fzr36j7pv8w",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668621810019,
+  "history_end_time" : 1668621860234,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9f7nxii4j16",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668620797307,
+  "history_end_time" : 1668621624264,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "bccklwzva1s",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668619692190,
+  "history_end_time" : 1668620775998,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "a6claa51bel",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668619508164,
+  "history_end_time" : 1668619512381,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "69cg5umvex3",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : 1668619495752,
+  "history_end_time" : 1668619497049,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3gwmogzcwmx",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668619446749,
+  "history_end_time" : 1668619489686,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "j9tsk7bj4b2",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668618488943,
+  "history_end_time" : 1668619427442,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "obts0ez7sfd",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668614599616,
+  "history_end_time" : 1668614645181,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b0idin1pmjc",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "",
+  "history_begin_time" : 1668613059231,
+  "history_end_time" : 1668613060677,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "vpjwlmxkzan",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668606706111,
+  "history_end_time" : 1668611987889,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "75f2c6y873c",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668602195804,
+  "history_end_time" : 1668606681671,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5v0g72tat2j",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1667848843641,
+  "history_end_time" : 1667848843641,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ccm3c7h0bky",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1667848692050,
+  "history_end_time" : 1667848802946,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gr6ddvlag01",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667835962074,
+  "history_end_time" : 1667836047764,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "35dus6955tf",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667833579348,
+  "history_end_time" : 1667834754094,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "33q0bbcd2eq",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667656275339,
+  "history_end_time" : 1667656278583,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "td3xk3kxhzl",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667654274800,
+  "history_end_time" : 1667656268338,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wv3owibaqdi",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667652458922,
+  "history_end_time" : 1667652501447,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "43ep7rylo6m",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667578137412,
+  "history_end_time" : 1667578184046,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "j1xuavvmd3k",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667567854552,
+  "history_end_time" : 1667578114369,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7lthyt4gncn",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667567854458,
+  "history_end_time" : 1667567949628,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cwtuzzuk5b2",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667566855113,
+  "history_end_time" : 1667567846604,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "z1828ismkdp",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667566411735,
+  "history_end_time" : 1667566416839,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0tkebi4s94h",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667564961794,
+  "history_end_time" : 1667566401784,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "epxjro1v3n9",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667524752870,
+  "history_end_time" : 1667562871692,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0kebkc9q6tp",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667188282464,
+  "history_end_time" : 1667188327565,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zdkakhcyklu",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667187388787,
+  "history_end_time" : 1667188260060,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5zksixobgdq",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667187049545,
+  "history_end_time" : 1667187366266,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "xg7xg53iqu6",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667186347306,
+  "history_end_time" : 1667186394462,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "j1rylu989vp",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667186228876,
+  "history_end_time" : 1667186314352,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3ufoigj68fi",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667186223023,
+  "history_end_time" : 1667186226828,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pv1v55ycujy",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667185572353,
+  "history_end_time" : 1667186205471,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "r66mzj7qfqh",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667185435939,
+  "history_end_time" : 1667185464788,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9ncwb32vbt4",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1667185417359,
+  "history_end_time" : 1667185419427,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "iemuzw3yzn8",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667184392920,
+  "history_end_time" : 1667185395962,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "n143ot8h4ft",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1667184294801,
+  "history_end_time" : 1667184298795,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jc588ek53gh",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667184203396,
+  "history_end_time" : 1667184272284,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "Hp8XbasQnSgO",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1667181125598,
+  "history_end_time" : 1667181169183,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "ov19pr1p316",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"Add_Segmentation_Plots.py\", line 2, in <module>\n    from eddy_plots import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\ov19pr1p316\\eddy_plots.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\ov19pr1p316\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180720895,
+  "history_end_time" : 1667180722279,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "nm1k6f9bmb1",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"Add_Segmentation_Plots.py\", line 2, in <module>\n    from eddy_plots import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\nm1k6f9bmb1\\eddy_plots.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\nm1k6f9bmb1\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180452191,
+  "history_end_time" : 1667180628924,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "t7k2p0ec5v0",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"Add_Segmentation_Plots.py\", line 2, in <module>\n    from eddy_plots import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\t7k2p0ec5v0\\eddy_plots.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\t7k2p0ec5v0\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180392188,
+  "history_end_time" : 1667180438927,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "drib1i6dfqg",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"Add_Segmentation_Plots.py\", line 2, in <module>\n    from eddy_plots import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\drib1i6dfqg\\eddy_plots.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\drib1i6dfqg\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180310275,
+  "history_end_time" : 1667180359949,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "yg7r3rt9mla",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"Add_Segmentation_Plots.py\", line 2, in <module>\n    from eddy_plots import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\yg7r3rt9mla\\eddy_plots.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\yg7r3rt9mla\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180277506,
+  "history_end_time" : 1667180278553,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "m04reodlese",
   "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
   "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
@@ -804,6 +1354,56 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1664325180121,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lmhmhsmsbhd",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960610,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jes7ls66cbd",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715941358,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "tliuitc2wmk",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184373466,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "dwlb2d8xypu",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667834755769,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ps9dcs0joua",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617179403,
   "history_notes" : null,
   "history_process" : "2if9sm",
   "host_id" : "100001",

@@ -1,0 +1,211 @@
+[{
+  "history_id" : "mc0zmfv7xft",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195040,
+  "history_end_time" : 1668623195040,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "prvjj3hcm3x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195046,
+  "history_end_time" : 1668623195046,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "zq6q1cda0z5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195065,
+  "history_end_time" : 1668623195065,
+  "history_notes" : null,
+  "history_process" : "ljp3lh",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "2ugr9jy6qqw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195067,
+  "history_end_time" : 1668623195067,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "6xcwib6x8cu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195072,
+  "history_end_time" : 1668623195072,
+  "history_notes" : null,
+  "history_process" : "nzmtjk",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "92vxhx7jdbr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195074,
+  "history_end_time" : 1668623195074,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "3dq0m76mmmh",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1668623195261,
+  "history_end_time" : 1668623198570,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7nt0jap8tyl",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOuputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/7nt0jap8tyl/Eddy_plotvariable.py\", line 15, in <module>\n    plt.savefig(f'{figOuputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\nNameError: name 'figOuputFolder' is not defined\n",
+  "history_begin_time" : 1668623200301,
+  "history_end_time" : 1668623203698,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "i1xu43057x6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195082,
+  "history_end_time" : 1668623195082,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1tt203ghyue",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195083,
+  "history_end_time" : 1668623195083,
+  "history_notes" : null,
+  "history_process" : "l9f2t3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "g49fw7nnfjv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195085,
+  "history_end_time" : 1668623195085,
+  "history_notes" : null,
+  "history_process" : "4o6voy",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "b2u8aqkkmyw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195086,
+  "history_end_time" : 1668623195086,
+  "history_notes" : null,
+  "history_process" : "j4jm66",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hd50jvs224u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195087,
+  "history_end_time" : 1668623195087,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "s4f9n028clw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195090,
+  "history_end_time" : 1668623195090,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "yj6evgh65lr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195091,
+  "history_end_time" : 1668623195091,
+  "history_notes" : null,
+  "history_process" : "oc42ub",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "cd29cffulyl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195092,
+  "history_end_time" : 1668623195092,
+  "history_notes" : null,
+  "history_process" : "bzgeyy",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "lr0wcvo28zv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668623195093,
+  "history_end_time" : 1668623195093,
+  "history_notes" : null,
+  "history_process" : "bomi2j",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "85efbw50oi2",
+  "history_input" : "#getting the test dates and files of training sets from 1998 - 2018 and from training set 2019 and also setting the logging level as ERROR\nfrom eddy_import import *\nfrom importing_multiprocessor import *\nfrom eddy_paths import *\nfrom eddy_plots import *\nimport logging\nfrom subset_arrays import *\n#from Generate_Masks import *\n# northern pacific (32x32 degree -> 128x128 pixels)\n\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 2019), range(1, 13), [1, 10, 20, 30], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 13), [1, 10, 20, 30], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)\n\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)\n\nplt.savefig(f'{figOutputFolder}/Train_Test_Subset_Img.png', bbox_inches =\"tight\")\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1668623266416,
+  "history_end_time" : 1668623266376,
+  "history_notes" : null,
+  "history_process" : "uji5d1",
+  "host_id" : "100001",
+  "indicator" : "Running"
+},{
+  "history_id" : "h8x1zargwq3",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\nfrom eddy_paths import *\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-5,\n    vmax=5,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter_with_updatedVminVmax&Wavelength_KM.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 100 from 700\nwavelength_km = 100\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-5,\n    vmax=5,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered_with_updatedVminVmax&Wavelength_KM.png', bbox_inches =\"tight\")\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668623204959,
+  "history_end_time" : 1668623210173,
+  "history_notes" : null,
+  "history_process" : "k3gm1y",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vchlyf8u3j2",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668623211619,
+  "history_end_time" : 1668623264969,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "uucpww2mcgv",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\n#updated the r4ef details and also the vmin and vmax values\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-5, vmax=5, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-250\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-250\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m)_with_UpdatedVminVmax&RefValues.png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig(f'{figOutputFolder}/Segmentation Mask_with_UpdatedVminVmax&RefValues.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668623266942,
+  "history_end_time" : 1668623372105,
+  "history_notes" : null,
+  "history_process" : "xm5gfq",
+  "host_id" : "100001",
+  "indicator" : "Done"
+}]

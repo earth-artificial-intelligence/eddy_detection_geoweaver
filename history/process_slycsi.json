@@ -1,4 +1,244 @@
 [{
+  "history_id" : "jyxuhm7h2tw",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1668660143550,
+  "history_end_time" : 1668660148572,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "otya8418ke0",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1668628607465,
+  "history_end_time" : 1668628612200,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b0ejy8ivg2p",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1668624407470,
+  "history_end_time" : 1668624412299,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1aybemk13x9",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1668624062667,
+  "history_end_time" : 1668624068118,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qz9sws6atv2",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1668623665202,
+  "history_end_time" : 1668623670391,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "s52jof3bfmu",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1668621924492,
+  "history_end_time" : 1668621928965,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "u4gy1ienmb0",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1668619493746,
+  "history_end_time" : 1668619498524,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "a1ekanu2ymh",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1668614693440,
+  "history_end_time" : 1668614697592,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "z8ljejuaik1",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667834270361,
+  "history_end_time" : 1667834752214,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mzh6nri40ra",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667652568789,
+  "history_end_time" : 1667652572324,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nkkfp4trujg",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667578264392,
+  "history_end_time" : 1667578268007,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "d8ghcdk4ngx",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667566502171,
+  "history_end_time" : 1667566506785,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "je6su553lxb",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667188378799,
+  "history_end_time" : 1667188382048,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mdlgn7whpq1",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667186443642,
+  "history_end_time" : 1667186447221,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4yktenrh0lz",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667186239067,
+  "history_end_time" : 1667186312243,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0d136g1slwm",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667186228829,
+  "history_end_time" : 1667186232305,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "y1cw2csq5ti",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667185671365,
+  "history_end_time" : 1667186204378,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "nt37iajpvvf",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667185511944,
+  "history_end_time" : 1667185515772,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pWiEYXrrMdYK",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1667183223754,
+  "history_end_time" : 1667183227663,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "dgv258bhy1n",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"imports_trainEvaluateEddyModel.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\dgv258bhy1n\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180724328,
+  "history_end_time" : 1667180725375,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "dg6urnkkfnq",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"imports_trainEvaluateEddyModel.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\dg6urnkkfnq\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180455450,
+  "history_end_time" : 1667180628869,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "6ihgpwin8j6",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"imports_trainEvaluateEddyModel.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\6ihgpwin8j6\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180395254,
+  "history_end_time" : 1667180438737,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "q8itsyf4x2i",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"imports_trainEvaluateEddyModel.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\q8itsyf4x2i\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180313187,
+  "history_end_time" : 1667180359934,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zi19rxwrnlv",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"imports_trainEvaluateEddyModel.py\", line 2, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\zi19rxwrnlv\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180280587,
+  "history_end_time" : 1667180281545,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "5VmA72NYv0ev",
   "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
   "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nFound 987 files for 1998-2018.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 116, in spawn_main\n    exitcode = _main(fd, parent_sentinel)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 125, in _main\n    prepare(preparation_data)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 236, in prepare\n    _fixup_main_from_path(data['init_main_from_path'])\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 287, in _fixup_main_from_path\n    main_content = runpy.run_path(main_path,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/generateMasks_TrainTestPlots.py\", line 3, in <module>\n    from importing_multiprocessor import *\n  File \"/Users/lakshmichetana/gw-workspace/JRaDWngNqziq/importing_multiprocessor.py\", line 7, in <module>\n    pool = multiprocessing.Pool(processes=2)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 119, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 212, in __init__\n    self._repopulate_pool()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 303, in _repopulate_pool\n    return self._repopulate_pool_static(self._ctx, self.Process,\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/pool.py\", line 326, in _repopulate_pool_static\n    w.start()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/process.py\", line 121, in start\n    self._popen = self._Popen(self)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/context.py\", line 284, in _Popen\n    return Popen(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 32, in __init__\n    super().__init__(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_fork.py\", line 19, in __init__\n    self._launch(process_obj)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/popen_spawn_posix.py\", line 42, in _launch\n    prep_data = spawn.get_preparation_data(process_obj._name)\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 154, in get_preparation_data\n    _check_not_importing_main()\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/spawn.py\", line 134, in _check_not_importing_main\n    raise RuntimeError('''\nRuntimeError: \n        An attempt has been made to start a new process before the\n        current process has finished its bootstrapping phase.\n        This probably means that you are not using fork to start your\n        child processes and you have forgotten to use the proper idiom\n        in the main module:\n            if __name__ == '__main__':\n                freeze_support()\n                ...\n        The \"freeze_support()\" line can be omitted if the program\n        is not going to be frozen to produce an executable.\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
@@ -314,6 +554,306 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1667091390293,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "urz1c0g2yk5",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960597,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "tu5qrq9ss4s",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715941313,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hgxcblpqsix",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184270198,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gt6pdd1w5wz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184298761,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5ui4vo9ems0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184373314,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3u3f8f3jdd0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667185392907,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fpfydf6yjuf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667185419189,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "olqxcefuott",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667187364172,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "cvimcn2eatz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667188257029,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ba0fd2sntjx",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667562870256,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "xvp4mf0pqd8",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667566400374,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u2x1vf6c9yz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667567844378,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "h3rxtz838n3",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667578113175,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "a54tmhauau6",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667656266843,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "kqd5bpc556p",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667834755445,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "9q81hw4a4f0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667848802615,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "p8kl2793ipl",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668606680048,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "xzu2tocprih",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668611987835,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zkj2dg8opn4",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668613059619,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "xftu2ptolcs",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617178335,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ykunlbkt70h",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668619426454,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "esvkag3pcbw",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668619495920,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jhwo9r9w01h",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668620774881,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "2kfj1tex3py",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668621623224,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "118t9j0hsxk",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668622988811,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "n9j9cnhd2kv",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668623057315,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5fn1ybgwfbo",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668623191175,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rr88q2zmfh2",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668623428579,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7sb27axjnqk",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668659548495,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "addr2eu7usy",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668659937651,
   "history_notes" : null,
   "history_process" : "slycsi",
   "host_id" : "100001",

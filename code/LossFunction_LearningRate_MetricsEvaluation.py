@@ -12,14 +12,14 @@ import numpy as np
 from tqdm.auto import tqdm
 from eddy_train_utils import run_batch, write_metrics_to_tensorboard, filter_scalar_metrics, EarlyStopping
 
+
 #Run the training loop for prescribed num_epochs
-from trainingModel import *
-from tensorboard_logger import *
 from declaring_epochs_size import *
 from eddy_train_utils import add_hparams
 
+print('Before Loss Function')
 loss_fn = torch.nn.CrossEntropyLoss()
-
+print('After loss Function')
 # TODO (homework): Try 
 # loss_fn = torch.nn.CrossEntropyLoss(weight=torch.Tensor(total_pixels/class_frequency))
 
@@ -27,6 +27,7 @@ loss_fn = torch.nn.CrossEntropyLoss()
 initial_lr = 1e-6
 max_lr = 5e-4
 
+print('Before scheduler initiation')
 optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)
 scheduler = torch.optim.lr_scheduler.OneCycleLR(
     optimizer,
@@ -36,6 +37,7 @@ scheduler = torch.optim.lr_scheduler.OneCycleLR(
     div_factor=max_lr / initial_lr,
     pct_start=0.3,
 )
+print('after scheduler initiation')
 
 #Defining and using the get_metrics function
 def get_metrics(N, sync=False):
@@ -84,6 +86,7 @@ train_metrics, val_metrics = get_metrics(num_classes)
 #Tensor Logger
 #We use the tensor logger to log our loss and metrics throughout the training process.
 import datetime
+print('before tensorboard dir')
 tensorboard_dir = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),
     "tensorboard",
@@ -96,7 +99,7 @@ print(
     f"Writing Tensorboard logs to {writer.log_dir}"
     f"\n{''.join(['=']*(28 + len(writer.log_dir)))}"
 )
-
+print('after tensorboard dir')
 
 #Train the model: Defining training loop
 
@@ -104,7 +107,7 @@ num_plots_in_tensorboard = 5
 # will populate this later with random numbers:
 random_plot_indices = np.zeros((num_plots_in_tensorboard,), np.uint8)
 
-
+print('before run_epoch')
 def run_epoch(
     epoch,
     model,
@@ -192,7 +195,7 @@ def run_epoch(
     val_m = filter_scalar_metrics(val_m)
 
     return train_loss, val_loss, train_m, val_m
-
+print('after run_epoch')
 
 def plot_eddies_on_axes(date, img, mask, pred, a1, a2, a3):
     im1 = a1.imshow(img.squeeze(), cmap="viridis")
@@ -333,6 +336,8 @@ metrics_dict = {
 add_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)
 writer.close()
 
+print('model path setting')
 # save model to tensorboard folder
 model_path = os.path.join(tensorboard_dir, f"model_ckpt_{N+1}.pt")
+print('entering save option')
 torch.save(model.state_dict(), model_path)

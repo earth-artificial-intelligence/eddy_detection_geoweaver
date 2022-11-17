@@ -6,6 +6,7 @@ import numpy as np
 import torch
 from get_eddy_dataloader import *
 from eddynet import EddyNet
+from eddy_paths import figOutputFolder
 
 # set binary = false if we want to distinguish between cyclonic and anticyclonic
 binary = False
@@ -32,7 +33,7 @@ print(
 
 #Using plot_sample to visualize the dataset we just loaded.
 train_loader.dataset.plot_sample(N=3)
-plt.savefig("/Users/lakshmichetana/ML_eddies_Output/datasetPlots",bbox="tight")
+plt.savefig(f"{figOutputFolder}/datasetPlots",bbox="tight")
 
 #Segmentation Model:
 num_classes = 2 if binary else 3

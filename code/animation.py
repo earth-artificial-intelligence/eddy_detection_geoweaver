@@ -44,4 +44,4 @@ with torch.no_grad():
 animation.save(os.path.join(tensorboard_dir, "val_predictions.gif"), writer="pillow")
 HTML(animation.to_jshtml())
 
-plt.savefig('/Users/lakshmichetana/ML_eddies_Output/Animations.png', bbox_inches ="tight")
+plt.savefig(f'{figOutputFolder}/Animations.png', bbox_inches ="tight")

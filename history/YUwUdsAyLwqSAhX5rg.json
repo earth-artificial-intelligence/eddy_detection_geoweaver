@@ -1,0 +1,261 @@
+[{
+  "history_id" : "xftu2ptolcs",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617178335,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "9wh2y9hxs9y",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176448,
+  "history_end_time" : 1668617178341,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "oxyytx8l05m",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176473,
+  "history_end_time" : 1668617178342,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "h169r81i9vr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176476,
+  "history_end_time" : 1668617178342,
+  "history_notes" : null,
+  "history_process" : "ljp3lh",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jd6r3hztbox",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176483,
+  "history_end_time" : 1668617178342,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "w95fzwje1gf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617178343,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "or5f6x8g25j",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617178345,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "9nfc17h5rsb",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176499,
+  "history_end_time" : 1668617178347,
+  "history_notes" : null,
+  "history_process" : "nzmtjk",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f4chemrtzu7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176500,
+  "history_end_time" : 1668617178347,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "a3lfdzse340",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176502,
+  "history_end_time" : 1668617178347,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5er74tkytvj",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\nfrom eddy_paths import *\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOuputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1668617176622,
+  "history_end_time" : 1668617178353,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cmicc31lycw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176511,
+  "history_end_time" : 1668617179378,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hlcl1ij3v6a",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176513,
+  "history_end_time" : 1668617179379,
+  "history_notes" : null,
+  "history_process" : "l9f2t3",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "z5qs26ezahy",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176514,
+  "history_end_time" : 1668617179380,
+  "history_notes" : null,
+  "history_process" : "4o6voy",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1nwkxr0z2o0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176514,
+  "history_end_time" : 1668617179381,
+  "history_notes" : null,
+  "history_process" : "j4jm66",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zb6yk3qrbex",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176516,
+  "history_end_time" : 1668617179382,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fbaga1g97mh",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176516,
+  "history_end_time" : 1668617179382,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ni2e5n794w7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176518,
+  "history_end_time" : 1668617179383,
+  "history_notes" : null,
+  "history_process" : "oc42ub",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ihfhuzg583m",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176519,
+  "history_end_time" : 1668617179383,
+  "history_notes" : null,
+  "history_process" : "bzgeyy",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "g5qk0c1ir3g",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1668617176519,
+  "history_end_time" : 1668617179383,
+  "history_notes" : null,
+  "history_process" : "bomi2j",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jlxiilove1y",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617179384,
+  "history_notes" : null,
+  "history_process" : "uji5d1",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0orl3yej89n",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\nfrom eddy_import import *\nimport numpy as np\nimport torch\nfrom get_eddy_dataloader import *\nfrom eddynet import EddyNet\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/0orl3yej89n/EddyDataLoader_PixelTraining_TrainingDataset_&_Pytorch.py\", line 7, in <module>\n    from get_eddy_dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/0orl3yej89n/get_eddy_dataloader.py\", line 24, in <module>\n    val_loader, _ = get_eddy_dataloader(\n  File \"/Users/lakshmichetana/gw-workspace/0orl3yej89n/data_utils.py\", line 34, in get_eddy_dataloader\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n  File \"/Users/lakshmichetana/gw-workspace/0orl3yej89n/data_utils.py\", line 47, in get_eddy_dataset\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n  File \"/Users/lakshmichetana/gw-workspace/0orl3yej89n/data_utils.py\", line 82, in read_npz_files\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/gw-workspace/0orl3yej89n/data_utils.py\", line 82, in <listcomp>\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py\", line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-993f590b-4b06-4822-9239-e83745a79dc7/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz'\n",
+  "history_begin_time" : 1668617180027,
+  "history_end_time" : 1668617186554,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "10uhvqnmq74",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617179399,
+  "history_notes" : null,
+  "history_process" : "tldnzh",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rnmqjrng5w6",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\nfrom eddy_paths import *\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-5,\n    vmax=5,\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/ADT(m)_before_high-pass_filter_with_updatedVminVmax&Wavelength_KM.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 100 from 700\nwavelength_km = 100\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-5,\n    vmax=5,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered_with_updatedVminVmax&Wavelength_KM.png', bbox_inches =\"tight\")\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1668617179993,
+  "history_end_time" : 1668617186521,
+  "history_notes" : null,
+  "history_process" : "k3gm1y",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ps9dcs0joua",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617179403,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ae2ocqn1zui",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617179405,
+  "history_notes" : null,
+  "history_process" : "xm5gfq",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+}]

@@ -23,4 +23,4 @@ plt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m)_w
 mask = generate_segmentation_mask(
     g_filtered, anticyclonic, cyclonic, -180, 0, plot=True
 )
-plt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask_with_UpdatedVminVmax&RefValues.png', bbox_inches ="tight")
+plt.savefig(f'{figOutputFolder}/Segmentation Mask_with_UpdatedVminVmax&RefValues.png', bbox_inches ="tight")

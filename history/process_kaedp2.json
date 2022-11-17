@@ -1,4 +1,234 @@
 [{
+  "history_id" : "pnht892ssi0",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1668660170850,
+  "history_end_time" : 1668660175361,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "y7i2druss2p",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1668628633336,
+  "history_end_time" : 1668628637643,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "q0bv1ajd3dc",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1668624433413,
+  "history_end_time" : 1668624437938,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "so3fq00801z",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1668624089672,
+  "history_end_time" : 1668624094642,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "nhgtoe0f2gw",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/nhgtoe0f2gw/cyclic_anticyclonic_eddies.py\", line 4, in <module>\n    from animation import *\n  File \"/Users/lakshmichetana/gw-workspace/nhgtoe0f2gw/animation.py\", line 3, in <module>\n    from pytorch import *\n  File \"/Users/lakshmichetana/gw-workspace/nhgtoe0f2gw/pytorch.py\", line 4, in <module>\n    from Eddy_Dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/nhgtoe0f2gw/Eddy_Dataloader.py\", line 9, in <module>\n    val_loader, _ = get_eddy_dataloader(\n  File \"/Users/lakshmichetana/gw-workspace/nhgtoe0f2gw/data_utils.py\", line 34, in get_eddy_dataloader\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n  File \"/Users/lakshmichetana/gw-workspace/nhgtoe0f2gw/data_utils.py\", line 47, in get_eddy_dataset\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n  File \"/Users/lakshmichetana/gw-workspace/nhgtoe0f2gw/data_utils.py\", line 82, in read_npz_files\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/gw-workspace/nhgtoe0f2gw/data_utils.py\", line 82, in <listcomp>\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py\", line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz'\n",
+  "history_begin_time" : 1668623690317,
+  "history_end_time" : 1668623695336,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "b4tf3d5nn3b",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/b4tf3d5nn3b/cyclic_anticyclonic_eddies.py\", line 4, in <module>\n    from animation import *\n  File \"/Users/lakshmichetana/gw-workspace/b4tf3d5nn3b/animation.py\", line 3, in <module>\n    from pytorch import *\n  File \"/Users/lakshmichetana/gw-workspace/b4tf3d5nn3b/pytorch.py\", line 4, in <module>\n    from Eddy_Dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/b4tf3d5nn3b/Eddy_Dataloader.py\", line 9, in <module>\n    val_loader, _ = get_eddy_dataloader(\n  File \"/Users/lakshmichetana/gw-workspace/b4tf3d5nn3b/data_utils.py\", line 34, in get_eddy_dataloader\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n  File \"/Users/lakshmichetana/gw-workspace/b4tf3d5nn3b/data_utils.py\", line 47, in get_eddy_dataset\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n  File \"/Users/lakshmichetana/gw-workspace/b4tf3d5nn3b/data_utils.py\", line 82, in read_npz_files\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/gw-workspace/b4tf3d5nn3b/data_utils.py\", line 82, in <listcomp>\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py\", line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-993f590b-4b06-4822-9239-e83745a79dc7/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz'\n",
+  "history_begin_time" : 1668621947523,
+  "history_end_time" : 1668621952050,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "atpkcf24dia",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/atpkcf24dia/cyclic_anticyclonic_eddies.py\", line 4, in <module>\n    from animation import *\n  File \"/Users/lakshmichetana/gw-workspace/atpkcf24dia/animation.py\", line 3, in <module>\n    from pytorch import *\n  File \"/Users/lakshmichetana/gw-workspace/atpkcf24dia/pytorch.py\", line 4, in <module>\n    from Eddy_Dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/atpkcf24dia/Eddy_Dataloader.py\", line 9, in <module>\n    val_loader, _ = get_eddy_dataloader(\n  File \"/Users/lakshmichetana/gw-workspace/atpkcf24dia/data_utils.py\", line 34, in get_eddy_dataloader\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n  File \"/Users/lakshmichetana/gw-workspace/atpkcf24dia/data_utils.py\", line 47, in get_eddy_dataset\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n  File \"/Users/lakshmichetana/gw-workspace/atpkcf24dia/data_utils.py\", line 82, in read_npz_files\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/gw-workspace/atpkcf24dia/data_utils.py\", line 82, in <listcomp>\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py\", line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-993f590b-4b06-4822-9239-e83745a79dc7/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz'\n",
+  "history_begin_time" : 1668619513176,
+  "history_end_time" : 1668619517640,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "7mkbvtiklmw",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/7mkbvtiklmw/cyclic_anticyclonic_eddies.py\", line 4, in <module>\n    from animation import *\n  File \"/Users/lakshmichetana/gw-workspace/7mkbvtiklmw/animation.py\", line 3, in <module>\n    from pytorch import *\n  File \"/Users/lakshmichetana/gw-workspace/7mkbvtiklmw/pytorch.py\", line 4, in <module>\n    from Eddy_Dataloader import *\n  File \"/Users/lakshmichetana/gw-workspace/7mkbvtiklmw/Eddy_Dataloader.py\", line 9, in <module>\n    val_loader, _ = get_eddy_dataloader(\n  File \"/Users/lakshmichetana/gw-workspace/7mkbvtiklmw/data_utils.py\", line 34, in get_eddy_dataloader\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n  File \"/Users/lakshmichetana/gw-workspace/7mkbvtiklmw/data_utils.py\", line 47, in get_eddy_dataset\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n  File \"/Users/lakshmichetana/gw-workspace/7mkbvtiklmw/data_utils.py\", line 82, in read_npz_files\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/gw-workspace/7mkbvtiklmw/data_utils.py\", line 82, in <listcomp>\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n  File \"/Users/lakshmichetana/opt/anaconda3/lib/python3.9/site-packages/numpy/lib/npyio.py\", line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-993f590b-4b06-4822-9239-e83745a79dc7/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz'\n",
+  "history_begin_time" : 1668614716017,
+  "history_end_time" : 1668614720367,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "zrkoylzrda1",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-11-07_14-21\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1667848863870,
+  "history_end_time" : 1667849118302,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hzw4kc6aqob",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-11-05_09-04\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1667653445952,
+  "history_end_time" : 1667653693231,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "thskaeaoxvo",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-11-04_12-25\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1667579112309,
+  "history_end_time" : 1667579353103,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pn4t2p2dhry",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "",
+  "history_begin_time" : 1667567604703,
+  "history_end_time" : 1667567844634,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zh2lpsbt1fk",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-31_00-09\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1667189352648,
+  "history_end_time" : 1667189647635,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7mumcupgo17",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-30_23-23\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1667186620816,
+  "history_end_time" : 1667186917791,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1hbwmjeurva",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-30_23-23\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1667186620102,
+  "history_end_time" : 1667186916845,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "25c7yd0ezd5",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-30_23-22\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1667186541889,
+  "history_end_time" : 1667186839123,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gb0az81ed14",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1667186313035,
+  "history_end_time" : 1667186313331,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "UinA1xuzYeVI",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-30_22-33\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
+  "history_begin_time" : 1667183594933,
+  "history_end_time" : 1667183889693,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "k6jox78r3cx",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"cyclic_anticyclonic_eddies.py\", line 3, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\k6jox78r3cx\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180729972,
+  "history_end_time" : 1667180730864,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "4hvzvj2djhk",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"cyclic_anticyclonic_eddies.py\", line 3, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\4hvzvj2djhk\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180462031,
+  "history_end_time" : 1667180628885,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "yawme5wlh2o",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"cyclic_anticyclonic_eddies.py\", line 3, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\yawme5wlh2o\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180400594,
+  "history_end_time" : 1667180438824,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "89brk5ywooi",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"cyclic_anticyclonic_eddies.py\", line 3, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\89brk5ywooi\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180318435,
+  "history_end_time" : 1667180359937,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fkrhluz53ph",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"cyclic_anticyclonic_eddies.py\", line 3, in <module>\n    from eddy_import import *\n  File \"C:\\Users\\JensenSun\\gw-workspace\\fkrhluz53ph\\eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1667180288032,
+  "history_end_time" : 1667180289013,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "lLQSXYnVKMSN",
   "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/EddyContours.png', bbox_inches =\"tight\")",
   "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n==============================================================================\nWriting Tensorboard logs to /Users/lakshmichetana/tensorboard/2022-10-28_11-20\n==============================================================================\nNumber of anticyclonic eddies: 0\nNumber of cyclonic eddies: 1\nNumber of both eddies: 1\nAverage contour area: 16129.00 sq. pixels\n",
@@ -284,6 +514,326 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1667091390321,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "np584leisnk",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715960608,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4k0zq591dzz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666715941354,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "elrrkdk7c6p",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184270204,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3o9wiqcezo1",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184298768,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "iizlqs8ba8p",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667184373433,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "e7jj52r8yiw",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667185392920,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "d7lub1msqom",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667185419414,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "pblwi5ufp4c",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667186204421,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "whx897xeyb3",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667187364179,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "oh4oir3d5u8",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667188257034,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "sbzy2pi95rx",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667562870411,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rqpw3fhh3zc",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667566400497,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vzs4ybly39c",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667567844454,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ewqerkyek5b",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667578113265,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jjpqu58reze",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667656266930,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3vnontwm15k",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667834752518,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1187hldprdp",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667834755637,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u1x9u4wx6i9",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1667848802700,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "2w0tg356muj",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668606680185,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "tzmu0s0q6xa",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668611987861,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hpaxk1olynz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668613059637,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "or5f6x8g25j",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668617178345,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1cb7yd2v5q5",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668619427413,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "sdcp0u2evqs",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668619495997,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0ar84rg4zjh",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668620774900,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "xo3pcgbpm0x",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668621623241,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "k1itpc1zja8",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668622988818,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "9b9utw1dw5b",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668623057319,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5nr8w8edgk3",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668623191181,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4zpuvsqnwnf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668623428591,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "43n05cp83vh",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668659548551,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vasqsm3vd1s",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1668659937656,
   "history_notes" : null,
   "history_process" : "kaedp2",
   "host_id" : "100001",

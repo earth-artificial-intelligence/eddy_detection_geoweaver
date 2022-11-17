@@ -11,7 +11,7 @@ ax, m = plot_variable(
     vmin=-5,
     vmax=5,
 )
-plt.savefig('/Users/lakshmichetana/ML_eddies_Output/ADT(m)_before_high-pass_filter_with_updatedVminVmax&Wavelength_KM.png', bbox_inches ="tight")
+plt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter_with_updatedVminVmax&Wavelength_KM.png', bbox_inches ="tight")
 #updated wavelength covered kilometers to 100 from 700
 wavelength_km = 100
 
@@ -26,5 +26,5 @@ ax, m = plot_variable(
     vmax=5,
 )
 
-plt.savefig('/Users/lakshmichetana/ML_eddies_Output/ADT(m)-filtered_with_updatedVminVmax&Wavelength_KM.png', bbox_inches ="tight")
+plt.savefig(f'{figOutputFolder}/ADT(m)-filtered_with_updatedVminVmax&Wavelength_KM.png', bbox_inches ="tight")
 
