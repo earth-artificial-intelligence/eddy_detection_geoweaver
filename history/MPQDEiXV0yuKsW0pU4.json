@@ -1,0 +1,261 @@
+[{
+  "history_id" : "x4k5da93roo",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1669125632172,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fxd49t3zor7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125564979,
+  "history_end_time" : 1669125632230,
+  "history_notes" : null,
+  "history_process" : "3hm7db",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "omx6z8ay69g",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565156,
+  "history_end_time" : 1669125632237,
+  "history_notes" : null,
+  "history_process" : "98bbcl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fvg9dghygqb",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565190,
+  "history_end_time" : 1669125632241,
+  "history_notes" : null,
+  "history_process" : "ljp3lh",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "uxgrfpvvndd",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565219,
+  "history_end_time" : 1669125632246,
+  "history_notes" : null,
+  "history_process" : "w484ne",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7fh28efls2e",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1669125632248,
+  "history_notes" : null,
+  "history_process" : "ohe0x9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fd4xjfd71ws",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1669125632263,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "si4pqtpsfy3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565431,
+  "history_end_time" : 1669125632273,
+  "history_notes" : null,
+  "history_process" : "nzmtjk",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hxh2aocfr4i",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565465,
+  "history_end_time" : 1669125632275,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f23u8izl5rm",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1669125566156,
+  "history_end_time" : 1669125632284,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "70wztwjynv4",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1669125572325,
+  "history_end_time" : 1669125632293,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4lhzzx4g9og",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565577,
+  "history_end_time" : 1669125632296,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "j9grjqrlnno",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565593,
+  "history_end_time" : 1669125632306,
+  "history_notes" : null,
+  "history_process" : "l9f2t3",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "t280q6n5tzv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565628,
+  "history_end_time" : 1669125632307,
+  "history_notes" : null,
+  "history_process" : "4o6voy",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wh82axw3r81",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565646,
+  "history_end_time" : 1669125632310,
+  "history_notes" : null,
+  "history_process" : "j4jm66",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0lic5jfuguc",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565654,
+  "history_end_time" : 1669125632318,
+  "history_notes" : null,
+  "history_process" : "39ur7y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "bljeife2juu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565687,
+  "history_end_time" : 1669125632321,
+  "history_notes" : null,
+  "history_process" : "uolls4",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ehdlubvtb1r",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565706,
+  "history_end_time" : 1669125632322,
+  "history_notes" : null,
+  "history_process" : "oc42ub",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "uu85g5yumwv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565725,
+  "history_end_time" : 1669125632327,
+  "history_notes" : null,
+  "history_process" : "bzgeyy",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "dy43tqmk2jp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565731,
+  "history_end_time" : 1669125632330,
+  "history_notes" : null,
+  "history_process" : "bomi2j",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jnas61yb6j3",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1669125632334,
+  "history_notes" : null,
+  "history_process" : "uji5d1",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hsvtbbzeseq",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1669125632356,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "r5hg0haqrqy",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1669125632387,
+  "history_notes" : null,
+  "history_process" : "tldnzh",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ng4fzs4346n",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\nfrom eddy_paths import *\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-5,\n    vmax=5,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter_with_updatedVminVmax&Wavelength_KM.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 100 from 700\nwavelength_km = 100\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-5,\n    vmax=5,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered_with_updatedVminVmax&Wavelength_KM.png', bbox_inches =\"tight\")\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1669125581542,
+  "history_end_time" : 1669125632405,
+  "history_notes" : null,
+  "history_process" : "k3gm1y",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7u9en3qdsck",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-0.15, vmax=0.15, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-180\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-180\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m).png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Segmentation Mask.png', bbox_inches =\"tight\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1669125588436,
+  "history_end_time" : 1669125632480,
+  "history_notes" : null,
+  "history_process" : "2if9sm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e791zf9undf",
+  "history_input" : "#code for plotting segmentation masks, antcyclonic display, cyclonic display and updating the axis\nfrom eddy_plots import *\nfrom eddy_paths import *\nfrom copy import deepcopy\n\n#updated the r4ef details and also the vmin and vmax values\ng, g_filtered, anticyclonic, cyclonic = identify_eddies(example_file, date)\nax, m = plot_variable(\n    g_filtered, \"adt\", \"Detected Eddies on ADT (m)\", vmin=-5, vmax=5, cmap=\"Greys\"\n)\nanticyclonic.display(\n    ax, color=\"r\", linewidth=0.75, label=\"Anticyclonic ({nb_obs} eddies)\", ref=-250\n)\ncyclonic.display(\n    ax, color=\"b\", linewidth=0.75, label=\"Cyclonic ({nb_obs} eddies)\", ref=-250\n)\nax.legend()\nupdate_axes(ax)\n\nplt.savefig('/Users/lakshmichetana/ML_eddies_Output/Detected Eddies on ADT (m)_with_UpdatedVminVmax&RefValues.png', bbox_inches =\"tight\")\n\n# Plot segmentation mask\nmask = generate_segmentation_mask(\n    g_filtered, anticyclonic, cyclonic, -180, 0, plot=True\n)\nplt.savefig(f'{figOutputFolder}/Segmentation Mask_with_UpdatedVminVmax&RefValues.png', bbox_inches =\"tight\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nWe assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1669125633390,
+  "history_end_time" : 1669125693573,
+  "history_notes" : null,
+  "history_process" : "xm5gfq",
+  "host_id" : "100001",
+  "indicator" : "Done"
+}]

@@ -1,4 +1,74 @@
 [{
+  "history_id" : "xkk9oiawt62",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1670331412874,
+  "history_end_time" : 1670331412874,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "zyiq1cm7uaz",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669994030401,
+  "history_end_time" : 1669994030401,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "e7hkDCnQL0nA",
+  "history_input" : "# Importing the required libraries for eddy workflow\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nnum_epochs = 5",
+  "history_output" : "",
+  "history_begin_time" : 1669730001568,
+  "history_end_time" : 1669730004781,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "ly5c6pqnq85",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669729025782,
+  "history_end_time" : 1669729253080,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "yikp4ne0zoe",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669728693192,
+  "history_end_time" : 1669728794553,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hxh2aocfr4i",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565465,
+  "history_end_time" : 1669125632275,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "uef3wpwbt0e",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669035208166,
+  "history_end_time" : 1669035208166,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
   "history_id" : "of0kq74uvlw",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -1199,6 +1269,16 @@
   "host_id" : "100001",
   "indicator" : "Done"
 },{
+  "history_id" : "4lnzxyazabv",
+  "history_input" : "# Write first python in Geoweaver\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "",
+  "history_begin_time" : 1663777408907,
+  "history_end_time" : 1663777409672,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "l11hmaq3l4y",
   "history_input" : "# Write first python in Geoweaver\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
   "history_output" : "",
@@ -1254,6 +1334,16 @@
   "history_output" : "RuntimeError: module compiled against API version 0x10 but this version of numpy is 0xe\nTraceback (most recent call last):\n  File \"eddy_import.py\", line 8, in <module>\n    from py_eddy_tracker.dataset.grid import RegularGridDataset\n  File \"C:\\Users\\user\\anaconda3\\envs\\eddy_env\\lib\\site-packages\\py_eddy_tracker\\dataset\\grid.py\", line 55, in <module>\n    from ..eddy_feature import Amplitude, Contours\n  File \"C:\\Users\\user\\anaconda3\\envs\\eddy_env\\lib\\site-packages\\py_eddy_tracker\\eddy_feature.py\", line 26, in <module>\n    from .poly import winding_number_poly\n  File \"C:\\Users\\user\\anaconda3\\envs\\eddy_env\\lib\\site-packages\\py_eddy_tracker\\poly.py\", line 12, in <module>\n    from Polygon import Polygon\n  File \"C:\\Users\\user\\anaconda3\\envs\\eddy_env\\lib\\site-packages\\Polygon\\__init__.py\", line 5, in <module>\n    from Polygon.cPolygon import *\nImportError: numpy.core.multiarray failed to import\n",
   "history_begin_time" : 1663677698927,
   "history_end_time" : 1663677719940,
+  "history_notes" : null,
+  "history_process" : "6gs3ym",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "2gfc33m7pkb",
+  "history_input" : "# Write first python in Geoweaver\nimport os\nfrom datetime import datetime\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/joe/gw-workspace/2gfc33m7pkb/eddy_import.py\", line 7, in <module>\n    from py_eddy_tracker import data\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1663593216587,
+  "history_end_time" : 1663593217771,
   "history_notes" : null,
   "history_process" : "6gs3ym",
   "host_id" : "100001",

@@ -1,5 +1,4 @@
 # Importing the required libraries for eddy workflow
-from eddy_import import *
 import os
 from datetime import datetime
 

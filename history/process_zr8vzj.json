@@ -1,4 +1,84 @@
 [{
+  "history_id" : "n4xlp2cqil5",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1670331421505,
+  "history_end_time" : 1670331422405,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wwhaefqiihv",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1669994038450,
+  "history_end_time" : 1669994039033,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "voGtX2FsZuT0",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1669730636500,
+  "history_end_time" : 1669730643840,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "lvaVC1awiwhq",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1669729280607,
+  "history_end_time" : 1669729287909,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "p0pim3o731n",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1669729032565,
+  "history_end_time" : 1669729253090,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hfdg8ph4dfr",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1669728701075,
+  "history_end_time" : 1669728794577,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "70wztwjynv4",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1669125572325,
+  "history_end_time" : 1669125632293,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "n3ymstszu4p",
+  "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1669035214310,
+  "history_end_time" : 1669035222301,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
   "history_id" : "3mwk0ia3omv",
   "history_input" : "# setting the vmin and vmax using the eddy 'plot_variable' method\n#from eddy_paths import *\nfrom eddy_paths import figOutputFolder, plot_variable, g\nfrom copy import deepcopy\nfrom matplotlib import pyplot as plt\n\n#updated the vmin and vmax to -1 and 1\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-1,\n    vmax=1,\n)\nplt.savefig(f'{figOutputFolder}/ADT(m)_before_high-pass_filter.png', bbox_inches =\"tight\")\n#updated wavelength covered kilometers to 500 from 700\nwavelength_km = 500\n\ng_filtered = deepcopy(g)\n\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-1,\n    vmax=1,\n)\n\nplt.savefig(f'{figOutputFolder}/ADT(m)-filtered.png', bbox_inches =\"tight\")\n",
   "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
@@ -1309,6 +1389,16 @@
   "host_id" : "100001",
   "indicator" : "Failed"
 },{
+  "history_id" : "pkotb29ovk0",
+  "history_input" : "# Write first python in Geoweaver\nfrom copy import deepcopy\n\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/joe/gw-workspace/pkotb29ovk0/Eddy_plotvariable.py\", line 4, in <module>\n    ax, m = plot_variable(\nNameError: name 'plot_variable' is not defined\n",
+  "history_begin_time" : 1663777411689,
+  "history_end_time" : 1663777411797,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "6wn20jm5203",
   "history_input" : "# Write first python in Geoweaver\nfrom copy import deepcopy\n\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)",
   "history_output" : "Traceback (most recent call last):\n  File \"Eddy_plotvariable.py\", line 4, in <module>\n    ax, m = plot_variable(\nNameError: name 'plot_variable' is not defined\n",
@@ -1364,6 +1454,16 @@
   "history_output" : "Traceback (most recent call last):\n  File \"Eddy_plotvariable.py\", line 4, in <module>\n    ax, m = plot_variable(\nNameError: name 'plot_variable' is not defined\n",
   "history_begin_time" : 1663677723053,
   "history_end_time" : 1663677724710,
+  "history_notes" : null,
+  "history_process" : "zr8vzj",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "3ruo6cxig0e",
+  "history_input" : "# Write first python in Geoweaver\nfrom copy import deepcopy\n\nax, m = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\nax, m = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/joe/gw-workspace/3ruo6cxig0e/Eddy_plotvariable.py\", line 4, in <module>\n    ax, m = plot_variable(\nNameError: name 'plot_variable' is not defined\n",
+  "history_begin_time" : 1663593218869,
+  "history_end_time" : 1663593218949,
   "history_notes" : null,
   "history_process" : "zr8vzj",
   "host_id" : "100001",

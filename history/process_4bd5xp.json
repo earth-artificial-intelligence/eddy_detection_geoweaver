@@ -1,4 +1,64 @@
 [{
+  "history_id" : "pp0g4r8d5tn",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1670331412887,
+  "history_end_time" : 1670331412887,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "oh98cbmxxab",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669994030432,
+  "history_end_time" : 1669994030432,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "33atx2cc0dl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669729025875,
+  "history_end_time" : 1669729253091,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "i054lkgxoye",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669728693283,
+  "history_end_time" : 1669728794584,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4lhzzx4g9og",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669125565577,
+  "history_end_time" : 1669125632296,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7hq427g4876",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1669035208179,
+  "history_end_time" : 1669035208179,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
   "history_id" : "x5xdtjyh123",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -1109,6 +1169,16 @@
   "host_id" : "100001",
   "indicator" : "Done"
 },{
+  "history_id" : "x3mosjcxoxm",
+  "history_input" : "# Write first python in Geoweaver\nfrom matplotlib.path import Path\nfrom py_eddy_tracker.poly import create_vertice\n\n\ndef generate_segmentation_mask_from_file(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=0,\n    y_offset=0,\n):\n    g, g_filtered, anticyclonic, cyclonic = identify_eddies(\n        gridded_ssh_file, date, ssh_var, u_var, v_var, high_pass_wavelength_km\n    )\n    mask = generate_segmentation_mask(\n        g_filtered, anticyclonic, cyclonic, x_offset, y_offset\n    )\n    var = g.grid(ssh_var)\n    var_filtered = g_filtered.grid(ssh_var)\n    return var, var_filtered, mask\n\n\ndef identify_eddies(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n):\n    g = RegularGridDataset(gridded_ssh_file, \"longitude\", \"latitude\")\n    g_filtered = deepcopy(g)  # make a copy so we don't alter the original\n    g_filtered.bessel_high_filter(ssh_var, high_pass_wavelength_km)\n    anticyclonic, cyclonic = g_filtered.eddy_identification(ssh_var, u_var, v_var, date)\n    return g, g_filtered, anticyclonic, cyclonic\n\n\ndef generate_segmentation_mask(\n    grid_dataset, anticyclonic, cyclonic, x_offset, y_offset, plot=False\n):\n    \"\"\"\n    Creates a numpy array to store the segmentation mask for the grid_dataset.\n    The mask contains classes 0: no eddy, 1: anticyclonic eddy, 2: cyclonic eddy.\n    \"\"\"\n    assert (\n        cyclonic.sign_legend == \"Cyclonic\"\n        and anticyclonic.sign_legend == \"Anticyclonic\"\n    ), \"Check whether the correct order for (anti)cyclonic observations were provided.\"\n    mask = np.zeros(grid_dataset.grid(\"adt\").shape, dtype=np.uint8)\n    # cyclonic should have the same: x_name = 'contour_lon_e', y_name = 'contour_lat_e'\n    x_name, y_name = anticyclonic.intern(False)\n    for eddy in anticyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        vertices = create_vertice(x_list, eddy[y_name] + y_offset)\n        i, j = Path(vertices).pixels_in(grid_dataset)\n        mask[i, j] = 1\n\n    for eddy in cyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        y_list = eddy[y_name] + y_offset\n        i, j = Path(create_vertice(x_list, y_list)).pixels_in(grid_dataset)\n        mask[i, j] = 2\n\n    if plot:\n        ax, m = plot_variable(grid_dataset, mask, \"Segmentation Mask\", cmap=\"viridis\")\n    return mask",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/joe/gw-workspace/x3mosjcxoxm/eddy_plots.py\", line 3, in <module>\n    from py_eddy_tracker.poly import create_vertice\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1663777413706,
+  "history_end_time" : 1663777414825,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "g9n3ghtsq10",
   "history_input" : "# Write first python in Geoweaver\nfrom matplotlib.path import Path\nfrom py_eddy_tracker.poly import create_vertice\n\n\ndef generate_segmentation_mask_from_file(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=0,\n    y_offset=0,\n):\n    g, g_filtered, anticyclonic, cyclonic = identify_eddies(\n        gridded_ssh_file, date, ssh_var, u_var, v_var, high_pass_wavelength_km\n    )\n    mask = generate_segmentation_mask(\n        g_filtered, anticyclonic, cyclonic, x_offset, y_offset\n    )\n    var = g.grid(ssh_var)\n    var_filtered = g_filtered.grid(ssh_var)\n    return var, var_filtered, mask\n\n\ndef identify_eddies(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n):\n    g = RegularGridDataset(gridded_ssh_file, \"longitude\", \"latitude\")\n    g_filtered = deepcopy(g)  # make a copy so we don't alter the original\n    g_filtered.bessel_high_filter(ssh_var, high_pass_wavelength_km)\n    anticyclonic, cyclonic = g_filtered.eddy_identification(ssh_var, u_var, v_var, date)\n    return g, g_filtered, anticyclonic, cyclonic\n\n\ndef generate_segmentation_mask(\n    grid_dataset, anticyclonic, cyclonic, x_offset, y_offset, plot=False\n):\n    \"\"\"\n    Creates a numpy array to store the segmentation mask for the grid_dataset.\n    The mask contains classes 0: no eddy, 1: anticyclonic eddy, 2: cyclonic eddy.\n    \"\"\"\n    assert (\n        cyclonic.sign_legend == \"Cyclonic\"\n        and anticyclonic.sign_legend == \"Anticyclonic\"\n    ), \"Check whether the correct order for (anti)cyclonic observations were provided.\"\n    mask = np.zeros(grid_dataset.grid(\"adt\").shape, dtype=np.uint8)\n    # cyclonic should have the same: x_name = 'contour_lon_e', y_name = 'contour_lat_e'\n    x_name, y_name = anticyclonic.intern(False)\n    for eddy in anticyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        vertices = create_vertice(x_list, eddy[y_name] + y_offset)\n        i, j = Path(vertices).pixels_in(grid_dataset)\n        mask[i, j] = 1\n\n    for eddy in cyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        y_list = eddy[y_name] + y_offset\n        i, j = Path(create_vertice(x_list, y_list)).pixels_in(grid_dataset)\n        mask[i, j] = 2\n\n    if plot:\n        ax, m = plot_variable(grid_dataset, mask, \"Segmentation Mask\", cmap=\"viridis\")\n    return mask",
   "history_output" : "",
@@ -1164,6 +1234,16 @@
   "history_output" : "RuntimeError: module compiled against API version 0x10 but this version of numpy is 0xe\nTraceback (most recent call last):\n  File \"eddy_plots.py\", line 3, in <module>\n    from py_eddy_tracker.poly import create_vertice\n  File \"C:\\Users\\user\\anaconda3\\envs\\eddy_env\\lib\\site-packages\\py_eddy_tracker\\poly.py\", line 12, in <module>\n    from Polygon import Polygon\n  File \"C:\\Users\\user\\anaconda3\\envs\\eddy_env\\lib\\site-packages\\Polygon\\__init__.py\", line 5, in <module>\n    from Polygon.cPolygon import *\nImportError: numpy.core.multiarray failed to import\n",
   "history_begin_time" : 1663677725362,
   "history_end_time" : 1663677729532,
+  "history_notes" : null,
+  "history_process" : "4bd5xp",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "c3srxnrd8e8",
+  "history_input" : "# Write first python in Geoweaver\nfrom matplotlib.path import Path\nfrom py_eddy_tracker.poly import create_vertice\n\n\ndef generate_segmentation_mask_from_file(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=0,\n    y_offset=0,\n):\n    g, g_filtered, anticyclonic, cyclonic = identify_eddies(\n        gridded_ssh_file, date, ssh_var, u_var, v_var, high_pass_wavelength_km\n    )\n    mask = generate_segmentation_mask(\n        g_filtered, anticyclonic, cyclonic, x_offset, y_offset\n    )\n    var = g.grid(ssh_var)\n    var_filtered = g_filtered.grid(ssh_var)\n    return var, var_filtered, mask\n\n\ndef identify_eddies(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n):\n    g = RegularGridDataset(gridded_ssh_file, \"longitude\", \"latitude\")\n    g_filtered = deepcopy(g)  # make a copy so we don't alter the original\n    g_filtered.bessel_high_filter(ssh_var, high_pass_wavelength_km)\n    anticyclonic, cyclonic = g_filtered.eddy_identification(ssh_var, u_var, v_var, date)\n    return g, g_filtered, anticyclonic, cyclonic\n\n\ndef generate_segmentation_mask(\n    grid_dataset, anticyclonic, cyclonic, x_offset, y_offset, plot=False\n):\n    \"\"\"\n    Creates a numpy array to store the segmentation mask for the grid_dataset.\n    The mask contains classes 0: no eddy, 1: anticyclonic eddy, 2: cyclonic eddy.\n    \"\"\"\n    assert (\n        cyclonic.sign_legend == \"Cyclonic\"\n        and anticyclonic.sign_legend == \"Anticyclonic\"\n    ), \"Check whether the correct order for (anti)cyclonic observations were provided.\"\n    mask = np.zeros(grid_dataset.grid(\"adt\").shape, dtype=np.uint8)\n    # cyclonic should have the same: x_name = 'contour_lon_e', y_name = 'contour_lat_e'\n    x_name, y_name = anticyclonic.intern(False)\n    for eddy in anticyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        vertices = create_vertice(x_list, eddy[y_name] + y_offset)\n        i, j = Path(vertices).pixels_in(grid_dataset)\n        mask[i, j] = 1\n\n    for eddy in cyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        y_list = eddy[y_name] + y_offset\n        i, j = Path(create_vertice(x_list, y_list)).pixels_in(grid_dataset)\n        mask[i, j] = 2\n\n    if plot:\n        ax, m = plot_variable(grid_dataset, mask, \"Segmentation Mask\", cmap=\"viridis\")\n    return mask",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/joe/gw-workspace/c3srxnrd8e8/eddy_plots.py\", line 3, in <module>\n    from py_eddy_tracker.poly import create_vertice\nModuleNotFoundError: No module named 'py_eddy_tracker'\n",
+  "history_begin_time" : 1663593219791,
+  "history_end_time" : 1663593220303,
   "history_notes" : null,
   "history_process" : "4bd5xp",
   "host_id" : "100001",

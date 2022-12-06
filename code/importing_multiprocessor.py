@@ -4,7 +4,6 @@ from eddy_import import *
 from eddy_plots import *
 import multiprocessing
 
-pool = multiprocessing.Pool(processes=2)
 def generate_masks_in_parallel(
     files,
     dates,
@@ -18,6 +17,7 @@ def generate_masks_in_parallel(
     plot=False,
     save=True,
 ):
+    pool = multiprocessing.Pool(processes=20)
     args = [
         (file, date, ssh_var, u_var, v_var, high_pass_wavelength_km, x_offset, y_offset)
         for file, date in zip(files, dates)
@@ -55,6 +55,8 @@ def generate_masks_in_parallel(
         )
         print(f"Saved masks to {save_path}")
 
+    pool.close()
+    pool.join()
     return vars_, vars_filtered, masks
 
 

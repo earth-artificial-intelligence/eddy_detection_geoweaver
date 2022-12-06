@@ -1,4 +1,174 @@
 [{
+  "history_id" : "cXUCWAqNKDf0",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1670334783517,
+  "history_end_time" : 1670334789726,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "i7q862dwz4b",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1670332353795,
+  "history_end_time" : 1670332357825,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "edmmbv7nt65",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669995115581,
+  "history_end_time" : 1669995119683,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "H2Klo0DlvhYg",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669770058694,
+  "history_end_time" : 1669770062760,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "Joft5caIoVde",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  from animation import *\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "  File \"/Users/lakshmichetana/gw-workspace/Joft5caIoVde/cyclic_anticyclonic_eddies.py\", line 5\n    def mainFunction():\n    ^\nSyntaxError: import * only allowed at module level\n",
+  "history_begin_time" : 1669770034548,
+  "history_end_time" : 1669770034616,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "lkmIp2d3CMDW",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nprint(\"starting to import\")\nfrom animation import *\nprint('importing done')\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669769917993,
+  "history_end_time" : 1669769922595,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "ObSaPra3XHup",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nprint(\"starting to import\")\nfrom animation import *\nprint('importing done')\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669741538464,
+  "history_end_time" : 1669741544546,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "aZDM9cjG3pJi",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nprint(\"starting to import\")\nfrom animation import *\nprint('importing done')\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669740715251,
+  "history_end_time" : 1669740719825,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "j8pbjcdFFxHB",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nprint(\"starting to import\")\nfrom animation import *\n#print('importing done')\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669740697118,
+  "history_end_time" : 1669740701587,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "DLZIjLr151fb",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n#print('importing done')\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669740667591,
+  "history_end_time" : 1669740672387,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "jVg0p4aFjxjR",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n#print('importing done')\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669740653350,
+  "history_end_time" : 1669740658408,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "eob3u6LY3Rvc",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n#print('importing done')\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669740643492,
+  "history_end_time" : 1669740648260,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "GjVNwgf1OJJ0",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\nprint('importing done')\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669740615932,
+  "history_end_time" : 1669740620873,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "VFsJ4ZU85qhb",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669740567698,
+  "history_end_time" : 1669740574269,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "qXN09gCYM43n",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669736209013,
+  "history_end_time" : 1669736213617,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "QVX3RXJ9uxUp",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669036511850,
+  "history_end_time" : 1669036517201,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "7bcah0zcyth",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
+  "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
+  "history_begin_time" : 1669035407463,
+  "history_end_time" : 1669035411806,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "pnht892ssi0",
   "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\nfrom eddy_import import *\nfrom animation import *\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n      \nplt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")",
   "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
@@ -834,6 +1004,36 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1668659937656,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fd4xjfd71ws",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1669125632263,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "v2x6xqs17v3",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1669728794531,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1opn243676e",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1669729253060,
   "history_notes" : null,
   "history_process" : "kaedp2",
   "host_id" : "100001",

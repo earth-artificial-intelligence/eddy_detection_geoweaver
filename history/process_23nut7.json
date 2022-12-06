@@ -1,4 +1,74 @@
 [{
+  "history_id" : "yoacoxw80wc",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1670331413660,
+  "history_end_time" : 1670331420453,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yiw9qfy5409",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1669994031305,
+  "history_end_time" : 1669994037258,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pGKxdZP929TT",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1669730751023,
+  "history_end_time" : 1669730754312,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "g3wew7myzi9",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1669729026624,
+  "history_end_time" : 1669729253084,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "m18fzve3vqf",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1669728694125,
+  "history_end_time" : 1669728794563,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f23u8izl5rm",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1669125566156,
+  "history_end_time" : 1669125632284,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "9tj0d26im6g",
+  "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
+  "history_begin_time" : 1669035208340,
+  "history_end_time" : 1669035212401,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
   "history_id" : "mo6cn9qisw6",
   "history_input" : "# Defining the start_axes, update_axes, plot_variabe  and setting the paths for eddy workflow\nfrom eddy_import import *\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nfigOutputFolder = '/Users/lakshmichetana/ML_Eddies_New_Data_Output/'\n",
   "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n",
@@ -1169,6 +1239,16 @@
   "host_id" : "100001",
   "indicator" : "Failed"
 },{
+  "history_id" : "7cpzw2vkm8k",
+  "history_input" : "# Write first python in Geoweaver\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/joe/gw-workspace/7cpzw2vkm8k/eddy_paths.py\", line 2, in <module>\n    data_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\nNameError: name 'os' is not defined\n",
+  "history_begin_time" : 1663777410485,
+  "history_end_time" : 1663777410590,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "rJOZ2TeVMvr4",
   "history_input" : "from eddy_import import *\n# Write first python in Geoweaver\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")",
   "history_output" : "We assume pixel position of grid is centered for C:\\Users\\user\\ML_eddies\\cds_ssh_2019_10day_interval\\dt_global_twosat_phy_l4_20190101_vDT2021.nc\nTraceback (most recent call last):\n  File \"eddy_paths.py\", line 9, in <module>\n    g = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n  File \"C:\\Users\\user\\anaconda3\\envs\\eddy_env\\lib\\site-packages\\py_eddy_tracker\\dataset\\grid.py\", line 1186, in __init__\n    super().__init__(*args, **kwargs)\n  File \"C:\\Users\\user\\anaconda3\\envs\\eddy_env\\lib\\site-packages\\py_eddy_tracker\\dataset\\grid.py\", line 310, in __init__\n    self.load_general_features()\n  File \"C:\\Users\\user\\anaconda3\\envs\\eddy_env\\lib\\site-packages\\py_eddy_tracker\\dataset\\grid.py\", line 331, in load_general_features\n    with Dataset(self.filename) as h:\n  File \"src\\netCDF4\\_netCDF4.pyx\", line 2353, in netCDF4._netCDF4.Dataset.__init__\n  File \"src\\netCDF4\\_netCDF4.pyx\", line 1963, in netCDF4._netCDF4._ensure_nc_success\nFileNotFoundError: [Errno 2] No such file or directory: b'C:\\\\Users\\\\user\\\\ML_eddies\\\\cds_ssh_2019_10day_interval\\\\dt_global_twosat_phy_l4_20190101_vDT2021.nc'\n",
@@ -1244,6 +1324,16 @@
   "history_output" : "Traceback (most recent call last):\n  File \"eddy_paths.py\", line 2, in <module>\n    data_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\nNameError: name 'os' is not defined\n",
   "history_begin_time" : 1663677720149,
   "history_end_time" : 1663677722314,
+  "history_notes" : null,
+  "history_process" : "23nut7",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "7znfzrxpoif",
+  "history_input" : "# Write first python in Geoweaver\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190101_vDT2021.nc\")\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/joe/gw-workspace/7znfzrxpoif/eddy_paths.py\", line 2, in <module>\n    data_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\nNameError: name 'os' is not defined\n",
+  "history_begin_time" : 1663593218627,
+  "history_end_time" : 1663593218710,
   "history_notes" : null,
   "history_process" : "23nut7",
   "host_id" : "100001",

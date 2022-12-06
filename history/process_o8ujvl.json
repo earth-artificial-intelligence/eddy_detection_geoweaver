@@ -1,0 +1,81 @@
+[{
+  "history_id" : "ont0dfywf5j",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "",
+  "history_begin_time" : 1670331413683,
+  "history_end_time" : 1670331420485,
+  "history_notes" : null,
+  "history_process" : "o8ujvl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "q1eshwsrhw8",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "",
+  "history_begin_time" : 1669994031568,
+  "history_end_time" : 1669994037375,
+  "history_notes" : null,
+  "history_process" : "o8ujvl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ppbnb6j3zlh",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1669729026624,
+  "history_end_time" : 1669729254285,
+  "history_notes" : null,
+  "history_process" : "o8ujvl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fd3zozdg9xl",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1669728694057,
+  "history_end_time" : 1669728797967,
+  "history_notes" : null,
+  "history_process" : "o8ujvl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gXMQ67td6Ggc",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1666962171784,
+  "history_end_time" : 1666962181469,
+  "history_notes" : null,
+  "history_process" : "o8ujvl",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "oQOKPxej5IPG",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "Read 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1666093827608,
+  "history_end_time" : 1666093832758,
+  "history_notes" : null,
+  "history_process" : "o8ujvl",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "1QNh3e5xY53Q",
+  "history_input" : "from file_paths import *\nfrom data_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/1QNh3e5xY53Q/Eddy_Dataloader.py\", line 7, in <module>\n    train_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nNameError: name 'batch_size' is not defined\n",
+  "history_begin_time" : 1666093775057,
+  "history_end_time" : 1666093781499,
+  "history_notes" : null,
+  "history_process" : "o8ujvl",
+  "host_id" : null,
+  "indicator" : "Failed"
+},{
+  "history_id" : "BJsL4pSV5FPA",
+  "history_input" : "from data_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/BJsL4pSV5FPA/Eddy_Dataloader.py\", line 6, in <module>\n    train_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nNameError: name 'train_file' is not defined\n",
+  "history_begin_time" : 1666093663652,
+  "history_end_time" : 1666093668158,
+  "history_notes" : null,
+  "history_process" : "o8ujvl",
+  "host_id" : null,
+  "indicator" : "Failed"
+},]
