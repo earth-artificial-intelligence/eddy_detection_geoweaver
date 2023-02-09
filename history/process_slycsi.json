@@ -1,4 +1,94 @@
 [{
+  "history_id" : "pqzhvw338oq",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "sh: /usr/lib/python3.6: Is a directory\n",
+  "history_begin_time" : 1675864040461,
+  "history_end_time" : 1675864046457,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "z4nr70",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wjm2X0yvcZQv",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "sh: /usr/lib/python3.6: Is a directory\n",
+  "history_begin_time" : 1675862579385,
+  "history_end_time" : 1675862581263,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "juizjgainzd",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "sh: /usr/lib/python3.6: Is a directory\n",
+  "history_begin_time" : 1675862087067,
+  "history_end_time" : 1675862183927,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "z4nr70",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "o3utwaqv8mb",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1675862001803,
+  "history_end_time" : 1675862001834,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "7qbf7qksr7s",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1675861965342,
+  "history_end_time" : 1675861965373,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "k18x8etbrp5",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1675861948975,
+  "history_end_time" : 1675861949007,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "aivgmws1jnv",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1675776986873,
+  "history_end_time" : 1675776991367,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e4bivmzilrs",
+  "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1674567094762,
+  "history_end_time" : 1674567102172,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "utui4552b7o",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1674566394629,
+  "history_end_time" : 1674566394720,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "z9lr9wfv7fv",
   "history_input" : "#Importing required libraries, inserting the system paths, fixing manual seeds for reproducibility\nfrom eddy_import import *\nimport os\nimport sys\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
   "history_output" : "",
@@ -927,5 +1017,35 @@
   "history_notes" : null,
   "history_process" : "slycsi",
   "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fgfpriq49w0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1675172362260,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hw034b4uygr",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1675862231639,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "z4nr70",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ogutalpfyoy",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1675862406077,
+  "history_notes" : null,
+  "history_process" : "slycsi",
+  "host_id" : "z4nr70",
   "indicator" : "Stopped"
 },]

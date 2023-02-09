@@ -1,4 +1,114 @@
 [{
+  "history_id" : "7ie3eq8qigc",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\nfrom eddy_import import *\nimport numpy as np\nimport torch\nfrom get_eddy_dataloader import *\nfrom eddynet import EddyNet\nfrom eddy_paths import figOutputFolder\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "sh: /usr/lib/python3.6: Is a directory\nsh: _Pytorch.py: command not found\n",
+  "history_begin_time" : 1675864046666,
+  "history_end_time" : 1675864050431,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "z4nr70",
+  "indicator" : "Failed"
+},{
+  "history_id" : "gxDYuCcB0kRi",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\nfrom eddy_import import *\nimport numpy as np\nimport torch\nfrom get_eddy_dataloader import *\nfrom eddynet import EddyNet\nfrom eddy_paths import figOutputFolder\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "sh: _Pytorch.py: command not found\nsh: /usr/lib/python3.6: Is a directory\n",
+  "history_begin_time" : 1675862633277,
+  "history_end_time" : 1675862634931,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "vSWyoOkB1Gsd",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\nfrom eddy_import import *\nimport numpy as np\nimport torch\nfrom get_eddy_dataloader import *\nfrom eddynet import EddyNet\nfrom eddy_paths import figOutputFolder\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "sh: /usr/lib/python3.6: Is a directory\nsh: _Pytorch.py: command not found\n",
+  "history_begin_time" : 1675862601427,
+  "history_end_time" : 1675862602941,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "tk9qmjjqnyu",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\nfrom eddy_import import *\nimport numpy as np\nimport torch\nfrom get_eddy_dataloader import *\nfrom eddynet import EddyNet\nfrom eddy_paths import figOutputFolder\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "sh: /usr/lib/python3.6: Is a directory\nsh: _Pytorch.py: command not found\n",
+  "history_begin_time" : 1675862092125,
+  "history_end_time" : 1675862183940,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "z4nr70",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "erx2ngwcvcw",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1675862002627,
+  "history_end_time" : 1675862002692,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "nd0y6ugs9u1",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1675861965987,
+  "history_end_time" : 1675861966054,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "jsyvr0zor9e",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1675861949553,
+  "history_end_time" : 1675861949591,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "c99xttqrsrl",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\nfrom eddy_import import *\nimport numpy as np\nimport torch\nfrom get_eddy_dataloader import *\nfrom eddynet import EddyNet\nfrom eddy_paths import figOutputFolder\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n/Users/lakshmichetana/gw-workspace/c99xttqrsrl/EddyDataLoader_PixelTraining_TrainingDataset_&_Pytorch.py:36: MatplotlibDeprecationWarning: savefig() got unexpected keyword argument \"bbox\" which is no longer supported as of 3.3 and will become an error in 3.6\n  plt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\nRead 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nRead 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 16.17 megapixels across 987 SSH maps\nNumber of pixels that are not eddies: 11.71 megapixels (72.43%)\nNumber of pixels that are anticyclonic eddies: 2.33 megapixels (14.39%)\nNumber of pixels that are cyclonic eddies: 2.13 megapixels (13.18%)\n",
+  "history_begin_time" : 1675776993010,
+  "history_end_time" : 1675776997615,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ojt92q16wdr",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\nfrom eddy_import import *\nimport numpy as np\nimport torch\nfrom get_eddy_dataloader import *\nfrom eddynet import EddyNet\nfrom eddy_paths import figOutputFolder\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1675172362503,
+  "history_end_time" : 1675172363929,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "nh7cehurhcl",
+  "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\nfrom eddy_import import *\nimport numpy as np\nimport torch\nfrom get_eddy_dataloader import *\nfrom eddynet import EddyNet\nfrom eddy_paths import figOutputFolder\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
+  "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n/Users/lakshmichetana/gw-workspace/nh7cehurhcl/EddyDataLoader_PixelTraining_TrainingDataset_&_Pytorch.py:36: MatplotlibDeprecationWarning: savefig() got unexpected keyword argument \"bbox\" which is no longer supported as of 3.3 and will become an error in 3.6\n  plt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\nRead 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nRead 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 16.17 megapixels across 987 SSH maps\nNumber of pixels that are not eddies: 11.71 megapixels (72.43%)\nNumber of pixels that are anticyclonic eddies: 2.33 megapixels (14.39%)\nNumber of pixels that are cyclonic eddies: 2.13 megapixels (13.18%)\n",
+  "history_begin_time" : 1674567104116,
+  "history_end_time" : 1674567109096,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "m5o1ij5s54j",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1674566395000,
+  "history_end_time" : 1674566395090,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "mc7q4umlui4",
   "history_input" : "from file_paths import *\nfrom declaring_epochs_size import *\nfrom data_utils import get_eddy_dataloader\nfrom eddy_import import *\nimport numpy as np\nimport torch\nfrom get_eddy_dataloader import *\nfrom eddynet import EddyNet\nfrom eddy_paths import figOutputFolder\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n#Looking at the distribution of class frequencies to identify class imbalances\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\n\n#Using plot_sample to visualize the dataset we just loaded.\ntrain_loader.dataset.plot_sample(N=3)\nplt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\n\n#Segmentation Model:\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available(): \n    model.to(device=\"cuda\")",
   "history_output" : "We assume pixel position of grid is centered for /Users/lakshmichetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc\n/Users/lakshmichetana/gw-workspace/mc7q4umlui4/EddyDataLoader_PixelTraining_TrainingDataset_&_Pytorch.py:36: MatplotlibDeprecationWarning: savefig() got unexpected keyword argument \"bbox\" which is no longer supported as of 3.3 and will become an error in 3.6\n  plt.savefig(f\"{figOutputFolder}/datasetPlots\",bbox=\"tight\")\nRead 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nRead 987 samples from /Users/lakshmichetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /Users/lakshmichetana/ML_eddies/dataset-satellite-sea-level-global-601bf215-53f9-47ac-bb7f-690c0c65c7c3/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 16.17 megapixels across 987 SSH maps\nNumber of pixels that are not eddies: 11.71 megapixels (72.43%)\nNumber of pixels that are anticyclonic eddies: 2.33 megapixels (14.39%)\nNumber of pixels that are cyclonic eddies: 2.13 megapixels (13.18%)\n",
@@ -617,5 +727,25 @@
   "history_notes" : null,
   "history_process" : "qsxf3a",
   "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vhb3s6ii89p",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1675862231659,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "z4nr70",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "aakxpiu60ix",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1675862406144,
+  "history_notes" : null,
+  "history_process" : "qsxf3a",
+  "host_id" : "z4nr70",
   "indicator" : "Stopped"
 },]

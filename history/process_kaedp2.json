@@ -1,4 +1,94 @@
 [{
+  "history_id" : "qwq2vu0vu0b",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "sh: /usr/lib/python3.6: Is a directory\n",
+  "history_begin_time" : 1675864057588,
+  "history_end_time" : 1675864060916,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "z4nr70",
+  "indicator" : "Failed"
+},{
+  "history_id" : "42lrKj030LTR",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "sh: /usr/lib/python3.6: Is a directory\n",
+  "history_begin_time" : 1675863980935,
+  "history_end_time" : 1675863982592,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "kx0n2c6doih",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "sh: /usr/lib/python3.6: Is a directory\n",
+  "history_begin_time" : 1675862109868,
+  "history_end_time" : 1675862183934,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "z4nr70",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1dwbrxqv41v",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1675862003889,
+  "history_end_time" : 1675862003931,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "iq9a46ydq3t",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1675861967464,
+  "history_end_time" : 1675861967573,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "u2b82ssq6g0",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1675861951103,
+  "history_end_time" : 1675861951149,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "kbjk0919qna",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "starting to import\nimporting done\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/kbjk0919qna/cyclic_anticyclonic_eddies.py\", line 33, in <module>\n    mainFunction()\n  File \"/Users/lakshmichetana/gw-workspace/kbjk0919qna/cyclic_anticyclonic_eddies.py\", line 9, in mainFunction\n    p = preds[0].astype(np.uint8)\nNameError: name 'preds' is not defined\n",
+  "history_begin_time" : 1675777006395,
+  "history_end_time" : 1675777007384,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "jp2btpm3orr",
+  "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
+  "history_output" : "starting to import\nimporting done\nTraceback (most recent call last):\n  File \"/Users/lakshmichetana/gw-workspace/jp2btpm3orr/cyclic_anticyclonic_eddies.py\", line 33, in <module>\n    mainFunction()\n  File \"/Users/lakshmichetana/gw-workspace/jp2btpm3orr/cyclic_anticyclonic_eddies.py\", line 9, in mainFunction\n    p = preds[0].astype(np.uint8)\nNameError: name 'preds' is not defined\n",
+  "history_begin_time" : 1674567119349,
+  "history_end_time" : 1674567120295,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ykvo4l711hn",
+  "history_input" : null,
+  "history_output" : "Authentication Failed. Wrong Password.",
+  "history_begin_time" : 1674566396915,
+  "history_end_time" : 1674566396977,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
   "history_id" : "cXUCWAqNKDf0",
   "history_input" : "#Demonstrate the beginnings of how one can use classical computer vision techniques to recover eddy contours from the predicted segnmentation masks.\n\n#from eddy_import import *\nfrom animation import *\n\ndef mainFunction():\n  print(\"starting to import\")\n  print('importing done')\n  p = preds[0].astype(np.uint8)\n\n  print(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\n  print(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\n  print(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n  # draw contours on the image\n  thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\n  contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n  img = np.zeros(p.shape, np.uint8)\n  cv2.drawContours(img, contours, -1, (255, 255, 255), 1)\n  plt.imshow(img, cmap=\"gray\")\n  plt.axis(\"off\")\n\n  # get average contour area\n  area = 0\n  for cnt in contours:\n      area += cv2.contourArea(cnt)\n  area /= len(contours)\n  print(f\"Average contour area: {area:.2f} sq. pixels\")\n      \n  plt.savefig(f'{figOutputFolder}/EddyContours.png', bbox_inches =\"tight\")\n  \nif __name__ == \"__main__\":\n  mainFunction()\n",
   "history_output" : "/Users/lakshmichetana/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown\n  warnings.warn('resource_tracker: There appear to be %d '\n",
@@ -1037,5 +1127,35 @@
   "history_notes" : null,
   "history_process" : "kaedp2",
   "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rd7dlt4udz4",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1675172362280,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ayoc4lval83",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1675862231653,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "z4nr70",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3562ovza3ek",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1675862406123,
+  "history_notes" : null,
+  "history_process" : "kaedp2",
+  "host_id" : "z4nr70",
   "indicator" : "Stopped"
 },]

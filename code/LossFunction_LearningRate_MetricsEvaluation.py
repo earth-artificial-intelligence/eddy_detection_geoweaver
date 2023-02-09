@@ -1,27 +1,40 @@
+#import os
+#os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
 #loss function
 print('start imports')
-#import torch
+
+import torch
 print('torch')
-#from eddy_import import *
+
+from eddy_import import *
 print('eddy_import')
+
 from pytorch_local import *
 print('pytorch_local')
+
 from data_utils import *
 print('get_eddy_dataloader')
+
 import torchmetrics
 print('torchmetrics')
+
 import datetime
 print('datetime')
+
 from torch.utils.tensorboard import SummaryWriter
 print('SummaryWriter')
+
 import cv2  # use cv2 to count eddies by drawing contours around segmentation masks
 print('cv2')
+
 import matplotlib.pyplot as plt
 print('matplotlib.pyplot')
 #import numpy as np
 
 from tqdm.auto import tqdm
 print('tqdm.auto ')
+
 from eddy_train_utils import run_batch, write_metrics_to_tensorboard, filter_scalar_metrics, EarlyStopping
 print('end of imports')
 
@@ -29,100 +42,47 @@ print('end of imports')
 from declaring_epochs_size import *
 from eddy_train_utils import add_hparams
 
-
-def mainFunction():
-  print('Before Loss Function')
-  loss_fn = torch.nn.CrossEntropyLoss()
-  print('After loss Function')
-  # TODO (homework): Try 
-  # loss_fn =    torch.nn.CrossEntropyLoss(weight=torch.Tensor(total_pixels/class_frequency))
-
-  # learning rate for use in OneCycle scheduler
-  initial_lr = 1e-6
-  max_lr = 5e-4
-
-  print('Before scheduler initiation')
-  optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)
-  scheduler = torch.optim.lr_scheduler.OneCycleLR(
-      optimizer,
-      max_lr=max_lr,
-      steps_per_epoch=len(train_loader),
-      epochs=num_epochs,
-      div_factor=max_lr / initial_lr,
-      pct_start=0.3,
-  )
-  print('after scheduler initiation')
-
-  #Defining and using the get_metrics function
-  def get_metrics(N, sync=False):
-      """Get the metrics to be used in the training loop.
+def get_metrics(N, sync=False):
+  """Get the metrics to be used in the training loop.
       Args:
-          N (int): The number of classes.
-          sync (bool): Whether to use wait for metrics to sync across devices before computing value.
-      Returns:
+        N (int): The number of classes.
+        sync (bool): Whether to use wait for metrics to sync across devices before computing value.
+    Returns:
           train_metrics (MetricCollection): The metrics to be used in the training loop.
           val_metrics (MetricCollection): The metrics to be used in validation.
-      """
+  """
       # Define metrics and move to GPU if available
-      metrics = [
-          torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),
-          torchmetrics.Precision(
-              average=None,
-              dist_sync_on_step=sync,
-              num_classes=N,
-          ),
-          torchmetrics.Recall(
-              average=None,
-              dist_sync_on_step=sync,
-              num_classes=N,
-          ),
+  metrics = [
+    torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),
+    torchmetrics.Precision(
+            average=None,
+            dist_sync_on_step=sync,
+            num_classes=N,
+        ),
+        torchmetrics.Recall(
+            average=None,
+            dist_sync_on_step=sync,
+            num_classes=N,
+        ),
 #           torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy
 #               average="micro",
 #               dist_sync_on_step=sync,
 #               num_classes=N,
 #           ),
-          torchmetrics.F1Score(
-              average="none",  # return F1 for each class
-              dist_sync_on_step=sync,
-              num_classes=N,
-          )
-      ]
-      if torch.cuda.is_available():  # move metrics to the same device as model
-          [metric.to("cuda") for metric in metrics]
+        torchmetrics.F1Score(
+            average="none",  # return F1 for each class
+            dist_sync_on_step=sync,
+            num_classes=N,
+        )
+  ]
+  if torch.cuda.is_available():  # move metrics to the same device as model
+      [metric.to("cuda") for metric in metrics]
 
-      train_metrics = torchmetrics.MetricCollection(metrics)
-      val_metrics = train_metrics.clone()
-      return train_metrics, val_metrics
+  train_metrics = torchmetrics.MetricCollection(metrics)
+  val_metrics = train_metrics.clone()
+  return train_metrics, val_metrics
 
-  train_metrics, val_metrics = get_metrics(num_classes)
-
-
-#Tensor Logger
-#We use the tensor logger to log our loss and metrics throughout the training process.
-  import datetime
-  print('before tensorboard dir')
-  tensorboard_dir = os.path.join(
-      os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),
-      "tensorboard",
-      # add current timestamp
-      f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}",
-  )
-  writer = SummaryWriter(log_dir=tensorboard_dir)
-  print(
-      f"{''.join(['=']*(28 + len(writer.log_dir)))}\n"
-      f"Writing Tensorboard logs to {writer.log_dir}"
-      f"\n{''.join(['=']*(28 + len(writer.log_dir)))}"
-  )
-  print('after tensorboard dir')
-
-  #Train the model: Defining training loop
-
-  num_plots_in_tensorboard = 5
-  # will populate this later with random numbers:
-  random_plot_indices = np.zeros((num_plots_in_tensorboard,), np.uint8)
-
-  print('before run_epoch')
-  def run_epoch(
+def run_epoch(
       epoch,
       model,
       loss_fn,
@@ -209,92 +169,148 @@ def mainFunction():
       val_m = filter_scalar_metrics(val_m)
 
       return train_loss, val_loss, train_m, val_m
-  print('after run_epoch')
+      print('after run_epoch')
 
-  def plot_eddies_on_axes(date, img, mask, pred, a1, a2, a3):
-      im1 = a1.imshow(img.squeeze(), cmap="viridis")
+def plot_eddies_on_axes(date, img, mask, pred, a1, a2, a3):
+    im1 = a1.imshow(img.squeeze(), cmap="viridis")
 
       # blit canvas for a1 a2 a3
-      a1.figure.canvas.draw()
-      a1.figure.canvas.flush_events()
-      a2.figure.canvas.draw()
-      a2.figure.canvas.flush_events()
-      a3.figure.canvas.draw()
-      a3.figure.canvas.flush_events()
+    a1.figure.canvas.draw()
+    a1.figure.canvas.flush_events()
+    a2.figure.canvas.draw()
+    a2.figure.canvas.flush_events()
+    a3.figure.canvas.draw()
+    a3.figure.canvas.flush_events()
 
       # https://stackoverflow.com/a/49159236
-      t1 = a1.text(
-          0.5,
-          1.05,
-          f"ADT {date}",
-          size=plt.rcParams["axes.titlesize"],
-          ha="center",
-          transform=a1.transAxes,
-      )
+    t1 = a1.text(
+        0.5,
+        1.05,
+        f"ADT {date}",
+        size=plt.rcParams["axes.titlesize"],
+        ha="center",
+        transform=a1.transAxes,
+    )
       # set axis off
-      a1.axis("off")
+    a1.axis("off")
 
       # count number of eddies in mask and pred
-      mask_anticyclonic = count_eddies(mask, "anticyclonic")
-      mask_cyclonic = count_eddies(mask, "cyclonic")
-      pred_anticyclonic = count_eddies(pred, "anticyclonic")
-      pred_cyclonic = count_eddies(pred, "cyclonic")
+    mask_anticyclonic = count_eddies(mask, "anticyclonic")
+    mask_cyclonic = count_eddies(mask, "cyclonic")
+    pred_anticyclonic = count_eddies(pred, "anticyclonic")
+    pred_cyclonic = count_eddies(pred, "cyclonic")
 
       # calculate accuracy between pred and mask
-      acc = np.sum(pred == mask) / mask.size
-      im2 = a2.imshow(pred, cmap="viridis")
-      t2 = a2.text(
-          0.5,
-          1.05,
-          (
-              f"Prediction (Acc = {acc:.3f} |"
-              f" Num. anticyclonic = {pred_anticyclonic} |"
-              f" Num. cyclonic = {pred_cyclonic})"
-          ),
-          size=plt.rcParams["axes.titlesize"],
-          ha="center",
-          transform=a2.transAxes,
-      )
-      a2.axis("off")
-      im3 = a3.imshow(mask, cmap="viridis")
-      t3 = a3.text(
-          0.5,
-          1.05,
-          (
-              f"Ground Truth"
-              f" (Num. anticyclonic: {mask_anticyclonic} |"
-              f" Num. cyclonic: {mask_cyclonic})"
-          ),
-          size=plt.rcParams["axes.titlesize"],
-          ha="center",
-          transform=a3.transAxes,
-      )
-      a3.axis("off")
+    acc = np.sum(pred == mask) / mask.size
+    im2 = a2.imshow(pred, cmap="viridis")
+    t2 = a2.text(
+        0.5,
+        1.05,
+        (
+            f"Prediction (Acc = {acc:.3f} |"
+            f" Num. anticyclonic = {pred_anticyclonic} |"
+            f" Num. cyclonic = {pred_cyclonic})"
+        ),
+        size=plt.rcParams["axes.titlesize"],
+        ha="center",
+        transform=a2.transAxes,
+    )
+    a2.axis("off")
+    im3 = a3.imshow(mask, cmap="viridis")
+    t3 = a3.text(
+        0.5,
+        1.05,
+        (
+            f"Ground Truth"
+            f" (Num. anticyclonic: {mask_anticyclonic} |"
+            f" Num. cyclonic: {mask_cyclonic})"
+        ),
+        size=plt.rcParams["axes.titlesize"],
+        ha="center",
+        transform=a3.transAxes,
+    )
+    a3.axis("off")
 
-      return im1, t1, im2, t2, im3, t3
+    return im1, t1, im2, t2, im3, t3
 
 
-  def count_eddies(arr, eddy_type="both"):
-      mask = np.zeros(arr.shape, dtype=np.uint8)
-      if eddy_type == "anticyclonic":
-          mask[arr == 1] = 1
-      elif eddy_type == "cyclonic":
-          mask[arr == 2] = 1
-      else:
-          mask[arr > 0] = 1
-      contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-      return len(contours)
+def count_eddies(arr, eddy_type="both"):
+    mask = np.zeros(arr.shape, dtype=np.uint8)
+    if eddy_type == "anticyclonic":
+        mask[arr == 1] = 1
+    elif eddy_type == "cyclonic":
+        mask[arr == 2] = 1
+    else:
+        mask[arr > 0] = 1
+    contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    return len(contours)
 
+
+def mainFunction():
+  print('Before Loss Function')
+  loss_fn = torch.nn.CrossEntropyLoss()
+  print('After loss Function')
+  # TODO (homework): Try 
+  # loss_fn =    torch.nn.CrossEntropyLoss(weight=torch.Tensor(total_pixels/class_frequency))
+
+  # learning rate for use in OneCycle scheduler
+  initial_lr = 1e-6
+  max_lr = 5e-4
+  num_epochs = 1
+
+  print('Before scheduler initiation')
+  optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)
+  scheduler = torch.optim.lr_scheduler.OneCycleLR(
+      optimizer,
+      max_lr=max_lr,
+      steps_per_epoch=len(train_loader),
+      epochs=num_epochs,
+      div_factor=max_lr / initial_lr,
+      pct_start=0.3,
+  )
+  print('after scheduler initiation')
+
+  #Defining and using the get_metrics function
+
+  train_metrics, val_metrics = get_metrics(num_classes)
+
+
+#Tensor Logger
+#We use the tensor logger to log our loss and metrics throughout the training process.
+  import datetime
+  #print('before tensorboard dir')
+  '''tensorboard_dir = os.path.join(
+      os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),
+      "tensorboard",
+      # add current timestamp
+      f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}",
+  )
+  writer = SummaryWriter(log_dir=tensorboard_dir)
+  print(
+      f"{''.join(['=']*(28 + len(writer.log_dir)))}\n"
+      f"Writing Tensorboard logs to {writer.log_dir}"
+      f"\n{''.join(['=']*(28 + len(writer.log_dir)))}"
+  )
+  print('after tensorboard dir')'''
+
+  #Train the model: Defining training loop
+
+  num_plots_in_tensorboard = 5
+  # will populate this later with random numbers:
+  random_plot_indices = np.zeros((num_plots_in_tensorboard,), np.uint8)
+
+  print('before run_epoch')
+  
 # create some aliases
   loss, opt, sched = loss_fn, optimizer, scheduler
   num_epochs = 5
 
-  checkpoint_path = os.path.join(tensorboard_dir, "model_ckpt_{epoch}.pt")
-  early_stopping = EarlyStopping(
+  #checkpoint_path = os.path.join(tensorboard_dir, "model_ckpt_{epoch}.pt")
+  '''early_stopping = EarlyStopping(
       patience=10,
-      path=checkpoint_path,
+     # path=checkpoint_path,
       min_epochs=30,
-  )
+  )'''
 
   progress_bar = tqdm(range(num_epochs), desc="Training: ", unit="epoch(s)")
   for N in progress_bar:
@@ -308,7 +324,7 @@ def mainFunction():
           val_loader,
           train_metrics,
           val_metrics,
-          writer,
+         # writer,
       )
 
       # update progress bar
@@ -356,5 +372,9 @@ def mainFunction():
   print('entering save option')
   torch.save(model.state_dict(), model_path)
 
+  
+  
 if __name__ == "__main__":
   mainFunction()
+  
+
