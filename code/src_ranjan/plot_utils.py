@@ -33,5 +33,6 @@ def save_fig_and_relesase_memory(ax, m, fig):
     # TODO: change the function to account for a relevant name
     fig.savefig( os.path.join("/home/chetana/ML_eddies/plots/", "0.png"))
     ax.cla()
+    plt.clf()
     plt.close('all')
     return
