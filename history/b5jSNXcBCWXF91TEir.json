@@ -1,0 +1,81 @@
+[{
+  "history_id" : "qxkpcdj0ys4",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\n\nfrom datetime import datetime\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy",
+  "history_output" : "Running",
+  "history_begin_time" : 1676565488539,
+  "history_end_time" : 1676565494147,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ulqgdv1h8sa",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1676565496429,
+  "history_end_time" : 1676565499487,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "oy71m0an35p",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676565494456,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "oh611giih7z",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676565494457,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vlhr8vk9hw2",
+  "history_input" : "# Process data to generate ground truth using py-eddy-tracker\n\nfrom dependency import *\nfrom plot_utils import *\nfrom matplotlib.path import Path\nfrom py_eddy_tracker.poly import create_vertice\n\ndef generate_segmentation_mask_from_file(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=0,\n    y_offset=0,\n):\n    g, g_filtered, anticyclonic, cyclonic = identify_eddies(\n        gridded_ssh_file, date, ssh_var, u_var, v_var, high_pass_wavelength_km\n    )\n    mask = generate_segmentation_mask(\n        g_filtered, anticyclonic, cyclonic, x_offset, y_offset\n    )\n    var = g.grid(ssh_var)\n    var_filtered = g_filtered.grid(ssh_var)\n    return var, var_filtered, mask\n\n\ndef identify_eddies(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n):\n    g = RegularGridDataset(gridded_ssh_file, \"longitude\", \"latitude\")\n    g_filtered = deepcopy(g)  # make a copy so we don't alter the original\n    g_filtered.bessel_high_filter(ssh_var, high_pass_wavelength_km)\n    anticyclonic, cyclonic = g_filtered.eddy_identification(ssh_var, u_var, v_var, date)\n    return g, g_filtered, anticyclonic, cyclonic\n\n\ndef generate_segmentation_mask(\n    grid_dataset, anticyclonic, cyclonic, x_offset, y_offset, plot=False\n):\n    \"\"\"\n    Creates a numpy array to store the segmentation mask for the grid_dataset.\n    The mask contains classes 0: no eddy, 1: anticyclonic eddy, 2: cyclonic eddy.\n    \"\"\"\n    assert (\n        cyclonic.sign_legend == \"Cyclonic\"\n        and anticyclonic.sign_legend == \"Anticyclonic\"\n    ), \"Check whether the correct order for (anti)cyclonic observations were provided.\"\n    mask = np.zeros(grid_dataset.grid(\"adt\").shape, dtype=np.uint8)\n    # cyclonic should have the same: x_name = 'contour_lon_e', y_name = 'contour_lat_e'\n    x_name, y_name = anticyclonic.intern(False)\n    for eddy in anticyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        vertices = create_vertice(x_list, eddy[y_name] + y_offset)\n        i, j = Path(vertices).pixels_in(grid_dataset)\n        mask[i, j] = 1\n\n    for eddy in cyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        y_list = eddy[y_name] + y_offset\n        i, j = Path(create_vertice(x_list, y_list)).pixels_in(grid_dataset)\n        mask[i, j] = 2\n\n    if plot:\n        ax, m,fig = plot_variable(grid_dataset, mask, \"Segmentation Mask\", cmap=\"viridis\")\n    return mask",
+  "history_output" : "Running",
+  "history_begin_time" : 1676565490012,
+  "history_end_time" : 1676565494458,
+  "history_notes" : null,
+  "history_process" : "jajowz",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "tety8szweg8",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676565494459,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rn07davlios",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676565494459,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "bg3w6ppihpn",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676565494460,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+}]
