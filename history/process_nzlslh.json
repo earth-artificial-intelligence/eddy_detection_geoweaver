@@ -1,4 +1,34 @@
 [{
+  "history_id" : "ho10d2qunob",
+  "history_input" : "# sea surface height (SSH preprocessing)\n\n\nfrom dependency import *\nfrom plot_utils import plot_variable, save_fig_and_relesase_memory\nfrom data_loader import example_file\n\n\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nax, m, fig = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\n\nax, m, fig = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\n",
+  "history_output" : "We assume pixel position of grid is centered for /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/ho10d2qunob/ssh_map_preprocessing.py\", line 20, in <module>\n    save_fig_and_relesase_memory(ax, m, fig)\n  File \"/home/chetana/gw-workspace/ho10d2qunob/plot_utils.py\", line 36, in save_fig_and_relesase_memory\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/figure.py\", line 3328, in savefig\n    self.canvas.print_figure(fname, **kwargs)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/backend_bases.py\", line 2362, in print_figure\n    result = print_method(\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/backend_bases.py\", line 2228, in <lambda>\n    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/backends/backend_agg.py\", line 509, in print_png\n    self._print_pil(filename_or_obj, \"png\", pil_kwargs, metadata)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/backends/backend_agg.py\", line 458, in _print_pil\n    mpl.image.imsave(\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/image.py\", line 1687, in imsave\n    image.save(fname, **pil_kwargs)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/PIL/Image.py\", line 2428, in save\n    fp = builtins.open(filename, \"w+b\")\nFileNotFoundError: [Errno 2] No such file or directory: '/home/chetana/ML_eddies/plots/0.png'\n",
+  "history_begin_time" : 1676678754120,
+  "history_end_time" : 1676678758996,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "itshf2v9kgf",
+  "history_input" : "# sea surface height (SSH preprocessing)\n\n\nfrom dependency import *\nfrom plot_utils import plot_variable, save_fig_and_relesase_memory\nfrom data_loader import example_file\n\n\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nax, m, fig = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\n\nax, m, fig = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\n",
+  "history_output" : "We assume pixel position of grid is centered for /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/itshf2v9kgf/ssh_map_preprocessing.py\", line 20, in <module>\n    save_fig_and_relesase_memory(ax, m, fig)\n  File \"/home/chetana/gw-workspace/itshf2v9kgf/plot_utils.py\", line 36, in save_fig_and_relesase_memory\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/figure.py\", line 3328, in savefig\n    self.canvas.print_figure(fname, **kwargs)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/backend_bases.py\", line 2362, in print_figure\n    result = print_method(\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/backend_bases.py\", line 2228, in <lambda>\n    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/backends/backend_agg.py\", line 509, in print_png\n    self._print_pil(filename_or_obj, \"png\", pil_kwargs, metadata)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/backends/backend_agg.py\", line 458, in _print_pil\n    mpl.image.imsave(\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/matplotlib/image.py\", line 1687, in imsave\n    image.save(fname, **pil_kwargs)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/PIL/Image.py\", line 2428, in save\n    fp = builtins.open(filename, \"w+b\")\nFileNotFoundError: [Errno 2] No such file or directory: '/home/chetana/ML_eddies/plots/0.png'\n",
+  "history_begin_time" : 1676678220916,
+  "history_end_time" : 1676678226572,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
+  "history_id" : "cbuy293s63d",
+  "history_input" : "# sea surface height (SSH preprocessing)\n\n\nfrom dependency import *\nfrom plot_utils import plot_variable, save_fig_and_relesase_memory\nfrom data_loader import example_file\n\n\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nax, m, fig = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\n\nax, m, fig = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\n",
+  "history_output" : "We assume pixel position of grid is centered for /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/cbuy293s63d/ssh_map_preprocessing.py\", line 10, in <module>\n    g = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/dataset/grid.py\", line 1211, in __init__\n    super().__init__(*args, **kwargs)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/dataset/grid.py\", line 307, in __init__\n    self.populate()\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/dataset/grid.py\", line 311, in populate\n    self.load_general_features()\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/dataset/grid.py\", line 345, in load_general_features\n    with Dataset(self.filename) as h:\n  File \"src/netCDF4/_netCDF4.pyx\", line 2307, in netCDF4._netCDF4.Dataset.__init__\n  File \"src/netCDF4/_netCDF4.pyx\", line 1925, in netCDF4._netCDF4._ensure_nc_success\nFileNotFoundError: [Errno 2] No such file or directory: b'/home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc'\n",
+  "history_begin_time" : 1676676343546,
+  "history_end_time" : 1676676348031,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
   "history_id" : "zziktfnjd0n",
   "history_input" : "# sea surface height (SSH preprocessing)\n\n\nfrom dependency import *\nfrom plot_utils import plot_variable, save_fig_and_relesase_memory\nfrom data_loader import example_file\n\n\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nax, m, fig = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\n\nax, m, fig = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\n",
   "history_output" : "We assume pixel position of grid is centered for /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc\n",
@@ -174,6 +204,36 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1676565494457,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vcvgoqhizbp",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676676718045,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "kbue7x2mvkf",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676676751673,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "70zcpyhyntn",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676677551319,
   "history_notes" : null,
   "history_process" : "nzlslh",
   "host_id" : "ycru82",

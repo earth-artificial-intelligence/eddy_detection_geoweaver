@@ -2,7 +2,7 @@
   "id" : "0ajbp0",
   "name" : "dependency",
   "description" : null,
-  "code" : "# All frequently used dependency are here\n\nimport os\n\nfrom datetime import datetime\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy",
+  "code" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
   "lang" : "python",
   "owner" : "111111",
   "confidential" : "FALSE"
@@ -67,6 +67,30 @@
   "name" : "compress_segmask_and_ssh",
   "description" : null,
   "code" : "# Use the segmask_and_ssh_utils to generate compress file\n\nfrom data_loader import *\nfrom generate_segmentation_in_parallel import *\nfrom segmask_and_ssh_utils import *\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)",
+  "lang" : "python",
+  "owner" : "111111",
+  "confidential" : "FALSE"
+},{
+  "id" : "dhjb5i",
+  "name" : "validate_data_and_paths",
+  "description" : null,
+  "code" : "from dependency import *\nfrom unzip_utils import *\nfrom get_data import *\n\n\nos.chdir('/home/chetana/')\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_eddies\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "lang" : "python",
+  "owner" : "111111",
+  "confidential" : "FALSE"
+},{
+  "id" : "zbt6sg",
+  "name" : "unzip_utils",
+  "description" : null,
+  "code" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "lang" : "python",
+  "owner" : "111111",
+  "confidential" : "FALSE"
+},{
+  "id" : "g7a3zf",
+  "name" : "get_data",
+  "description" : null,
+  "code" : "\nfrom dependency import logger\n\nimport cdsapi\n\nclient = cdsapi.Client()\n\ndef download_train_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [\n                    '1998',\n                ],\n                'month': [\n                '01', '02', '03',\n                '04', '05', '06',\n                '07', '08', '09',\n                '10', '11', '12',\n            ],\n                'day': ['01','10','20','30'],\n            },\n            'train_data.zip')\n        return 'train_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading training data\")\n\n\ndef download_test_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [ '2019' ],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01','10','20','30'],\n            },\n            'test_data.zip')\n        return 'test_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading test data\")\n\n\ndef download_data():\n    train_zip_file = download_train_data()\n    test_zip_file = download_test_data()\n    return train_zip_file, test_zip_file",
   "lang" : "python",
   "owner" : "111111",
   "confidential" : "FALSE"
