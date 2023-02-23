@@ -1,4 +1,94 @@
 [{
+  "history_id" : "xt6e5oglswo",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1677174649031,
+  "history_end_time" : 1677174652411,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "wmu9bqojvgg",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "",
+  "history_begin_time" : 1677171145054,
+  "history_end_time" : 1677171162514,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "eu3xsilhwug",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996987512,
+  "history_end_time" : 1676997349579,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5jc4q755wdr",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996429032,
+  "history_end_time" : 1676996898619,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "2ke98e2a8vr",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996296098,
+  "history_end_time" : 1676996301584,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u9oz3pkdaaw",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "",
+  "history_begin_time" : 1676996149726,
+  "history_end_time" : 1676996171001,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "cf8ny1ll2mi",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676923910314,
+  "history_end_time" : 1676923961276,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "8odea1thze0",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "",
+  "history_begin_time" : 1676923359633,
+  "history_end_time" : 1676923410518,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hymm29owc71",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "\u001B[0m\n",
+  "history_begin_time" : 1676923255469,
+  "history_end_time" : 1676923345987,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
   "history_id" : "o0yuq50vpcf",
   "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
   "history_output" : "Running",

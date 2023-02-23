@@ -1,4 +1,54 @@
 [{
+  "history_id" : "b1dokfyhk1v",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "",
+  "history_begin_time" : 1677174663719,
+  "history_end_time" : 1677174668038,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "sphd6oa4d98",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "",
+  "history_begin_time" : 1677174082589,
+  "history_end_time" : 1677174104901,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "c5mf8wxhytt",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996184669,
+  "history_end_time" : 1676996187691,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "pni8yhs3v9g",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "",
+  "history_begin_time" : 1676923388638,
+  "history_end_time" : 1676923410521,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "65ad9x0hnlm",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "\u001B[0m\n",
+  "history_begin_time" : 1676923299684,
+  "history_end_time" : 1676923345989,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
   "history_id" : "jhnltol2q20",
   "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
   "history_output" : "",
@@ -314,6 +364,46 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1676677551309,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "54b1h0dujl7",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676923961277,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "yvbrswtyc5a",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676996302537,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zh8h84sfaxd",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676996898620,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7dl7i66grgh",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676997349585,
   "history_notes" : null,
   "history_process" : "0ps7es",
   "host_id" : "ycru82",

@@ -1,4 +1,94 @@
 [{
+  "history_id" : "emilylzkmge",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1677174655482,
+  "history_end_time" : 1677174658688,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "yic1bupvxwc",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "",
+  "history_begin_time" : 1677171164489,
+  "history_end_time" : 1677171169054,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "6uox4vurube",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "",
+  "history_begin_time" : 1676996992830,
+  "history_end_time" : 1676997349626,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "kixosl664q8",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "",
+  "history_begin_time" : 1676996434446,
+  "history_end_time" : 1676996898634,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jp4q32kjyye",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996304105,
+  "history_end_time" : 1676996307431,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "tetuyt23kd2",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "",
+  "history_begin_time" : 1676996173018,
+  "history_end_time" : 1676996177346,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "r6737lac8ml",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "",
+  "history_begin_time" : 1676923915437,
+  "history_end_time" : 1676923961302,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ikmjczisosj",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676923370654,
+  "history_end_time" : 1676923410552,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "tvwx0vz4zcc",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "",
+  "history_begin_time" : 1676923284991,
+  "history_end_time" : 1676923346013,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
   "history_id" : "kp1fqswjc8z",
   "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
   "history_output" : "Running",

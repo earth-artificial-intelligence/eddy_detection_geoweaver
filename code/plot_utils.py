@@ -33,7 +33,7 @@ def plot_variable(grid_object, var_name, ax_title, **kwargs):
 
 def save_fig_and_relesase_memory(ax, m, fig):
     # TODO: change the function to account for a relevant name
-    fig.savefig( os.path.join("/home/chetana/ML_eddies/plots/", "0.png"))
+    #fig.savefig( os.path.join("/home/chetana/ML_eddies/plots/", "0.png"))
     ax.cla()
     plt.close('all')
 

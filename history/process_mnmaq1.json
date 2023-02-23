@@ -1,0 +1,91 @@
+[{
+  "history_id" : "skk3sgt0bqf",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1677174654260,
+  "history_end_time" : 1677174659725,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "e5ffd18x9fa",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1677171164531,
+  "history_end_time" : 1677171170161,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "x8x6be672y8",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996994169,
+  "history_end_time" : 1676997349627,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5ks80xbudyg",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1676996434446,
+  "history_end_time" : 1676996898635,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "iv07cst6suc",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1676996302909,
+  "history_end_time" : 1676996307406,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
+  "history_id" : "hqkeo3t131i",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1676996173018,
+  "history_end_time" : 1676996183086,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "NZYY61ZZsclS",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "",
+  "history_begin_time" : 1676923229336,
+  "history_end_time" : 1676923238125,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "t7LZBwtZLhKA",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/home/chetana/gw-workspace/t7LZBwtZLhKA/get_device_config.py\", line 1, in <module>\n    from dependency import *\n  File \"/home/chetana/gw-workspace/t7LZBwtZLhKA/dependency.py\", line 10, in <module>\n    from py_eddy_tracker.dataset.grid import RegularGridDataset\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/dataset/grid.py\", line 11, in <module>\n    from numba import njit, prange, types as numba_types\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numba/__init__.py\", line 200, in <module>\n    _ensure_critical_deps()\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numba/__init__.py\", line 140, in _ensure_critical_deps\n    raise ImportError(\"Numba needs NumPy 1.22 or less\")\nImportError: Numba needs NumPy 1.22 or less\n",
+  "history_begin_time" : 1676922980428,
+  "history_end_time" : 1676922987201,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "9d063CPzMJHz",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/requests/compat.py\", line 11, in <module>\n    import chardet\nModuleNotFoundError: No module named 'chardet'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/9d063CPzMJHz/get_device_config.py\", line 1, in <module>\n    from dependency import *\n  File \"/home/chetana/gw-workspace/9d063CPzMJHz/dependency.py\", line 9, in <module>\n    from py_eddy_tracker import data\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/data/__init__.py\", line 16, in <module>\n    import requests\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/requests/__init__.py\", line 45, in <module>\n    from .exceptions import RequestsDependencyWarning\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/requests/exceptions.py\", line 9, in <module>\n    from .compat import JSONDecodeError as CompatJSONDecodeError\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/requests/compat.py\", line 13, in <module>\n    import charset_normalizer as chardet\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/charset_normalizer/__init__.py\", line 23, in <module>\n    from charset_normalizer.api import from_fp, from_path, from_bytes, normalize\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/charset_normalizer/api.py\", line 10, in <module>\n    from charset_normalizer.md import mess_ratio\n  File \"charset_normalizer/md.py\", line 5, in <module>\nImportError: cannot import name 'COMMON_SAFE_ASCII_CHARACTERS' from 'charset_normalizer.constant' (/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/charset_normalizer/constant.py)\n",
+  "history_begin_time" : 1676922864283,
+  "history_end_time" : 1676922868590,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : null,
+  "indicator" : "Done"
+},]

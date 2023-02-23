@@ -3,7 +3,7 @@ from unzip_utils import *
 from get_data import *
 
 
-os.chdir('/home/chetana/')
+os.chdir(os.path.expanduser("~"))
 current_working_dir = os.getcwd()
 print(current_working_dir)
 

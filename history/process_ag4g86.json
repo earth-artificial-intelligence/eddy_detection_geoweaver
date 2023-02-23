@@ -1,4 +1,94 @@
 [{
+  "history_id" : "lo8gkb9xfjl",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1677174648928,
+  "history_end_time" : 1677174652246,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "hess3asvf0o",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1677171146307,
+  "history_end_time" : 1677171162463,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "7c5ignk3wo9",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996987510,
+  "history_end_time" : 1676997349597,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "b5luz71q47m",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996429053,
+  "history_end_time" : 1676996898624,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "r6k6a43iflb",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996296317,
+  "history_end_time" : 1676996302538,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u656lj751f8",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996150929,
+  "history_end_time" : 1676996171000,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "b78rmpqisx0",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676923916226,
+  "history_end_time" : 1676923961283,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jxr9n0j2g7c",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "",
+  "history_begin_time" : 1676923369337,
+  "history_end_time" : 1676923410522,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ospt6z3wcjg",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "\u001B[0m\n",
+  "history_begin_time" : 1676923284633,
+  "history_end_time" : 1676923345991,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
   "history_id" : "jnxki5dic50",
   "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
   "history_output" : "",

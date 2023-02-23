@@ -1,0 +1,141 @@
+[{
+  "history_id" : "2ke98e2a8vr",
+  "history_input" : "# All frequently used dependency are here\n\nimport os\nimport numpy as np\nimport logging as logger\n\nfrom datetime import datetime\nfrom matplotlib import pyplot as plt\nfrom py_eddy_tracker import data\nfrom py_eddy_tracker.dataset.grid import RegularGridDataset\nfrom copy import deepcopy\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996296098,
+  "history_end_time" : 1676996301584,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "yvbrswtyc5a",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676996302537,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "r6k6a43iflb",
+  "history_input" : "#Fequently used plotting functions\n\n\nimport os.path\nfrom dependency import plt\n\n\n\n\ndef start_axes(title):\n    fig = plt.figure(figsize=(13, 5))\n    ax = fig.add_axes([0.03, 0.03, 0.90, 0.94])\n    ax.set_aspect(\"equal\")\n    ax.set_title(title, weight=\"bold\")\n    return ax, fig\n\n\ndef update_axes(ax, mappable=None):\n    ax.grid()\n    if mappable:\n        plt.colorbar(mappable, cax=ax.figure.add_axes([0.94, 0.05, 0.01, 0.9]))\n\n\n\n\ndef plot_variable(grid_object, var_name, ax_title, **kwargs):\n    ax,fig = start_axes(ax_title)\n    m = grid_object.display(ax, var_name, **kwargs)\n    update_axes(ax, m)\n    ax.set_xlim(grid_object.x_c.min(), grid_object.x_c.max())\n    ax.set_ylim(grid_object.y_c.min(), grid_object.y_c.max())\n    return ax, m, fig\n\ndef save_fig_and_relesase_memory(ax, m, fig):\n    # TODO: change the function to account for a relevant name\n    fig.savefig( os.path.join(\"/home/chetana/ML_eddies/plots/\", \"0.png\"))\n    ax.cla()\n    plt.close('all')\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996296317,
+  "history_end_time" : 1676996302538,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f8nnzb6myxu",
+  "history_input" : "# sea surface height (SSH preprocessing)\n\n\nfrom dependency import *\nfrom plot_utils import plot_variable, save_fig_and_relesase_memory\nfrom data_loader import example_file\n\n\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nax, m, fig = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\n\nax, m, fig = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\n",
+  "history_output" : "We assume pixel position of grid is centered for /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/f8nnzb6myxu/ssh_map_preprocessing.py\", line 10, in <module>\n    g = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/dataset/grid.py\", line 1211, in __init__\n    super().__init__(*args, **kwargs)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/dataset/grid.py\", line 307, in __init__\n    self.populate()\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/dataset/grid.py\", line 311, in populate\n    self.load_general_features()\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/py_eddy_tracker/dataset/grid.py\", line 345, in load_general_features\n    with Dataset(self.filename) as h:\n  File \"src/netCDF4/_netCDF4.pyx\", line 2307, in netCDF4._netCDF4.Dataset.__init__\n  File \"src/netCDF4/_netCDF4.pyx\", line 1925, in netCDF4._netCDF4._ensure_nc_success\nFileNotFoundError: [Errno 2] No such file or directory: b'/home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc'\n",
+  "history_begin_time" : 1676996302853,
+  "history_end_time" : 1676996307398,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ur1tz04k8vn",
+  "history_input" : "# Process data to generate ground truth using py-eddy-tracker\n\nfrom dependency import *\nfrom plot_utils import *\nfrom matplotlib.path import Path\nfrom py_eddy_tracker.poly import create_vertice\n\ndef generate_segmentation_mask_from_file(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=0,\n    y_offset=0,\n):\n    g, g_filtered, anticyclonic, cyclonic = identify_eddies(\n        gridded_ssh_file, date, ssh_var, u_var, v_var, high_pass_wavelength_km\n    )\n    mask = generate_segmentation_mask(\n        g_filtered, anticyclonic, cyclonic, x_offset, y_offset\n    )\n    var = g.grid(ssh_var)\n    var_filtered = g_filtered.grid(ssh_var)\n    return var, var_filtered, mask\n\n\ndef identify_eddies(\n    gridded_ssh_file,\n    date,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n):\n    g = RegularGridDataset(gridded_ssh_file, \"longitude\", \"latitude\")\n    g_filtered = deepcopy(g)  # make a copy so we don't alter the original\n    g_filtered.bessel_high_filter(ssh_var, high_pass_wavelength_km)\n    anticyclonic, cyclonic = g_filtered.eddy_identification(ssh_var, u_var, v_var, date)\n    return g, g_filtered, anticyclonic, cyclonic\n\n\ndef generate_segmentation_mask(\n    grid_dataset, anticyclonic, cyclonic, x_offset, y_offset, plot=False\n):\n    \"\"\"\n    Creates a numpy array to store the segmentation mask for the grid_dataset.\n    The mask contains classes 0: no eddy, 1: anticyclonic eddy, 2: cyclonic eddy.\n    \"\"\"\n    assert (\n        cyclonic.sign_legend == \"Cyclonic\"\n        and anticyclonic.sign_legend == \"Anticyclonic\"\n    ), \"Check whether the correct order for (anti)cyclonic observations were provided.\"\n    mask = np.zeros(grid_dataset.grid(\"adt\").shape, dtype=np.uint8)\n    # cyclonic should have the same: x_name = 'contour_lon_e', y_name = 'contour_lat_e'\n    x_name, y_name = anticyclonic.intern(False)\n    for eddy in anticyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        vertices = create_vertice(x_list, eddy[y_name] + y_offset)\n        i, j = Path(vertices).pixels_in(grid_dataset)\n        mask[i, j] = 1\n\n    for eddy in cyclonic:\n        x_list = (eddy[x_name] - x_offset) % 360 + x_offset\n        y_list = eddy[y_name] + y_offset\n        i, j = Path(create_vertice(x_list, y_list)).pixels_in(grid_dataset)\n        mask[i, j] = 2\n\n    if plot:\n        ax, m,fig = plot_variable(grid_dataset, mask, \"Segmentation Mask\", cmap=\"viridis\")\n    return mask",
+  "history_output" : "",
+  "history_begin_time" : 1676996298067,
+  "history_end_time" : 1676996302540,
+  "history_notes" : null,
+  "history_process" : "jajowz",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0px5iov0imt",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676996302542,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mhlzlprxmx0",
+  "history_input" : "# Generate ground truth on a global scale helper functions\n\nimport multiprocessing\n\nfrom ground_truth_utils import *\n\ndef generate_masks_in_parallel(\n    files,\n    dates,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=-180,\n    y_offset=0,\n    num_processes=8,\n    plot=False,\n    save=True,\n):\n    args = [\n        (file, date, ssh_var, u_var, v_var, high_pass_wavelength_km, x_offset, y_offset)\n        for file, date in zip(files, dates)\n    ]\n    pool = multiprocessing.Pool(processes=num_processes)\n    results = pool.starmap(generate_segmentation_mask_from_file, args)\n\n    vars_ = []\n    vars_filtered = []\n    masks = []\n    for result in results:\n        vars_.append(result[0])\n        vars_filtered.append(result[1])\n        masks.append(result[2])\n\n    # concatenate list into single numpy array and return\n    masks = np.stack(masks, axis=0)\n    vars_ = np.stack(vars_, axis=0).astype(np.float32)\n    vars_filtered = np.stack(vars_filtered, axis=0).astype(np.float32)\n\n    if save:\n        # find common folder across all files\n        common_folder = os.path.commonpath(files)\n        years = sorted(set([date.year for date in dates]))\n        year_str = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n        save_path = os.path.join(\n            common_folder, f\"global_pet_masks_with_{ssh_var}_{year_str}.npz\"\n        )\n        np.savez_compressed(\n            save_path,\n            masks=masks,\n            dates=dates,\n            var=vars_,\n            var_filtered=vars_filtered,\n        )\n        print(f\"Saved masks to {save_path}\")\n\n    return vars_, vars_filtered, masks\n\n\nfrom itertools import product\n\n\ndef get_dates_and_files(years, months, days, folder, file_pattern):\n    \"\"\"\n    Given a filename pattern and a list of years months and days,\n    fill in the filename pattern with the date and return\n    a list of filenames and a list of associated `datetime` objects.\n\n    Args:\n        years (list): list of years, e.g., [1993, 1994, 1995, 1996]\n        months (list): list of months, e.g., [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n        days (list): list of days, e.g., [1, 10, 20, 30] for every 10th day\n        folder (str): folder where the files are located\n        file_pattern (str): filename pattern, e.g.,\n            \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n    Returns:\n        files (list): full/absolute path to each netCDF file in the list of dates\n        dates (list): list of `datetime` objects formed from the combination of years, months and days\n    \"\"\"\n    dates, files = [], []\n    for y, m, d in product(years, months, days):  # cartesian product\n        try:\n            date = datetime(y, m, d)\n            file = os.path.join(folder, file_pattern.format(year=y, month=m, day=d))\n            dates.append(date)\n            files.append(file)\n        # catch ValueError thrown by datetime if date is not valid\n        except ValueError:\n            pass\n    years = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n    print(f\"Found {len(dates)} files for {years}.\")\n    return dates, files",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996297666,
+  "history_end_time" : 1676996302544,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "txu6e1v8rg7",
+  "history_input" : "# Take a subset of the masks and SSH map, and save to a compressed numpy (.npz) file\n\nfrom dependency import *\n\ndef subset_arrays(\n    masks,\n    var,\n    var_filtered,\n    dates,\n    lon_range,\n    lat_range,\n    resolution_deg,\n    plot=False,\n    ssh_var=\"adt\",\n    save_folder=None,\n):\n    \"\"\"\n    Subset the arrays to the given lon_range and lat_range.\n\n    Args:\n        masks (np.ndarray): Global eddy segmentation masks.\n            Can be masks from multiple dates concatenated into one array\n        var (np.ndarray): Global SSH value\n        var_filtered (np.ndarray): Global SSH value after high-pass filter\n        dates (list): List of `datetime` objects\n        lon_range (tuple): Longitude range to subset to (lon_start, lon_end)\n        lat_range (tuple): Latitude range to subset to (lat_start, lat_end)\n        resolution_deg (float): Resolution of the SSH map in degrees\n        plot (bool): Whether to plot a sample of the subsetted arrays\n        ssh_var (str): SSH variable name. Defaults to \"adt\". Only used if save_folder is not None.\n        save_folder (str): Folder to save the subsetted arrays to. Defaults to None.\n            If None, the arrays are not saved.\n\n    Returns:\n        mask_subset (np.ndarray): Subsetted masks\n        var_subset (np.ndarray): Subsetted var\n        var_filtered_subset (np.ndarray): Subsetted var_filtered\n        lon_subset (np.ndarray): Subsetted lon\n        lat_subset (np.ndarray): Subsetted lat\n    \"\"\"\n    lon_bounds = np.arange(-180, 180 + resolution_deg, resolution_deg)\n    lat_bounds = np.arange(-90, 90 + resolution_deg, resolution_deg)\n\n    # convert lon_range and lat_range to indices in the numpy arrays\n    lon_start, lon_end = lon_range\n    lat_start, lat_end = lat_range\n    lon_idx = lambda lon: np.argmin(np.abs(lon_bounds - lon))\n    lat_idx = lambda lat: np.argmin(np.abs(lat_bounds - lat))\n    lon_start_idx, lon_end_idx = lon_idx(lon_start), lon_idx(lon_end)\n    lat_start_idx, lat_end_idx = lat_idx(lat_start), lat_idx(lat_end)\n\n    mask_subset = masks[:, lon_start_idx:lon_end_idx, lat_start_idx:lat_end_idx]\n    var_subset = var[:, lon_start_idx:lon_end_idx, lat_start_idx:lat_end_idx]\n    var_filtered_subset = var_filtered[\n        :, lon_start_idx:lon_end_idx, lat_start_idx:lat_end_idx\n    ]\n    lon_subset = lon_bounds[lon_start_idx : lon_end_idx + 1]\n    lat_subset = lat_bounds[lat_start_idx : lat_end_idx + 1]\n    if plot:\n        fig, ax = plt.subplots()\n        if mask_subset.ndim == 3:\n            m = mask_subset[0]\n            v = var_subset[0]\n        elif mask_subset.ndim == 2:\n            m = mask_subset\n            v = var_subset\n        ax.pcolormesh(lon_subset, lat_subset, m.T, vmin=0, vmax=2, cmap=\"viridis\")\n        ax.set_xlim(lon_start, lon_end)\n        ax.set_ylim(lat_start, lat_end)\n        ax.set_aspect(abs((lon_end - lon_start) / (lat_start - lat_end)) * 1.0)\n\n    if save_folder is not None:\n        all_years = sorted(set([d.year for d in dates]))\n        year_str = (\n            f\"{all_years[0]}\"\n            if len(all_years) == 1\n            else f\"{min(all_years)}-{max(all_years)}\"\n        )\n        lat_str = lat_range_to_str(lat_range)\n        lon_str = lon_range_to_str(lon_range)\n        save_path = os.path.join(\n            save_folder,\n            f\"subset_pet_masks_with_{ssh_var}_{year_str}_lat{lat_str}_lon{lon_str}.npz\",\n        )\n        np.savez_compressed(\n            save_path,\n            masks=mask_subset,\n            dates=dates,\n            var=var_subset,\n            var_filtered=var_filtered_subset,\n            lon_subset=lon_subset,\n            lat_subset=lat_subset,\n        )\n        print(f\"Saved mask subset to {save_path}\")\n    return mask_subset, var_subset, var_filtered_subset, lon_subset, lat_subset\n\n\ndef lon_range_to_str(lon_range):\n    lon_start, lon_end = lon_range\n    lon_start = f\"{lon_start}E\" if lon_start >= 0 else f\"{abs(lon_start)}W\"\n    lon_end = f\"{lon_end}E\" if lon_end >= 0 else f\"{abs(lon_end)}W\"\n    return f\"{lon_start}-{lon_end}\"\n\n\ndef lat_range_to_str(lat_range):\n    lat_start, lat_end = lat_range\n    lat_start = f\"{lat_start}N\" if lat_start >= 0 else f\"{abs(lat_start)}S\"\n    lat_end = f\"{lat_end}N\" if lat_end >= 0 else f\"{abs(lat_end)}S\"\n    return f\"{lat_start}-{lat_end}\"",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996297583,
+  "history_end_time" : 1676996302546,
+  "history_notes" : null,
+  "history_process" : "g85teu",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ahyr2aonxwc",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676996302548,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "borehcuclqo",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676996302550,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ao55xg8qu7t",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1676996302551,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jp4q32kjyye",
+  "history_input" : "from dependency import logger\nfrom zipfile import ZipFile\n\ndef unzip_file(zip_file_path, extract_to_path):\n    try:\n        with ZipFile(zip_file_path) as zip_file_object:          \n            zip_file_object.extractall(extract_to_path)\n            \n    except:\n        logger.error(\"Something went wrong while extracting File\" )\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1676996304105,
+  "history_end_time" : 1676996307431,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "rikucup36ig",
+  "history_input" : "\nfrom dependency import logger\n\nimport cdsapi\n\nclient = cdsapi.Client()\n\ndef download_train_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [\n                    '1998', '1999', '2000',\n            \t\t'2001', '2002', '2003',\n           \t\t\t'2004', '2005', '2006',\n                    '2007', '2008', '2009',\n                    '2010', '2011', '2012',\n                    '2013', '2014', '2015',\n                    '2016', '2017', '2018',\n                ],\n                'month': [\n                '01', '02', '03',\n                '04', '05', '06',\n                '07', '08', '09',\n                '10', '11', '12',\n            ],\n                'day': ['01','10','20','30'],\n            },\n            'train_data.zip')\n        return 'train_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading training data\")\n\n\ndef download_test_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [ '2019' ],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01','10','20','30'],\n            },\n            'test_data.zip')\n        return 'test_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading test data\")\n\n\ndef download_data():\n    train_zip_file = download_train_data()\n    test_zip_file = download_test_data()\n    return train_zip_file, test_zip_file",
+  "history_output" : "",
+  "history_begin_time" : 1676996302868,
+  "history_end_time" : 1676996307400,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "iv07cst6suc",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1676996302909,
+  "history_end_time" : 1676996307406,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+}]
