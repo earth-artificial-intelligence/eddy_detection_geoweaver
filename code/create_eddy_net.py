@@ -1,5 +1,5 @@
 import torch
-from model_utils import EddyNet
+from data_utils import EddyNet
 from convert_to_pytorch_data_loader import *
 
 num_classes = 2 if binary else 3

@@ -1,5 +1,5 @@
 import torchmetrics
-import troch
+import torch
 from create_eddy_net import *
 
 def get_metrics(N, sync=False):
