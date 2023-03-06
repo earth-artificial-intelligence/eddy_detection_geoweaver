@@ -11,8 +11,8 @@ tensorboard_dir = os.path.join(
 )
 writer = SummaryWriter(log_dir=tensorboard_dir)
 print(
-    f"{''.join(['=']*(28 + len(writer.log_dir)))}\n"
+    f"{''.join(['=']*(28 + len(writer.log_dir)))}\\n"
     f"Writing Tensorboard logs to {writer.log_dir}"
-    f"\n{''.join(['=']*(28 + len(writer.log_dir)))}"
+    f"\\n{''.join(['=']*(28 + len(writer.log_dir)))}"
 )
 

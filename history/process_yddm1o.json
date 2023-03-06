@@ -1,4 +1,64 @@
 [{
+  "history_id" : "4ywpq84kh55",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678128154740,
+  "history_end_time" : 1678128154740,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "gpfgscwy750",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800433,
+  "history_end_time" : 1678127800433,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "aio8dx38tuz",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127389133,
+  "history_end_time" : 1678127389133,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vx91esasz9n",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678125719429,
+  "history_end_time" : 1678125719429,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ckv4rfk29sf",
+  "history_input" : "# Use the segmask_and_ssh_utils to generate compress file\n\nfrom data_loader import *\nfrom generate_segmentation_in_parallel import *\nfrom segmask_and_ssh_utils import *\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)",
+  "history_output" : "Found 252 files for 1998-2018.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n",
+  "history_begin_time" : 1677777227573,
+  "history_end_time" : 1677777226302,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "ycru82",
+  "indicator" : "Running"
+},{
+  "history_id" : "fsw0u3mmd7l",
+  "history_input" : "# Use the segmask_and_ssh_utils to generate compress file\n\nfrom data_loader import *\nfrom generate_segmentation_in_parallel import *\nfrom segmask_and_ssh_utils import *\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)",
+  "history_output" : "Found 24 files for 1998-1999.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/global_pet_masks_with_adt_1998-1999.npz\nFound 12 files for 2019.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/global_pet_masks_with_adt_2019.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\n",
+  "history_begin_time" : 1677775211039,
+  "history_end_time" : 1677775378223,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
   "history_id" : "eajj7p2qr41",
   "history_input" : "# Use the segmask_and_ssh_utils to generate compress file\n\nfrom data_loader import *\nfrom generate_segmentation_in_parallel import *\nfrom segmask_and_ssh_utils import *\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)",
   "history_output" : "Found 24 files for 1998-1999.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/global_pet_masks_with_adt_1998-1999.npz\nFound 12 files for 2019.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/global_pet_masks_with_adt_2019.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\n",

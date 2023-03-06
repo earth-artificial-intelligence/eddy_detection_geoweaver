@@ -1,5 +1,5 @@
 from get_device_config import *
-from link_npz_file import *
+from link_npz_files import *
 from torch_data_loader_utils import get_eddy_dataloader
 
 # set binary = false if we want to distinguish between cyclonic and anticyclonic

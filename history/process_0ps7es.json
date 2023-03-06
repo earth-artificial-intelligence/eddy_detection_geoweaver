@@ -1,4 +1,64 @@
 [{
+  "history_id" : "u9sy968d9ih",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678128154738,
+  "history_end_time" : 1678128154738,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ote9f5c5x6f",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800430,
+  "history_end_time" : 1678127800430,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "mrfrihhx7ep",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127389130,
+  "history_end_time" : 1678127389130,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "aqagylgy5ps",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678125719425,
+  "history_end_time" : 1678125719425,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "de3qtdqj2zi",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1677776110531,
+  "history_end_time" : 1677776113772,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "eyeofkidwn1",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "",
+  "history_begin_time" : 1677775011345,
+  "history_end_time" : 1677775019936,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
   "history_id" : "b1dokfyhk1v",
   "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
   "history_output" : "",

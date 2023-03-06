@@ -1,5 +1,6 @@
 import torch
 from convert_to_pytorch_data_loader import *
+from create_eddy_net import *
 
 initial_lr = 1e-6
 max_lr = 5e-4

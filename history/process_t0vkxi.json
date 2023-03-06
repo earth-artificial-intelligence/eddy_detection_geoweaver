@@ -1,0 +1,71 @@
+[{
+  "history_id" : "0guxa8okyu6",
+  "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
+  "history_output" : "",
+  "history_begin_time" : 1678128194067,
+  "history_end_time" : 1678128197371,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "c1vfnt9ea3m",
+  "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-03-06_18-37\n======================================================================\n",
+  "history_begin_time" : 1678127839549,
+  "history_end_time" : 1678127843385,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "NpBFGo4PbMyx",
+  "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-03-06_18-36\n======================================================================\n",
+  "history_begin_time" : 1678127764117,
+  "history_end_time" : 1678127766791,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "R8vHZ94ILrRJ",
+  "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
+  "history_output" : "  File \"/home/chetana/gw-workspace/R8vHZ94ILrRJ/set_summary_writer.py\", line 14\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\n    ^\nSyntaxError: unterminated string literal (detected at line 14)\n",
+  "history_begin_time" : 1678127740569,
+  "history_end_time" : 1678127741692,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "sjcjbvp9hp6",
+  "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
+  "history_output" : "  File \"/home/chetana/gw-workspace/sjcjbvp9hp6/set_summary_writer.py\", line 14\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\n    ^\nSyntaxError: unterminated string literal (detected at line 14)\n",
+  "history_begin_time" : 1678127436238,
+  "history_end_time" : 1678127438676,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9e4ibnm9v2x",
+  "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
+  "history_output" : "  File \"/home/chetana/gw-workspace/9e4ibnm9v2x/set_summary_writer.py\", line 14\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\n    ^\nSyntaxError: unterminated string literal (detected at line 14)\n",
+  "history_begin_time" : 1678125761901,
+  "history_end_time" : 1678125763074,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "nb0i761k8u1",
+  "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
+  "history_output" : "  File \"/home/chetana/gw-workspace/nb0i761k8u1/set_summary_writer.py\", line 14\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\n    ^\nSyntaxError: unterminated string literal (detected at line 14)\n",
+  "history_begin_time" : 1677775405758,
+  "history_end_time" : 1677775408224,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},]

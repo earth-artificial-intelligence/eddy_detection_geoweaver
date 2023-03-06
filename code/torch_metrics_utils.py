@@ -13,16 +13,18 @@ def get_metrics(N, sync=False):
     """
     # Define metrics and move to GPU if available
     metrics = [
-        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),
+        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N,task="multiclass"),
         torchmetrics.Precision(
             average=None,
             dist_sync_on_step=sync,
             num_classes=N,
+          	task="multiclass"
         ),
         torchmetrics.Recall(
             average=None,
             dist_sync_on_step=sync,
             num_classes=N,
+          	task="multiclass"
         ),
 #         torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy
 #             average="micro",
@@ -33,6 +35,7 @@ def get_metrics(N, sync=False):
             average="none",  # return F1 for each class
             dist_sync_on_step=sync,
             num_classes=N,
+          	task="multiclass"
         )
     ]
     if torch.cuda.is_available():  # move metrics to the same device as model

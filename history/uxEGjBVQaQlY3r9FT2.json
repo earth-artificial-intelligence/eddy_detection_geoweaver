@@ -1,0 +1,271 @@
+[{
+  "history_id" : "logbkrktlpu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800429,
+  "history_end_time" : 1678127800429,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ote9f5c5x6f",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800430,
+  "history_end_time" : 1678127800430,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "eph7d7583io",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800430,
+  "history_end_time" : 1678127800430,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hsn35kjxvqb",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800431,
+  "history_end_time" : 1678127800431,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "qsmudq1irbk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800431,
+  "history_end_time" : 1678127800431,
+  "history_notes" : null,
+  "history_process" : "jajowz",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "s4ziru4i47b",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800431,
+  "history_end_time" : 1678127800431,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "b5yzrdba2ut",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800432,
+  "history_end_time" : 1678127800432,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "py8d8gvjv2e",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800433,
+  "history_end_time" : 1678127800433,
+  "history_notes" : null,
+  "history_process" : "g85teu",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nwgt0e2f9ey",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800433,
+  "history_end_time" : 1678127800433,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "gpfgscwy750",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800433,
+  "history_end_time" : 1678127800433,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "fbxk8o63tda",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800434,
+  "history_end_time" : 1678127800434,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "29xlumblag2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800434,
+  "history_end_time" : 1678127800434,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1ijyftjie0v",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800434,
+  "history_end_time" : 1678127800434,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "z4k7mhsyaqh",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1678127801366,
+  "history_end_time" : 1678127805257,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "0rmw5znk4u0",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1678127808146,
+  "history_end_time" : 1678127811177,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "ssjzefgjnv0",
+  "history_input" : "from get_device_config import *\nfrom link_npz_files import *\nfrom torch_data_loader_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678127812286,
+  "history_end_time" : 1678127818349,
+  "history_notes" : null,
+  "history_process" : "28zx21",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "47ryjn6p9j3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800443,
+  "history_end_time" : 1678127800443,
+  "history_notes" : null,
+  "history_process" : "d6b94y",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "klia0oaqtjm",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixels across 252 SSH maps\nNumber of pixels that are not eddies: 2.99 megapixels (72.37%)\nNumber of pixels that are anticyclonic eddies: 0.60 megapixels (14.43%)\nNumber of pixels that are cyclonic eddies: 0.55 megapixels (13.20%)\n\n",
+  "history_begin_time" : 1678127819307,
+  "history_end_time" : 1678127825311,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "862lu3k9ej4",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678127825378,
+  "history_end_time" : 1678127831463,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "r4qotszjb15",
+  "history_input" : "import torch\nfrom convert_to_pytorch_data_loader import *\nfrom create_eddy_net import *\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)\n",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678127832349,
+  "history_end_time" : 1678127838553,
+  "history_notes" : null,
+  "history_process" : "suoxrn",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "3blfag6t7pf",
+  "history_input" : "import torch\n\nloss_fn = torch.nn.CrossEntropyLoss()",
+  "history_output" : "Running",
+  "history_begin_time" : 1678127840746,
+  "history_end_time" : 1678127843036,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "oahpk9t0jd5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800453,
+  "history_end_time" : 1678127800453,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "sbukmv48bwq",
+  "history_input" : "import numpy as np\nimport torch\nimport torch.nn as nn\nimport torchmetrics\nfrom torch.utils.tensorboard.summary import hparams\n\n\ndef run_batch(\n    model,\n    loss_fn,\n    x_batch,\n    y_batch,\n    opt=None,\n    sched=None,\n    metrics=None,\n    return_pred=False,\n):\n    \"\"\"Run a batch of data through the model and return loss and metrics.\"\"\"\n    if torch.cuda.is_available():\n        loss_fn = loss_fn.to(device=\"cuda\")\n        x_batch = x_batch.to(device=\"cuda\", non_blocking=True)\n        y_batch = y_batch.to(device=\"cuda\", non_blocking=True)\n\n    # forward pass\n    logits = model(x_batch)\n    if return_pred:\n        preds = logits.argmax(axis=1).squeeze()\n    # reshape so that each pixel in seg. mask can be treated as separate instance\n    mask_flattened, logits = reshape_mask_and_predictions(y_batch, logits)\n    # compute loss\n    loss = loss_fn(logits, mask_flattened)\n    # backward pass\n    if opt is not None:\n        loss.backward()\n        opt.step()\n        opt.zero_grad()\n        if sched is not None:\n            sched.step()\n    # update metrics\n    if metrics is not None:\n        metrics.update(logits, mask_flattened)\n    if return_pred:\n        return loss.item(), preds\n    else:\n        return loss.item()\n\n\ndef reshape_mask_and_predictions(mask, prediction):\n    \"\"\"flatten mask and prediction in each batch\"\"\"\n    mask_reshaped = mask.flatten().to(torch.int64)\n    # pred_reshaped = prediction.flatten(start_dim=-2, end_dim=-1)\n    # logits shape: [B, C, 128, 128] -> [B, 128, 128, C] -> [B * 128 * 128, C]\n    pred_reshaped = prediction.permute((0, 2, 3, 1)).flatten(start_dim=0, end_dim=-2)\n    return mask_reshaped, pred_reshaped\n\n\ndef get_metrics(N, sync):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        torchmetrics.F1Score(\n            average=\"micro\",\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        # torchmetrics.AUROC(dist_sync_on_step=sync, num_classes=N),\n        # StorePredLabel(dist_sync_on_step=sync),\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\n\ndef write_metrics_to_tensorboard(N, metrics, writer, epoch, train_or_val):\n    m = metrics.compute()\n    for k, v in m.items():\n        if k == \"StorePredLabel\":\n            pred, label = v\n            label = nn.functional.one_hot(label, N)\n            writer.add_pr_curve(f\"{train_or_val}/pr_curve\", label, pred, epoch)\n        # handle class-level metrics\n        elif isinstance(v, torch.Tensor) and len(v.shape) > 0 and v.shape[-1] > 1:\n            for i, v_ in enumerate(v):\n                if N == 2:  # binary\n                    l = \"negative\" if i == 0 else \"positive\"\n                elif N == 3:\n                    if i == 0:\n                        l = \"negative\"\n                    elif i == 1:\n                        l = \"anticyclonic\"\n                    elif i == 2:\n                        l = \"cyclonic\"\n                else:\n                    raise NotImplementedError(f\"{N} classes not supported\")\n                writer.add_scalar(f\"{train_or_val}/{k}_{l}\", v_, epoch)\n        else:\n            writer.add_scalar(f\"{train_or_val}/{k}\", v, epoch)\n    return m\n\n\ndef filter_scalar_metrics(metrics_dict):\n    \"\"\"Filters the output of metrics.compute() and returns only the scalar metrics.\"\"\"\n    output = {}\n    for k, v in metrics_dict.items():\n        if (isinstance(v, torch.Tensor) or isinstance(v, np.ndarray)) and len(\n            v.shape\n        ) == 0:\n            output[k] = v\n    return output\n\n\ndef add_hparams(\n    torch_tb_writer, hparam_dict, metric_dict, hparam_domain_discrete=None, epoch_num=0\n):\n    \"\"\"Add a set of hyperparameters to be compared in TensorBoard.\n    Args:\n        hparam_dict (dict): Each key-value pair in the dictionary is the\n            name of the hyper parameter and it's corresponding value.\n            The type of the value can be one of `bool`, `string`, `float`,\n            `int`, or `None`.\n        metric_dict (dict): Each key-value pair in the dictionary is the\n            name of the metric and it's corresponding value. Note that the key used\n            here should be unique in the tensorboard record. Otherwise the value\n            you added by ``add_scalar`` will be displayed in hparam plugin. In most\n            cases, this is unwanted.\n        hparam_domain_discrete: (Optional[Dict[str, List[Any]]]) A dictionary that\n            contains names of the hyperparameters and all discrete values they can hold\n    \"\"\"\n    torch._C._log_api_usage_once(\"tensorboard.logging.add_hparams\")\n    if type(hparam_dict) is not dict or type(metric_dict) is not dict:\n        raise TypeError(\"hparam_dict and metric_dict should be dictionary.\")\n    exp, ssi, sei = hparams(hparam_dict, metric_dict, hparam_domain_discrete)\n\n    torch_tb_writer.file_writer.add_summary(exp)\n    torch_tb_writer.file_writer.add_summary(ssi)\n    torch_tb_writer.file_writer.add_summary(sei)\n    for k, v in metric_dict.items():\n        torch_tb_writer.add_scalar(k, v, epoch_num)\n\n\n# Taken from: https://github.com/Bjarten/early-stopping-pytorch/blob/master/pytorchtools.py\nclass EarlyStopping:\n    \"\"\"Early stops the training if validation loss doesn't improve after a given patience.\"\"\"\n\n    def __init__(\n        self,\n        patience=7,\n        verbose=False,\n        delta=0,\n        path=\"checkpoint.pt\",\n        min_epochs=30,\n    ):\n        \"\"\"\n        Args:\n            patience (int): How long to wait after last time validation loss improved.\n                            Default: 7\n            verbose (bool): If True, prints a message for each validation loss improvement.\n                            Default: False\n            delta (float): Minimum change in the monitored quantity to qualify as an improvement.\n                            Default: 0\n            path (str): Path for the checkpoint to be saved to.\n                            Default: 'checkpoint.pt'\n            trace_func (function): trace print function.\n                            Default: print\n        \"\"\"\n        self.patience = patience\n        self.verbose = verbose\n        self.counter = 0\n        self.best_score = None\n        self.early_stop = False\n        self.val_loss_min = np.Inf\n        self.delta = delta\n        self.path = path\n        self.min_epochs = min_epochs\n        self.epochs = 0\n\n    def __call__(self, val_loss, model):\n\n        score = -val_loss\n\n        if self.best_score is None:\n            self.best_score = score\n            self.save_checkpoint(val_loss, model)\n        elif score < self.best_score + self.delta:\n            self.counter += 1\n            if self.counter >= self.patience and self.epochs >= self.min_epochs:\n                self.early_stop = True\n        else:\n            self.best_score = score\n            self.save_checkpoint(val_loss, model)\n            self.counter = 0\n\n        self.epochs += 1\n\n    def save_checkpoint(self, val_loss, model):\n        \"\"\"Saves model when validation loss decrease.\"\"\"\n        if self.verbose:\n            self.trace_func(\n                f\"Validation loss decreased ({self.val_loss_min:.6f} --> {val_loss:.6f}).  Saving model ...\"\n            )\n        torch.save(model.state_dict(), self.path)\n        self.val_loss_min = val_loss",
+  "history_output" : "",
+  "history_begin_time" : 1678127800787,
+  "history_end_time" : 1678127805239,
+  "history_notes" : null,
+  "history_process" : "uf6vbr",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "0h6dopobefs",
+  "history_input" : "import torchmetrics\nimport torch\nfrom create_eddy_net import *\n\ndef get_metrics(N, sync=False):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N,task=\"multiclass\"),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n          \ttask=\"multiclass\"\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n          \ttask=\"multiclass\"\n        ),\n#         torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy\n#             average=\"micro\",\n#             dist_sync_on_step=sync,\n#             num_classes=N,\n#         ),\n        torchmetrics.F1Score(\n            average=\"none\",  # return F1 for each class\n            dist_sync_on_step=sync,\n            num_classes=N,\n          \ttask=\"multiclass\"\n        )\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\ntrain_metrics, val_metrics = get_metrics(num_classes)\n",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678127832271,
+  "history_end_time" : 1678127838536,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "c1vfnt9ea3m",
+  "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
+  "history_output" : "======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-03-06_18-37\n======================================================================\n",
+  "history_begin_time" : 1678127839549,
+  "history_end_time" : 1678127843385,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "arnbv0uscta",
+  "history_input" : "from model_training_utils import add_hparams, EarlyStopping\nfrom get_device_config import *\nfrom loss_function import *\nfrom set_optmizer_and_scheduler import *\nfrom set_summary_writer import *\nfrom model_utils import *\nfrom torch_metrics_utils import *\nfrom tqdm.auto import tqdm\n\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"Accuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"Accuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_{N+1}.pt\")\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-03-06_18-37\n======================================================================\n\nTraining:   0%|                                   | 0/250 [00:00<?, ?epoch(s)/s]\nTraining:   0%|                                   | 0/250 [00:12<?, ?epoch(s)/s]\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/arnbv0uscta/run_model_training.py\", line 23, in <module>\n    train_loss, val_loss, train_m, val_m = run_epoch(\n  File \"/home/chetana/gw-workspace/arnbv0uscta/model_utils.py\", line 87, in run_epoch\n    num_classes, train_metrics, writer, epoch, \"train\"\nNameError: name 'num_classes' is not defined\n",
+  "history_begin_time" : 1678127843574,
+  "history_end_time" : 1678127862811,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9v3zakr8tvp",
+  "history_input" : "\nimport cv2  # use cv2 to count eddies by drawing contours around segmentation masks\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport torch\nfrom get_device_config import *\nfrom tqdm.auto import tqdm\nfrom model_training_utils import run_batch, write_metrics_to_tensorboard, filter_scalar_metrics, EarlyStopping\n\nnum_plots_in_tensorboard = 5\n# will populate this later with random numbers:\nrandom_plot_indices = np.zeros((num_plots_in_tensorboard,), np.uint8)\n\n\ndef run_epoch(\n    epoch,\n    model,\n    loss_fn,\n    optimizer,\n    scheduler,\n    train_loader,\n    val_loader,\n    train_metrics,\n    val_metrics,\n    writer,\n):\n    leave = epoch == num_epochs - 1  # leave progress bar on screen after last epoch\n\n    model.train()\n    # training set\n    for batch_num, (gvs, seg_masks, date_indices) in enumerate(train_loader):\n        train_loss = run_batch(\n            model, loss_fn, gvs, seg_masks, optimizer, scheduler, train_metrics\n        )\n        iter_num = epoch * len(train_loader) + batch_num\n        writer.add_scalar(\"train/lr\", scheduler.get_last_lr()[-1], iter_num)\n\n    # validation set\n    images, preds, labels, dates = [], [], [], []\n    model.eval()\n    with torch.no_grad():\n        val_loss = num_examples = 0\n        for gvs, masks, date_indices in val_loader:\n            # continue\n            loss_, pred_batch = run_batch(\n                model, loss_fn, gvs, masks, metrics=val_metrics, return_pred=True\n            )\n            val_loss += loss_\n            num_examples += np.prod(gvs.shape)\n            # keep track of images, preds, labels for plotting\n            images.append(gvs)\n            preds.append(pred_batch)\n            labels.append(masks)\n            dates.append(date_indices)\n\n    # calculate average validation loss across all samples\n    # num_examples should be equal to sum of all pixels\n    val_loss = val_loss / num_examples\n\n    # plot validation images and log to tensorboard\n    ## move images, preds, labels, dates to cpu\n    images = torch.cat(images).cpu().numpy()\n    labels = torch.cat(labels).cpu().numpy()\n    preds = torch.cat(preds).cpu().numpy()\n    dates = torch.cat(dates).cpu().numpy()\n    ## convert indices to actual dates\n    dates = [val_loader.dataset.dates[i].strftime(\"%Y-%m-%d\") for i in dates]\n\n    # take random images from validation set\n    if epoch == 0:\n        indices_ = np.random.choice(\n            len(images), num_plots_in_tensorboard, replace=False\n        )\n        for i, idx in enumerate(indices_):\n            random_plot_indices[i] = idx\n    fig, ax = plt.subplots(num_plots_in_tensorboard, 3, figsize=(20, 30))\n    for n, i in enumerate(random_plot_indices):\n        date, img, mask, pred = dates[i], images[i], labels[i], preds[i]\n        artists = plot_eddies_on_axes(\n            date, img, mask, pred, ax[n, 0], ax[n, 1], ax[n, 2]\n        )\n    plt.tight_layout()\n    writer.add_figure(f\"val/sample_prediction\", fig, global_step=epoch)\n\n    # Update tensorboard\n    train_m = write_metrics_to_tensorboard(\n        num_classes, train_metrics, writer, epoch, \"train\"\n    )\n    val_m = write_metrics_to_tensorboard(num_classes, val_metrics, writer, epoch, \"val\")\n\n    writer.add_scalar(\"train/loss\", train_loss, epoch)\n    writer.add_scalar(\"val/loss\", val_loss, epoch)\n\n    # reset metrics after each epoch\n    train_metrics.reset()\n    val_metrics.reset()\n\n    train_m = filter_scalar_metrics(train_m)\n    val_m = filter_scalar_metrics(val_m)\n\n    return train_loss, val_loss, train_m, val_m\n\n\ndef plot_eddies_on_axes(date, img, mask, pred, a1, a2, a3):\n    im1 = a1.imshow(img.squeeze(), cmap=\"viridis\")\n\n    # blit canvas for a1 a2 a3\n    a1.figure.canvas.draw()\n    a1.figure.canvas.flush_events()\n    a2.figure.canvas.draw()\n    a2.figure.canvas.flush_events()\n    a3.figure.canvas.draw()\n    a3.figure.canvas.flush_events()\n\n    # https://stackoverflow.com/a/49159236\n    t1 = a1.text(\n        0.5,\n        1.05,\n        f\"ADT {date}\",\n        size=plt.rcParams[\"axes.titlesize\"],\n        ha=\"center\",\n        transform=a1.transAxes,\n    )\n    # set axis off\n    a1.axis(\"off\")\n\n    # count number of eddies in mask and pred\n    mask_anticyclonic = count_eddies(mask, \"anticyclonic\")\n    mask_cyclonic = count_eddies(mask, \"cyclonic\")\n    pred_anticyclonic = count_eddies(pred, \"anticyclonic\")\n    pred_cyclonic = count_eddies(pred, \"cyclonic\")\n\n    # calculate accuracy between pred and mask\n    acc = np.sum(pred == mask) / mask.size\n    im2 = a2.imshow(pred, cmap=\"viridis\")\n    t2 = a2.text(\n        0.5,\n        1.05,\n        (\n            f\"Prediction (Acc = {acc:.3f} |\"\n            f\" Num. anticyclonic = {pred_anticyclonic} |\"\n            f\" Num. cyclonic = {pred_cyclonic})\"\n        ),\n        size=plt.rcParams[\"axes.titlesize\"],\n        ha=\"center\",\n        transform=a2.transAxes,\n    )\n    a2.axis(\"off\")\n    im3 = a3.imshow(mask, cmap=\"viridis\")\n    t3 = a3.text(\n        0.5,\n        1.05,\n        (\n            f\"Ground Truth\"\n            f\" (Num. anticyclonic: {mask_anticyclonic} |\"\n            f\" Num. cyclonic: {mask_cyclonic})\"\n        ),\n        size=plt.rcParams[\"axes.titlesize\"],\n        ha=\"center\",\n        transform=a3.transAxes,\n    )\n    a3.axis(\"off\")\n\n    return im1, t1, im2, t2, im3, t3\n\n\ndef count_eddies(arr, eddy_type=\"both\"):\n    mask = np.zeros(arr.shape, dtype=np.uint8)\n    if eddy_type == \"anticyclonic\":\n        mask[arr == 1] = 1\n    elif eddy_type == \"cyclonic\":\n        mask[arr == 2] = 1\n    else:\n        mask[arr > 0] = 1\n    contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n    return len(contours)",
+  "history_output" : "",
+  "history_begin_time" : 1678127832360,
+  "history_end_time" : 1678127838536,
+  "history_notes" : null,
+  "history_process" : "3z0gs7",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+}]

@@ -62,16 +62,19 @@ hparam_dict = {
     "max_lr": max_lr,
     "loss_function": loss_fn.__class__.__name__,
 }
+print(train_m)
 metrics_dict = {
     "train/end_epoch": N,
     "train/loss": train_loss,
-    "train/Accuracy": train_m["Accuracy"],
+    "train/Accuracy": train_m["MulticlassAccuracy"],
     "val/loss": val_loss,
-    "val/Accuracy": val_m["Accuracy"],
+    "val/Accuracy": val_m["MulticlassAccuracy"],
 }
 add_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)
 writer.close()
 
 # save model to tensorboard folder
 model_path = os.path.join(tensorboard_dir, f"model_ckpt_{N+1}.pt")
+print(model_path)
+print(tensorboard_dir)
 torch.save(model.state_dict(), model_path)

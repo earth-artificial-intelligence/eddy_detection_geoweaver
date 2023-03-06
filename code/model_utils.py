@@ -6,6 +6,7 @@ import torch
 from get_device_config import *
 from tqdm.auto import tqdm
 from model_training_utils import run_batch, write_metrics_to_tensorboard, filter_scalar_metrics, EarlyStopping
+from create_eddy_net import *
 
 num_plots_in_tensorboard = 5
 # will populate this later with random numbers:

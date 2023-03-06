@@ -1,0 +1,61 @@
+[{
+  "history_id" : "sxfx9fzul35",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678128180111,
+  "history_end_time" : 1678128186604,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "862lu3k9ej4",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678127825378,
+  "history_end_time" : 1678127831463,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "2bqxbas1akd",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678127419063,
+  "history_end_time" : 1678127426260,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "vq4ub99kdhc",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678125746882,
+  "history_end_time" : 1678125752845,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "RfVTlKkWftgR",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678125066309,
+  "history_end_time" : 1678125071075,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "o0axwu14jer",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Traceback (most recent call last):\n  File \"/home/chetana/gw-workspace/o0axwu14jer/create_eddy_net.py\", line 3, in <module>\n    from convert_to_pytorch_data_loader import *\n  File \"/home/chetana/gw-workspace/o0axwu14jer/convert_to_pytorch_data_loader.py\", line 2, in <module>\n    from link_npz_file import *\nModuleNotFoundError: No module named 'link_npz_file'\n",
+  "history_begin_time" : 1677775393625,
+  "history_end_time" : 1677775398807,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},]

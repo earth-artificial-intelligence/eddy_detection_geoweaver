@@ -1,4 +1,64 @@
 [{
+  "history_id" : "3q1ka55v6yl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678128154740,
+  "history_end_time" : 1678128154740,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "fbxk8o63tda",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127800434,
+  "history_end_time" : 1678127800434,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "i2mu28y14gc",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678127389133,
+  "history_end_time" : 1678127389133,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "drdwrem6abv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678125719430,
+  "history_end_time" : 1678125719430,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "knkhpgwa2mi",
+  "history_input" : "from dependency import *\nfrom unzip_utils import *\nfrom get_data import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_eddies\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\n",
+  "history_begin_time" : 1677776103968,
+  "history_end_time" : 1677776108266,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "wrqjt44j7rl",
+  "history_input" : "from dependency import *\nfrom unzip_utils import *\nfrom get_data import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_eddies\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\n",
+  "history_begin_time" : 1677775006394,
+  "history_end_time" : 1677775010915,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
   "history_id" : "ct05w383b6f",
   "history_input" : "from dependency import *\nfrom unzip_utils import *\nfrom get_data import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_eddies\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
   "history_output" : "/home/chetana\n",

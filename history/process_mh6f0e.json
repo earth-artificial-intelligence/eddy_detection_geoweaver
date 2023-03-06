@@ -1,4 +1,624 @@
 [{
+  "history_id" : "7t11dd2royk",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixels across 252 SSH maps\nNumber of pixels that are not eddies: 2.99 megapixels (72.37%)\nNumber of pixels that are anticyclonic eddies: 0.60 megapixels (14.43%)\nNumber of pixels that are cyclonic eddies: 0.55 megapixels (13.20%)\n\n",
+  "history_begin_time" : 1678128173527,
+  "history_end_time" : 1678128180043,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "klia0oaqtjm",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixels across 252 SSH maps\nNumber of pixels that are not eddies: 2.99 megapixels (72.37%)\nNumber of pixels that are anticyclonic eddies: 0.60 megapixels (14.43%)\nNumber of pixels that are cyclonic eddies: 0.55 megapixels (13.20%)\n\n",
+  "history_begin_time" : 1678127819307,
+  "history_end_time" : 1678127825311,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "rfushwv9mfr",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixels across 252 SSH maps\nNumber of pixels that are not eddies: 2.99 megapixels (72.37%)\nNumber of pixels that are anticyclonic eddies: 0.60 megapixels (14.43%)\nNumber of pixels that are cyclonic eddies: 0.55 megapixels (13.20%)\n\n",
+  "history_begin_time" : 1678127410506,
+  "history_end_time" : 1678127418067,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "4rhdopftsso",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixels across 252 SSH maps\nNumber of pixels that are not eddies: 2.99 megapixels (72.37%)\nNumber of pixels that are anticyclonic eddies: 0.60 megapixels (14.43%)\nNumber of pixels that are cyclonic eddies: 0.55 megapixels (13.20%)\n\n",
+  "history_begin_time" : 1678125740122,
+  "history_end_time" : 1678125746325,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "fuQRnJS5mxLM",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixels across 252 SSH maps\nNumber of pixels that are not eddies: 2.99 megapixels (72.37%)\nNumber of pixels that are anticyclonic eddies: 0.60 megapixels (14.43%)\nNumber of pixels that are cyclonic eddies: 0.55 megapixels (13.20%)\n\n",
+  "history_begin_time" : 1678124946501,
+  "history_end_time" : 1678124951370,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "ecJmnaqIYgAV",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\\\\n\"\n  f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \")\n  \n\"\"\"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixelsacross 252 SSH maps\nNumber of pixels that are not eddies: 2.99 megapixels \n",
+  "history_begin_time" : 1678124871036,
+  "history_end_time" : 1678124875712,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "ibejWcyNNEft",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\"\n  f\"\\\\nNumber of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \")\n  \n\"\"\"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixelsacross 252 SSH maps\nNumber of pixels that are not eddies: 2.99 megapixels \n",
+  "history_begin_time" : 1678124849018,
+  "history_end_time" : 1678124853885,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "a3OrQmBMe8dD",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\"\n  f\"\\nNumber of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \")\n  \n\"\"\"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/a3OrQmBMe8dD/class_distribution_check.py\", line 13\n    f\"\n    ^\nSyntaxError: unterminated string literal (detected at line 13)\n",
+  "history_begin_time" : 1678124836498,
+  "history_end_time" : 1678124837628,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "xzF8O7PDU37Q",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\"\n  f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \")\n  \n\"\"\"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixelsacross 252 SSH mapsNumber of pixels that are not eddies: 2.99 megapixels \n",
+  "history_begin_time" : 1678124824857,
+  "history_end_time" : 1678124829718,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "sbf27lyVmQEj",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\"\n  f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \")\n  \n  \"\"\"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/sbf27lyVmQEj/class_distribution_check.py\", line 15\n    \"\"\"\nIndentationError: unexpected indent\n",
+  "history_begin_time" : 1678124812561,
+  "history_end_time" : 1678124813742,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "gpH3czLuDMyJ",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\"\n\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \")\n  \n  \"\"\"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/gpH3czLuDMyJ/class_distribution_check.py\", line 16\n    \"\"\"\nIndentationError: unexpected indent\n",
+  "history_begin_time" : 1678124796179,
+  "history_end_time" : 1678124797337,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "cJ5jkKLXWeVV",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\")\n\"\"\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixelsacross 252 SSH maps\n",
+  "history_begin_time" : 1678124772832,
+  "history_end_time" : 1678124777597,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "nUS6YafQce0M",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\\n\")\n\"\"\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/nUS6YafQce0M/class_distribution_check.py\", line 12\n    f\"across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 12)\n",
+  "history_begin_time" : 1678124755832,
+  "history_end_time" : 1678124757024,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "X53gumnvzX4r",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\")\n\"\"\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixelsacross 252 SSH maps\n",
+  "history_begin_time" : 1678124734328,
+  "history_end_time" : 1678124739093,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "FHRXuFj9p2Xv",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\"across {len(train_masks)} SSH maps\")\"\"\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/FHRXuFj9p2Xv/class_distribution_check.py\", line 12\n    f\"across {len(train_masks)} SSH maps\")\"\"\"\n                                          ^^^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1678124713958,
+  "history_end_time" : 1678124715104,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "OOEjqcVPyIHR",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  \" across {len(train_masks)} SSH maps\\n\")\"\"\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/OOEjqcVPyIHR/class_distribution_check.py\", line 12\n    \" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 12)\n",
+  "history_begin_time" : 1678124635104,
+  "history_end_time" : 1678124636295,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "4IoqFVmdNFTX",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\" across {len(train_masks)} SSH maps\\n\")\"\"\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/4IoqFVmdNFTX/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\" across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678124622999,
+  "history_end_time" : 1678124624211,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "FBLajhvCNG0x",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n f\" across {len(train_masks)} SSH maps\\n\")\"\"\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/FBLajhvCNG0x/class_distribution_check.py\", line 12\n    f\" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 12)\n",
+  "history_begin_time" : 1678124606433,
+  "history_end_time" : 1678124607624,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "iSEEehmvP8GR",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\"total number pixels\",len(train_masks))\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\")\n\"\"\" f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\ntotal number pixels 252\nTotal number of pixels in training set: 4.13 megapixels\n",
+  "history_begin_time" : 1678124553419,
+  "history_end_time" : 1678124558256,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "E3jzjX5jjaDN",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\")\n\"\"\"  f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 4.13 megapixels\n",
+  "history_begin_time" : 1678124516314,
+  "history_end_time" : 1678124521084,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "bJHJGfQLx8Lw",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n#  f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/bJHJGfQLx8Lw/class_distribution_check.py\", line 13\n    \"\n    ^\nSyntaxError: unterminated string literal (detected at line 13)\n",
+  "history_begin_time" : 1678124376749,
+  "history_end_time" : 1678124377936,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "BB4H8aC4LsB7",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n  f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/BB4H8aC4LsB7/class_distribution_check.py\", line 12\n    f\" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 12)\n",
+  "history_begin_time" : 1678124357911,
+  "history_end_time" : 1678124359035,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "vM7BFgyU8uKK",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/vM7BFgyU8uKK/class_distribution_check.py\", line 12\n    f\" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 12)\n",
+  "history_begin_time" : 1678124331179,
+  "history_end_time" : 1678124332372,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "jb9AbwFDfOap",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",total_pixels)\n\nprint(\"Total number of pixels in training set (megapixels):\", (total_pixels/1e6)) \n  ",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set (megapixels): 4.128768\n",
+  "history_begin_time" : 1678124148807,
+  "history_end_time" : 1678124153673,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "ttfQPcCR9MjI",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",total_pixels)\n\nprint(\"Total number of pixels in training set (megapixels):\", (total_pixels/1e6:.2)) \n  ",
+  "history_output" : "  File \"/home/chetana/gw-workspace/ttfQPcCR9MjI/class_distribution_check.py\", line 10\n    print(\"Total number of pixels in training set (megapixels):\", (total_pixels/1e6:.2)) \n                                                                                   ^\nSyntaxError: invalid syntax\n",
+  "history_begin_time" : 1678124137606,
+  "history_end_time" : 1678124138724,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "RyhgXAfkaqra",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n#print(\"total number pixels\",total_pixels)\n\nprint(\"Total number of pixels in training set (megapixels):\", (total_pixels/1e6:.2f)) \n  ",
+  "history_output" : "  File \"/home/chetana/gw-workspace/RyhgXAfkaqra/class_distribution_check.py\", line 10\n    print(\"Total number of pixels in training set (megapixels):\", (total_pixels/1e6:.2f)) \n                                                                                     ^\nSyntaxError: invalid decimal literal\n",
+  "history_begin_time" : 1678124132403,
+  "history_end_time" : 1678124133603,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "zvHBLrEeeF6J",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\"total number pixels\",total_pixels)\n\n#print(\"Total number of pixels in training set (megapixels):\", (total_pixels/1e6:.2f)) \n  ",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\ntotal number pixels 4128768\n",
+  "history_begin_time" : 1678124059510,
+  "history_end_time" : 1678124084860,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "R81LxzlO39q4",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\"total number pixels\",total_pixels)\n\n\"\"\"print(\"Total number of pixels in training set (megapixels):\", (total_pixels/1e6:.2f)) \"\"\"\n  \n \"\"\" \n f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/R81LxzlO39q4/class_distribution_check.py\", line 12\n    \"\"\" \nIndentationError: unexpected indent\n",
+  "history_begin_time" : 1678124014764,
+  "history_end_time" : 1678124015946,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "FfdrOcfMeEfL",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\"\"\"print(\"total number pixels\",total_pixels)\"\"\"\n\nprint(\"Total number of pixels in training set (megapixels):\", (total_pixels/1e6:.2f)) \n  \n \"\"\" \n f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/FfdrOcfMeEfL/class_distribution_check.py\", line 10\n    print(\"Total number of pixels in training set (megapixels):\", (total_pixels/1e6:.2f)) \n                                                                                     ^\nSyntaxError: invalid decimal literal\n",
+  "history_begin_time" : 1678123847848,
+  "history_end_time" : 1678123849123,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "mYng3zOqJNrp",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\"\"\"print(\"total number pixels\",total_pixels)\"\"\"\n\nprint(\"Total number of pixels in training set (megapixels):\" total_pixels/1e6:.2f) \n  \n \"\"\" \n f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/mYng3zOqJNrp/class_distribution_check.py\", line 10\n    print(\"Total number of pixels in training set (megapixels):\" total_pixels/1e6:.2f) \n                                                                                   ^\nSyntaxError: invalid decimal literal\n",
+  "history_begin_time" : 1678123823683,
+  "history_end_time" : 1678123824932,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "wjMcVGfab4qw",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\"\"\"print(\"total number pixels\",total_pixels)\"\"\"\n\nprint(\"Total number of pixels in training set (megapixels):\" (total_pixels/1e6:.2f)) \n  \n \"\"\" \n f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "  File \"/home/chetana/gw-workspace/wjMcVGfab4qw/class_distribution_check.py\", line 10\n    print(\"Total number of pixels in training set (megapixels):\" (total_pixels/1e6:.2f)) \n                                                                                    ^\nSyntaxError: invalid decimal literal\n",
+  "history_begin_time" : 1678123794803,
+  "history_end_time" : 1678123795967,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "7RyjOZx3dtWG",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\"\"\"print(\"total number pixels\",total_pixels)\"\"\"\n\nprint(\n    f\"Total number of pixels in training set (megapixels):\" (total_pixels/1e6:.2f)) \n  \n  f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/7RyjOZx3dtWG/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set (megapixels):\" (total_pixels/1e6:.2f)) \n                                                                               ^\nSyntaxError: invalid decimal literal\n",
+  "history_begin_time" : 1678123766134,
+  "history_end_time" : 1678123767316,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "boOnnwaOOJwt",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\"\"\"print(\"total number pixels\",total_pixels)\"\"\"\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/boOnnwaOOJwt/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678123762354,
+  "history_end_time" : 1678123763493,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "DRVDbzSnomFR",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\"\"\"print(\"total number pixels\",total_pixels)\"\"\"\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/DRVDbzSnomFR/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678123704222,
+  "history_end_time" : 1678123705387,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "qsjBGn1Tnfj5",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\"\"\"print(\"total number pixels\",total_pixels)\"\"\"\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/qsjBGn1Tnfj5/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678123577984,
+  "history_end_time" : 1678123580140,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "hCNjI8nTNOjM",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\"\"\"print(\"total number pixels\",total_pixels)\"\"\"\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/hCNjI8nTNOjM/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678037870436,
+  "history_end_time" : 1678037871567,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "EVYN2gh5j2aw",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\"\"\"print(\"total number pixels\",total_pixels)\"\"\"\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/EVYN2gh5j2aw/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678037852250,
+  "history_end_time" : 1678037853549,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "C710Q5AStRjv",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\"total number pixels\",total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/C710Q5AStRjv/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678037814862,
+  "history_end_time" : 1678037815979,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "rUfY9STJslKs",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\"total number pixels\",total_pixels)\n\n\"\"\"print(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)\"\"\"",
+  "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\ntotal number pixels 4128768\n",
+  "history_begin_time" : 1678037791036,
+  "history_end_time" : 1678037795577,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "D4A3mxMZMERJ",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\"total number pixels\",total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/D4A3mxMZMERJ/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678037766876,
+  "history_end_time" : 1678037768000,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "lRvxIVpTLnxX",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\"total number pixels\",total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/lRvxIVpTLnxX/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678037726219,
+  "history_end_time" : 1678037727413,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "oOFjkUQtViYk",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/oOFjkUQtViYk/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678037704861,
+  "history_end_time" : 1678037706007,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "wIXvDFN2lHl8",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/wIXvDFN2lHl8/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678037682358,
+  "history_end_time" : 1678037683576,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "KwCqS5WqxbTa",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(total_pixels)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/KwCqS5WqxbTa/class_distribution_check.py\", line 11\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678037665353,
+  "history_end_time" : 1678037666581,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "qPZP4a5hzPaa",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/qPZP4a5hzPaa/class_distribution_check.py\", line 9\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"f\"across {len(train_masks)} SSH maps\n                                                                                ^\nSyntaxError: unterminated string literal (detected at line 9)\n",
+  "history_begin_time" : 1678037621902,
+  "history_end_time" : 1678037623024,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "qskboeO97GnK",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\" f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/qskboeO97GnK/class_distribution_check.py\", line 9\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\" f\"across {len(train_masks)} SSH maps\n                                                                                 ^\nSyntaxError: unterminated string literal (detected at line 9)\n",
+  "history_begin_time" : 1678037572418,
+  "history_end_time" : 1678037573607,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "w9OJSNV3hoKs",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/w9OJSNV3hoKs/class_distribution_check.py\", line 10\n    f\"across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678037500623,
+  "history_end_time" : 1678037501750,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "WZvH8dmbwuvR",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\")\n\n#print(f\"across {len(train_masks)} SSH maps\\n\")\n\nprint(f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \")\n\nprint(f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \")\n\nprint(f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\")\n    \nprint(f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \")    \n\nprint(f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\")",
+  "history_output" : "  File \"/home/chetana/gw-workspace/WZvH8dmbwuvR/class_distribution_check.py\", line 11\n    \")\n    ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "history_begin_time" : 1678037462250,
+  "history_end_time" : 1678037463392,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "hrMmITw8GWwX",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\")\n\nprint(f\"across {len(train_masks)} SSH maps\\n\")\n\nprint(f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \")\n\nprint(f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \")\n\nprint(f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\")\n    \nprint(f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \")    \n\nprint(f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\")",
+  "history_output" : "  File \"/home/chetana/gw-workspace/hrMmITw8GWwX/class_distribution_check.py\", line 10\n    print(f\"across {len(train_masks)} SSH maps\n          ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678037424274,
+  "history_end_time" : 1678037425525,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "TZ9SapB5J7fs",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\")\n\nprint(\"across {len(train_masks)} SSH maps\\n\")\n\nprint(f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \")\n\nprint(f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \")\n\nprint(f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\")\n    \nprint(f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \")    \n\nprint(f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\")",
+  "history_output" : "  File \"/home/chetana/gw-workspace/TZ9SapB5J7fs/class_distribution_check.py\", line 10\n    print(\"across {len(train_masks)} SSH maps\n          ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678037399558,
+  "history_end_time" : 1678037400701,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "rEC1bu1lR9bd",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\\\n    f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/rEC1bu1lR9bd/class_distribution_check.py\", line 10\n    f\"across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678037350226,
+  "history_end_time" : 1678037351418,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "9ZpZ6bpjLU0s",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\\\n    f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/9ZpZ6bpjLU0s/class_distribution_check.py\", line 10\n    f\"across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678037127534,
+  "history_end_time" : 1678037128680,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "xSLah6NSu7yo",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"+\n    f\"across hello SSH maps\\n\"+\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"+\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"+\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"+\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"+\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"+\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/xSLah6NSu7yo/class_distribution_check.py\", line 10\n    f\"across hello SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678036070408,
+  "history_end_time" : 1678036071601,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "ONWybtF3a0V6",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"+\n    f\"across {len(train_masks)} SSH maps\\n\"+\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"+\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"+\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"+\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"+\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"+\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/ONWybtF3a0V6/class_distribution_check.py\", line 10\n    f\"across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678036044194,
+  "history_end_time" : 1678036045392,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "s9kIAZzC6lKd",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/s9kIAZzC6lKd/class_distribution_check.py\", line 10\n    f\"across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678035911895,
+  "history_end_time" : 1678035913018,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "sAwoYHuewKAF",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\",\n    f\"across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/sAwoYHuewKAF/class_distribution_check.py\", line 10\n    f\"across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678035904311,
+  "history_end_time" : 1678035905517,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "nn5pDADKOcTs",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\",\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/nn5pDADKOcTs/class_distribution_check.py\", line 10\n    f\" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678035891312,
+  "history_end_time" : 1678035892504,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "oynVV9Bmli6G",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/oynVV9Bmli6G/class_distribution_check.py\", line 10\n    f\" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "history_begin_time" : 1678035803970,
+  "history_end_time" : 1678035805112,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "1bEoJY1nzyxb",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\"across {len(train_masks)} SSH maps\\n\"\n  f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/1bEoJY1nzyxb/class_distribution_check.py\", line 9\n    f\"across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 9)\n",
+  "history_begin_time" : 1678035742012,
+  "history_end_time" : 1678035743206,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "2G0Wvzhv4z55",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/2G0Wvzhv4z55/class_distribution_check.py\", line 9\n    f\" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 9)\n",
+  "history_begin_time" : 1678035737195,
+  "history_end_time" : 1678035738397,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "B28R5JexLwiQ",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/B28R5JexLwiQ/class_distribution_check.py\", line 9\n    f\" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 9)\n",
+  "history_begin_time" : 1678035696244,
+  "history_end_time" : 1678035697532,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "dgwfrirkglx",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
+  "history_output" : "  File \"/home/chetana/gw-workspace/dgwfrirkglx/class_distribution_check.py\", line 9\n    f\" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 9)\n",
+  "history_begin_time" : 1677775390560,
+  "history_end_time" : 1677775393067,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
   "history_id" : "02iwi93o8fq",
   "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\n\"\n)",
   "history_output" : "  File \"/home/chetana/gw-workspace/02iwi93o8fq/class_distribution_check.py\", line 9\n    f\" across {len(train_masks)} SSH maps\n    ^\nSyntaxError: unterminated string literal (detected at line 9)\n",
