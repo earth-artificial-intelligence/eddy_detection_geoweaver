@@ -1,4 +1,14 @@
 [{
+  "history_id" : "wi74e5e0syf",
+  "history_input" : null,
+  "history_output" : "Exhausted available authentication methods",
+  "history_begin_time" : 1678250137851,
+  "history_end_time" : 1678250139811,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
   "history_id" : "0guxa8okyu6",
   "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
   "history_output" : "",
@@ -68,4 +78,24 @@
   "history_process" : "t0vkxi",
   "host_id" : "ycru82",
   "indicator" : "Failed"
+},{
+  "history_id" : "rlnw98dhxyr",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820049,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "x9cbunuqhf0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678250276598,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
 },]

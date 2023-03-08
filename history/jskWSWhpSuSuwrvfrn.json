@@ -1,0 +1,271 @@
+[{
+  "history_id" : "yl0ym7eorpj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366124,
+  "history_end_time" : 1678249820013,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7x6wdqk9t5s",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366125,
+  "history_end_time" : 1678249820015,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u3xuuelsh4k",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366126,
+  "history_end_time" : 1678249820015,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ebhpcxfto1l",
+  "history_input" : "# sea surface height (SSH preprocessing)\n\n\nfrom dependency import *\nfrom plot_utils import plot_variable, save_fig_and_relesase_memory\nfrom data_loader import example_file\n\n\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nax, m, fig = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\n\nax, m, fig = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\n",
+  "history_output" : "We assume pixel position of grid is centered for /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1678213366217,
+  "history_end_time" : 1678249820016,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4zi3d79wziv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366132,
+  "history_end_time" : 1678249820016,
+  "history_notes" : null,
+  "history_process" : "jajowz",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ebn6qj3zp24",
+  "history_input" : "# Generate ground truth on a global scale helper functions\n\nimport multiprocessing\n\nfrom ground_truth_utils import *\n\ndef generate_masks_in_parallel(\n    files,\n    dates,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=-180,\n    y_offset=0,\n    num_processes=8,\n    plot=False,\n    save=True,\n):\n    args = [\n        (file, date, ssh_var, u_var, v_var, high_pass_wavelength_km, x_offset, y_offset)\n        for file, date in zip(files, dates)\n    ]\n    pool = multiprocessing.Pool(processes=num_processes)\n    results = pool.starmap(generate_segmentation_mask_from_file, args)\n\n    vars_ = []\n    vars_filtered = []\n    masks = []\n    for result in results:\n        vars_.append(result[0])\n        vars_filtered.append(result[1])\n        masks.append(result[2])\n\n    # concatenate list into single numpy array and return\n    masks = np.stack(masks, axis=0)\n    vars_ = np.stack(vars_, axis=0).astype(np.float32)\n    vars_filtered = np.stack(vars_filtered, axis=0).astype(np.float32)\n\n    if save:\n        # find common folder across all files\n        common_folder = os.path.commonpath(files)\n        years = sorted(set([date.year for date in dates]))\n        year_str = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n        save_path = os.path.join(\n            common_folder, f\"global_pet_masks_with_{ssh_var}_{year_str}.npz\"\n        )\n        np.savez_compressed(\n            save_path,\n            masks=masks,\n            dates=dates,\n            var=vars_,\n            var_filtered=vars_filtered,\n        )\n        print(f\"Saved masks to {save_path}\")\n\n    return vars_, vars_filtered, masks\n\n\nfrom itertools import product\n\n\ndef get_dates_and_files(years, months, days, folder, file_pattern):\n    \"\"\"\n    Given a filename pattern and a list of years months and days,\n    fill in the filename pattern with the date and return\n    a list of filenames and a list of associated `datetime` objects.\n\n    Args:\n        years (list): list of years, e.g., [1993, 1994, 1995, 1996]\n        months (list): list of months, e.g., [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n        days (list): list of days, e.g., [1, 10, 20, 30] for every 10th day\n        folder (str): folder where the files are located\n        file_pattern (str): filename pattern, e.g.,\n            \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n    Returns:\n        files (list): full/absolute path to each netCDF file in the list of dates\n        dates (list): list of `datetime` objects formed from the combination of years, months and days\n    \"\"\"\n    dates, files = [], []\n    for y, m, d in product(years, months, days):  # cartesian product\n        try:\n            date = datetime(y, m, d)\n            file = os.path.join(folder, file_pattern.format(year=y, month=m, day=d))\n            dates.append(date)\n            files.append(file)\n        # catch ValueError thrown by datetime if date is not valid\n        except ValueError:\n            pass\n    years = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n    print(f\"Found {len(dates)} files for {years}.\")\n    return dates, files",
+  "history_output" : "Running",
+  "history_begin_time" : 1678213381705,
+  "history_end_time" : 1678249820017,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ii7x5nv1n5i",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366137,
+  "history_end_time" : 1678249820017,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "01gxaphz9ri",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366138,
+  "history_end_time" : 1678249820017,
+  "history_notes" : null,
+  "history_process" : "g85teu",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qpgtj5xa4ts",
+  "history_input" : "# This generates segmentation efficiently in parallel on a gloabal scale\n\n\nimport logging\n\nfrom generate_ground_truth_parallel_utils import *\nfrom data_loader import *\n\n\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 2019), range(1, 13), [1, 10, 20, 30], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 13), [1, 10, 20, 30], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)",
+  "history_output" : "Found 987 files for 1998-2018.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n",
+  "history_begin_time" : 1678213385941,
+  "history_end_time" : 1678249820018,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "663hccphpfh",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820023,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ae8js1kg3wm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366141,
+  "history_end_time" : 1678249820029,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "o9qs54feulh",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366142,
+  "history_end_time" : 1678249820030,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "d4i0kdmtwcj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366142,
+  "history_end_time" : 1678249820030,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "v9iy5b2hnjp",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1678213366997,
+  "history_end_time" : 1678249820030,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "kyagu7uf7ns",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820031,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "n7o1qjh6anw",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820034,
+  "history_notes" : null,
+  "history_process" : "28zx21",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "t6i9qesv9kc",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366148,
+  "history_end_time" : 1678249820037,
+  "history_notes" : null,
+  "history_process" : "d6b94y",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "inf6ahajtvm",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820038,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "k2z82yahkp8",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820040,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f5qxgzeiwzm",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820042,
+  "history_notes" : null,
+  "history_process" : "suoxrn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ifmkvjaaezg",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820044,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "02ms2p2zmku",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678213366154,
+  "history_end_time" : 1678249820046,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u9eushkgv2o",
+  "history_input" : "import numpy as np\nimport torch\nimport torch.nn as nn\nimport torchmetrics\nfrom torch.utils.tensorboard.summary import hparams\n\n\ndef run_batch(\n    model,\n    loss_fn,\n    x_batch,\n    y_batch,\n    opt=None,\n    sched=None,\n    metrics=None,\n    return_pred=False,\n):\n    \"\"\"Run a batch of data through the model and return loss and metrics.\"\"\"\n    if torch.cuda.is_available():\n        loss_fn = loss_fn.to(device=\"cuda\")\n        x_batch = x_batch.to(device=\"cuda\", non_blocking=True)\n        y_batch = y_batch.to(device=\"cuda\", non_blocking=True)\n\n    # forward pass\n    logits = model(x_batch)\n    if return_pred:\n        preds = logits.argmax(axis=1).squeeze()\n    # reshape so that each pixel in seg. mask can be treated as separate instance\n    mask_flattened, logits = reshape_mask_and_predictions(y_batch, logits)\n    # compute loss\n    loss = loss_fn(logits, mask_flattened)\n    # backward pass\n    if opt is not None:\n        loss.backward()\n        opt.step()\n        opt.zero_grad()\n        if sched is not None:\n            sched.step()\n    # update metrics\n    if metrics is not None:\n        metrics.update(logits, mask_flattened)\n    if return_pred:\n        return loss.item(), preds\n    else:\n        return loss.item()\n\n\ndef reshape_mask_and_predictions(mask, prediction):\n    \"\"\"flatten mask and prediction in each batch\"\"\"\n    mask_reshaped = mask.flatten().to(torch.int64)\n    # pred_reshaped = prediction.flatten(start_dim=-2, end_dim=-1)\n    # logits shape: [B, C, 128, 128] -> [B, 128, 128, C] -> [B * 128 * 128, C]\n    pred_reshaped = prediction.permute((0, 2, 3, 1)).flatten(start_dim=0, end_dim=-2)\n    return mask_reshaped, pred_reshaped\n\n\ndef get_metrics(N, sync):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        torchmetrics.F1Score(\n            average=\"micro\",\n            dist_sync_on_step=sync,\n            num_classes=N,\n        ),\n        # torchmetrics.AUROC(dist_sync_on_step=sync, num_classes=N),\n        # StorePredLabel(dist_sync_on_step=sync),\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\n\ndef write_metrics_to_tensorboard(N, metrics, writer, epoch, train_or_val):\n    m = metrics.compute()\n    for k, v in m.items():\n        if k == \"StorePredLabel\":\n            pred, label = v\n            label = nn.functional.one_hot(label, N)\n            writer.add_pr_curve(f\"{train_or_val}/pr_curve\", label, pred, epoch)\n        # handle class-level metrics\n        elif isinstance(v, torch.Tensor) and len(v.shape) > 0 and v.shape[-1] > 1:\n            for i, v_ in enumerate(v):\n                if N == 2:  # binary\n                    l = \"negative\" if i == 0 else \"positive\"\n                elif N == 3:\n                    if i == 0:\n                        l = \"negative\"\n                    elif i == 1:\n                        l = \"anticyclonic\"\n                    elif i == 2:\n                        l = \"cyclonic\"\n                else:\n                    raise NotImplementedError(f\"{N} classes not supported\")\n                writer.add_scalar(f\"{train_or_val}/{k}_{l}\", v_, epoch)\n        else:\n            writer.add_scalar(f\"{train_or_val}/{k}\", v, epoch)\n    return m\n\n\ndef filter_scalar_metrics(metrics_dict):\n    \"\"\"Filters the output of metrics.compute() and returns only the scalar metrics.\"\"\"\n    output = {}\n    for k, v in metrics_dict.items():\n        if (isinstance(v, torch.Tensor) or isinstance(v, np.ndarray)) and len(\n            v.shape\n        ) == 0:\n            output[k] = v\n    return output\n\n\ndef add_hparams(\n    torch_tb_writer, hparam_dict, metric_dict, hparam_domain_discrete=None, epoch_num=0\n):\n    \"\"\"Add a set of hyperparameters to be compared in TensorBoard.\n    Args:\n        hparam_dict (dict): Each key-value pair in the dictionary is the\n            name of the hyper parameter and it's corresponding value.\n            The type of the value can be one of `bool`, `string`, `float`,\n            `int`, or `None`.\n        metric_dict (dict): Each key-value pair in the dictionary is the\n            name of the metric and it's corresponding value. Note that the key used\n            here should be unique in the tensorboard record. Otherwise the value\n            you added by ``add_scalar`` will be displayed in hparam plugin. In most\n            cases, this is unwanted.\n        hparam_domain_discrete: (Optional[Dict[str, List[Any]]]) A dictionary that\n            contains names of the hyperparameters and all discrete values they can hold\n    \"\"\"\n    torch._C._log_api_usage_once(\"tensorboard.logging.add_hparams\")\n    if type(hparam_dict) is not dict or type(metric_dict) is not dict:\n        raise TypeError(\"hparam_dict and metric_dict should be dictionary.\")\n    exp, ssi, sei = hparams(hparam_dict, metric_dict, hparam_domain_discrete)\n\n    torch_tb_writer.file_writer.add_summary(exp)\n    torch_tb_writer.file_writer.add_summary(ssi)\n    torch_tb_writer.file_writer.add_summary(sei)\n    for k, v in metric_dict.items():\n        torch_tb_writer.add_scalar(k, v, epoch_num)\n\n\n# Taken from: https://github.com/Bjarten/early-stopping-pytorch/blob/master/pytorchtools.py\nclass EarlyStopping:\n    \"\"\"Early stops the training if validation loss doesn't improve after a given patience.\"\"\"\n\n    def __init__(\n        self,\n        patience=7,\n        verbose=False,\n        delta=0,\n        path=\"checkpoint.pt\",\n        min_epochs=30,\n    ):\n        \"\"\"\n        Args:\n            patience (int): How long to wait after last time validation loss improved.\n                            Default: 7\n            verbose (bool): If True, prints a message for each validation loss improvement.\n                            Default: False\n            delta (float): Minimum change in the monitored quantity to qualify as an improvement.\n                            Default: 0\n            path (str): Path for the checkpoint to be saved to.\n                            Default: 'checkpoint.pt'\n            trace_func (function): trace print function.\n                            Default: print\n        \"\"\"\n        self.patience = patience\n        self.verbose = verbose\n        self.counter = 0\n        self.best_score = None\n        self.early_stop = False\n        self.val_loss_min = np.Inf\n        self.delta = delta\n        self.path = path\n        self.min_epochs = min_epochs\n        self.epochs = 0\n\n    def __call__(self, val_loss, model):\n\n        score = -val_loss\n\n        if self.best_score is None:\n            self.best_score = score\n            self.save_checkpoint(val_loss, model)\n        elif score < self.best_score + self.delta:\n            self.counter += 1\n            if self.counter >= self.patience and self.epochs >= self.min_epochs:\n                self.early_stop = True\n        else:\n            self.best_score = score\n            self.save_checkpoint(val_loss, model)\n            self.counter = 0\n\n        self.epochs += 1\n\n    def save_checkpoint(self, val_loss, model):\n        \"\"\"Saves model when validation loss decrease.\"\"\"\n        if self.verbose:\n            self.trace_func(\n                f\"Validation loss decreased ({self.val_loss_min:.6f} --> {val_loss:.6f}).  Saving model ...\"\n            )\n        torch.save(model.state_dict(), self.path)\n        self.val_loss_min = val_loss",
+  "history_output" : "Running",
+  "history_begin_time" : 1678213368156,
+  "history_end_time" : 1678249820047,
+  "history_notes" : null,
+  "history_process" : "uf6vbr",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "n5ldad2pa2c",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820047,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rlnw98dhxyr",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820049,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "slwkxs0xuj9",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820052,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "omgj6bupsmz",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820054,
+  "history_notes" : null,
+  "history_process" : "3z0gs7",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+}]

@@ -1,4 +1,44 @@
 [{
+  "history_id" : "djca8xwd3n5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678250309050,
+  "history_end_time" : 1678250309050,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "xuqyh7vjd3a",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678250165308,
+  "history_end_time" : 1678250276581,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mnz36levei8",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678250120269,
+  "history_end_time" : 1678250120269,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ebhpcxfto1l",
+  "history_input" : "# sea surface height (SSH preprocessing)\n\n\nfrom dependency import *\nfrom plot_utils import plot_variable, save_fig_and_relesase_memory\nfrom data_loader import example_file\n\n\ndate = datetime(2019, 1, 1)\ng = RegularGridDataset(example_file, \"longitude\", \"latitude\")\n\nax, m, fig = plot_variable(\n    g,\n    \"adt\",\n    f\"ADT (m) before high-pass filter\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\nwavelength_km = 700\ng_filtered = deepcopy(g)\ng_filtered.bessel_high_filter(\"adt\", wavelength_km)\n\nax, m, fig = plot_variable(\n    g_filtered,\n    \"adt\",\n    f\"ADT (m) filtered (Final: {wavelength_km} km)\",\n    vmin=-0.15,\n    vmax=0.15,\n)\n\nsave_fig_and_relesase_memory(ax, m, fig)\n\n",
+  "history_output" : "We assume pixel position of grid is centered for /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1678213366217,
+  "history_end_time" : 1678249820016,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
   "history_id" : "xehvnh9y22h",
   "history_input" : "No code saved",
   "history_output" : "Skipped",

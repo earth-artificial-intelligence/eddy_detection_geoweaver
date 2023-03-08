@@ -1,4 +1,24 @@
 [{
+  "history_id" : "72mmaz88ilm",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1678250191329,
+  "history_end_time" : 1678250276587,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fmoig8xljeg",
+  "history_input" : null,
+  "history_output" : "Exhausted available authentication methods",
+  "history_begin_time" : 1678250124100,
+  "history_end_time" : 1678250126502,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
   "history_id" : "9v9g944ohw8",
   "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
   "history_output" : "",
@@ -78,4 +98,14 @@
   "history_process" : "w3hmlz",
   "host_id" : "ycru82",
   "indicator" : "Done"
+},{
+  "history_id" : "kyagu7uf7ns",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820031,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
 },]

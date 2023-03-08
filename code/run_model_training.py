@@ -76,5 +76,4 @@ writer.close()
 # save model to tensorboard folder
 model_path = os.path.join(tensorboard_dir, f"model_ckpt_{N+1}.pt")
 print(model_path)
-print(tensorboard_dir)
 torch.save(model.state_dict(), model_path)

@@ -1,4 +1,14 @@
 [{
+  "history_id" : "ectoer94ywv",
+  "history_input" : null,
+  "history_output" : "Exhausted available authentication methods",
+  "history_begin_time" : 1678250134676,
+  "history_end_time" : 1678250137110,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "ycru82",
+  "indicator" : "Failed"
+},{
   "history_id" : "1ezreubzk8h",
   "history_input" : "import torchmetrics\nimport torch\nfrom create_eddy_net import *\n\ndef get_metrics(N, sync=False):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N,task=\"multiclass\"),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n          \ttask=\"multiclass\"\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n          \ttask=\"multiclass\"\n        ),\n#         torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy\n#             average=\"micro\",\n#             dist_sync_on_step=sync,\n#             num_classes=N,\n#         ),\n        torchmetrics.F1Score(\n            average=\"none\",  # return F1 for each class\n            dist_sync_on_step=sync,\n            num_classes=N,\n          \ttask=\"multiclass\"\n        )\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\ntrain_metrics, val_metrics = get_metrics(num_classes)\n",
   "history_output" : "Read 252 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
@@ -78,4 +88,24 @@
   "history_process" : "cxz2e7",
   "host_id" : "ycru82",
   "indicator" : "Failed"
+},{
+  "history_id" : "n5ldad2pa2c",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820047,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3eyt0i3v1ft",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678250276597,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
 },]
