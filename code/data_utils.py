@@ -1,240 +1,177 @@
-#Data utils code
-import os
+import collections
+from itertools import repeat
+from typing import OrderedDict
 
-import matplotlib.pyplot as plt
-import numpy as np
 import torch
-from matplotlib.animation import ArtistAnimation
-from PIL import Image
-from sklearn.model_selection import train_test_split
-from torch.utils.data import DataLoader
-from torchvision import transforms
-from tqdm.auto import tqdm
+import torch.nn as nn
+import torch.nn.functional as F
 
-torch.manual_seed(42)
-
-
-def get_eddy_dataloader(
-    files, binary=False, transform=None, batch_size=32, shuffle=True, val_split=0
-):
+class EddyNet(nn.Module):
     """
-    Given a list of npz files, return dataloader(s) for train (and val).
-    Args:
-        files (list) : list of npz files
-        binary (bool) : whether to use binary masks or not.
-                        If True, treat cyclonic and anticyclonic eddies as single positive class.
-        transform (callable) : optional transform to be applied on a sample.
-        batch_size (int) : batch size for dataloader
-        shuffle (bool) : whether to shuffle the dataset or not
-        val_split (float) : fraction of data to be used as validation set.
-                            If 0, no validation split is performed.
-    Returns:
-        (train_loader, val_loader) if val_split > 0; (train_loader, None) otherwise
+    PyTorch implementation of EddyNet from Lguensat et al. (2018)
+    Original implementation in TensorFlow: https://github.com/redouanelg/EddyNet
     """
-    ds, _ = get_eddy_dataset(files, binary, transform, val_split)
-    loader_kwargs = dict(batch_size=batch_size, shuffle=shuffle, pin_memory=True)
-    if val_split > 0:
-        train_ds, val_ds = ds
-        train_dl = DataLoader(train_ds, **loader_kwargs)
-        val_dl = DataLoader(val_ds, **loader_kwargs)
-    else:
-        train_dl = DataLoader(ds, **loader_kwargs)
-        val_dl = None
-    return train_dl, val_dl
-
-
-def get_eddy_dataset(files, binary=None, transform=None, val_split=0):
-    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)
-    print(f"Read {len(masks)} samples from {files}.")
-    if val_split > 0:
-        # split into training and validation sets (80% training, 20% validation)
-        train_idx, val_idx = train_test_split(
-            np.arange(len(masks)), test_size=val_split, random_state=42
+    def __init__(self, num_classes, num_filters, kernel_size):
+        super(EddyNet, self).__init__()
+        # encoder
+        self.encoder1 = EddyNet._block(1, num_filters, kernel_size, "enc1", dropout=0.2)
+        self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.encoder2 = EddyNet._block(
+            num_filters, num_filters, kernel_size, "enc2", dropout=0.3
         )
-        train_ds = EddyDataset(
-            masks[train_idx],
-            var_filtered[train_idx],
-            dates[train_idx],
-            transform=transform,
-            binary_mask=binary,
+        self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.encoder3 = EddyNet._block(
+            num_filters, num_filters, kernel_size, "enc3", dropout=0.4
+        )
+        self.pool3 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.encoder4 = EddyNet._block(
+            num_filters, num_filters, kernel_size, "enc4", dropout=0.5
         )
 
-        val_ds = EddyDataset(
-            masks[val_idx],
-            var_filtered[val_idx],
-            dates[val_idx],
-            transform=transform,
-            binary_mask=binary,
+        # decoder
+        self.decoder3 = EddyNet.decoder_block(
+            num_filters * 2, num_filters, kernel_size, "dec3", dropout=0.4
         )
-    else:
-        train_ds = EddyDataset(
-            masks, var_filtered, dates, transform=transform, binary_mask=binary
+        self.decoder2 = EddyNet.decoder_block(
+            num_filters * 2, num_filters, kernel_size, "dec2", dropout=0.3
         )
-        val_ds = None
-    return train_ds, val_ds
-
-
-def read_npz_files(npz_files: list):
-    """Load a list of npz files, concatenate, and return separate arrays for eddy segmentation"""
-    # load npz file into separate variables
-    if isinstance(npz_files, str):
-        npz_files = [npz_files]
-    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]
-    masks, dates, var, var_filtered, lon_subset, lat_subset = eddy_dict_to_vars(
-        npz_contents
-    )
-    return masks, dates, var, var_filtered, lon_subset, lat_subset, npz_contents
-
-
-def eddy_dict_to_vars(npz_contents):
-    masks = np.concatenate(
-        [npz_content["masks"] for npz_content in npz_contents], axis=0
-    )
-    dates = np.concatenate(
-        [npz_content["dates"] for npz_content in npz_contents], axis=0
-    )
-    # var = np.concatenate([npz_content["var"] for npz_content in npz_contents], axis=0)
-    var = None
-    var_filtered = np.concatenate(
-        [npz_content["var_filtered"] for npz_content in npz_contents], axis=0
-    )
-    if "lon_subset" in npz_contents[0]:
-        lon_subset = np.concatenate(
-            [npz_content["lon_subset"] for npz_content in npz_contents], axis=0
+        self.decoder1 = EddyNet.decoder_block(
+            num_filters * 2, num_filters, kernel_size, "dec1", dropout=0.2
         )
-        lat_subset = np.concatenate(
-            [npz_content["lat_subset"] for npz_content in npz_contents], axis=0
+
+        # final layer
+        self.final_conv = nn.Conv2d(
+            num_filters, num_classes, kernel_size=1, padding=0, bias=False
         )
-    else:
-        lon_subset = lat_subset = None
-    return masks, dates, var, var_filtered, lon_subset, lat_subset
+
+    @staticmethod
+    def conv_block(in_channels, out_channels, kernel_size, name, num, dropout=0):
+        layers = {
+            f"{name}_conv{num}": Conv2dSame(in_channels, out_channels, kernel_size),
+            f"{name}_bn{num}": nn.BatchNorm2d(out_channels),
+            f"{name}_relu{num}": nn.ReLU(inplace=True),
+        }
+        if dropout > 0:
+            layers[f"{name}_dropout"] = nn.Dropout(p=dropout)
+
+        return nn.Sequential(OrderedDict(layers))
+
+    @staticmethod
+    def _block(in_channels, out_channels, kernel_size, name, dropout=0):
+        conv1 = EddyNet.conv_block(in_channels, out_channels, kernel_size, name, 1)
+        conv2 = EddyNet.conv_block(
+            out_channels, out_channels, kernel_size, name, 2, dropout=dropout
+        )
+        return nn.Sequential(conv1, conv2)
+
+    @staticmethod
+    def decoder_block(in_channels, out_channels, kernel_size, name, dropout=0):
+        return EddyNet._block(in_channels, out_channels, kernel_size, name, dropout)
+
+    def forward(self, x):
+        # encoder
+        enc1 = self.encoder1(x)
+        pool1 = self.pool1(enc1)
+
+        enc2 = self.encoder2(pool1)
+        pool2 = self.pool2(enc2)
+
+        enc3 = self.encoder3(pool2)
+        pool3 = self.pool3(enc3)
+
+        # bottleneck?
+        enc4 = self.encoder4(pool3)
+
+        # decoder
+        dec3 = nn.Upsample(scale_factor=2, mode="bilinear", align_corners=False)(enc4)
+        dec3 = torch.cat((dec3, enc3), dim=1)
+        dec3 = self.decoder3(dec3)
+
+        dec2 = nn.Upsample(scale_factor=2, mode="bilinear", align_corners=False)(dec3)
+        dec2 = torch.cat((dec2, enc2), dim=1)
+        dec2 = self.decoder2(dec2)
+
+        dec1 = nn.Upsample(scale_factor=2, mode="bilinear", align_corners=False)(dec2)
+        dec1 = torch.cat((dec1, enc1), dim=1)
+        dec1 = self.decoder1(dec1)
+
+        # final layer
+        final = self.final_conv(dec1)
+
+        # softmax
+        final = nn.Softmax(dim=1)(final)
+
+        return final
 
 
-class EddyDataset(torch.utils.data.Dataset):
-    def __init__(self, masks, gv, dates, transform=None, binary_mask=False):
-        """PyTorch dataset for eddy detection
-        Args:
-            masks (np.array): array of segmentation masks with shape: (N_dates, N_lon, N_lat)
-                Can have 3 values: 0, 1 and 2, where 1 = anticyclonic, 2 = cyclonic and 0 = no eddy
-            gv (np.array): array of GV maps with shape: (N_dates, N_lon, N_lat)
-                Example GVs: sea level anomaly, absolute dynamic topography
-            transform (callable, optional): Transformation to be applied on a sample.
-            binary_mask (bool, optional): If true, all eddies (anticyclonic and cyclonic) will be assigned a value of 1
+class Conv2dSame(nn.Module):
+    """Manual convolution with same padding
+    https://discuss.pytorch.org/t/same-padding-equivalent-in-pytorch/85121/9
+    Although PyTorch >= 1.10.0 supports ``padding='same'`` as a keyword
+    argument, this does not export to CoreML as of coremltools 5.1.0,
+    so we need to implement the internal torch logic manually.
+
+    Currently the ``RuntimeError`` is
+
+    "PyTorch convert function for op '_convolution_mode' not implemented"
+    """
+
+    def __init__(
+        self, in_channels, out_channels, kernel_size, stride=1, dilation=1, **kwargs
+    ):
+        """Wrap base convolution layer
+
+        See official PyTorch documentation for parameter details
+        https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html
         """
-        self.masks = masks
-        self.gv = gv.astype(np.float32)  # GV stands for Geophysical Variable
-        self.dates = dates
-        self.transform = transform
-        self.binary_mask = binary_mask
+        super().__init__()
+        self.conv = nn.Conv2d(
+            in_channels=in_channels,
+            out_channels=out_channels,
+            kernel_size=kernel_size,
+            stride=stride,
+            dilation=dilation,
+            **kwargs,
+        )
 
-    def __getitem__(self, index, return_date=True):
-        # return image and mask for a given index
-        image = self.gv[index, :, :].copy()
-        mask = self.masks[index, :, :].copy()
-        date = self.dates[index]
+        # Setup internal representations
+        kernel_size_ = _pair(kernel_size)
+        dilation_ = _pair(dilation)
+        self._reversed_padding_repeated_twice = [0, 0] * len(kernel_size_)
 
-        # transpose
-        image = image.T
-        mask = mask.T
+        # Follow the logic from ``nn/modules/conv.py:_ConvNd``
+        for d, k, i in zip(
+            dilation_, kernel_size_, range(len(kernel_size_) - 1, -1, -1)
+        ):
+            total_padding = d * (k - 1)
+            left_pad = total_padding // 2
+            self._reversed_padding_repeated_twice[2 * i] = left_pad
+            self._reversed_padding_repeated_twice[2 * i + 1] = total_padding - left_pad
 
-        # address regions of land that are represented as -2147483648
-        image[image < -10000] = 0
+    def forward(self, imgs):
+        """Setup padding so same spatial dimensions are returned
 
-        if image.ndim == 2:
-            image = np.expand_dims(image, axis=0)  # make ndim = 3
+        All shapes (input/output) are ``(N, C, W, H)`` convention
 
-        if self.transform:
-            image = self.transform(image)
-
-        # if image and mask are numpy arrays, convert them to torch tensors
-        if isinstance(image, np.ndarray):
-            image = torch.from_numpy(image)
-        if isinstance(mask, np.ndarray):
-            mask = torch.from_numpy(mask)
-
-        if self.binary_mask:
-            mask[mask >= 1] = 1
-
-        # convert to float
-        image = image.float()
-
-        if return_date:
-            # convert date to tensor
-            # date_str = date.strftime("%Y-%m-%d")
-            # date =
-            return image, mask, index
-        else:
-            return image, mask
-
-    def __len__(self):
-        return self.masks.shape[0]
-
-    def plot_sample(self, N=5):
-
-        # var in first column, mask in second column
-        num_cols = 2
-        num_rows = N
-        fig, ax = plt.subplots(num_rows, num_cols, figsize=(num_cols * 4, num_rows * 4))
-        ax[0, 0].set_title("GV")
-        ax[0, 1].set_title("Mask")
-        for i in range(num_rows):
-            # get random sample from self
-            n = np.random.randint(0, len(self))
-            gv, mask, index = self.__getitem__(n, return_date=True)
-            gv = np.squeeze(gv.cpu().detach().numpy())
-            mask = np.squeeze(mask.cpu().detach().numpy())
-            date = self.dates[index].strftime("%Y-%m-%d")
-            # ax[i, 0].pcolormesh(lon_subset, lat_subset, gv.T, cmap="RdBu_r", vmin=-0.15, vmax=0.15)
-            ax[i, 0].imshow(gv, cmap="RdBu_r", vmin=-0.15, vmax=0.15)
-            ax[i, 0].set_title(f"GV ({date})")
-            ax[i, 0].axis("off")
-            ax[i, 1].imshow(mask, cmap="viridis")
-            ax[i, 1].set_title(f"Mask ({date})")
-            ax[i, 1].axis("off")
-
-    def animate(self):
-        fig, ax = plt.subplots(1, 2, figsize=(20, 10))
-        print(f"Drawing animation of GV and segmentation mask")
-        artists = []
-        for i in tqdm(range(len(self)), desc="Animating eddies:"):
-            gv, mask, date_idx = self.__getitem__(i, return_date=True)
-            date = self.dates[date_idx].strftime("%Y-%m-%d")
-            im1 = ax[0].imshow(gv.squeeze(), cmap="RdBu_r", vmin=-0.15, vmax=0.15)
-            t1 = ax[0].text(
-                0.5,
-                1.05,
-                f"GV {date}",
-                size=plt.rcParams["axes.titlesize"],
-                ha="center",
-                transform=ax[0].transAxes,
-            )
-            ax[0].axis("off")
-
-            im2 = ax[1].imshow(mask.squeeze(), cmap="viridis")
-            t2 = ax[1].text(
-                0.5,
-                1.05,
-                f"Mask {date}",
-                size=plt.rcParams["axes.titlesize"],
-                ha="center",
-                transform=ax[1].transAxes,
-            )
-            ax[1].axis("off")
-            plt.tight_layout()
-            artists.append([im1, t1, im2, t2])
-            fig.canvas.draw()
-            fig.canvas.flush_events()
-        animation = ArtistAnimation(fig, artists, interval=500, blit=True)
-        plt.close()
-        return animation
-
-def transform_ssh(ssh_array):
-    # normalize sea level anomaly between 0 and 1 based on min max
-    ssh_array = (ssh_array - ssh_array.min()) / (ssh_array.max() - ssh_array.min())
-    return ssh_array
+        :param torch.Tensor imgs:
+        :return torch.Tensor:
+        """
+        padded = F.pad(imgs, self._reversed_padding_repeated_twice)
+        return self.conv(padded)
 
 
-# convert npy to compressed npz
-def convert_npy_to_npz(npy_file):
-    npz_file = npy_file.replace(".npy", ".npz")
-    npy_contents = np.load(npy_file)
+def _ntuple(n):
+    """Copy from PyTorch since internal function is not importable
+
+    See ``nn/modules/utils.py:6``
+    """
+
+    def parse(x):
+        if isinstance(x, collections.abc.Iterable):
+            return tuple(x)
+        return tuple(repeat(x, n))
+
+    return parse
+
+
+_pair = _ntuple(2)
