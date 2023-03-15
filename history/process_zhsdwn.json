@@ -1,4 +1,104 @@
 [{
+  "history_id" : "d6quah750fr",
+  "history_input" : "# Generate ground truth on a global scale helper functions\n\nimport multiprocessing\n\nfrom ground_truth_utils import *\n\ndef generate_masks_in_parallel(\n    files,\n    dates,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=-180,\n    y_offset=0,\n    num_processes=8,\n    plot=False,\n    save=True,\n):\n    args = [\n        (file, date, ssh_var, u_var, v_var, high_pass_wavelength_km, x_offset, y_offset)\n        for file, date in zip(files, dates)\n    ]\n    pool = multiprocessing.Pool(processes=num_processes)\n    results = pool.starmap(generate_segmentation_mask_from_file, args)\n\n    vars_ = []\n    vars_filtered = []\n    masks = []\n    for result in results:\n        vars_.append(result[0])\n        vars_filtered.append(result[1])\n        masks.append(result[2])\n\n    # concatenate list into single numpy array and return\n    masks = np.stack(masks, axis=0)\n    vars_ = np.stack(vars_, axis=0).astype(np.float32)\n    vars_filtered = np.stack(vars_filtered, axis=0).astype(np.float32)\n\n    if save:\n        # find common folder across all files\n        common_folder = os.path.commonpath(files)\n        years = sorted(set([date.year for date in dates]))\n        year_str = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n        save_path = os.path.join(\n            common_folder, f\"global_pet_masks_with_{ssh_var}_{year_str}.npz\"\n        )\n        np.savez_compressed(\n            save_path,\n            masks=masks,\n            dates=dates,\n            var=vars_,\n            var_filtered=vars_filtered,\n        )\n        print(f\"Saved masks to {save_path}\")\n\n    return vars_, vars_filtered, masks\n\n\nfrom itertools import product\n\n\ndef get_dates_and_files(years, months, days, folder, file_pattern):\n    \"\"\"\n    Given a filename pattern and a list of years months and days,\n    fill in the filename pattern with the date and return\n    a list of filenames and a list of associated `datetime` objects.\n\n    Args:\n        years (list): list of years, e.g., [1993, 1994, 1995, 1996]\n        months (list): list of months, e.g., [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n        days (list): list of days, e.g., [1, 10, 20, 30] for every 10th day\n        folder (str): folder where the files are located\n        file_pattern (str): filename pattern, e.g.,\n            \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n    Returns:\n        files (list): full/absolute path to each netCDF file in the list of dates\n        dates (list): list of `datetime` objects formed from the combination of years, months and days\n    \"\"\"\n    dates, files = [], []\n    for y, m, d in product(years, months, days):  # cartesian product\n        try:\n            date = datetime(y, m, d)\n            file = os.path.join(folder, file_pattern.format(year=y, month=m, day=d))\n            dates.append(date)\n            files.append(file)\n        # catch ValueError thrown by datetime if date is not valid\n        except ValueError:\n            pass\n    years = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n    print(f\"Found {len(dates)} files for {years}.\")\n    return dates, files",
+  "history_output" : "Running",
+  "history_begin_time" : 1678850367949,
+  "history_end_time" : 1678850371075,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "is7iyek60u4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678850346151,
+  "history_end_time" : 1678850346151,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "l6al0bsquu5",
+  "history_input" : "# Generate ground truth on a global scale helper functions\n\nimport multiprocessing\n\nfrom ground_truth_utils import *\n\ndef generate_masks_in_parallel(\n    files,\n    dates,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=-180,\n    y_offset=0,\n    num_processes=8,\n    plot=False,\n    save=True,\n):\n    args = [\n        (file, date, ssh_var, u_var, v_var, high_pass_wavelength_km, x_offset, y_offset)\n        for file, date in zip(files, dates)\n    ]\n    pool = multiprocessing.Pool(processes=num_processes)\n    results = pool.starmap(generate_segmentation_mask_from_file, args)\n\n    vars_ = []\n    vars_filtered = []\n    masks = []\n    for result in results:\n        vars_.append(result[0])\n        vars_filtered.append(result[1])\n        masks.append(result[2])\n\n    # concatenate list into single numpy array and return\n    masks = np.stack(masks, axis=0)\n    vars_ = np.stack(vars_, axis=0).astype(np.float32)\n    vars_filtered = np.stack(vars_filtered, axis=0).astype(np.float32)\n\n    if save:\n        # find common folder across all files\n        common_folder = os.path.commonpath(files)\n        years = sorted(set([date.year for date in dates]))\n        year_str = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n        save_path = os.path.join(\n            common_folder, f\"global_pet_masks_with_{ssh_var}_{year_str}.npz\"\n        )\n        np.savez_compressed(\n            save_path,\n            masks=masks,\n            dates=dates,\n            var=vars_,\n            var_filtered=vars_filtered,\n        )\n        print(f\"Saved masks to {save_path}\")\n\n    return vars_, vars_filtered, masks\n\n\nfrom itertools import product\n\n\ndef get_dates_and_files(years, months, days, folder, file_pattern):\n    \"\"\"\n    Given a filename pattern and a list of years months and days,\n    fill in the filename pattern with the date and return\n    a list of filenames and a list of associated `datetime` objects.\n\n    Args:\n        years (list): list of years, e.g., [1993, 1994, 1995, 1996]\n        months (list): list of months, e.g., [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n        days (list): list of days, e.g., [1, 10, 20, 30] for every 10th day\n        folder (str): folder where the files are located\n        file_pattern (str): filename pattern, e.g.,\n            \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n    Returns:\n        files (list): full/absolute path to each netCDF file in the list of dates\n        dates (list): list of `datetime` objects formed from the combination of years, months and days\n    \"\"\"\n    dates, files = [], []\n    for y, m, d in product(years, months, days):  # cartesian product\n        try:\n            date = datetime(y, m, d)\n            file = os.path.join(folder, file_pattern.format(year=y, month=m, day=d))\n            dates.append(date)\n            files.append(file)\n        # catch ValueError thrown by datetime if date is not valid\n        except ValueError:\n            pass\n    years = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n    print(f\"Found {len(dates)} files for {years}.\")\n    return dates, files",
+  "history_output" : "",
+  "history_begin_time" : 1678838079906,
+  "history_end_time" : 1678850059402,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zjhq1t3dho9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678838073986,
+  "history_end_time" : 1678850059404,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "6pjdy7ecyro",
+  "history_input" : "# Generate ground truth on a global scale helper functions\n\nimport multiprocessing\n\nfrom ground_truth_utils import *\n\ndef generate_masks_in_parallel(\n    files,\n    dates,\n    ssh_var=\"adt\",\n    u_var=\"ugosa\",\n    v_var=\"vgosa\",\n    high_pass_wavelength_km=700,\n    x_offset=-180,\n    y_offset=0,\n    num_processes=8,\n    plot=False,\n    save=True,\n):\n    args = [\n        (file, date, ssh_var, u_var, v_var, high_pass_wavelength_km, x_offset, y_offset)\n        for file, date in zip(files, dates)\n    ]\n    pool = multiprocessing.Pool(processes=num_processes)\n    results = pool.starmap(generate_segmentation_mask_from_file, args)\n\n    vars_ = []\n    vars_filtered = []\n    masks = []\n    for result in results:\n        vars_.append(result[0])\n        vars_filtered.append(result[1])\n        masks.append(result[2])\n\n    # concatenate list into single numpy array and return\n    masks = np.stack(masks, axis=0)\n    vars_ = np.stack(vars_, axis=0).astype(np.float32)\n    vars_filtered = np.stack(vars_filtered, axis=0).astype(np.float32)\n\n    if save:\n        # find common folder across all files\n        common_folder = os.path.commonpath(files)\n        years = sorted(set([date.year for date in dates]))\n        year_str = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n        save_path = os.path.join(\n            common_folder, f\"global_pet_masks_with_{ssh_var}_{year_str}.npz\"\n        )\n        np.savez_compressed(\n            save_path,\n            masks=masks,\n            dates=dates,\n            var=vars_,\n            var_filtered=vars_filtered,\n        )\n        print(f\"Saved masks to {save_path}\")\n\n    return vars_, vars_filtered, masks\n\n\nfrom itertools import product\n\n\ndef get_dates_and_files(years, months, days, folder, file_pattern):\n    \"\"\"\n    Given a filename pattern and a list of years months and days,\n    fill in the filename pattern with the date and return\n    a list of filenames and a list of associated `datetime` objects.\n\n    Args:\n        years (list): list of years, e.g., [1993, 1994, 1995, 1996]\n        months (list): list of months, e.g., [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n        days (list): list of days, e.g., [1, 10, 20, 30] for every 10th day\n        folder (str): folder where the files are located\n        file_pattern (str): filename pattern, e.g.,\n            \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n    Returns:\n        files (list): full/absolute path to each netCDF file in the list of dates\n        dates (list): list of `datetime` objects formed from the combination of years, months and days\n    \"\"\"\n    dates, files = [], []\n    for y, m, d in product(years, months, days):  # cartesian product\n        try:\n            date = datetime(y, m, d)\n            file = os.path.join(folder, file_pattern.format(year=y, month=m, day=d))\n            dates.append(date)\n            files.append(file)\n        # catch ValueError thrown by datetime if date is not valid\n        except ValueError:\n            pass\n    years = f\"{years[0]}\" if len(years) == 1 else f\"{min(years)}-{max(years)}\"\n    print(f\"Found {len(dates)} files for {years}.\")\n    return dates, files",
+  "history_output" : "",
+  "history_begin_time" : 1678837917376,
+  "history_end_time" : 1678838010038,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "nii696nrp7l",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678837910827,
+  "history_end_time" : 1678838010039,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lgya3zqwih2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678837413863,
+  "history_end_time" : 1678837413863,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "7e5ue9j8a7p",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678837413862,
+  "history_end_time" : 1678837413862,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vk8pey60g9j",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678837361430,
+  "history_end_time" : 1678837361430,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "3ykrgxbu5fl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678837361429,
+  "history_end_time" : 1678837361429,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
   "history_id" : "paaqzlmhotz",
   "history_input" : "No code saved",
   "history_output" : "Skipped",

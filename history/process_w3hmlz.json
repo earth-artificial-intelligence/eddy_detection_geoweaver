@@ -1,4 +1,34 @@
 [{
+  "history_id" : "1f0wey454p9",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1678850731990,
+  "history_end_time" : 1678850735099,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "4i41953frlu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678837413867,
+  "history_end_time" : 1678837413867,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "cnbvhclndgm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1678837361439,
+  "history_end_time" : 1678837361439,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Skipped"
+},{
   "history_id" : "72mmaz88ilm",
   "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
   "history_output" : "",
@@ -104,6 +134,26 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1678249820031,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "tmr5s9ardai",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678838010055,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "auk37g1frog",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678850059419,
   "history_notes" : null,
   "history_process" : "w3hmlz",
   "host_id" : "ycru82",

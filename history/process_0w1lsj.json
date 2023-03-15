@@ -1,4 +1,34 @@
 [{
+  "history_id" : "vadqbzmgffs",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 21 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678850751047,
+  "history_end_time" : 1678850757107,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "q5g5n1hce21",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "",
+  "history_begin_time" : 1678837414810,
+  "history_end_time" : 1678837418526,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "41e6ia9e2ch",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 987 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 47 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1678837361651,
+  "history_end_time" : 1678837384202,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
   "history_id" : "7baib2isdpo",
   "history_input" : null,
   "history_output" : "Exhausted available authentication methods",
@@ -84,6 +114,26 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1678250276592,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ews0bgo3deg",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678838010063,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ah97hiigh6x",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678850059434,
   "history_notes" : null,
   "history_process" : "0w1lsj",
   "host_id" : "ycru82",
