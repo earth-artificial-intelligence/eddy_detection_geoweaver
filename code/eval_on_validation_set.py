@@ -39,4 +39,30 @@ with torch.no_grad():
 
 print(os.path.join(tensorboard_dir, "val_predictions.gif"))
 animation.save(os.path.join(tensorboard_dir, "val_predictions.gif"), writer="pillow")
+
 # HTML(animation.to_jshtml())
+
+#plot contour
+
+p = preds[0].astype(np.uint8)
+
+print(f"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}")
+print(f"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}")
+print(f"Number of both eddies: {count_eddies(p, eddy_type='both')}")
+
+# draw contours on the image
+thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)
+contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+img = np.zeros(p.shape, np.uint8)
+cv2.drawContours(img, contours, -1, (255, 255, 255), 1)
+fileName = os.path.join("/home/chetana/plots/","contours.png")
+cv2.imwrite(fileName, img)
+plt.imshow(img, cmap="gray")
+plt.axis("off")
+
+# get average contour area
+area = 0
+for cnt in contours:
+    area += cv2.contourArea(cnt)
+area /= len(contours)
+print(f"Average contour area: {area:.2f} sq. pixels")
