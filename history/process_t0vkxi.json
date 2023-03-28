@@ -1,4 +1,14 @@
 [{
+  "history_id" : "ylqpf99jukq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557963,
+  "history_end_time" : 1680029661150,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
   "history_id" : "5lilubmeiw9",
   "history_input" : "\nimport datetime\nimport os\nfrom torch.utils.tensorboard import SummaryWriter\n\ntensorboard_dir = os.path.join(\n    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),\n    \"tensorboard\",\n    # add current timestamp\n    f\"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}\",\n)\nwriter = SummaryWriter(log_dir=tensorboard_dir)\nprint(\n    f\"{''.join(['=']*(28 + len(writer.log_dir)))}\\\\n\"\n    f\"Writing Tensorboard logs to {writer.log_dir}\"\n    f\"\\\\n{''.join(['=']*(28 + len(writer.log_dir)))}\"\n)\n",
   "history_output" : "======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-03-15_03-26\n======================================================================\n",
@@ -109,26 +119,6 @@
   "host_id" : "ycru82",
   "indicator" : "Failed"
 },{
-  "history_id" : "rlnw98dhxyr",
-  "history_input" : null,
-  "history_output" : null,
-  "history_begin_time" : null,
-  "history_end_time" : 1678249820049,
-  "history_notes" : null,
-  "history_process" : "t0vkxi",
-  "host_id" : "ycru82",
-  "indicator" : "Stopped"
-},{
-  "history_id" : "x9cbunuqhf0",
-  "history_input" : null,
-  "history_output" : null,
-  "history_begin_time" : null,
-  "history_end_time" : 1678250276598,
-  "history_notes" : null,
-  "history_process" : "t0vkxi",
-  "host_id" : "ycru82",
-  "indicator" : "Stopped"
-},{
   "history_id" : "cz0cknfbl19",
   "history_input" : null,
   "history_output" : null,
@@ -144,6 +134,26 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1678850059449,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "x9cbunuqhf0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678250276598,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rlnw98dhxyr",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820049,
   "history_notes" : null,
   "history_process" : "t0vkxi",
   "host_id" : "ycru82",

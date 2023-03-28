@@ -1,4 +1,14 @@
 [{
+  "history_id" : "r3j61qdgltp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557958,
+  "history_end_time" : 1680029661149,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
   "history_id" : "da4zgcjg1xg",
   "history_input" : "import torchmetrics\nimport torch\nfrom create_eddy_net import *\n\ndef get_metrics(N, sync=False):\n    \"\"\"Get the metrics to be used in the training loop.\n    Args:\n        N (int): The number of classes.\n        sync (bool): Whether to use wait for metrics to sync across devices before computing value.\n    Returns:\n        train_metrics (MetricCollection): The metrics to be used in the training loop.\n        val_metrics (MetricCollection): The metrics to be used in validation.\n    \"\"\"\n    # Define metrics and move to GPU if available\n    metrics = [\n        torchmetrics.Accuracy(dist_sync_on_step=sync, num_classes=N,task=\"multiclass\"),\n        torchmetrics.Precision(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n          \ttask=\"multiclass\"\n        ),\n        torchmetrics.Recall(\n            average=None,\n            dist_sync_on_step=sync,\n            num_classes=N,\n          \ttask=\"multiclass\"\n        ),\n#         torchmetrics.F1Score(  # TODO: Homework: verify in tensorboard that this is equivalent to accuracy\n#             average=\"micro\",\n#             dist_sync_on_step=sync,\n#             num_classes=N,\n#         ),\n        torchmetrics.F1Score(\n            average=\"none\",  # return F1 for each class\n            dist_sync_on_step=sync,\n            num_classes=N,\n          \ttask=\"multiclass\"\n        )\n    ]\n    if torch.cuda.is_available():  # move metrics to the same device as model\n        [metric.to(\"cuda\") for metric in metrics]\n\n    train_metrics = torchmetrics.MetricCollection(metrics)\n    val_metrics = train_metrics.clone()\n    return train_metrics, val_metrics\n\ntrain_metrics, val_metrics = get_metrics(num_classes)\n",
   "history_output" : "",
@@ -119,26 +129,6 @@
   "host_id" : "ycru82",
   "indicator" : "Failed"
 },{
-  "history_id" : "n5ldad2pa2c",
-  "history_input" : null,
-  "history_output" : null,
-  "history_begin_time" : null,
-  "history_end_time" : 1678249820047,
-  "history_notes" : null,
-  "history_process" : "cxz2e7",
-  "host_id" : "ycru82",
-  "indicator" : "Stopped"
-},{
-  "history_id" : "3eyt0i3v1ft",
-  "history_input" : null,
-  "history_output" : null,
-  "history_begin_time" : null,
-  "history_end_time" : 1678250276597,
-  "history_notes" : null,
-  "history_process" : "cxz2e7",
-  "host_id" : "ycru82",
-  "indicator" : "Stopped"
-},{
   "history_id" : "kvldcrcwy74",
   "history_input" : null,
   "history_output" : null,
@@ -154,6 +144,26 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1678850059446,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3eyt0i3v1ft",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678250276597,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "n5ldad2pa2c",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820047,
   "history_notes" : null,
   "history_process" : "cxz2e7",
   "host_id" : "ycru82",

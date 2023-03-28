@@ -1,4 +1,14 @@
 [{
+  "history_id" : "senu3y9ep35",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1680029558589,
+  "history_end_time" : 1680029661139,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
   "history_id" : "136rckmcryv",
   "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
   "history_output" : "",

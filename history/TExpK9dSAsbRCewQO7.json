@@ -1,0 +1,311 @@
+[{
+  "history_id" : "keh71vfczcp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557846,
+  "history_end_time" : 1680029661123,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gou7hkrpoik",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557849,
+  "history_end_time" : 1680029661125,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "c3dpte0k3ee",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557852,
+  "history_end_time" : 1680029661126,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ujspdbte6pv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557858,
+  "history_end_time" : 1680029661127,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "660vqabqxpm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557863,
+  "history_end_time" : 1680029661128,
+  "history_notes" : null,
+  "history_process" : "jajowz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mo7vbj5hguq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557868,
+  "history_end_time" : 1680029661130,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "8ng63vfz48u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557872,
+  "history_end_time" : 1680029661131,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "8cu26gzfq9p",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557876,
+  "history_end_time" : 1680029661132,
+  "history_notes" : null,
+  "history_process" : "g85teu",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4jgcwhuj97d",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557881,
+  "history_end_time" : 1680029661134,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "pr6ow08e8u8",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557886,
+  "history_end_time" : 1680029661135,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wn1qzsfdflr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557891,
+  "history_end_time" : 1680029661136,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lrpvvd1mgka",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557896,
+  "history_end_time" : 1680029661137,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "h58elczliu3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557901,
+  "history_end_time" : 1680029661138,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "senu3y9ep35",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "",
+  "history_begin_time" : 1680029558589,
+  "history_end_time" : 1680029661139,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mo5qj6swi4m",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557914,
+  "history_end_time" : 1680029661140,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rlqsfyr0zy0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557919,
+  "history_end_time" : 1680029661141,
+  "history_notes" : null,
+  "history_process" : "28zx21",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wcg13cuipul",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557924,
+  "history_end_time" : 1680029661143,
+  "history_notes" : null,
+  "history_process" : "d6b94y",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lx55j6dq5eb",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557929,
+  "history_end_time" : 1680029661144,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qb2k8od6q70",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557935,
+  "history_end_time" : 1680029661145,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "le08x70ax5c",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557940,
+  "history_end_time" : 1680029661146,
+  "history_notes" : null,
+  "history_process" : "suoxrn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1upviqmya99",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557945,
+  "history_end_time" : 1680029661147,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gq58shyrxuy",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557950,
+  "history_end_time" : 1680029661148,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "k2rx9qzwy6m",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557955,
+  "history_end_time" : 1680029661149,
+  "history_notes" : null,
+  "history_process" : "uf6vbr",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "r3j61qdgltp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557958,
+  "history_end_time" : 1680029661149,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ylqpf99jukq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557963,
+  "history_end_time" : 1680029661150,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "613htwg0qek",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557968,
+  "history_end_time" : 1680029661150,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "widwhr2dvu4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557973,
+  "history_end_time" : 1680029661151,
+  "history_notes" : null,
+  "history_process" : "3z0gs7",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mcg2hqfdk3w",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557978,
+  "history_end_time" : 1680029661152,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "72a2omykqle",
+  "history_input" : "#Preprocessing for test files\n\nfrom generate_segmentation_in_parallel import *\nfrom segmask_and_ssh_utils import *\n\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\ntest_dates, test_files = get_dates_and_files(\n    [2019], [1], [10], test_folder, file_pattern\n)\n\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)\n",
+  "history_output" : "Found 987 files for 1998-2018.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n",
+  "history_begin_time" : 1680029558009,
+  "history_end_time" : 1680029661153,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7uk26fznge8",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680029661157,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "urk4mvszr72",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680029661161,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+}]

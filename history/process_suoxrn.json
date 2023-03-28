@@ -1,4 +1,14 @@
 [{
+  "history_id" : "le08x70ax5c",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557940,
+  "history_end_time" : 1680029661146,
+  "history_notes" : null,
+  "history_process" : "suoxrn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
   "history_id" : "tlhvb7sppy3",
   "history_input" : "import torch\nfrom convert_to_pytorch_data_loader import *\nfrom create_eddy_net import *\n\ninitial_lr = 1e-6\nmax_lr = 5e-4\n\noptimizer = torch.optim.Adam(model.parameters(), lr=max_lr)\nscheduler = torch.optim.lr_scheduler.OneCycleLR(\n    optimizer,\n    max_lr=max_lr,\n    steps_per_epoch=len(train_loader),\n    epochs=num_epochs,\n    div_factor=max_lr / initial_lr,\n    pct_start=0.3,\n)\n",
   "history_output" : "Read 21 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
@@ -99,26 +109,6 @@
   "host_id" : "ycru82",
   "indicator" : "Failed"
 },{
-  "history_id" : "f5qxgzeiwzm",
-  "history_input" : null,
-  "history_output" : null,
-  "history_begin_time" : null,
-  "history_end_time" : 1678249820042,
-  "history_notes" : null,
-  "history_process" : "suoxrn",
-  "host_id" : "ycru82",
-  "indicator" : "Stopped"
-},{
-  "history_id" : "10rvd49c6qd",
-  "history_input" : null,
-  "history_output" : null,
-  "history_begin_time" : null,
-  "history_end_time" : 1678250276593,
-  "history_notes" : null,
-  "history_process" : "suoxrn",
-  "host_id" : "ycru82",
-  "indicator" : "Stopped"
-},{
   "history_id" : "1hxyiwk5rm7",
   "history_input" : null,
   "history_output" : null,
@@ -134,6 +124,26 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1678850059438,
+  "history_notes" : null,
+  "history_process" : "suoxrn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "10rvd49c6qd",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678250276593,
+  "history_notes" : null,
+  "history_process" : "suoxrn",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f5qxgzeiwzm",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820042,
   "history_notes" : null,
   "history_process" : "suoxrn",
   "host_id" : "ycru82",
