@@ -1,4 +1,54 @@
 [{
+  "history_id" : "er7natfau0u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244937,
+  "history_end_time" : 1680032244937,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1upviqmya99",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680029557945,
+  "history_end_time" : 1680029661147,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "g6dv1zpvyi7",
+  "history_input" : "import torch\n\nloss_fn = torch.nn.CrossEntropyLoss()",
+  "history_output" : "Running",
+  "history_begin_time" : 1678850764439,
+  "history_end_time" : 1678850766944,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "hi1ov17khyz",
+  "history_input" : "import torch\n\nloss_fn = torch.nn.CrossEntropyLoss()",
+  "history_output" : "Running",
+  "history_begin_time" : 1678837421712,
+  "history_end_time" : 1678837424238,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
+  "history_id" : "zx9wd4ttu9a",
+  "history_input" : "import torch\n\nloss_fn = torch.nn.CrossEntropyLoss()",
+  "history_output" : "",
+  "history_begin_time" : 1678837391237,
+  "history_end_time" : 1678837394726,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "ycru82",
+  "indicator" : "Done"
+},{
   "history_id" : "myx59ogjsmh",
   "history_input" : null,
   "history_output" : "Exhausted available authentication methods",
@@ -59,11 +109,21 @@
   "host_id" : "ycru82",
   "indicator" : "Done"
 },{
-  "history_id" : "ifmkvjaaezg",
+  "history_id" : "anvnmfmbcrw",
   "history_input" : null,
   "history_output" : null,
   "history_begin_time" : null,
-  "history_end_time" : 1678249820044,
+  "history_end_time" : 1678838010068,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "g3ylyb252u4",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678850059442,
   "history_notes" : null,
   "history_process" : "ax7g0d",
   "host_id" : "ycru82",
@@ -74,6 +134,16 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1678250276595,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ifmkvjaaezg",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1678249820044,
   "history_notes" : null,
   "history_process" : "ax7g0d",
   "host_id" : "ycru82",

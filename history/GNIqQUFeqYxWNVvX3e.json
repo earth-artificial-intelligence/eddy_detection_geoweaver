@@ -1,0 +1,311 @@
+[{
+  "history_id" : "xixa3egq1a5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244924,
+  "history_end_time" : 1680032244924,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "0x5ey0kyfsl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244926,
+  "history_end_time" : 1680032244926,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "pa012bx9bje",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244926,
+  "history_end_time" : 1680032244926,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "bwjhnrtak00",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244926,
+  "history_end_time" : 1680032244926,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "sj4ratq4yps",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244927,
+  "history_end_time" : 1680032244927,
+  "history_notes" : null,
+  "history_process" : "jajowz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "s3mv7a326rc",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244927,
+  "history_end_time" : 1680032244927,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ip5pjjmyiiu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244927,
+  "history_end_time" : 1680032244927,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "3n6fllk9p6e",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244928,
+  "history_end_time" : 1680032244928,
+  "history_notes" : null,
+  "history_process" : "g85teu",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "louj04j5omo",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244928,
+  "history_end_time" : 1680032244928,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "i9s30bqewf6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244929,
+  "history_end_time" : 1680032244929,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1r4hvsjy60y",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244929,
+  "history_end_time" : 1680032244929,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "zyoarelowj3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244929,
+  "history_end_time" : 1680032244929,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "x1f6ylqhb9t",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244930,
+  "history_end_time" : 1680032244930,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "qa8faim5oa3",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "Running",
+  "history_begin_time" : 1680032247176,
+  "history_end_time" : 1680032251861,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "n8c5cb5rnfc",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244934,
+  "history_end_time" : 1680032244934,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "gx5sjpjhkuv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244935,
+  "history_end_time" : 1680032244935,
+  "history_notes" : null,
+  "history_process" : "28zx21",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nvnsx6usoe1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244935,
+  "history_end_time" : 1680032244935,
+  "history_notes" : null,
+  "history_process" : "d6b94y",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "8r9npn0hi5n",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244935,
+  "history_end_time" : 1680032244935,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "8nund1jvg8a",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244936,
+  "history_end_time" : 1680032244936,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "wja71nle2m3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244936,
+  "history_end_time" : 1680032244936,
+  "history_notes" : null,
+  "history_process" : "suoxrn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "er7natfau0u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244937,
+  "history_end_time" : 1680032244937,
+  "history_notes" : null,
+  "history_process" : "ax7g0d",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "cb96t18qciz",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244937,
+  "history_end_time" : 1680032244937,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "bo5g45rci33",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244937,
+  "history_end_time" : 1680032244937,
+  "history_notes" : null,
+  "history_process" : "uf6vbr",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "gd7k5d3egxx",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244938,
+  "history_end_time" : 1680032244938,
+  "history_notes" : null,
+  "history_process" : "cxz2e7",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ssl9pm9odl1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244938,
+  "history_end_time" : 1680032244938,
+  "history_notes" : null,
+  "history_process" : "t0vkxi",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "4l345jmkk9c",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244939,
+  "history_end_time" : 1680032244939,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "gdmxlptujj0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244939,
+  "history_end_time" : 1680032244939,
+  "history_notes" : null,
+  "history_process" : "3z0gs7",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tjeb77zzhfm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244940,
+  "history_end_time" : 1680032244940,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "2kdn5do01x7",
+  "history_input" : "#Preprocessing for test files\n\nfrom segmask_and_ssh_utils import *\nfrom generate_ground_truth_parallel_utils import *\n\nprint(\"process is here\")\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\n\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\nprint(\"testdate before:\", test_folder)\n\ntest_dates, test_files = get_dates_and_files(\n    [2019], [1], [10], test_folder, file_pattern\n)\n\n\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates, test=True\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)\n",
+  "history_output" : "process is here\ntestdate before: /home/chetana/ML_eddies/cds_ssh_2019_10day_interval\nFound 1 files for 2019.\nWe assume pixel position of grid is centered for /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190110_vDT2021.nc\nNo filtering above 85.000000 degrees of latitude\n",
+  "history_begin_time" : 1680032247160,
+  "history_end_time" : 1680032251881,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "srq1ie9hxt4",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\n\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "",
+  "history_begin_time" : 1680032251910,
+  "history_end_time" : 1680032256215,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "tbfa727c85f",
+  "history_input" : "#predict eddies on testdataset\n\nfrom matplotlib.animation import ArtistAnimation\nfrom model_utils import *\nfrom set_summary_writer import *\n\n\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.load_state_dict(torch.load(\"/home/chetana/tensorboard/2023-03-15_03-26/model_ckpt_68.pt\"))\nmodel.eval()\n\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities,\n        # so choose the channels (0, 1, or 2) with the highest prob.\n        preds = preds.argmax(dim=1)\n\n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n\nprint(os.path.join(tensorboard_dir, \"test_predictions.gif\"))\nanimation.save(os.path.join(tensorboard_dir, \"test_predictions.gif\"), writer=\"pillow\")\n\n# HTML(animation.to_jshtml())\n\n#plot contour\n\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nfileName = os.path.join(\"/home/chetana/plots/\",\"contours.png\")\ncv2.imwrite(fileName, img)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n",
+  "history_output" : "Read 21 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 1 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-03-28_19-37\n======================================================================\nRead 1 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n/home/chetana/tensorboard/2023-03-28_19-37/test_predictions.gif\nNumber of anticyclonic eddies: 104\nNumber of cyclonic eddies: 59\nNumber of both eddies: 119\nAverage contour area: 31.92 sq. pixels\n",
+  "history_begin_time" : 1680032257896,
+  "history_end_time" : 1680032265039,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+}]

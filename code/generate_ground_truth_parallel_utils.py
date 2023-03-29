@@ -16,6 +16,7 @@ def generate_masks_in_parallel(
     num_processes=8,
     plot=False,
     save=True,
+    test=False,
 ):
     args = [
         (file, date, ssh_var, u_var, v_var, high_pass_wavelength_km, x_offset, y_offset)
@@ -40,6 +41,8 @@ def generate_masks_in_parallel(
     if save:
         # find common folder across all files
         common_folder = os.path.commonpath(files)
+        if test is True:
+            common_folder = "/home/chetana/ML_eddies/cds_ssh_2019_10day_interval"
         years = sorted(set([date.year for date in dates]))
         year_str = f"{years[0]}" if len(years) == 1 else f"{min(years)}-{max(years)}"
         save_path = os.path.join(
@@ -91,3 +94,4 @@ def get_dates_and_files(years, months, days, folder, file_pattern):
     years = f"{years[0]}" if len(years) == 1 else f"{min(years)}-{max(years)}"
     print(f"Found {len(dates)} files for {years}.")
     return dates, files
+
