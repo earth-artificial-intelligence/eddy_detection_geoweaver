@@ -1,4 +1,14 @@
 [{
+  "history_id" : "srq1ie9hxt4",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\n\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "",
+  "history_begin_time" : 1680032251910,
+  "history_end_time" : 1680032256215,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
   "history_id" : "xiUzlWyFH2iI",
   "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\n\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
   "history_output" : "",

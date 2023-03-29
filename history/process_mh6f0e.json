@@ -1,4 +1,14 @@
 [{
+  "history_id" : "8r9npn0hi5n",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1680032244935,
+  "history_end_time" : 1680032244935,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
   "history_id" : "lx55j6dq5eb",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
