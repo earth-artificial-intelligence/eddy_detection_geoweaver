@@ -1,4 +1,114 @@
 [{
+  "history_id" : "eq6urpyjnk8",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1681846898570,
+  "history_end_time" : 1681846901775,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "9ibm3iyggyz",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1681846509366,
+  "history_end_time" : 1681846782372,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "678vtpfukh0",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1681845560481,
+  "history_end_time" : 1681845564775,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "jgelz23lagz",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1681842361692,
+  "history_end_time" : 1681842365744,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "cej8og53boz",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1681841812490,
+  "history_end_time" : 1681841816929,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "t62wgmd4ltk",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1681841552674,
+  "history_end_time" : 1681841557792,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "b4rdb2qa0ag",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1681841168438,
+  "history_end_time" : 1681841171326,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "22mfwwvv2d7",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1680667473218,
+  "history_end_time" : 1680667476154,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "zkl7o07g7lf",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1680666871547,
+  "history_end_time" : 1680666875675,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "bwwudu2bbtf",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1680666786188,
+  "history_end_time" : 1680666790785,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "7pkkaumsqvk",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1680666547995,
+  "history_end_time" : 1680666551002,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
   "history_id" : "n8c5cb5rnfc",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -177,5 +287,35 @@
   "history_notes" : null,
   "history_process" : "w3hmlz",
   "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ynpgd12224o",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666655728,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wuhoip698ny",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666772304,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mgcc13a2r6f",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666801832,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
   "indicator" : "Stopped"
 },]

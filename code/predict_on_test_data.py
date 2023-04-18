@@ -70,8 +70,12 @@ plt.axis("off")
 
 # get average contour area
 area = 0
+      
+      
 for cnt in contours:
     area += cv2.contourArea(cnt)
 area /= len(contours)
+      
+      
 print(f"Average contour area: {area:.2f} sq. pixels")
 

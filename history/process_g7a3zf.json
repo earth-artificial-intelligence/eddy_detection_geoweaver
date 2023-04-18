@@ -1,4 +1,114 @@
 [{
+  "history_id" : "xu86c7uve8s",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897175,
+  "history_end_time" : 1681846897175,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "e0tuz9gu06u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846509201,
+  "history_end_time" : 1681846782372,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jwhwwd6n7rp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552428,
+  "history_end_time" : 1681845552428,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "osy2dfybj0v",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681842356453,
+  "history_end_time" : 1681842356453,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ikad8l3rctq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841806219,
+  "history_end_time" : 1681841806219,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "j8zqcu8ba1u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841544607,
+  "history_end_time" : 1681841544607,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "5w9in5oe3ya",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841141514,
+  "history_end_time" : 1681841141514,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "soac1wfttc3",
+  "history_input" : "from dependency import logger\n\nimport cdsapi\n\nclient = cdsapi.Client()\n\n\ndef download_train_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [\n                    '1998', '1999', '2000',\n                    '2001', '2002', '2003',\n                    '2004', '2005', '2006',\n                    '2007', '2008', '2009',\n                    '2010', '2011', '2012',\n                    '2013', '2014', '2015',\n                    '2016', '2017', '2018',\n                ],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01', '10', '20', '30'],\n            },\n            'train_data.zip')\n        return 'train_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading training data\")\n\n\ndef download_test_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': ['2019'],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01', '10', '20', '30'],\n            },\n            'test_data.zip')\n        return 'test_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading test data\")\n\n\ndef download_data():\n    train_zip_file = download_train_data()\n    test_zip_file = download_test_data()\n    return train_zip_file, test_zip_file\n\n\n\ndef download_test_date(year, month, day):\n    if len(month) < 2:\n        month = '0'+month\n\n    if len(day) < 2:\n        day = '0'+day\n\n    fileName = year + \"_\" + month + \"_\" + day + \"_test.zip\"\n\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [str(year)],\n                'month': [str(month)],\n                'day': [str(day)],\n            },\n            fileName)\n        return fileName\n    except:\n        logger.error(\"Something went wrong while downloading daily test data\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1680667104090,
+  "history_end_time" : 1680667108126,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "u3wve1shhpt",
+  "history_input" : "from dependency import logger\n\nimport cdsapi\n\nclient = cdsapi.Client()\n\n\ndef download_train_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [\n                    '1998', '1999', '2000',\n                    '2001', '2002', '2003',\n                    '2004', '2005', '2006',\n                    '2007', '2008', '2009',\n                    '2010', '2011', '2012',\n                    '2013', '2014', '2015',\n                    '2016', '2017', '2018',\n                ],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01', '10', '20', '30'],\n            },\n            'train_data.zip')\n        return 'train_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading training data\")\n\n\ndef download_test_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': ['2019'],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01', '10', '20', '30'],\n            },\n            'test_data.zip')\n        return 'test_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading test data\")\n\n\ndef download_data():\n    train_zip_file = download_train_data()\n    test_zip_file = download_test_data()\n    return train_zip_file, test_zip_file\n\n\n\ndef download_test_date(year, month, day):\n    if len(month) < 2:\n        month = '0'+month\n\n    if len(day) < 2:\n        day = '0'+day\n\n    fileName = year + \"_\" + month + \"_\" + day + \"_test.zip\"\n\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [str(year)],\n                'month': [str(month)],\n                'day': [str(day)],\n            },\n            fileName)\n        return fileName\n    except:\n        logger.error(\"Something went wrong while downloading daily test data\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1680666829588,
+  "history_end_time" : 1680666833691,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "fjxfspbdkdp",
+  "history_input" : "from dependency import logger\n\nimport cdsapi\n\nclient = cdsapi.Client()\n\n\ndef download_train_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [\n                    '1998', '1999', '2000',\n                    '2001', '2002', '2003',\n                    '2004', '2005', '2006',\n                    '2007', '2008', '2009',\n                    '2010', '2011', '2012',\n                    '2013', '2014', '2015',\n                    '2016', '2017', '2018',\n                ],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01', '10', '20', '30'],\n            },\n            'train_data.zip')\n        return 'train_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading training data\")\n\n\ndef download_test_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': ['2019'],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01', '10', '20', '30'],\n            },\n            'test_data.zip')\n        return 'test_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading test data\")\n\n\ndef download_data():\n    train_zip_file = download_train_data()\n    test_zip_file = download_test_data()\n    return train_zip_file, test_zip_file\n\n\n\ndef download_test_date(year, month, day):\n    if len(month) < 2:\n        month = '0'+month\n\n    if len(day) < 2:\n        day = '0'+day\n\n    fileName = year + \"_\" + month + \"_\" + day + \"_test.zip\"\n\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [str(year)],\n                'month': [str(month)],\n                'day': [str(day)],\n            },\n            fileName)\n        return fileName\n    except:\n        logger.error(\"Something went wrong while downloading daily test data\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1680666597214,
+  "history_end_time" : 1680666655727,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "cqhmi1d1agn",
+  "history_input" : "from dependency import logger\n\nimport cdsapi\n\nclient = cdsapi.Client()\n\n\ndef download_train_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [\n                    '1998', '1999', '2000',\n                    '2001', '2002', '2003',\n                    '2004', '2005', '2006',\n                    '2007', '2008', '2009',\n                    '2010', '2011', '2012',\n                    '2013', '2014', '2015',\n                    '2016', '2017', '2018',\n                ],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01', '10', '20', '30'],\n            },\n            'train_data.zip')\n        return 'train_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading training data\")\n\n\ndef download_test_data():\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': ['2019'],\n                'month': [\n                    '01', '02', '03',\n                    '04', '05', '06',\n                    '07', '08', '09',\n                    '10', '11', '12',\n                ],\n                'day': ['01', '10', '20', '30'],\n            },\n            'test_data.zip')\n        return 'test_data.zip'\n    except:\n        logger.error(\"Something went wrong while downloading test data\")\n\n\ndef download_data():\n    train_zip_file = download_train_data()\n    test_zip_file = download_test_data()\n    return train_zip_file, test_zip_file\n\n\n\ndef download_test_date(year, month, day):\n    if len(month) < 2:\n        month = '0'+month\n\n    if len(day) < 2:\n        day = '0'+day\n\n    fileName = year + \"_\" + month + \"_\" + day + \"_test.zip\"\n\n    try:\n        client.retrieve(\n            'satellite-sea-level-global',\n            {\n                'version': 'vDT2021',\n                'variable': 'all',\n                'format': 'zip',\n                'year': [str(year)],\n                'month': [str(month)],\n                'day': [str(day)],\n            },\n            fileName)\n        return fileName\n    except:\n        logger.error(\"Something went wrong while downloading daily test data\")\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1680666560987,
+  "history_end_time" : 1680666563964,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
   "history_id" : "x1f6ylqhb9t",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -328,4 +438,34 @@
   "history_process" : "g7a3zf",
   "host_id" : null,
   "indicator" : "Done"
+},{
+  "history_id" : "9g5306227t6",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666547101,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "72frjtboul0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666772301,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "h5q8qs2znb7",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666801830,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
 },]

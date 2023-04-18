@@ -1,4 +1,114 @@
 [{
+  "history_id" : "nn5cvwm0f78",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897173,
+  "history_end_time" : 1681846897173,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "zk73j7l9tks",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846509199,
+  "history_end_time" : 1681846782367,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "g9of5zpovhw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552424,
+  "history_end_time" : 1681845552424,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "kql8m2az8fb",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681842356449,
+  "history_end_time" : 1681842356449,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ow0lus3ip2e",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841806214,
+  "history_end_time" : 1681841806214,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "jq4nzci297i",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841544602,
+  "history_end_time" : 1681841544602,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nqfg1wkqq0x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841141503,
+  "history_end_time" : 1681841141503,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vjtwhstons2",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1680667115327,
+  "history_end_time" : 1680667118241,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "iotnskcg656",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "",
+  "history_begin_time" : 1680666840721,
+  "history_end_time" : 1680666845211,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "f26fvp7wyo3",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1680666608046,
+  "history_end_time" : 1680666655716,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4tz8gp3scdb",
+  "history_input" : "from dependency import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddies\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\ntest_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nexample_file = os.path.join(test_folder, \"dt_global_twosat_phy_l4_20190110_vDT2021.nc\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1680666571167,
+  "history_end_time" : 1680666574019,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
   "history_id" : "0x5ey0kyfsl",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -577,5 +687,35 @@
   "history_notes" : null,
   "history_process" : "0ps7es",
   "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "78xgmze1otx",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666547079,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3a7j8z9dk34",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666772281,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "dk33onf22jq",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666801815,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
   "indicator" : "Stopped"
 },]

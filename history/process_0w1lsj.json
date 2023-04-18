@@ -1,4 +1,34 @@
 [{
+  "history_id" : "eh0yrvh4myb",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 21 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1680667489781,
+  "history_end_time" : 1680667495221,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "h3b9kgm38in",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 21 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 1 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1680666889782,
+  "history_end_time" : 1680666895199,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "1p1tcmbses3",
+  "history_input" : "import torch\nfrom data_utils import EddyNet\nfrom convert_to_pytorch_data_loader import *\n\nnum_classes = 2 if binary else 3\nmodel_name = \"eddynet\"  # we'll log this in Tensorboard\nmodel = EddyNet(num_classes, num_filters=16, kernel_size=3)\nif torch.cuda.is_available():\n    model.to(device=\"cuda\")",
+  "history_output" : "Read 21 samples from /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz.\nRead 1 samples from /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1680666809575,
+  "history_end_time" : 1680666815362,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
   "history_id" : "8nund1jvg8a",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -157,5 +187,45 @@
   "history_notes" : null,
   "history_process" : "0w1lsj",
   "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rqsl5rh5m7l",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666547108,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "bcsreh0lopq",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666655733,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "flbpmh57pt5",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666772308,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1i9120ige1d",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666801837,
+  "history_notes" : null,
+  "history_process" : "0w1lsj",
+  "host_id" : "c2lqcn",
   "indicator" : "Stopped"
 },]
