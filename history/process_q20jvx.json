@@ -1,4 +1,114 @@
 [{
+  "history_id" : "rpau7s38tld",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897174,
+  "history_end_time" : 1681846897174,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "y5bpogz47x1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846509201,
+  "history_end_time" : 1681846782369,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5dcyejbeser",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552427,
+  "history_end_time" : 1681845552427,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "qh45ns3tsbr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681842356452,
+  "history_end_time" : 1681842356452,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "63bqwlkbuwk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841806218,
+  "history_end_time" : 1681841806218,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "cunbxd3f895",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841544605,
+  "history_end_time" : 1681841544605,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "q2klmwo11fg",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841141510,
+  "history_end_time" : 1681841141510,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "bihwz23w4cu",
+  "history_input" : "# This generates segmentation efficiently in parallel on a gloabal scale\n\n\nimport logging\n\nfrom generate_ground_truth_parallel_utils import *\nfrom data_loader import *\n\n\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 2019), range(1, 2), [1], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 13), [10], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)",
+  "history_output" : "Found 21 files for 1998-2018.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/global_pet_masks_with_adt_1998-2018.npz\nFound 12 files for 2019.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/global_pet_masks_with_adt_2019.npz\n",
+  "history_begin_time" : 1680667136887,
+  "history_end_time" : 1680667305352,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "dgkaapdtg07",
+  "history_input" : "# This generates segmentation efficiently in parallel on a gloabal scale\n\n\nimport logging\n\nfrom generate_ground_truth_parallel_utils import *\nfrom data_loader import *\n\n\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 2019), range(1, 2), [1], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 13), [10], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/home/chetana/gw-workspace/dgkaapdtg07/generate_segmentation_in_parallel.py\", line 6, in <module>\n    from generate_ground_truth_parallel_utils import *\nModuleNotFoundError: No module named 'generate_ground_truth_parallel_utils'\n",
+  "history_begin_time" : 1680666864272,
+  "history_end_time" : 1680666866529,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Failed"
+},{
+  "history_id" : "wijyqlxhhqy",
+  "history_input" : "# This generates segmentation efficiently in parallel on a gloabal scale\n\n\nimport logging\n\nfrom generate_ground_truth_parallel_utils import *\nfrom data_loader import *\n\n\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 2019), range(1, 2), [1], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 13), [10], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)",
+  "history_output" : "Found 21 files for 1998-2018.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/global_pet_masks_with_adt_1998-2018.npz\nFound 12 files for 2019.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/global_pet_masks_with_adt_2019.npz\n",
+  "history_begin_time" : 1680666632411,
+  "history_end_time" : 1680666815363,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "sip8ba0gjzh",
+  "history_input" : "# This generates segmentation efficiently in parallel on a gloabal scale\n\n\nimport logging\n\nfrom generate_ground_truth_parallel_utils import *\nfrom data_loader import *\n\n\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 2019), range(1, 2), [1], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 13), [10], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)",
+  "history_output" : "Found 21 files for 1998-2018.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/global_pet_masks_with_adt_1998-2018.npz\nFound 12 files for 2019.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/global_pet_masks_with_adt_2019.npz\n",
+  "history_begin_time" : 1680666593520,
+  "history_end_time" : 1680666779315,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
   "history_id" : "louj04j5omo",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -367,5 +477,35 @@
   "history_notes" : null,
   "history_process" : "q20jvx",
   "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7fwjr7idtcs",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666547097,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "acf35u6qz87",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666772293,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gauragcqjgi",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666801821,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
   "indicator" : "Stopped"
 },]

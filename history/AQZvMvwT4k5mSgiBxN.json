@@ -1,0 +1,271 @@
+[{
+  "history_id" : "axk991r2754",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552423,
+  "history_end_time" : 1681845552423,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "g9of5zpovhw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552424,
+  "history_end_time" : 1681845552424,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "x2a626n4011",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552425,
+  "history_end_time" : 1681845552425,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "zcu5it74nrs",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552425,
+  "history_end_time" : 1681845552425,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "svz2yemk5no",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552425,
+  "history_end_time" : 1681845552425,
+  "history_notes" : null,
+  "history_process" : "jajowz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ftirott2lg6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552425,
+  "history_end_time" : 1681845552425,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "f2zgaxfa5wj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552426,
+  "history_end_time" : 1681845552426,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "7d93ggazrm3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552426,
+  "history_end_time" : 1681845552426,
+  "history_notes" : null,
+  "history_process" : "g85teu",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "5dcyejbeser",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552427,
+  "history_end_time" : 1681845552427,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "d7l9x7fbd01",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552427,
+  "history_end_time" : 1681845552427,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "8ejv0pxibku",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552427,
+  "history_end_time" : 1681845552427,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "0n5ydgjen5g",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552428,
+  "history_end_time" : 1681845552428,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "jwhwwd6n7rp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552428,
+  "history_end_time" : 1681845552428,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "r9ps1r8h9ji",
+  "history_input" : "from dependency import *\nimport sys\n\nsys.path.insert(0, os.path.dirname(os.getcwd()))\n\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256",
+  "history_output" : "Running",
+  "history_begin_time" : 1681845554774,
+  "history_end_time" : 1681845558905,
+  "history_notes" : null,
+  "history_process" : "mnmaq1",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "678vtpfukh0",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "",
+  "history_begin_time" : 1681845560481,
+  "history_end_time" : 1681845564775,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "w3z5p4enh2g",
+  "history_input" : "from get_device_config import *\nfrom link_npz_files import *\nfrom torch_data_loader_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1681845565938,
+  "history_end_time" : 1681845571700,
+  "history_notes" : null,
+  "history_process" : "28zx21",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "dp91ftzg7vj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552435,
+  "history_end_time" : 1681845552435,
+  "history_notes" : null,
+  "history_process" : "d6b94y",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "0j5vfzghx4l",
+  "history_input" : "from convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 0.39 megapixels across 24 SSH maps\nNumber of pixels that are not eddies: 0.28 megapixels (72.00%)\nNumber of pixels that are anticyclonic eddies: 0.06 megapixels (14.23%)\nNumber of pixels that are cyclonic eddies: 0.05 megapixels (13.77%)\n\n",
+  "history_begin_time" : 1681845571807,
+  "history_end_time" : 1681845578419,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "lmzrrvllcuu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552437,
+  "history_end_time" : 1681845552437,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "35aynhfgwwp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552437,
+  "history_end_time" : 1681845552437,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hgml7csflie",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552438,
+  "history_end_time" : 1681845552438,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "56v7qk1f4fm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552438,
+  "history_end_time" : 1681845552438,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "pdlt8ovrqz3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552438,
+  "history_end_time" : 1681845552438,
+  "history_notes" : null,
+  "history_process" : "znr9qa",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ez8v1xg6knb",
+  "history_input" : "from training_and_plot_utils import *\nfrom model_components import *\nfrom get_device_config import *\nfrom tqdm.auto import tqdm\n\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nprint(train_m)\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"MulticlassAccuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"MulticlassAccuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_final_full_data.pt\")\n\nprint(model_path)\n\n\nprint(\"train/Accuracy\", train_m[\"MulticlassAccuracy\"])\nprint(\"val/Accuracy\", val_m[\"MulticlassAccuracy\"])\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-04-18_19-19\n======================================================================\n\nTraining:   0%|                                   | 0/250 [00:00<?, ?epoch(s)/s]\nTraining:   0%| | 0/250 [00:05<?, ?epoch(s)/s, train_multiclassaccuracy=0.239357\nTraining:   0%| | 1/250 [00:05<21:43,  5.23s/epoch(s), train_multiclassaccuracy=\nTraining:   0%| | 1/250 [00:10<21:43,  5.23s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 2/250 [00:10<21:16,  5.15s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 2/250 [00:15<21:16,  5.15s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 3/250 [00:15<21:28,  5.22s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 3/250 [00:20<21:28,  5.22s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 4/250 [00:20<20:58,  5.12s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 4/250 [00:25<20:58,  5.12s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 5/250 [00:25<20:55,  5.12s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 5/250 [00:30<20:55,  5.12s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 6/250 [00:30<20:35,  5.06s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 6/250 [00:35<20:35,  5.06s/epoch(s), train_multiclassaccuracy=\nTraining:   3%| | 7/250 [00:35<20:25,  5.04s/epoch(s), train_multiclassaccuracy=\nTraining:   3%| | 7/250 [00:40<20:25,  5.04s/epoch(s), train_multiclassaccuracy=\nTraining:   3%| | 8/250 [00:40<20:17,  5.03s/epoch(s), train_multiclassaccuracy=\nTraining:   3%| | 8/250 [00:45<20:17,  5.03s/epoch(s), train_multiclassaccuracy=\nTraining:   4%| | 9/250 [00:45<19:51,  4.95s/epoch(s), train_multiclassaccuracy=\nTraining:   4%| | 9/250 [00:50<19:51,  4.95s/epoch(s), train_multiclassaccuracy=\nTraining:   4%| | 10/250 [00:50<19:46,  4.95s/epoch(s), train_multiclassaccuracy\nTraining:   4%| | 10/250 [00:55<19:46,  4.95s/epoch(s), train_multiclassaccuracy\nTraining:   4%| | 11/250 [00:55<19:29,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:   4%| | 11/250 [01:00<19:29,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:   5%| | 12/250 [01:00<19:28,  4.91s/epoch(s), train_multiclassaccuracy\nTraining:   5%| | 12/250 [01:04<19:28,  4.91s/epoch(s), train_multiclassaccuracy\nTraining:   5%| | 13/250 [01:04<19:11,  4.86s/epoch(s), train_multiclassaccuracy\nTraining:   5%| | 13/250 [01:09<19:11,  4.86s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 14/250 [01:09<19:15,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 14/250 [01:14<19:15,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 15/250 [01:14<18:59,  4.85s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 15/250 [01:19<18:59,  4.85s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 16/250 [01:19<18:59,  4.87s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 16/250 [01:24<18:59,  4.87s/epoch(s), train_multiclassaccuracy\nTraining:   7%| | 17/250 [01:24<18:44,  4.83s/epoch(s), train_multiclassaccuracy\nTraining:   7%| | 17/250 [01:29<18:44,  4.83s/epoch(s), train_multiclassaccuracy\nTraining:   7%| | 18/250 [01:29<18:46,  4.86s/epoch(s), train_multiclassaccuracy\nTraining:   7%| | 18/250 [01:34<18:46,  4.86s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 19/250 [01:34<18:46,  4.88s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 19/250 [01:38<18:46,  4.88s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 20/250 [01:38<18:31,  4.83s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 20/250 [01:43<18:31,  4.83s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 21/250 [01:43<18:39,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 21/250 [01:48<18:39,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:   9%| | 22/250 [01:48<18:26,  4.85s/epoch(s), train_multiclassaccuracy\nTraining:   9%| | 22/250 [01:53<18:26,  4.85s/epoch(s), train_multiclassaccuracy\nTraining:   9%| | 23/250 [01:53<18:31,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:   9%| | 23/250 [01:58<18:31,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 24/250 [01:58<18:20,  4.87s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 24/250 [02:03<18:20,  4.87s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 25/250 [02:03<18:19,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 25/250 [02:08<18:19,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 26/250 [02:08<18:15,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 26/250 [02:13<18:15,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  11%| | 27/250 [02:13<18:24,  4.95s/epoch(s), train_multiclassaccuracy\nTraining:  11%| | 27/250 [02:18<18:24,  4.95s/epoch(s), train_multiclassaccuracy\nTraining:  11%| | 28/250 [02:18<18:07,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  11%| | 28/250 [02:22<18:07,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 29/250 [02:22<18:03,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 29/250 [02:27<18:03,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 30/250 [02:27<18:00,  4.91s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 30/250 [02:32<18:00,  4.91s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 31/250 [02:32<17:48,  4.88s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 31/250 [02:37<17:48,  4.88s/epoch(s), train_multiclassaccuracy\nTraining:  13%|▏| 32/250 [02:37<17:52,  4.92s/epoch(s), train_multiclassaccuracy\nTraining:  13%|▏| 32/250 [02:42<17:52,  4.92s/epoch(s), train_multiclassaccuracy\nTraining:  13%|▏| 33/250 [02:42<17:40,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  13%|▏| 33/250 [02:47<17:40,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 34/250 [02:47<17:43,  4.93s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 34/250 [02:52<17:43,  4.93s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 35/250 [02:52<17:31,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 35/250 [02:57<17:31,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 36/250 [02:57<17:27,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 36/250 [03:02<17:27,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  15%|▏| 37/250 [03:02<17:12,  4.85s/epoch(s), train_multiclassaccuracy\nTraining:  15%|▏| 37/250 [03:06<17:12,  4.85s/epoch(s), train_multiclassaccuracy\nTraining:  15%|▏| 38/250 [03:06<17:14,  4.88s/epoch(s), train_multiclassaccuracy\nTraining:  15%|▏| 38/250 [03:11<17:14,  4.88s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 39/250 [03:11<17:02,  4.85s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 39/250 [03:16<17:02,  4.85s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 40/250 [03:16<17:02,  4.87s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 40/250 [03:21<17:02,  4.87s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 41/250 [03:21<17:06,  4.91s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 41/250 [03:26<17:06,  4.91s/epoch(s), train_multiclassaccuracy\nTraining:  17%|▏| 42/250 [03:26<17:13,  4.97s/epoch(s), train_multiclassaccuracy\nTraining:  17%|▏| 42/250 [03:31<17:13,  4.97s/epoch(s), train_multiclassaccuracy\nTraining:  17%|▏| 43/250 [03:31<17:16,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  17%|▏| 43/250 [03:36<17:16,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 44/250 [03:36<17:11,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 44/250 [03:41<17:11,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 45/250 [03:41<17:12,  5.04s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 45/250 [03:46<17:12,  5.04s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 46/250 [03:46<17:01,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 46/250 [03:51<17:01,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  19%|▏| 47/250 [03:51<16:57,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  19%|▏| 47/250 [03:56<16:57,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  19%|▏| 48/250 [03:56<16:36,  4.94s/epoch(s), train_multiclassaccuracy\nTraining:  19%|▏| 48/250 [04:01<16:36,  4.94s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 49/250 [04:01<16:40,  4.98s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 49/250 [04:06<16:40,  4.98s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 50/250 [04:06<16:26,  4.93s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 50/250 [04:11<16:26,  4.93s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 51/250 [04:11<16:25,  4.95s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 51/250 [04:16<16:25,  4.95s/epoch(s), train_multiclassaccuracy\nTraining:  21%|▏| 52/250 [04:16<16:10,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  21%|▏| 52/250 [04:21<16:10,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  21%|▏| 53/250 [04:21<16:09,  4.92s/epoch(s), train_multiclassaccuracy\nTraining:  21%|▏| 53/250 [04:26<16:09,  4.92s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 54/250 [04:26<16:07,  4.93s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 54/250 [04:31<16:07,  4.93s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 55/250 [04:31<16:04,  4.94s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 55/250 [04:36<16:04,  4.94s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 56/250 [04:36<15:58,  4.94s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 56/250 [04:41<15:58,  4.94s/epoch(s), train_multiclassaccuracy\nTraining:  23%|▏| 57/250 [04:41<15:53,  4.94s/epoch(s), train_multiclassaccuracy\nTraining:  23%|▏| 57/250 [04:45<15:53,  4.94s/epoch(s), train_multiclassaccuracy\nTraining:  23%|▏| 58/250 [04:45<15:38,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  23%|▏| 58/250 [04:50<15:38,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 59/250 [04:50<15:35,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 59/250 [04:55<15:35,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 60/250 [04:55<15:34,  4.92s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 60/250 [05:00<15:34,  4.92s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 61/250 [05:00<15:31,  4.93s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 61/250 [05:05<15:31,  4.93s/epoch(s), train_multiclassaccuracy\nTraining:  25%|▏| 62/250 [05:05<15:17,  4.88s/epoch(s), train_multiclassaccuracy\nTraining:  25%|▏| 62/250 [05:10<15:17,  4.88s/epoch(s), train_multiclassaccuracy\nTraining:  25%|▎| 63/250 [05:10<15:14,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  25%|▎| 63/250 [05:15<15:14,  4.89s/epoch(s), train_multiclassaccuracy\nTraining:  26%|▎| 64/250 [05:15<15:11,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  26%|▎| 64/250 [05:20<15:11,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  26%|▎| 65/250 [05:20<14:58,  4.86s/epoch(s), train_multiclassaccuracy\nTraining:  26%|▎| 65/250 [05:25<14:58,  4.86s/epoch(s), train_multiclassaccuracy\nTraining:  26%|▎| 66/250 [05:25<15:01,  4.90s/epoch(s), train_multiclassaccuracy\nTraining:  26%|▎| 66/250 [05:29<15:01,  4.90s/epoch(s), train_multiclassaccuracyEarly stopping at epoch 66 with validation loss 0.000 and training loss 1.006\n\nTraining:  26%|▎| 66/250 [05:29<15:19,  5.00s/epoch(s), train_multiclassaccuracy\n{'MulticlassAccuracy': tensor(0.6333)}\n/home/chetana/tensorboard/2023-04-18_19-19/model_ckpt_final_full_data.pt\ntrain/Accuracy tensor(0.6333)\nval/Accuracy tensor(0.7205)\n",
+  "history_begin_time" : 1681845578728,
+  "history_end_time" : 1681845914431,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "5w5t9knih9c",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552440,
+  "history_end_time" : 1681845552440,
+  "history_notes" : null,
+  "history_process" : "n508da",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "wvtenfvgho8",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552441,
+  "history_end_time" : 1681845552441,
+  "history_notes" : null,
+  "history_process" : "rdt0gy",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "guu6n7zdxvm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552441,
+  "history_end_time" : 1681845552441,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+}]

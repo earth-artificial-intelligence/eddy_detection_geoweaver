@@ -1,7 +1,28 @@
+# This file contanis differetnt components to run the model
+# 1. Eddy-Net Object
+# 2. Torch Metrics (metrics to keep track of)
+# 3. Optimizer
+# 4. Loss function
+# 5. Summery writer to write summary
+
 import torchmetrics
 import torch
-from create_eddy_net import *
+import datetime
+import os
 
+from torch.utils.tensorboard import SummaryWriter
+from data_utils import EddyNet
+from convert_to_pytorch_data_loader import *
+
+# 1. Eddy Net
+num_classes = 2 if binary else 3
+model_name = "eddynet"  # we'll log this in Tensorboard
+model = EddyNet(num_classes, num_filters=16, kernel_size=3)
+if torch.cuda.is_available():
+    model.to(device="cuda")
+
+
+# 2. Torch Metrics (metrics to keep track of)
 def get_metrics(N, sync=False):
     """Get the metrics to be used in the training loop.
     Args:
@@ -46,4 +67,42 @@ def get_metrics(N, sync=False):
     return train_metrics, val_metrics
 
 train_metrics, val_metrics = get_metrics(num_classes)
+
+
+
+# 3. Optimizer
+initial_lr = 1e-6
+max_lr = 5e-4
+
+optimizer = torch.optim.Adam(model.parameters(), lr=max_lr)
+scheduler = torch.optim.lr_scheduler.OneCycleLR(
+    optimizer,
+    max_lr=max_lr,
+    steps_per_epoch=len(train_loader),
+    epochs=num_epochs,
+    div_factor=max_lr / initial_lr,
+    pct_start=0.3,
+)
+
+
+# 4. Loss function
+loss_fn = torch.nn.CrossEntropyLoss()
+
+
+# 5. Summery writer
+tensorboard_dir = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(os.getcwd()))),
+    "tensorboard",
+    # add current timestamp
+    f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}",
+)
+writer = SummaryWriter(log_dir=tensorboard_dir)
+print(
+    f"{''.join(['=']*(28 + len(writer.log_dir)))}\\n"
+    f"Writing Tensorboard logs to {writer.log_dir}"
+    f"\\n{''.join(['=']*(28 + len(writer.log_dir)))}"
+)
+
+
+
 

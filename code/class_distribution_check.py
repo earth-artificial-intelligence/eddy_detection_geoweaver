@@ -1,3 +1,4 @@
+from device_config_and_data_loader import *
 from convert_to_pytorch_data_loader import *
 
 import numpy as np

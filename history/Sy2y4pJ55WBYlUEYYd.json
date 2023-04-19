@@ -1,0 +1,261 @@
+[{
+  "history_id" : "60b3kqrwjca",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897172,
+  "history_end_time" : 1681846897172,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nn5cvwm0f78",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897173,
+  "history_end_time" : 1681846897173,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hxizipu2zof",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897173,
+  "history_end_time" : 1681846897173,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "mlpq58q9t2r",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897173,
+  "history_end_time" : 1681846897173,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "of5ez1zj5je",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897174,
+  "history_end_time" : 1681846897174,
+  "history_notes" : null,
+  "history_process" : "jajowz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "lk6qogkryj4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897174,
+  "history_end_time" : 1681846897174,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "bgowt6vxonn",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897174,
+  "history_end_time" : 1681846897174,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "9ufniobtatf",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897174,
+  "history_end_time" : 1681846897174,
+  "history_notes" : null,
+  "history_process" : "g85teu",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "rpau7s38tld",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897174,
+  "history_end_time" : 1681846897174,
+  "history_notes" : null,
+  "history_process" : "q20jvx",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hywm79z8nwa",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897175,
+  "history_end_time" : 1681846897175,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "lq6dalslz9c",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897175,
+  "history_end_time" : 1681846897175,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "6v7riairw59",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897175,
+  "history_end_time" : 1681846897175,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "xu86c7uve8s",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897175,
+  "history_end_time" : 1681846897175,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "eq6urpyjnk8",
+  "history_input" : "from dependency import os\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")",
+  "history_output" : "Running",
+  "history_begin_time" : 1681846898570,
+  "history_end_time" : 1681846901775,
+  "history_notes" : null,
+  "history_process" : "w3hmlz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "0m6k5j138ur",
+  "history_input" : "from device_config_and_data_loader import *\nfrom link_npz_files import *\nfrom torch_data_loader_utils import get_eddy_dataloader\n\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n",
+  "history_begin_time" : 1681846902912,
+  "history_end_time" : 1681846908593,
+  "history_notes" : null,
+  "history_process" : "28zx21",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "c7ayahcfwp2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897178,
+  "history_end_time" : 1681846897178,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "v1lga75mn24",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897179,
+  "history_end_time" : 1681846897179,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "fhcv4pr6xei",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897179,
+  "history_end_time" : 1681846897179,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1la98e0ru38",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897179,
+  "history_end_time" : 1681846897179,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ipqjag5tw0r",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897180,
+  "history_end_time" : 1681846897180,
+  "history_notes" : null,
+  "history_process" : "znr9qa",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "qw407x3ikex",
+  "history_input" : "from training_and_plot_utils import *\nfrom model_components import *\nfrom device_config_and_data_loader import *\nfrom tqdm.auto import tqdm\n\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nprint(train_m)\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"MulticlassAccuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"MulticlassAccuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_final_full_data.pt\")\n\nprint(model_path)\n\n\nprint(\"train/Accuracy\", train_m[\"MulticlassAccuracy\"])\nprint(\"val/Accuracy\", val_m[\"MulticlassAccuracy\"])\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\n======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-04-18_19-42\n======================================================================\n\nTraining:   0%|                                   | 0/250 [00:00<?, ?epoch(s)/s]\nTraining:   0%| | 0/250 [00:05<?, ?epoch(s)/s, train_multiclassaccuracy=0.239357\nTraining:   0%| | 1/250 [00:05<23:06,  5.57s/epoch(s), train_multiclassaccuracy=\nTraining:   0%| | 1/250 [00:10<23:06,  5.57s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 2/250 [00:10<21:48,  5.28s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 2/250 [00:15<21:48,  5.28s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 3/250 [00:15<21:41,  5.27s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 3/250 [00:20<21:41,  5.27s/epoch(s), train_multiclassaccuracy=\n",
+  "history_begin_time" : 1681846916457,
+  "history_end_time" : 1681846915381,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Running"
+},{
+  "history_id" : "z48zowq1shr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897181,
+  "history_end_time" : 1681846897181,
+  "history_notes" : null,
+  "history_process" : "n508da",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tmqeakopt9l",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897182,
+  "history_end_time" : 1681846897182,
+  "history_notes" : null,
+  "history_process" : "rdt0gy",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "rrb15czx2t0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897182,
+  "history_end_time" : 1681846897182,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "to33zs5iipr",
+  "history_input" : "# This file has device config to run things on CUDA\n# 1. Device Config \n# 2. Dataloader\n\nimport os\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport torch\nimport sys\n\nfrom matplotlib.animation import ArtistAnimation\nfrom PIL import Image\nfrom sklearn.model_selection import train_test_split\nfrom torch.utils.data import DataLoader\nfrom torchvision import transforms\nfrom tqdm.auto import tqdm\n\n\n\n\n# 1. Device Config \nsys.path.insert(0, os.path.dirname(os.getcwd()))\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256\n\n\n# 2. Dataloader\ntorch.manual_seed(42)\n\ndef get_eddy_dataloader(\n    files, binary=False, transform=None, batch_size=32, shuffle=True, val_split=0\n):\n    \"\"\"\n    Given a list of npz files, return dataloader(s) for train (and val).\n\n    Args:\n        files (list) : list of npz files\n        binary (bool) : whether to use binary masks or not.\n                        If True, treat cyclonic and anticyclonic eddies as single positive class.\n        transform (callable) : optional transform to be applied on a sample.\n        batch_size (int) : batch size for dataloader\n        shuffle (bool) : whether to shuffle the dataset or not\n        val_split (float) : fraction of data to be used as validation set.\n                            If 0, no validation split is performed.\n    Returns:\n        (train_loader, val_loader) if val_split > 0; (train_loader, None) otherwise\n    \"\"\"\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n    loader_kwargs = dict(batch_size=batch_size, shuffle=shuffle, pin_memory=True)\n    if val_split > 0:\n        train_ds, val_ds = ds\n        train_dl = DataLoader(train_ds, **loader_kwargs)\n        val_dl = DataLoader(val_ds, **loader_kwargs)\n    else:\n        train_dl = DataLoader(ds, **loader_kwargs)\n        val_dl = None\n    return train_dl, val_dl\n\n\ndef get_eddy_dataset(files, binary=None, transform=None, val_split=0):\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n    print(f\"Read {len(masks)} samples from {files}.\")\n    if val_split > 0:\n        # split into training and validation sets (80% training, 20% validation)\n        train_idx, val_idx = train_test_split(\n            np.arange(len(masks)), test_size=val_split, random_state=42\n        )\n        train_ds = EddyDataset(\n            masks[train_idx],\n            var_filtered[train_idx],\n            dates[train_idx],\n            transform=transform,\n            binary_mask=binary,\n        )\n\n        val_ds = EddyDataset(\n            masks[val_idx],\n            var_filtered[val_idx],\n            dates[val_idx],\n            transform=transform,\n            binary_mask=binary,\n        )\n    else:\n        train_ds = EddyDataset(\n            masks, var_filtered, dates, transform=transform, binary_mask=binary\n        )\n        val_ds = None\n    return train_ds, val_ds\n\n\ndef read_npz_files(npz_files: list):\n    \"\"\"Load a list of npz files, concatenate, and return separate arrays for eddy segmentation\"\"\"\n    # load npz file into separate variables\n    if isinstance(npz_files, str):\n        npz_files = [npz_files]\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n    masks, dates, var, var_filtered, lon_subset, lat_subset = eddy_dict_to_vars(\n        npz_contents\n    )\n    return masks, dates, var, var_filtered, lon_subset, lat_subset, npz_contents\n\n\ndef eddy_dict_to_vars(npz_contents):\n    masks = np.concatenate(\n        [npz_content[\"masks\"] for npz_content in npz_contents], axis=0\n    )\n    dates = np.concatenate(\n        [npz_content[\"dates\"] for npz_content in npz_contents], axis=0\n    )\n    # var = np.concatenate([npz_content[\"var\"] for npz_content in npz_contents], axis=0)\n    var = None\n    var_filtered = np.concatenate(\n        [npz_content[\"var_filtered\"] for npz_content in npz_contents], axis=0\n    )\n    if \"lon_subset\" in npz_contents[0]:\n        lon_subset = np.concatenate(\n            [npz_content[\"lon_subset\"] for npz_content in npz_contents], axis=0\n        )\n        lat_subset = np.concatenate(\n            [npz_content[\"lat_subset\"] for npz_content in npz_contents], axis=0\n        )\n    else:\n        lon_subset = lat_subset = None\n    return masks, dates, var, var_filtered, lon_subset, lat_subset\n\n\nclass EddyDataset(torch.utils.data.Dataset):\n    def __init__(self, masks, gv, dates, transform=None, binary_mask=False):\n        \"\"\"PyTorch dataset for eddy detection\n        Args:\n            masks (np.array): array of segmentation masks with shape: (N_dates, N_lon, N_lat)\n                Can have 3 values: 0, 1 and 2, where 1 = anticyclonic, 2 = cyclonic and 0 = no eddy\n            gv (np.array): array of GV maps with shape: (N_dates, N_lon, N_lat)\n                Example GVs: sea level anomaly, absolute dynamic topography\n            transform (callable, optional): Transformation to be applied on a sample.\n            binary_mask (bool, optional): If true, all eddies (anticyclonic and cyclonic) will be assigned a value of 1\n        \"\"\"\n        self.masks = masks\n        self.gv = gv.astype(np.float32)  # GV stands for Geophysical Variable\n        self.dates = dates\n        self.transform = transform\n        self.binary_mask = binary_mask\n\n    def __getitem__(self, index, return_date=True):\n        # return image and mask for a given index\n        image = self.gv[index, :, :].copy()\n        mask = self.masks[index, :, :].copy()\n        date = self.dates[index]\n\n        # transpose\n        image = image.T\n        mask = mask.T\n\n        # address regions of land that are represented as -2147483648\n        image[image < -10000] = 0\n\n        if image.ndim == 2:\n            image = np.expand_dims(image, axis=0)  # make ndim = 3\n\n        if self.transform:\n            image = self.transform(image)\n\n        # if image and mask are numpy arrays, convert them to torch tensors\n        if isinstance(image, np.ndarray):\n            image = torch.from_numpy(image)\n        if isinstance(mask, np.ndarray):\n            mask = torch.from_numpy(mask)\n\n        if self.binary_mask:\n            mask[mask >= 1] = 1\n\n        # convert to float\n        image = image.float()\n\n        if return_date:\n            # convert date to tensor\n            # date_str = date.strftime(\"%Y-%m-%d\")\n            # date =\n            return image, mask, index\n        else:\n            return image, mask\n\n    def __len__(self):\n        return self.masks.shape[0]\n\n    def plot_sample(self, N=5):\n\n        # var in first column, mask in second column\n        num_cols = 2\n        num_rows = N\n        fig, ax = plt.subplots(num_rows, num_cols, figsize=(num_cols * 4, num_rows * 4))\n        ax[0, 0].set_title(\"GV\")\n        ax[0, 1].set_title(\"Mask\")\n        for i in range(num_rows):\n            # get random sample from self\n            n = np.random.randint(0, len(self))\n            gv, mask, index = self.__getitem__(n, return_date=True)\n            gv = np.squeeze(gv.cpu().detach().numpy())\n            mask = np.squeeze(mask.cpu().detach().numpy())\n            date = self.dates[index].strftime(\"%Y-%m-%d\")\n            # ax[i, 0].pcolormesh(lon_subset, lat_subset, gv.T, cmap=\"RdBu_r\", vmin=-0.15, vmax=0.15)\n            ax[i, 0].imshow(gv, cmap=\"RdBu_r\", vmin=-0.15, vmax=0.15)\n            ax[i, 0].set_title(f\"GV ({date})\")\n            ax[i, 0].axis(\"off\")\n            ax[i, 1].imshow(mask, cmap=\"viridis\")\n            ax[i, 1].set_title(f\"Mask ({date})\")\n            ax[i, 1].axis(\"off\")\n\n    def animate(self):\n        fig, ax = plt.subplots(1, 2, figsize=(20, 10))\n        print(f\"Drawing animation of GV and segmentation mask\")\n        artists = []\n        for i in tqdm(range(len(self)), desc=\"Animating eddies:\"):\n            gv, mask, date_idx = self.__getitem__(i, return_date=True)\n            date = self.dates[date_idx].strftime(\"%Y-%m-%d\")\n            im1 = ax[0].imshow(gv.squeeze(), cmap=\"RdBu_r\", vmin=-0.15, vmax=0.15)\n            t1 = ax[0].text(\n                0.5,\n                1.05,\n                f\"GV {date}\",\n                size=plt.rcParams[\"axes.titlesize\"],\n                ha=\"center\",\n                transform=ax[0].transAxes,\n            )\n            ax[0].axis(\"off\")\n\n            im2 = ax[1].imshow(mask.squeeze(), cmap=\"viridis\")\n            t2 = ax[1].text(\n                0.5,\n                1.05,\n                f\"Mask {date}\",\n                size=plt.rcParams[\"axes.titlesize\"],\n                ha=\"center\",\n                transform=ax[1].transAxes,\n            )\n            ax[1].axis(\"off\")\n            plt.tight_layout()\n            artists.append([im1, t1, im2, t2])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n        animation = ArtistAnimation(fig, artists, interval=500, blit=True)\n        plt.close()\n        return animation\n\ndef transform_ssh(ssh_array):\n    # normalize sea level anomaly between 0 and 1 based on min max\n    ssh_array = (ssh_array - ssh_array.min()) / (ssh_array.max() - ssh_array.min())\n    return ssh_array\n\n\n# convert npy to compressed npz\ndef convert_npy_to_npz(npy_file):\n    npz_file = npy_file.replace(\".npy\", \".npz\")\n    npy_contents = np.load(npy_file)\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1681846898604,
+  "history_end_time" : 1681846902341,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "u2z557ntvy4",
+  "history_input" : "from device_config_and_data_loader import *\nfrom convert_to_pytorch_data_loader import *\n\nimport numpy as np\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 0.39 megapixels across 24 SSH maps\nNumber of pixels that are not eddies: 0.28 megapixels (72.00%)\nNumber of pixels that are anticyclonic eddies: 0.06 megapixels (14.23%)\nNumber of pixels that are cyclonic eddies: 0.05 megapixels (13.77%)\n\n",
+  "history_begin_time" : 1681846908804,
+  "history_end_time" : 1681846914601,
+  "history_notes" : null,
+  "history_process" : "mh6f0e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+}]

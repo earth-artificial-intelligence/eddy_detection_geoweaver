@@ -1,10 +1,6 @@
-from model_training_utils import add_hparams, EarlyStopping
-from get_device_config import *
-from loss_function import *
-from set_optmizer_and_scheduler import *
-from set_summary_writer import *
-from model_utils import *
-from torch_metrics_utils import *
+from training_and_plot_utils import *
+from model_components import *
+from device_config_and_data_loader import *
 from tqdm.auto import tqdm
 
 
@@ -74,6 +70,11 @@ add_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)
 writer.close()
 
 # save model to tensorboard folder
-model_path = os.path.join(tensorboard_dir, f"model_ckpt_{N+1}.pt")
+model_path = os.path.join(tensorboard_dir, f"model_ckpt_final_full_data.pt")
+
 print(model_path)
+
+
+print("train/Accuracy", train_m["MulticlassAccuracy"])
+print("val/Accuracy", val_m["MulticlassAccuracy"])
 torch.save(model.state_dict(), model_path)

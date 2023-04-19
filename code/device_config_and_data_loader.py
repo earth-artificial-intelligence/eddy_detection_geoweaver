@@ -1,9 +1,13 @@
-# Write first python in Geoweaver
-import os
+# This file has device config to run things on CUDA
+# 1. Device Config 
+# 2. Dataloader
 
+import os
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
+import sys
+
 from matplotlib.animation import ArtistAnimation
 from PIL import Image
 from sklearn.model_selection import train_test_split
@@ -11,8 +15,28 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 from tqdm.auto import tqdm
 
-torch.manual_seed(42)
 
+
+
+# 1. Device Config 
+sys.path.insert(0, os.path.dirname(os.getcwd()))
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # see issue #152
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"   # useful on multi-GPU systems with multiple users
+
+# Fix manual seeds for reproducibility
+import torch
+seed = 42
+torch.manual_seed(seed)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(seed)
+np.random.seed(seed)
+
+num_epochs = 250  # can lower this to save time
+batch_size = 256
+
+
+# 2. Dataloader
+torch.manual_seed(42)
 
 def get_eddy_dataloader(
     files, binary=False, transform=None, batch_size=32, shuffle=True, val_split=0
@@ -239,3 +263,4 @@ def transform_ssh(ssh_array):
 def convert_npy_to_npz(npy_file):
     npz_file = npy_file.replace(".npy", ".npz")
     npy_contents = np.load(npy_file)
+

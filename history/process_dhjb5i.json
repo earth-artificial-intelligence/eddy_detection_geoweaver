@@ -1,4 +1,114 @@
 [{
+  "history_id" : "lq6dalslz9c",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897175,
+  "history_end_time" : 1681846897175,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "78t0my4lz2j",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846509201,
+  "history_end_time" : 1681846782370,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "8ejv0pxibku",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552427,
+  "history_end_time" : 1681845552427,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1d019f5s3tm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681842356452,
+  "history_end_time" : 1681842356452,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "meucs5rtgx1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841806218,
+  "history_end_time" : 1681841806218,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nj9ab2ws5df",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841544606,
+  "history_end_time" : 1681841544606,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "p29fhyt5f65",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841141512,
+  "history_end_time" : 1681841141512,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "899xakwdf1a",
+  "history_input" : "from dependency import *\nfrom unzip_utils import *\nfrom get_data import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_eddies\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\n",
+  "history_begin_time" : 1680667109224,
+  "history_end_time" : 1680667113349,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "gt80tzqrqde",
+  "history_input" : "from dependency import *\nfrom unzip_utils import *\nfrom get_data import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_eddies\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\n",
+  "history_begin_time" : 1680666835610,
+  "history_end_time" : 1680666839717,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "kk8les2eux0",
+  "history_input" : "from dependency import *\nfrom unzip_utils import *\nfrom get_data import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_eddies\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\n",
+  "history_begin_time" : 1680666602271,
+  "history_end_time" : 1680666655726,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ozzx4lonu9l",
+  "history_input" : "from dependency import *\nfrom unzip_utils import *\nfrom get_data import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_eddies\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\n",
+  "history_begin_time" : 1680666565067,
+  "history_end_time" : 1680666569087,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
   "history_id" : "1r4hvsjy60y",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -427,5 +537,35 @@
   "history_notes" : null,
   "history_process" : "dhjb5i",
   "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "82oh3zmhw5e",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666547098,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ruavn1uaeow",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666772297,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mtagcl85jjs",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666801824,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
   "indicator" : "Stopped"
 },]

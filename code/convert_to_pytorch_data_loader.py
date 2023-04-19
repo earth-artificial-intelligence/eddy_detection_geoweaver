@@ -1,4 +1,4 @@
-from get_device_config import *
+from device_config_and_data_loader import *
 from link_npz_files import *
 from torch_data_loader_utils import get_eddy_dataloader
 

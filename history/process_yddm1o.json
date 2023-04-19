@@ -1,4 +1,104 @@
 [{
+  "history_id" : "hywm79z8nwa",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846897175,
+  "history_end_time" : 1681846897175,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "7xr00tz19jv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681846509201,
+  "history_end_time" : 1681846782370,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "d7l9x7fbd01",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681845552427,
+  "history_end_time" : 1681845552427,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ocb0cqgfks2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681842356452,
+  "history_end_time" : 1681842356452,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "4bv2sqdw77v",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841806218,
+  "history_end_time" : 1681841806218,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "lhvq0adkww2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841544605,
+  "history_end_time" : 1681841544605,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "cickfk8ieru",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1681841141511,
+  "history_end_time" : 1681841141511,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "40lpn31uv18",
+  "history_input" : "# Use the segmask_and_ssh_utils to generate compress file\n\nfrom data_loader import *\nfrom generate_segmentation_in_parallel import *\nfrom segmask_and_ssh_utils import *\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)",
+  "history_output" : "Found 21 files for 1998-2018.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/global_pet_masks_with_adt_1998-2018.npz\nFound 12 files for 2019.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/global_pet_masks_with_adt_2019.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-2018_lat14N-46N_lon166W-134W.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\n",
+  "history_begin_time" : 1680667306163,
+  "history_end_time" : 1680667471324,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "lo21fykl05d",
+  "history_input" : "# Use the segmask_and_ssh_utils to generate compress file\n\nfrom data_loader import *\nfrom generate_segmentation_in_parallel import *\nfrom segmask_and_ssh_utils import *\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/home/chetana/gw-workspace/lo21fykl05d/compress_segmask_and_ssh.py\", line 4, in <module>\n    from generate_segmentation_in_parallel import *\n  File \"/home/chetana/gw-workspace/lo21fykl05d/generate_segmentation_in_parallel.py\", line 6, in <module>\n    from generate_ground_truth_parallel_utils import *\nModuleNotFoundError: No module named 'generate_ground_truth_parallel_utils'\n",
+  "history_begin_time" : 1680666867288,
+  "history_end_time" : 1680666871374,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Failed"
+},{
+  "history_id" : "2dbvroeep59",
+  "history_input" : "# Use the segmask_and_ssh_utils to generate compress file\n\nfrom data_loader import *\nfrom generate_segmentation_in_parallel import *\nfrom segmask_and_ssh_utils import *\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)",
+  "history_output" : "Traceback (most recent call last):\n  File \"/home/chetana/gw-workspace/2dbvroeep59/compress_segmask_and_ssh.py\", line 4, in <module>\n    from generate_segmentation_in_parallel import *\n  File \"/home/chetana/gw-workspace/2dbvroeep59/generate_segmentation_in_parallel.py\", line 6, in <module>\n    from generate_ground_truth_parallel_utils import *\nModuleNotFoundError: No module named 'generate_ground_truth_parallel_utils'\n",
+  "history_begin_time" : 1680666781329,
+  "history_end_time" : 1680666785890,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Failed"
+},{
   "history_id" : "i9s30bqewf6",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -327,5 +427,45 @@
   "history_notes" : null,
   "history_process" : "yddm1o",
   "host_id" : "ycru82",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u46lbk5qpt3",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666547097,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "aptl51pm5a4",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666655723,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "bfrbp0zston",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666772295,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "6an5bfq3ggs",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1680666801822,
+  "history_notes" : null,
+  "history_process" : "yddm1o",
+  "host_id" : "c2lqcn",
   "indicator" : "Stopped"
 },]
