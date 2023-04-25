@@ -12,7 +12,7 @@ import os
 
 from torch.utils.tensorboard import SummaryWriter
 from data_utils import EddyNet
-from convert_to_pytorch_data_loader import *
+from torch_data_loader import *
 
 # 1. Eddy Net
 num_classes = 2 if binary else 3
