@@ -1,0 +1,221 @@
+[{
+  "history_id" : "0kh17b5nmiu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532352,
+  "history_end_time" : 1682442550962,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ieydk20zly9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532353,
+  "history_end_time" : 1682442550963,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vpcalpmmd6r",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532353,
+  "history_end_time" : 1682442550963,
+  "history_notes" : null,
+  "history_process" : "ag4g86",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7o4gmfdzus4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532353,
+  "history_end_time" : 1682442550963,
+  "history_notes" : null,
+  "history_process" : "nzlslh",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7q4mcump58o",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532354,
+  "history_end_time" : 1682442550964,
+  "history_notes" : null,
+  "history_process" : "jajowz",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lscc4o5pf2a",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532354,
+  "history_end_time" : 1682442550964,
+  "history_notes" : null,
+  "history_process" : "zhsdwn",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "b5vxw0vgjwo",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532354,
+  "history_end_time" : 1682442550964,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "cc6eb2g3lft",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532354,
+  "history_end_time" : 1682442550965,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ozkpzpaci8d",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532354,
+  "history_end_time" : 1682442550965,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mw5gbp1t3yi",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532357,
+  "history_end_time" : 1682442550965,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "m3ck705q6da",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532357,
+  "history_end_time" : 1682442550966,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "oqq71s7bsw2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532358,
+  "history_end_time" : 1682442550967,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "o6cnhe3mwi9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532358,
+  "history_end_time" : 1682442550968,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ochuh21d4ux",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532358,
+  "history_end_time" : 1682442550968,
+  "history_notes" : null,
+  "history_process" : "znr9qa",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "90m9b3mu21y",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1682442550969,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "pncjoa8i9lv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532360,
+  "history_end_time" : 1682442550972,
+  "history_notes" : null,
+  "history_process" : "n508da",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "w19fgtt0ky9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532360,
+  "history_end_time" : 1682442550972,
+  "history_notes" : null,
+  "history_process" : "rdt0gy",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "b8k4c8vy9qn",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532361,
+  "history_end_time" : 1682442550972,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "867ilhn7iik",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532361,
+  "history_end_time" : 1682442550972,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "r0bs7wefbrn",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1682442550973,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "v5v81jt2lb7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532362,
+  "history_end_time" : 1682442550974,
+  "history_notes" : null,
+  "history_process" : "sq4sw3",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "s0wizyv2cle",
+  "history_input" : "#  Generate compress segmentaiton mask\n\nimport logging\n\nfrom compression_and_segmentation_utils import *\n\nfrom data_loader import *\n\n\n# Generate segmentaion mask\n\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 1999), range(1, 3), [1, 10], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 2), [1], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)\n\n# copress Segmentaion masks to npz files\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)\n\n# compress segmask\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)",
+  "history_output" : "Found 4 files for 1998.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/global_pet_masks_with_adt_1998.npz\nFound 1 files for 2019.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/s0wizyv2cle/preprocessing_and_compression.py\", line 31, in <module>\n    test_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n  File \"/home/chetana/gw-workspace/s0wizyv2cle/compression_and_segmentation_utils.py\", line 127, in generate_masks_in_parallel\n    np.savez_compressed(\n  File \"<__array_function__ internals>\", line 180, in savez_compressed\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/npyio.py\", line 683, in savez_compressed\n    _savez(file, args, kwds, True)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/npyio.py\", line 709, in _savez\n    zipf = zipfile_factory(file, mode=\"w\", compression=compression)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/npyio.py\", line 101, in zipfile_factory\n    return zipfile.ZipFile(file, *args, **kwargs)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/zipfile.py\", line 1249, in __init__\n    self.fp = io.open(file, filemode)\nNotADirectoryError: [Errno 20] Not a directory: '/home/chetana/ML_eddies/cds_ssh_2019_10day_interval/dt_global_twosat_phy_l4_20190101_vDT2021.nc/global_pet_masks_with_adt_2019.npz'\n",
+  "history_begin_time" : 1682442532416,
+  "history_end_time" : 1682442595180,
+  "history_notes" : null,
+  "history_process" : "shce7j",
+  "host_id" : "c2lqcn",
+  "indicator" : "Failed"
+}]

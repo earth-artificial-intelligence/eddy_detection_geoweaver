@@ -1,4 +1,154 @@
 [{
+  "history_id" : "p2v63r66qo2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682444006971,
+  "history_end_time" : 1682444006971,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "t5o18qk2l92",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443926517,
+  "history_end_time" : 1682443979655,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mmx1fixsgrl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685802,
+  "history_end_time" : 1682443925656,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "b2sraus0uqd",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442641210,
+  "history_end_time" : 1682442641210,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "867ilhn7iik",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682442532361,
+  "history_end_time" : 1682442550972,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "v3yw9yyrwmz",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682441929646,
+  "history_end_time" : 1682441929646,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "41v740f7z1c",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682440386658,
+  "history_end_time" : 1682440474437,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4w8lmbmundw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682440235245,
+  "history_end_time" : 1682440385658,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "6k81jhlf3pt",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682440181475,
+  "history_end_time" : 1682440234546,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "c56s50aszux",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682439988637,
+  "history_end_time" : 1682440138046,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "bgfm4am2n8h",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682439640531,
+  "history_end_time" : 1682439640531,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "34f87mtvjso",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682439488955,
+  "history_end_time" : 1682439488955,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "p28cwts86a3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682439471674,
+  "history_end_time" : 1682439471674,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "9p6vtqk68vx",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682437191027,
+  "history_end_time" : 1682437217450,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "yd0uqeop71x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682434977833,
+  "history_end_time" : 1682435038077,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
   "history_id" : "to33zs5iipr",
   "history_input" : "# This file has device config to run things on CUDA\n# 1. Device Config \n# 2. Dataloader\n\nimport os\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport torch\nimport sys\n\nfrom matplotlib.animation import ArtistAnimation\nfrom PIL import Image\nfrom sklearn.model_selection import train_test_split\nfrom torch.utils.data import DataLoader\nfrom torchvision import transforms\nfrom tqdm.auto import tqdm\n\n\n\n\n# 1. Device Config \nsys.path.insert(0, os.path.dirname(os.getcwd()))\nos.environ[\"CUDA_DEVICE_ORDER\"] = \"PCI_BUS_ID\"  # see issue #152\nos.environ[\"CUDA_VISIBLE_DEVICES\"] = \"0\"   # useful on multi-GPU systems with multiple users\n\n# Fix manual seeds for reproducibility\nimport torch\nseed = 42\ntorch.manual_seed(seed)\nif torch.cuda.is_available():\n    torch.cuda.manual_seed_all(seed)\nnp.random.seed(seed)\n\nnum_epochs = 250  # can lower this to save time\nbatch_size = 256\n\n\n# 2. Dataloader\ntorch.manual_seed(42)\n\ndef get_eddy_dataloader(\n    files, binary=False, transform=None, batch_size=32, shuffle=True, val_split=0\n):\n    \"\"\"\n    Given a list of npz files, return dataloader(s) for train (and val).\n\n    Args:\n        files (list) : list of npz files\n        binary (bool) : whether to use binary masks or not.\n                        If True, treat cyclonic and anticyclonic eddies as single positive class.\n        transform (callable) : optional transform to be applied on a sample.\n        batch_size (int) : batch size for dataloader\n        shuffle (bool) : whether to shuffle the dataset or not\n        val_split (float) : fraction of data to be used as validation set.\n                            If 0, no validation split is performed.\n    Returns:\n        (train_loader, val_loader) if val_split > 0; (train_loader, None) otherwise\n    \"\"\"\n    ds, _ = get_eddy_dataset(files, binary, transform, val_split)\n    loader_kwargs = dict(batch_size=batch_size, shuffle=shuffle, pin_memory=True)\n    if val_split > 0:\n        train_ds, val_ds = ds\n        train_dl = DataLoader(train_ds, **loader_kwargs)\n        val_dl = DataLoader(val_ds, **loader_kwargs)\n    else:\n        train_dl = DataLoader(ds, **loader_kwargs)\n        val_dl = None\n    return train_dl, val_dl\n\n\ndef get_eddy_dataset(files, binary=None, transform=None, val_split=0):\n    masks, dates, _, var_filtered, lon, lat, npz_dict = read_npz_files(files)\n    print(f\"Read {len(masks)} samples from {files}.\")\n    if val_split > 0:\n        # split into training and validation sets (80% training, 20% validation)\n        train_idx, val_idx = train_test_split(\n            np.arange(len(masks)), test_size=val_split, random_state=42\n        )\n        train_ds = EddyDataset(\n            masks[train_idx],\n            var_filtered[train_idx],\n            dates[train_idx],\n            transform=transform,\n            binary_mask=binary,\n        )\n\n        val_ds = EddyDataset(\n            masks[val_idx],\n            var_filtered[val_idx],\n            dates[val_idx],\n            transform=transform,\n            binary_mask=binary,\n        )\n    else:\n        train_ds = EddyDataset(\n            masks, var_filtered, dates, transform=transform, binary_mask=binary\n        )\n        val_ds = None\n    return train_ds, val_ds\n\n\ndef read_npz_files(npz_files: list):\n    \"\"\"Load a list of npz files, concatenate, and return separate arrays for eddy segmentation\"\"\"\n    # load npz file into separate variables\n    if isinstance(npz_files, str):\n        npz_files = [npz_files]\n    npz_contents = [np.load(file, allow_pickle=True) for file in npz_files]\n    masks, dates, var, var_filtered, lon_subset, lat_subset = eddy_dict_to_vars(\n        npz_contents\n    )\n    return masks, dates, var, var_filtered, lon_subset, lat_subset, npz_contents\n\n\ndef eddy_dict_to_vars(npz_contents):\n    masks = np.concatenate(\n        [npz_content[\"masks\"] for npz_content in npz_contents], axis=0\n    )\n    dates = np.concatenate(\n        [npz_content[\"dates\"] for npz_content in npz_contents], axis=0\n    )\n    # var = np.concatenate([npz_content[\"var\"] for npz_content in npz_contents], axis=0)\n    var = None\n    var_filtered = np.concatenate(\n        [npz_content[\"var_filtered\"] for npz_content in npz_contents], axis=0\n    )\n    if \"lon_subset\" in npz_contents[0]:\n        lon_subset = np.concatenate(\n            [npz_content[\"lon_subset\"] for npz_content in npz_contents], axis=0\n        )\n        lat_subset = np.concatenate(\n            [npz_content[\"lat_subset\"] for npz_content in npz_contents], axis=0\n        )\n    else:\n        lon_subset = lat_subset = None\n    return masks, dates, var, var_filtered, lon_subset, lat_subset\n\n\nclass EddyDataset(torch.utils.data.Dataset):\n    def __init__(self, masks, gv, dates, transform=None, binary_mask=False):\n        \"\"\"PyTorch dataset for eddy detection\n        Args:\n            masks (np.array): array of segmentation masks with shape: (N_dates, N_lon, N_lat)\n                Can have 3 values: 0, 1 and 2, where 1 = anticyclonic, 2 = cyclonic and 0 = no eddy\n            gv (np.array): array of GV maps with shape: (N_dates, N_lon, N_lat)\n                Example GVs: sea level anomaly, absolute dynamic topography\n            transform (callable, optional): Transformation to be applied on a sample.\n            binary_mask (bool, optional): If true, all eddies (anticyclonic and cyclonic) will be assigned a value of 1\n        \"\"\"\n        self.masks = masks\n        self.gv = gv.astype(np.float32)  # GV stands for Geophysical Variable\n        self.dates = dates\n        self.transform = transform\n        self.binary_mask = binary_mask\n\n    def __getitem__(self, index, return_date=True):\n        # return image and mask for a given index\n        image = self.gv[index, :, :].copy()\n        mask = self.masks[index, :, :].copy()\n        date = self.dates[index]\n\n        # transpose\n        image = image.T\n        mask = mask.T\n\n        # address regions of land that are represented as -2147483648\n        image[image < -10000] = 0\n\n        if image.ndim == 2:\n            image = np.expand_dims(image, axis=0)  # make ndim = 3\n\n        if self.transform:\n            image = self.transform(image)\n\n        # if image and mask are numpy arrays, convert them to torch tensors\n        if isinstance(image, np.ndarray):\n            image = torch.from_numpy(image)\n        if isinstance(mask, np.ndarray):\n            mask = torch.from_numpy(mask)\n\n        if self.binary_mask:\n            mask[mask >= 1] = 1\n\n        # convert to float\n        image = image.float()\n\n        if return_date:\n            # convert date to tensor\n            # date_str = date.strftime(\"%Y-%m-%d\")\n            # date =\n            return image, mask, index\n        else:\n            return image, mask\n\n    def __len__(self):\n        return self.masks.shape[0]\n\n    def plot_sample(self, N=5):\n\n        # var in first column, mask in second column\n        num_cols = 2\n        num_rows = N\n        fig, ax = plt.subplots(num_rows, num_cols, figsize=(num_cols * 4, num_rows * 4))\n        ax[0, 0].set_title(\"GV\")\n        ax[0, 1].set_title(\"Mask\")\n        for i in range(num_rows):\n            # get random sample from self\n            n = np.random.randint(0, len(self))\n            gv, mask, index = self.__getitem__(n, return_date=True)\n            gv = np.squeeze(gv.cpu().detach().numpy())\n            mask = np.squeeze(mask.cpu().detach().numpy())\n            date = self.dates[index].strftime(\"%Y-%m-%d\")\n            # ax[i, 0].pcolormesh(lon_subset, lat_subset, gv.T, cmap=\"RdBu_r\", vmin=-0.15, vmax=0.15)\n            ax[i, 0].imshow(gv, cmap=\"RdBu_r\", vmin=-0.15, vmax=0.15)\n            ax[i, 0].set_title(f\"GV ({date})\")\n            ax[i, 0].axis(\"off\")\n            ax[i, 1].imshow(mask, cmap=\"viridis\")\n            ax[i, 1].set_title(f\"Mask ({date})\")\n            ax[i, 1].axis(\"off\")\n\n    def animate(self):\n        fig, ax = plt.subplots(1, 2, figsize=(20, 10))\n        print(f\"Drawing animation of GV and segmentation mask\")\n        artists = []\n        for i in tqdm(range(len(self)), desc=\"Animating eddies:\"):\n            gv, mask, date_idx = self.__getitem__(i, return_date=True)\n            date = self.dates[date_idx].strftime(\"%Y-%m-%d\")\n            im1 = ax[0].imshow(gv.squeeze(), cmap=\"RdBu_r\", vmin=-0.15, vmax=0.15)\n            t1 = ax[0].text(\n                0.5,\n                1.05,\n                f\"GV {date}\",\n                size=plt.rcParams[\"axes.titlesize\"],\n                ha=\"center\",\n                transform=ax[0].transAxes,\n            )\n            ax[0].axis(\"off\")\n\n            im2 = ax[1].imshow(mask.squeeze(), cmap=\"viridis\")\n            t2 = ax[1].text(\n                0.5,\n                1.05,\n                f\"Mask {date}\",\n                size=plt.rcParams[\"axes.titlesize\"],\n                ha=\"center\",\n                transform=ax[1].transAxes,\n            )\n            ax[1].axis(\"off\")\n            plt.tight_layout()\n            artists.append([im1, t1, im2, t2])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n        animation = ArtistAnimation(fig, artists, interval=500, blit=True)\n        plt.close()\n        return animation\n\ndef transform_ssh(ssh_array):\n    # normalize sea level anomaly between 0 and 1 based on min max\n    ssh_array = (ssh_array - ssh_array.min()) / (ssh_array.max() - ssh_array.min())\n    return ssh_array\n\n\n# convert npy to compressed npz\ndef convert_npy_to_npz(npy_file):\n    npz_file = npy_file.replace(\".npy\", \".npz\")\n    npy_contents = np.load(npy_file)\n",
   "history_output" : "Running",

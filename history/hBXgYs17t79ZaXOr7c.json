@@ -1,0 +1,181 @@
+[{
+  "history_id" : "grtfs43lzwh",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685798,
+  "history_end_time" : 1682443925653,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gkj8qvzt786",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685798,
+  "history_end_time" : 1682443925653,
+  "history_notes" : null,
+  "history_process" : "0ps7es",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rmysxmep3me",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685799,
+  "history_end_time" : 1682443925653,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "yqfkkul74fr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685799,
+  "history_end_time" : 1682443925653,
+  "history_notes" : null,
+  "history_process" : "zbt6sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qxuu3agr3ax",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685799,
+  "history_end_time" : 1682443925654,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5tu9h4cluv9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685799,
+  "history_end_time" : 1682443925654,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "byldzv3ti7o",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685799,
+  "history_end_time" : 1682443925654,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0fv2tzr33q7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685799,
+  "history_end_time" : 1682443925654,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "wtpwq15bg83",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685800,
+  "history_end_time" : 1682443925654,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "db8m7vr0ops",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685800,
+  "history_end_time" : 1682443925654,
+  "history_notes" : null,
+  "history_process" : "znr9qa",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "g5l4de82gn3",
+  "history_input" : "from training_and_plot_utils import *\nfrom model_components import *\nfrom device_config_and_data_loader import *\nfrom tqdm.auto import tqdm\n\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nprint(train_m)\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"MulticlassAccuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"MulticlassAccuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_final_full_data.pt\")\n\nprint(model_path)\n\n\nprint(\"train/Accuracy\", train_m[\"MulticlassAccuracy\"])\nprint(\"val/Accuracy\", val_m[\"MulticlassAccuracy\"])\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nRead 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 0.39 megapixels across 24 SSH maps\nNumber of pixels that are not eddies: 0.28 megapixels (72.00%)\nNumber of pixels that are anticyclonic eddies: 0.06 megapixels (14.23%)\nNumber of pixels that are cyclonic eddies: 0.05 megapixels (13.77%)\n\n======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-04-25_17-29\n======================================================================\n\nTraining:   0%|                                   | 0/250 [00:00<?, ?epoch(s)/s]\nTraining:   0%| | 0/250 [00:05<?, ?epoch(s)/s, train_multiclassaccuracy=0.239357\nTraining:   0%| | 1/250 [00:05<21:19,  5.14s/epoch(s), train_multiclassaccuracy=\nTraining:   0%| | 1/250 [00:10<21:19,  5.14s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 2/250 [00:10<20:36,  4.99s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 2/250 [00:15<20:36,  4.99s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 3/250 [00:15<20:52,  5.07s/epoch(s), train_multiclassaccuracy=\nTraining:   1%| | 3/250 [00:19<20:52,  5.07s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 4/250 [00:19<20:13,  4.93s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 4/250 [00:24<20:13,  4.93s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 5/250 [00:24<20:17,  4.97s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 5/250 [00:29<20:17,  4.97s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 6/250 [00:29<19:52,  4.89s/epoch(s), train_multiclassaccuracy=\nTraining:   2%| | 6/250 [00:34<19:52,  4.89s/epoch(s), train_multiclassaccuracy=\nTraining:   3%| | 7/250 [00:34<19:52,  4.91s/epoch(s), train_multiclassaccuracy=\nTraining:   3%| | 7/250 [00:39<19:52,  4.91s/epoch(s), train_multiclassaccuracy=\nTraining:   3%| | 8/250 [00:39<19:45,  4.90s/epoch(s), train_multiclassaccuracy=\nTraining:   3%| | 8/250 [00:44<19:45,  4.90s/epoch(s), train_multiclassaccuracy=\nTraining:   4%| | 9/250 [00:44<20:13,  5.04s/epoch(s), train_multiclassaccuracy=\nTraining:   4%| | 9/250 [00:57<20:13,  5.04s/epoch(s), train_multiclassaccuracy=\nTraining:   4%| | 10/250 [00:57<29:46,  7.44s/epoch(s), train_multiclassaccuracy\nTraining:   4%| | 10/250 [01:09<29:46,  7.44s/epoch(s), train_multiclassaccuracy\nTraining:   4%| | 11/250 [01:09<35:21,  8.88s/epoch(s), train_multiclassaccuracy\nTraining:   4%| | 11/250 [01:24<35:21,  8.88s/epoch(s), train_multiclassaccuracy\nTraining:   5%| | 12/250 [01:24<42:02, 10.60s/epoch(s), train_multiclassaccuracy\nTraining:   5%| | 12/250 [01:36<42:02, 10.60s/epoch(s), train_multiclassaccuracy\nTraining:   5%| | 13/250 [01:36<43:44, 11.07s/epoch(s), train_multiclassaccuracy\nTraining:   5%| | 13/250 [01:48<43:44, 11.07s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 14/250 [01:48<44:40, 11.36s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 14/250 [01:59<44:40, 11.36s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 15/250 [01:59<43:28, 11.10s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 15/250 [02:04<43:28, 11.10s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 16/250 [02:04<36:10,  9.28s/epoch(s), train_multiclassaccuracy\nTraining:   6%| | 16/250 [02:08<36:10,  9.28s/epoch(s), train_multiclassaccuracy\nTraining:   7%| | 17/250 [02:08<30:50,  7.94s/epoch(s), train_multiclassaccuracy\nTraining:   7%| | 17/250 [02:13<30:50,  7.94s/epoch(s), train_multiclassaccuracy\nTraining:   7%| | 18/250 [02:13<27:14,  7.05s/epoch(s), train_multiclassaccuracy\nTraining:   7%| | 18/250 [02:18<27:14,  7.05s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 19/250 [02:18<24:36,  6.39s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 19/250 [02:23<24:36,  6.39s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 20/250 [02:23<22:37,  5.90s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 20/250 [02:28<22:37,  5.90s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 21/250 [02:28<21:38,  5.67s/epoch(s), train_multiclassaccuracy\nTraining:   8%| | 21/250 [02:33<21:38,  5.67s/epoch(s), train_multiclassaccuracy\nTraining:   9%| | 22/250 [02:33<20:34,  5.42s/epoch(s), train_multiclassaccuracy\nTraining:   9%| | 22/250 [02:38<20:34,  5.42s/epoch(s), train_multiclassaccuracy\nTraining:   9%| | 23/250 [02:38<19:57,  5.28s/epoch(s), train_multiclassaccuracy\nTraining:   9%| | 23/250 [02:43<19:57,  5.28s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 24/250 [02:43<19:15,  5.11s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 24/250 [02:48<19:15,  5.11s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 25/250 [02:48<19:04,  5.09s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 25/250 [02:53<19:04,  5.09s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 26/250 [02:53<19:31,  5.23s/epoch(s), train_multiclassaccuracy\nTraining:  10%| | 26/250 [02:59<19:31,  5.23s/epoch(s), train_multiclassaccuracy\nTraining:  11%| | 27/250 [02:59<20:19,  5.47s/epoch(s), train_multiclassaccuracy\nTraining:  11%| | 27/250 [03:04<20:19,  5.47s/epoch(s), train_multiclassaccuracy\nTraining:  11%| | 28/250 [03:04<19:49,  5.36s/epoch(s), train_multiclassaccuracy\nTraining:  11%| | 28/250 [03:10<19:49,  5.36s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 29/250 [03:10<19:40,  5.34s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 29/250 [03:15<19:40,  5.34s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 30/250 [03:15<19:31,  5.32s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 30/250 [03:20<19:31,  5.32s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 31/250 [03:20<19:10,  5.25s/epoch(s), train_multiclassaccuracy\nTraining:  12%| | 31/250 [03:25<19:10,  5.25s/epoch(s), train_multiclassaccuracy\nTraining:  13%|▏| 32/250 [03:25<19:01,  5.23s/epoch(s), train_multiclassaccuracy\nTraining:  13%|▏| 32/250 [03:30<19:01,  5.23s/epoch(s), train_multiclassaccuracy\nTraining:  13%|▏| 33/250 [03:30<18:53,  5.22s/epoch(s), train_multiclassaccuracy\nTraining:  13%|▏| 33/250 [03:36<18:53,  5.22s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 34/250 [03:36<18:51,  5.24s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 34/250 [03:41<18:51,  5.24s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 35/250 [03:41<18:31,  5.17s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 35/250 [03:46<18:31,  5.17s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 36/250 [03:46<18:31,  5.19s/epoch(s), train_multiclassaccuracy\nTraining:  14%|▏| 36/250 [03:51<18:31,  5.19s/epoch(s), train_multiclassaccuracy\nTraining:  15%|▏| 37/250 [03:51<18:28,  5.20s/epoch(s), train_multiclassaccuracy\nTraining:  15%|▏| 37/250 [03:57<18:28,  5.20s/epoch(s), train_multiclassaccuracy\nTraining:  15%|▏| 38/250 [03:57<18:38,  5.27s/epoch(s), train_multiclassaccuracy\nTraining:  15%|▏| 38/250 [04:02<18:38,  5.27s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 39/250 [04:02<18:23,  5.23s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 39/250 [04:07<18:23,  5.23s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 40/250 [04:07<18:22,  5.25s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 40/250 [04:12<18:22,  5.25s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 41/250 [04:12<18:26,  5.29s/epoch(s), train_multiclassaccuracy\nTraining:  16%|▏| 41/250 [04:18<18:26,  5.29s/epoch(s), train_multiclassaccuracy\nTraining:  17%|▏| 42/250 [04:18<18:16,  5.27s/epoch(s), train_multiclassaccuracy\nTraining:  17%|▏| 42/250 [04:23<18:16,  5.27s/epoch(s), train_multiclassaccuracy\nTraining:  17%|▏| 43/250 [04:23<18:05,  5.24s/epoch(s), train_multiclassaccuracy\nTraining:  17%|▏| 43/250 [04:28<18:05,  5.24s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 44/250 [04:28<17:29,  5.10s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 44/250 [04:33<17:29,  5.10s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 45/250 [04:33<17:16,  5.06s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 45/250 [04:37<17:16,  5.06s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 46/250 [04:37<16:56,  4.98s/epoch(s), train_multiclassaccuracy\nTraining:  18%|▏| 46/250 [04:42<16:56,  4.98s/epoch(s), train_multiclassaccuracy\nTraining:  19%|▏| 47/250 [04:42<16:56,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  19%|▏| 47/250 [04:48<16:56,  5.01s/epoch(s), train_multiclassaccuracy\nTraining:  19%|▏| 48/250 [04:48<17:06,  5.08s/epoch(s), train_multiclassaccuracy\nTraining:  19%|▏| 48/250 [04:53<17:06,  5.08s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 49/250 [04:53<17:18,  5.17s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 49/250 [04:58<17:18,  5.17s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 50/250 [04:58<17:11,  5.16s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 50/250 [05:03<17:11,  5.16s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 51/250 [05:03<17:10,  5.18s/epoch(s), train_multiclassaccuracy\nTraining:  20%|▏| 51/250 [05:08<17:10,  5.18s/epoch(s), train_multiclassaccuracy\nTraining:  21%|▏| 52/250 [05:08<16:41,  5.06s/epoch(s), train_multiclassaccuracy\nTraining:  21%|▏| 52/250 [05:13<16:41,  5.06s/epoch(s), train_multiclassaccuracy\nTraining:  21%|▏| 53/250 [05:13<16:41,  5.08s/epoch(s), train_multiclassaccuracy\nTraining:  21%|▏| 53/250 [05:18<16:41,  5.08s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 54/250 [05:18<16:20,  5.00s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 54/250 [05:23<16:20,  5.00s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 55/250 [05:23<16:21,  5.03s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 55/250 [05:28<16:21,  5.03s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 56/250 [05:28<16:19,  5.05s/epoch(s), train_multiclassaccuracy\nTraining:  22%|▏| 56/250 [05:34<16:19,  5.05s/epoch(s), train_multiclassaccuracy\nTraining:  23%|▏| 57/250 [05:34<16:23,  5.10s/epoch(s), train_multiclassaccuracy\nTraining:  23%|▏| 57/250 [05:39<16:23,  5.10s/epoch(s), train_multiclassaccuracy\nTraining:  23%|▏| 58/250 [05:39<16:24,  5.13s/epoch(s), train_multiclassaccuracy\nTraining:  23%|▏| 58/250 [05:50<16:24,  5.13s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 59/250 [05:50<22:28,  7.06s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 59/250 [06:02<22:28,  7.06s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 60/250 [06:02<26:28,  8.36s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 60/250 [06:13<26:28,  8.36s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 61/250 [06:13<29:25,  9.34s/epoch(s), train_multiclassaccuracy\nTraining:  24%|▏| 61/250 [06:21<29:25,  9.34s/epoch(s), train_multiclassaccuracy\nTraining:  25%|▏| 62/250 [06:21<28:06,  8.97s/epoch(s), train_multiclassaccuracy\nTraining:  25%|▏| 62/250 [06:27<28:06,  8.97s/epoch(s), train_multiclassaccuracy\nTraining:  25%|▎| 63/250 [06:27<25:03,  8.04s/epoch(s), train_multiclassaccuracy\nTraining:  25%|▎| 63/250 [06:33<25:03,  8.04s/epoch(s), train_multiclassaccuracy\nTraining:  26%|▎| 64/250 [06:33<22:40,  7.31s/epoch(s), train_multiclassaccuracy\nTraining:  26%|▎| 64/250 [06:38<22:40,  7.31s/epoch(s), train_multiclassaccuracy\n",
+  "history_begin_time" : 1682443755511,
+  "history_end_time" : 1682443925655,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Running"
+},{
+  "history_id" : "8sdtj792u7h",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685802,
+  "history_end_time" : 1682443925656,
+  "history_notes" : null,
+  "history_process" : "n508da",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4igbgukndil",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685802,
+  "history_end_time" : 1682443925656,
+  "history_notes" : null,
+  "history_process" : "rdt0gy",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "366rja4dv90",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685802,
+  "history_end_time" : 1682443925656,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "mmx1fixsgrl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685802,
+  "history_end_time" : 1682443925656,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rmew81vs6ff",
+  "history_input" : "# Pytorch DataLoader\n\nimport numpy as np\nfrom dependency import os\nfrom device_config_and_data_loader import *\nfrom convert_to_pytorch_data_loader import *\n\n\n# link npz files\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\n\n# Data Loader\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\n\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n\n# Class Distribution check\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)\n\n",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nRead 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 0.39 megapixels across 24 SSH maps\nNumber of pixels that are not eddies: 0.28 megapixels (72.00%)\nNumber of pixels that are anticyclonic eddies: 0.06 megapixels (14.23%)\nNumber of pixels that are cyclonic eddies: 0.05 megapixels (13.77%)\n\n",
+  "history_begin_time" : 1682443749505,
+  "history_end_time" : 1682443925656,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gttx0jx9a05",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1682443685804,
+  "history_end_time" : 1682443925656,
+  "history_notes" : null,
+  "history_process" : "sq4sw3",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hrhf7ugbajw",
+  "history_input" : "#  Generate compress segmentaiton mask\n\nimport logging\n\nfrom compression_and_segmentation_utils import *\n\nfrom data_loader import *\n\n\n# Generate segmentaion mask\n\nlogging.getLogger(\"pet\").setLevel(logging.ERROR)\n\n# enter the AVISO filename pattern\n# year, month, and day in file_pattern will be filled in get_dates_and_files:\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\n# training set: 1998 - 2018\ntrain_dates, train_files = get_dates_and_files(\n    range(1998, 1999), range(1, 3), [1, 10], train_folder, file_pattern\n)\ntrain_adt, train_adt_filtered, train_masks = generate_masks_in_parallel(\n    train_files, train_dates\n)\n\n\n# test set: 2019\ntest_dates, test_files = get_dates_and_files(\n    [2019], range(1, 3), [1], test_folder, file_pattern\n)\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates\n)\n\n# copress Segmentaion masks to npz files\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)\n\n# compress segmask\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ntrain_subset = subset_arrays(\n    train_masks,\n    train_adt,\n    train_adt_filtered,\n    train_dates,\n    lon_range,\n    lat_range,\n    plot=False,\n    resolution_deg=0.25,\n    save_folder=train_folder,\n)\n\ntest_subset = subset_arrays(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n)",
+  "history_output" : "Found 4 files for 1998.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/global_pet_masks_with_adt_1998.npz\nFound 2 files for 2019.\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\nSaved masks to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/global_pet_masks_with_adt_2019.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998_lat14N-46N_lon166W-134W.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998_lat14N-46N_lon166W-134W.npz\nSaved mask subset to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\n",
+  "history_begin_time" : 1682443686189,
+  "history_end_time" : 1682443925657,
+  "history_notes" : null,
+  "history_process" : "shce7j",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+}]
