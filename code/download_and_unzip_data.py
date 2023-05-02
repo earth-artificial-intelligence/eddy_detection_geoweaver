@@ -1,6 +1,5 @@
 from dependency import *
-from unzip_utils import *
-from get_data import *
+from fetch_data_utils import *
 
 
 os.chdir(os.path.expanduser("~"))
@@ -8,7 +7,7 @@ current_working_dir = os.getcwd()
 print(current_working_dir)
 
 # Directory names
-root_dir_name = "ML_eddies"
+root_dir_name = "ML_test"
 train_dir_name = "cds_ssh_1998-2018_10day_interval"
 test_dir_name = "cds_ssh_2019_10day_interval"
 

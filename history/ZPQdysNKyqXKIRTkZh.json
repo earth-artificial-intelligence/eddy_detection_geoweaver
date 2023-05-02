@@ -1,0 +1,161 @@
+[{
+  "history_id" : "qg1pucsk0x0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018639,
+  "history_end_time" : 1683060018639,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "kjxjl0kmrrk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018640,
+  "history_end_time" : 1683060018640,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vfzhz23awij",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018640,
+  "history_end_time" : 1683060018640,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "b8txnprp0ag",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018641,
+  "history_end_time" : 1683060018641,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vjvvq6ntsav",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018641,
+  "history_end_time" : 1683060018641,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "84kcff0ce7q",
+  "history_input" : "# Scripts download and unzip test files\n\n# Scripts download and unzip test files\n\nimport datetime as datetime\nimport os\nfrom fetch_data_utils import *\n\ntoday = datetime.date.today()\nprev_dt_object = datetime.datetime(today.year, today.month, today.day) - datetime.timedelta(days=331)\ndate = prev_dt_object.date()\n\nprev_date = str(date.day)\nprev_month = str(date.month)\nprev_year = str(date.year)\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nroot_dir_name = \"ML_test\"\ntest_data_store = \"cds_ssh_test_everyday_interval\"\n\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntest_path = os.path.join(root_path, test_data_store)\n\ncreate_directory(root_path)\ncreate_directory(test_path)\n\ntest_zip_file = download_test_date(prev_year, prev_month, prev_date)\nunzip_file(os.path.join(current_working_dir, test_zip_file), test_path)\n\n\n\n",
+  "history_output" : "Something went wrong while creating folder\nSomething went wrong while creating folder\n2023-05-02 20:40:23,574 INFO Welcome to the CDS\n2023-05-02 20:40:23,574 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/satellite-sea-level-global\n2023-05-02 20:40:23,696 INFO Request is queued\n2023-05-02 20:40:24,816 INFO Request is running\n2023-05-02 20:40:32,321 INFO Request is completed\n2023-05-02 20:40:32,321 INFO Downloading https://download-0014-clone.copernicus-climate.eu/cache-compute-0014/cache/data6/dataset-satellite-sea-level-global-bdf14fcd-1cf0-4374-aa7e-2a994a9f431c.zip to 2022_06_05_test.zip (9.3M)\n\n  0%|                                               | 0.00/9.25M [00:00<?, ?B/s]\n  0%|                                      | 8.00k/9.25M [00:00<02:08, 75.5kB/s]\n  0%|▏                                      | 34.0k/9.25M [00:00<00:55, 173kB/s]\n  1%|▎                                      | 77.0k/9.25M [00:00<00:34, 275kB/s]\n  2%|▋                                       | 177k/9.25M [00:00<00:17, 531kB/s]\n  4%|█▍                                      | 333k/9.25M [00:00<00:10, 858kB/s]\n  7%|██▊                                    | 681k/9.25M [00:00<00:05, 1.66MB/s]\n 11%|████▎                                 | 1.04M/9.25M [00:00<00:03, 2.28MB/s]\n 21%|███████▊                              | 1.91M/9.25M [00:00<00:01, 4.17MB/s]\n 35%|█████████████▏                        | 3.21M/9.25M [00:00<00:00, 6.69MB/s]\n 62%|███████████████████████▋              | 5.78M/9.25M [00:01<00:00, 12.1MB/s]\n 88%|█████████████████████████████████▍    | 8.13M/9.25M [00:01<00:00, 15.2MB/s]\n                                                                                \n2023-05-02 20:40:34,133 INFO Download rate 5.1M/s\n",
+  "history_begin_time" : 1683060019526,
+  "history_end_time" : 1683060034633,
+  "history_notes" : null,
+  "history_process" : "znr9qa",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "lom3k3ll3kr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018645,
+  "history_end_time" : 1683060018645,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "rr1xmx4mbzy",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018648,
+  "history_end_time" : 1683060018648,
+  "history_notes" : null,
+  "history_process" : "n508da",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "t0ac5xgqi5x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018649,
+  "history_end_time" : 1683060018649,
+  "history_notes" : null,
+  "history_process" : "rdt0gy",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "0908c1ukqtm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018650,
+  "history_end_time" : 1683060018650,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "fvwkym5axl1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018651,
+  "history_end_time" : 1683060018651,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "cenkskfdnx4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018651,
+  "history_end_time" : 1683060018651,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "f1qujpvux89",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018652,
+  "history_end_time" : 1683060018652,
+  "history_notes" : null,
+  "history_process" : "sq4sw3",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "epc3q505osr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018652,
+  "history_end_time" : 1683060018652,
+  "history_notes" : null,
+  "history_process" : "shce7j",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "9k4fex5q3u6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018652,
+  "history_end_time" : 1683060018652,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1i9pmpom9he",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018653,
+  "history_end_time" : 1683060018653,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+}]
