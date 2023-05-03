@@ -1,4 +1,64 @@
 [{
+  "history_id" : "5k2hjju9svj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683063256458,
+  "history_end_time" : 1683063256458,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "qj9vjvjdlsd",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683063215116,
+  "history_end_time" : 1683063215116,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "22ijm04v5l8",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683061007173,
+  "history_end_time" : 1683061007173,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "q0m2uya1xkv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060956372,
+  "history_end_time" : 1683060956372,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1i9pmpom9he",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1683060018653,
+  "history_end_time" : 1683060018653,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "mwngbdt4n08",
+  "history_input" : "from dependency import *\nfrom fetch_data_utils import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_test\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\n/home/chetana/ML_test\nSuccessfully created folder\ncreated: /home/chetana/ML_test\nSuccessfully created folder\nSuccessfully created folder\n2023-05-02 20:28:32,872 INFO Welcome to the CDS\n2023-05-02 20:28:32,873 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/satellite-sea-level-global\n2023-05-02 20:28:33,023 INFO Request is queued\n2023-05-02 20:28:34,146 INFO Request is running\n2023-05-02 20:28:41,660 INFO Request is completed\n2023-05-02 20:28:41,660 INFO Downloading https://download-0009-clone.copernicus-climate.eu/cache-compute-0009/cache/data8/dataset-satellite-sea-level-global-c04387b6-9279-4513-abf5-c6b16fa28300.zip to train_data.zip (27.9M)\n\n  0%|                                               | 0.00/27.9M [00:00<?, ?B/s]\n  0%|                                       | 34.0k/27.9M [00:00<02:41, 180kB/s]\n  0%|                                       | 77.0k/27.9M [00:00<01:43, 281kB/s]\n  1%|▎                                       | 183k/27.9M [00:00<00:51, 561kB/s]\n  1%|▍                                       | 334k/27.9M [00:00<00:33, 871kB/s]\n  2%|▌                                       | 440k/27.9M [00:00<00:31, 915kB/s]\n  3%|█▏                                     | 876k/27.9M [00:00<00:14, 1.96MB/s]\n  5%|█▊                                    | 1.36M/27.9M [00:00<00:09, 2.87MB/s]\n  8%|██▉                                   | 2.11M/27.9M [00:01<00:07, 3.70MB/s]\n 14%|█████▏                                | 3.81M/27.9M [00:01<00:03, 7.25MB/s]\n 17%|██████▎                               | 4.67M/27.9M [00:01<00:03, 7.07MB/s]\n 25%|█████████▍                            | 6.89M/27.9M [00:01<00:01, 11.1MB/s]\n 29%|██████████▉                           | 8.02M/27.9M [00:01<00:01, 11.0MB/s]\n 33%|████████████▍                         | 9.11M/27.9M [00:01<00:01, 10.8MB/s]\n 37%|█████████████▊                        | 10.2M/27.9M [00:01<00:01, 10.7MB/s]\n 40%|███████████████▎                      | 11.2M/27.9M [00:01<00:01, 10.5MB/s]\n 44%|████████████████▋                     | 12.2M/27.9M [00:01<00:01, 10.3MB/s]\n 47%|██████████████████                    | 13.2M/27.9M [00:02<00:01, 10.2MB/s]\n 51%|███████████████████▎                  | 14.2M/27.9M [00:02<00:01, 9.97MB/s]\n 54%|████████████████████▋                 | 15.2M/27.9M [00:02<00:01, 9.90MB/s]\n 58%|██████████████████████▏               | 16.3M/27.9M [00:02<00:01, 10.0MB/s]\n 62%|███████████████████████▍              | 17.2M/27.9M [00:02<00:01, 9.34MB/s]\n 66%|█████████████████████████▏            | 18.5M/27.9M [00:02<00:01, 9.80MB/s]\n 70%|██████████████████████████▍           | 19.4M/27.9M [00:02<00:01, 8.33MB/s]\n 73%|███████████████████████████▌          | 20.2M/27.9M [00:02<00:00, 8.21MB/s]\n 75%|████████████████████████████▋         | 21.0M/27.9M [00:02<00:00, 8.09MB/s]\n 78%|█████████████████████████████▋        | 21.8M/27.9M [00:03<00:00, 7.96MB/s]\n 81%|██████████████████████████████▊       | 22.6M/27.9M [00:03<00:00, 7.83MB/s]\n 84%|███████████████████████████████▊      | 23.3M/27.9M [00:03<00:00, 7.71MB/s]\n 87%|████████████████████████████████▉     | 24.1M/27.9M [00:03<00:00, 7.71MB/s]\n 89%|█████████████████████████████████▉    | 24.9M/27.9M [00:03<00:00, 7.76MB/s]\n 92%|███████████████████████████████████▏  | 25.8M/27.9M [00:03<00:00, 7.81MB/s]\n 95%|████████████████████████████████████▎ | 26.6M/27.9M [00:03<00:00, 7.90MB/s]\n 98%|█████████████████████████████████████▍| 27.4M/27.9M [00:03<00:00, 7.94MB/s]\n                                                                                \n2023-05-02 20:28:46,245 INFO Download rate 6.1M/s\n2023-05-02 20:28:46,485 INFO Welcome to the CDS\n2023-05-02 20:28:46,485 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/satellite-sea-level-global\n2023-05-02 20:28:46,620 INFO Request is queued\n2023-05-02 20:28:47,742 INFO Request is running\n2023-05-02 20:28:51,747 INFO Request is completed\n2023-05-02 20:28:51,747 INFO Downloading https://download-0005-clone.copernicus-climate.eu/cache-compute-0005/cache/data4/dataset-satellite-sea-level-global-545f7d64-8ac7-4ed4-b091-9e63f9c649f5.zip to test_data.zip (27.9M)\n\n  0%|                                               | 0.00/27.9M [00:00<?, ?B/s]\n  0%|                                      | 8.00k/27.9M [00:00<06:33, 74.3kB/s]\n  0%|                                       | 34.0k/27.9M [00:00<02:49, 172kB/s]\n  0%|                                       | 78.0k/27.9M [00:00<01:44, 278kB/s]\n  1%|▎                                       | 183k/27.9M [00:00<00:52, 551kB/s]\n  1%|▍                                       | 333k/27.9M [00:00<00:33, 850kB/s]\n  2%|▌                                       | 442k/27.9M [00:00<00:31, 903kB/s]\n  3%|█▏                                     | 876k/27.9M [00:00<00:14, 1.92MB/s]\n  4%|█▌                                    | 1.18M/27.9M [00:00<00:12, 2.27MB/s]\n  6%|██▎                                   | 1.72M/27.9M [00:00<00:08, 3.16MB/s]\n 12%|████▌                                 | 3.36M/27.9M [00:01<00:03, 6.97MB/s]\n 22%|████████▎                             | 6.08M/27.9M [00:01<00:01, 12.7MB/s]\n 29%|██████████▉                           | 8.02M/27.9M [00:01<00:01, 14.4MB/s]\n 39%|██████████████▉                       | 11.0M/27.9M [00:01<00:00, 18.5MB/s]\n 50%|██████████████████▉                   | 13.9M/27.9M [00:01<00:00, 21.3MB/s]\n 58%|██████████████████████▏               | 16.2M/27.9M [00:01<00:00, 21.6MB/s]\n 69%|██████████████████████████            | 19.1M/27.9M [00:01<00:00, 23.3MB/s]\n 79%|█████████████████████████████▉        | 22.0M/27.9M [00:01<00:00, 24.3MB/s]\n 89%|█████████████████████████████████▋    | 24.7M/27.9M [00:01<00:00, 24.8MB/s]\n 99%|█████████████████████████████████████▌| 27.5M/27.9M [00:02<00:00, 25.3MB/s]\n                                                                                \n2023-05-02 20:28:54,431 INFO Download rate 10.4M/s\n",
+  "history_begin_time" : 1683059308638,
+  "history_end_time" : 1683059335140,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
   "history_id" : "0ig75un037x",
   "history_input" : "No code saved",
   "history_output" : "Skipped",

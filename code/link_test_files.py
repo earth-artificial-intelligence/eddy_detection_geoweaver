@@ -2,7 +2,7 @@
 
 from link_npz_files import *
 
-data_root = os.path.join(os.path.expanduser("~"), "ML_eddies")
+data_root = os.path.join(os.path.expanduser("~"), "ML_test")
 
 val_folder = os.path.join(data_root, "cds_ssh_2019_10day_interval")
 
