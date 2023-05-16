@@ -1,4 +1,174 @@
 [{
+  "history_id" : "bx00rjdored",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684268295709,
+  "history_end_time" : 1684268295709,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "zgste1fnvvg",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684268093743,
+  "history_end_time" : 1684268093743,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "5yl3iluahi1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684267389197,
+  "history_end_time" : 1684267389197,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "g74cthnmr44",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056688,
+  "history_end_time" : 1684266056688,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "n6v4yo3b9jf",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684265995099,
+  "history_end_time" : 1684265995099,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1aws4sa5uno",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684265857018,
+  "history_end_time" : 1684265857018,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "pwp7n2eul7j",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684265720538,
+  "history_end_time" : 1684265720538,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "u0fg92z1a4s",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684265684579,
+  "history_end_time" : 1684265684579,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "mqzoppfaykg",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264569982,
+  "history_end_time" : 1684264569982,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "26fedrhkzv7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544464,
+  "history_end_time" : 1684264550373,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0ph9qw6r2ny",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684263382635,
+  "history_end_time" : 1684263382635,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "yohg301gzzp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684263250323,
+  "history_end_time" : 1684263250323,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "dd1x9c7fjyq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684263086333,
+  "history_end_time" : 1684263086333,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tcfu9j9ft1m",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262746507,
+  "history_end_time" : 1684262746507,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "xjijf0z2dez",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262105028,
+  "history_end_time" : 1684262105028,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ajrcyvpxp6d",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085475,
+  "history_end_time" : 1684262085475,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "d9biy6mf3bh",
+  "history_input" : "# Pytorch DataLoader\n\nimport numpy as np\nfrom dependency import os\nfrom device_config_and_data_loader import *\nfrom convert_to_pytorch_data_loader import *\n\n\n# link npz files\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_eddie\")\ntrain_folder = os.path.join(data_root, \"cds_ssh_1998-2018_10day_interval\")\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\ntrain_file = os.path.join(train_folder, \"subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz\")\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\n\n# Data Loader\n# set binary = false if we want to distinguish between cyclonic and anticyclonic\n\nbinary = False\nnum_classes = 2 if binary else 3\ntrain_loader, _ = get_eddy_dataloader(train_file, binary=binary, batch_size=batch_size)\nval_loader, _ = get_eddy_dataloader(\n    val_file, binary=binary, batch_size=batch_size, shuffle=False\n)\n\n\n# Class Distribution check\ntrain_masks = train_loader.dataset.masks.copy()\nclass_frequency = np.bincount(train_masks.flatten())\ntotal_pixels = sum(class_frequency)\n\n\nprint(\n    f\"Total number of pixels in training set: {total_pixels/1e6:.2f} megapixels\"\n    f\" across {len(train_masks)} SSH maps\\\\n\"\n    f\"Number of pixels that are not eddies: {class_frequency[0]/1e6:.2f} megapixels \"\n    f\"({class_frequency[0]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are anticyclonic eddies: {class_frequency[1]/1e6:.2f} megapixels \"\n    f\"({class_frequency[1]/total_pixels * 100:.2f}%)\\\\n\"\n    f\"Number of pixels that are cyclonic eddies: {class_frequency[2]/1e6:.2f} megapixels \"\n    f\"({class_frequency[2]/total_pixels * 100:.2f}%)\\\\n\"\n)\n\n",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nRead 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 0.39 megapixels across 24 SSH maps\nNumber of pixels that are not eddies: 0.28 megapixels (72.00%)\nNumber of pixels that are anticyclonic eddies: 0.06 megapixels (14.23%)\nNumber of pixels that are cyclonic eddies: 0.05 megapixels (13.77%)\n\n",
+  "history_begin_time" : 1684261914455,
+  "history_end_time" : 1684261974115,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
   "history_id" : "myerhfb2zk2",
   "history_input" : "No code saved",
   "history_output" : "Skipped",

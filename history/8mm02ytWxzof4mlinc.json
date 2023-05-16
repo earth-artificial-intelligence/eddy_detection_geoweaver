@@ -1,0 +1,161 @@
+[{
+  "history_id" : "15zqoq8b8g7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056686,
+  "history_end_time" : 1684266056686,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "g7fevxw3uhf",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056687,
+  "history_end_time" : 1684266056687,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "a5mndblofu3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056687,
+  "history_end_time" : 1684266056687,
+  "history_notes" : null,
+  "history_process" : "znr9qa",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ttr5h2ilbcq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056687,
+  "history_end_time" : 1684266056687,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ocia6fel9re",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056687,
+  "history_end_time" : 1684266056687,
+  "history_notes" : null,
+  "history_process" : "n508da",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "f6eppff4zc0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056688,
+  "history_end_time" : 1684266056688,
+  "history_notes" : null,
+  "history_process" : "rdt0gy",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "lb6w75irdpj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056688,
+  "history_end_time" : 1684266056688,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "3d7ak3go6jm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056688,
+  "history_end_time" : 1684266056688,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "g74cthnmr44",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056688,
+  "history_end_time" : 1684266056688,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "l1468ilu0mi",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056688,
+  "history_end_time" : 1684266056688,
+  "history_notes" : null,
+  "history_process" : "sq4sw3",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "r8mcwqs0arm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056689,
+  "history_end_time" : 1684266056689,
+  "history_notes" : null,
+  "history_process" : "shce7j",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "m9bzjqawy34",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056689,
+  "history_end_time" : 1684266056689,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "l4j1l1bu2iv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056689,
+  "history_end_time" : 1684266056689,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nsgowjfs65c",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056689,
+  "history_end_time" : 1684266056689,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "m7ckljxzsbp",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\nval_folder = os.path.join(data_root, \"\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1684266089546,
+  "history_end_time" : 1684266092382,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "vy4f6uomqje",
+  "history_input" : "#Preprocessing for test files\n\nfrom compression_and_segmentation_utils import *\nfrom fetch_data_utils import *\n\n\nprev_date, prev_month, prev_year = get_dates_with_delta(331)\n\nlon_range = (-166, -134)\nlat_range = (14, 46)\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\ntest_folder = os.path.join(data_root, \"cds_ssh_test_everyday_interval\")\n\nfile_pattern = \"dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc\"\n\nprint(\"testdate before:\", test_folder)\n\ntest_dates, test_files = get_dates_and_files(\n    [int(prev_year)], [int(prev_month)], [int(prev_date)], test_folder, file_pattern\n)\n\n\ntest_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(\n    test_files, test_dates, test=True\n)\n\ntest_subset = subset_arrays_for_test(\n    test_masks,\n    test_adt,\n    test_adt_filtered,\n    test_dates,\n    lon_range,\n    lat_range,\n    plot=True,\n    resolution_deg=0.25,\n    save_folder=test_folder,\n    prev_date = int(prev_date),\n    prev_month= int(prev_month),\n    prev_year= int(prev_year)\n)\n\n",
+  "history_output" : "testdate before: /home/chetana/ML_test/cds_ssh_test_everyday_interval\nFound 1 files for 2022.\n2023-05-16 19:41:00,925 WARNING We assume pixel position of grid is centered for /home/chetana/ML_test/cds_ssh_test_everyday_interval/dt_global_twosat_phy_l4_20220619_vDT2021.nc\n2023-05-16 19:41:00,964 WARNING No filtering above 85.000000 degrees of latitude\n2023-05-16 19:41:07,999 INFO We will apply on step a factor to be coherent with grid : 1.000000\n/home/chetana/anaconda3/envs/ranjan/lib/python3.10/site-packages/numpy/lib/function_base.py:4650: UserWarning: Warning: 'partition' will ignore the 'mask' of the MaskedArray.\n  arr.partition(\n2023-05-16 19:41:08,022 INFO Start computing iso lines\n2023-05-16 19:41:08,042 INFO Start computing iso lines with 343 levels from -0.850000 to 0.860000 ...\n2023-05-16 19:41:11,682 INFO 686 contours close over the bounds\n2023-05-16 19:41:11,682 INFO Finish computing iso lines\n2023-05-16 19:41:12,958 INFO Repair 12597 closed contours and 40 almost closed contours / 97678 contours\nSaved masks to /home/chetana/ML_eddies/cds_ssh_2019_10day_interval/global_pet_masks_with_adt_2022.npz\nSaved mask subset to /home/chetana/ML_test/cds_ssh_test_everyday_interval/subset_pet_masks_with_adt_20220619_lat14N-46N_lon166W-134W.npz\n",
+  "history_begin_time" : 1684266057000,
+  "history_end_time" : 1684266087772,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+}]

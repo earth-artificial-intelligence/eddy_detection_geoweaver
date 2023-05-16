@@ -315,6 +315,9 @@ def lat_range_to_str(lat_range):
     lat_end = f"{lat_end}N" if lat_end >= 0 else f"{abs(lat_end)}S"
     return f"{lat_start}-{lat_end}"
 
+  
+  
+  
 def subset_arrays_for_test(
     masks,
     var,
@@ -323,9 +326,12 @@ def subset_arrays_for_test(
     lon_range,
     lat_range,
     resolution_deg,
+    prev_date, 
+    prev_month,
+    prev_year,
     plot=False,
     ssh_var="adt",
-    save_folder=None,
+    save_folder=None,    
 ):
     """
     Subset the arrays to the given lon_range and lat_range.
@@ -391,10 +397,12 @@ def subset_arrays_for_test(
         )
         lat_str = lat_range_to_str(lat_range)
         lon_str = lon_range_to_str(lon_range)
+        
         save_path = os.path.join(
             save_folder,
-            f"subset_pet_masks_with_{ssh_var}_{year_str}_lat{lat_str}_lon{lon_str}.npz",
+            f"subset_pet_masks_with_{ssh_var}_{prev_year:04d}{prev_month:02d}{prev_date:02d}_lat{lat_str}_lon{lon_str}.npz",
         )
+
         np.savez_compressed(
             save_path,
             masks=mask_subset,

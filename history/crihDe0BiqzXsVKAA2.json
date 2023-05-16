@@ -1,0 +1,161 @@
+[{
+  "history_id" : "g1sejwiswqe",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085464,
+  "history_end_time" : 1684262085464,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "8tnv8jj7y4t",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085466,
+  "history_end_time" : 1684262085466,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "w9axqiqh1gm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085467,
+  "history_end_time" : 1684262085467,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "i9qkfnsucks",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085467,
+  "history_end_time" : 1684262085467,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "p4hmeq0q60y",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085468,
+  "history_end_time" : 1684262085468,
+  "history_notes" : null,
+  "history_process" : "znr9qa",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hwleajwp7z0",
+  "history_input" : "from training_and_plot_utils import *\nfrom model_components import *\nfrom device_config_and_data_loader import *\nfrom tqdm.auto import tqdm\n\n\n# create some aliases\nloss, opt, sched = loss_fn, optimizer, scheduler\n\ncheckpoint_path = os.path.join(tensorboard_dir, \"model_ckpt_{epoch}.pt\")\nearly_stopping = EarlyStopping(\n    patience=10,\n    path=checkpoint_path,\n    min_epochs=30,\n)\n\nprogress_bar = tqdm(range(num_epochs), desc=\"Training: \", unit=\"epoch(s)\")\nfor N in progress_bar:\n    train_loss, val_loss, train_m, val_m = run_epoch(\n        N,\n        model,\n        loss,\n        opt,\n        sched,\n        train_loader,\n        val_loader,\n        train_metrics,\n        val_metrics,\n        writer,\n    )\n\n    # update progress bar\n    train_m_copy = {f\"train_{k}\".lower(): v.cpu().numpy() for k, v in train_m.items()}\n    val_m_copy = {f\"val_{k}\".lower(): v.cpu().numpy() for k, v in val_m.items()}\n    progress_bar.set_postfix(**train_m_copy, **val_m_copy)\n\n    # early stopping when validation loss stops improving\n    early_stopping.path = checkpoint_path.format(epoch=N)\n    early_stopping(val_loss, model)\n    if early_stopping.early_stop:\n        print(\n            f\"Early stopping at epoch {N}\"\n            f\" with validation loss {val_loss:.3f}\"\n            f\" and training loss {train_loss:.3f}\"\n        )\n        break\n\n    # TODO (homework): save checkpoint every 10 epochs\n\n# add hyperparameters and corresponding results to tensorboard HParams table\nhparam_dict = {\n    \"backbone\": model_name,\n    \"num_epochs\": num_epochs,\n    \"batch_size\": batch_size,\n    \"num_classes\": num_classes,\n    \"binary_mask\": binary,\n    \"optimizer\": optimizer.__class__.__name__,\n    \"max_lr\": max_lr,\n    \"loss_function\": loss_fn.__class__.__name__,\n}\nprint(train_m)\nmetrics_dict = {\n    \"train/end_epoch\": N,\n    \"train/loss\": train_loss,\n    \"train/Accuracy\": train_m[\"MulticlassAccuracy\"],\n    \"val/loss\": val_loss,\n    \"val/Accuracy\": val_m[\"MulticlassAccuracy\"],\n}\nadd_hparams(writer, hparam_dict, metrics_dict, epoch_num=N)\nwriter.close()\n\n# save model to tensorboard folder\nmodel_path = os.path.join(tensorboard_dir, f\"model_ckpt_final_full_data.pt\")\n\nprint(model_path)\n\n\nprint(\"train/Accuracy\", train_m[\"MulticlassAccuracy\"])\nprint(\"val/Accuracy\", val_m[\"MulticlassAccuracy\"])\ntorch.save(model.state_dict(), model_path)",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nRead 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 0.39 megapixels across 24 SSH maps\nNumber of pixels that are not eddies: 0.28 megapixels (72.00%)\nNumber of pixels that are anticyclonic eddies: 0.06 megapixels (14.23%)\nNumber of pixels that are cyclonic eddies: 0.05 megapixels (13.77%)\n\n======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-05-16_18-34\n======================================================================\n\nTraining:   0%|                                   | 0/250 [00:00<?, ?epoch(s)/s]\n",
+  "history_begin_time" : 1684262086851,
+  "history_end_time" : 1684262093348,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "ctl45bv7r6z",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085472,
+  "history_end_time" : 1684262085472,
+  "history_notes" : null,
+  "history_process" : "n508da",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "7gvvqfosc39",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085473,
+  "history_end_time" : 1684262085473,
+  "history_notes" : null,
+  "history_process" : "rdt0gy",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ygtc4r6o4eb",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085474,
+  "history_end_time" : 1684262085474,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vmyre16qxjv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085474,
+  "history_end_time" : 1684262085474,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ajrcyvpxp6d",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085475,
+  "history_end_time" : 1684262085475,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "62xzt2p9sx9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085477,
+  "history_end_time" : 1684262085477,
+  "history_notes" : null,
+  "history_process" : "sq4sw3",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "rqao2l22jrt",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085478,
+  "history_end_time" : 1684262085478,
+  "history_notes" : null,
+  "history_process" : "shce7j",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "pgemhje02p7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085478,
+  "history_end_time" : 1684262085478,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "55eof9l3idg",
+  "history_input" : "from dependency import *\nfrom fetch_data_utils import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_test\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\nSomething went wrong while creating folder\n2023-05-16 18:34:50,083 INFO Welcome to the CDS\n2023-05-16 18:34:50,084 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/satellite-sea-level-global\n2023-05-16 18:34:50,207 INFO Request is queued\n2023-05-16 18:34:51,323 INFO Request is running\n2023-05-16 18:34:52,946 INFO Request is failed\n2023-05-16 18:34:52,946 ERROR Message: the request you have submitted is not valid\n2023-05-16 18:34:52,946 ERROR Reason:  Value 'all' not valid for parameter 'variable', valid values are: daily, monthly_mean\n2023-05-16 18:34:52,946 ERROR   Traceback (most recent call last):\n2023-05-16 18:34:52,946 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,946 ERROR       result = handle_locally()\n2023-05-16 18:34:52,946 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,946 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,946 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 383, in handle_exception\n2023-05-16 18:34:52,947 ERROR       raise exception\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,947 ERROR       result = handle_locally()\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,947 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 365, in handle_exception\n2023-05-16 18:34:52,947 ERROR       raise exception\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,947 ERROR       result = handle_locally()\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,947 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 406, in handle_exception\n2023-05-16 18:34:52,948 ERROR       raise exception\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,948 ERROR       result = handle_locally()\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,948 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:34:52,948 ERROR       raise exception\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,948 ERROR       result = handle_locally()\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,948 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:34:52,949 ERROR       raise exception\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,949 ERROR       result = handle_locally()\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,949 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:34:52,949 ERROR       raise exception\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,949 ERROR       result = handle_locally()\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,949 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:34:52,950 ERROR       raise exception\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,950 ERROR       result = handle_locally()\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 210, in <lambda>\n2023-05-16 18:34:52,950 ERROR       lambda: self.handle_request(context, request_data),\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsprocessor.py\", line 46, in handle_request\n2023-05-16 18:34:52,950 ERROR       constraint_type_strict)\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsengines/constraintsengine.py\", line 66, in run\n2023-05-16 18:34:52,950 ERROR       self._check_request_validity(cdsinf, request_params, constraints, constraint_type_strict)\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsengines/constraintsengine.py\", line 162, in _check_request_validity\n2023-05-16 18:34:52,950 ERROR       \"http://copernicus-climate.eu/exc/constraints-bad-params\")\n2023-05-16 18:34:52,950 ERROR   cdsinf.exceptions.BadRequestException: Value 'all' not valid for parameter 'variable', valid values are: daily, monthly_mean\nSomething went wrong while downloading training data\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/55eof9l3idg/download_and_unzip_data.py\", line 49, in <module>\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/posixpath.py\", line 90, in join\n    genericpath._check_arg_types('join', a, *p)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/genericpath.py\", line 152, in _check_arg_types\n    raise TypeError(f'{funcname}() argument must be str, bytes, or '\nTypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'\n",
+  "history_begin_time" : 1684262085511,
+  "history_end_time" : 1684262093327,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Failed"
+},{
+  "history_id" : "mxo9vn5f7aj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085482,
+  "history_end_time" : 1684262085482,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+}]

@@ -48,7 +48,7 @@ def download_test_data():
             'satellite-sea-level-global',
             {
                 'version': 'vDT2021',
-                'variable': 'all',
+                'variable': 'daily',
                 'format': 'zip',
                 'year': ['2019'],
                 'month': [
@@ -87,7 +87,7 @@ def download_test_date(year, month, day):
             'satellite-sea-level-global',
             {
                 'version': 'vDT2021',
-                'variable': 'all',
+                'variable': 'daily',
                 'format': 'zip',
                 'year': [str(year)],
                 'month': [str(month)],

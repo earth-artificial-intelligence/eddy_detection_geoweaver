@@ -1,6 +1,6 @@
 from matplotlib.animation import ArtistAnimation
-from model_utils import *
-from set_summary_writer import *
+from model_components import *
+from training_and_plot_utils import *
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.load_state_dict(torch.load("/home/chetana/tensorboard/2023-03-15_03-26/model_ckpt_68.pt"))
@@ -55,7 +55,7 @@ thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)
 contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 img = np.zeros(p.shape, np.uint8)
 cv2.drawContours(img, contours, -1, (255, 255, 255), 1)
-fileName = os.path.join("/home/chetana/plots/","contours.png")
+fileName = os.path.join("/home/chetana/plots/validation/","contours.png")
 cv2.imwrite(fileName, img)
 plt.imshow(img, cmap="gray")
 plt.axis("off")
@@ -66,3 +66,4 @@ for cnt in contours:
     area += cv2.contourArea(cnt)
 area /= len(contours)
 print(f"Average contour area: {area:.2f} sq. pixels")
+

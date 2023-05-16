@@ -3,7 +3,6 @@
 from compression_and_segmentation_utils import *
 from fetch_data_utils import *
 
-print("process is here")
 
 prev_date, prev_month, prev_year = get_dates_with_delta(331)
 
@@ -27,7 +26,7 @@ test_adt, test_adt_filtered, test_masks = generate_masks_in_parallel(
     test_files, test_dates, test=True
 )
 
-test_subset = subset_arrays(
+test_subset = subset_arrays_for_test(
     test_masks,
     test_adt,
     test_adt_filtered,
@@ -37,5 +36,9 @@ test_subset = subset_arrays(
     plot=True,
     resolution_deg=0.25,
     save_folder=test_folder,
+    prev_date = int(prev_date),
+    prev_month= int(prev_month),
+    prev_year= int(prev_year)
 )
+
 

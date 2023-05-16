@@ -1,4 +1,144 @@
 [{
+  "history_id" : "ttwu915o14u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684268093747,
+  "history_end_time" : 1684268093747,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "wwbn33egn5x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684267389200,
+  "history_end_time" : 1684267389200,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "m7ckljxzsbp",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\nval_folder = os.path.join(data_root, \"\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1684266089546,
+  "history_end_time" : 1684266092382,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "qpaijikckwu",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\nval_folder = os.path.join(data_root, \"\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1684265889568,
+  "history_end_time" : 1684265892368,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "2fquaci934p",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\nval_folder = os.path.join(data_root, \"\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "",
+  "history_begin_time" : 1684265752627,
+  "history_end_time" : 1684265756889,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "7c9kao3x848",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\nval_folder = os.path.join(data_root, \"\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1684265686350,
+  "history_end_time" : 1684265689303,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "a18gy5uwm8i",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264569980,
+  "history_end_time" : 1684264569980,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "gty7nydaz4y",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1684263440327,
+  "history_end_time" : 1684263443158,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "607rsjmfxgi",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1684263262865,
+  "history_end_time" : 1684263265801,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "5kgzthtts3m",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1684263099431,
+  "history_end_time" : 1684263102268,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "c4hvkj1sgu8",
+  "history_input" : "# seting paths and classes for testfiles\n\nfrom link_npz_files import *\n\ndata_root = os.path.join(os.path.expanduser(\"~\"), \"ML_test\")\n\nval_folder = os.path.join(data_root, \"cds_ssh_2019_10day_interval\")\n\nval_file = os.path.join(val_folder, \"subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz\")\n\nbinary = False\nnum_classes = 2 if binary else 3\n\n",
+  "history_output" : "Running",
+  "history_begin_time" : 1684262753521,
+  "history_end_time" : 1684262756357,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "t4bmr8shlfu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262105025,
+  "history_end_time" : 1684262105025,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "i9qkfnsucks",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262085467,
+  "history_end_time" : 1684262085467,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "qmo9dfc6c5x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684261824545,
+  "history_end_time" : 1684261974097,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
   "history_id" : "n12bzrhqm6u",
   "history_input" : "No code saved",
   "history_output" : "Skipped",
@@ -384,6 +524,16 @@
   "history_output" : null,
   "history_begin_time" : null,
   "history_end_time" : 1680029661157,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4vstjimif83",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1684264550366,
   "history_notes" : null,
   "history_process" : "wn1y5m",
   "host_id" : "c2lqcn",
