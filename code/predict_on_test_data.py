@@ -1,9 +1,26 @@
 #predict eddies on testdataset
 
 from matplotlib.animation import ArtistAnimation
-from model_utils import *
-from set_summary_writer import *
+from model_components import *
+from training_and_plot_utils  import *
+from device_config_and_data_loader import *
+import os
+from fetch_data_utils import *
 
+prev_date, prev_month, prev_year = get_dates_with_delta(331)
+
+data_root = os.path.join(os.path.expanduser("~"), "ML_test")
+
+val_folder = os.path.join(data_root, "cds_ssh_test_everyday_interval")
+
+prev_date = int(prev_date)
+prev_month = int(prev_month)
+prev_year = int(prev_year)
+
+val_file = os.path.join(val_folder, f"subset_pet_masks_with_adt_{prev_year:04d}{prev_month:02d}{prev_date:02d}_lat14N-46N_lon166W-134W.npz")
+
+binary = False
+num_classes = 2 if binary else 3
 
 val_loader, _ = get_eddy_dataloader(
     val_file, binary=binary, batch_size=batch_size, shuffle=False
@@ -63,7 +80,7 @@ thr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)
 contours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 img = np.zeros(p.shape, np.uint8)
 cv2.drawContours(img, contours, -1, (255, 255, 255), 1)
-fileName = os.path.join("/home/chetana/plots/","contours.png")
+fileName = os.path.join("/home/chetana/plots/test/",f"{prev_year:04d}{prev_month:02d}{prev_date:02d}_contours.png")
 cv2.imwrite(fileName, img)
 plt.imshow(img, cmap="gray")
 plt.axis("off")
@@ -78,4 +95,5 @@ area /= len(contours)
       
       
 print(f"Average contour area: {area:.2f} sq. pixels")
+
 

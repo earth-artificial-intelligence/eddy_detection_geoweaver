@@ -1,4 +1,174 @@
 [{
+  "history_id" : "s69hn41w7pr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684268295710,
+  "history_end_time" : 1684268295710,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "c8ctagpk43a",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684268093744,
+  "history_end_time" : 1684268093744,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "0862dqxdf6p",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684267389198,
+  "history_end_time" : 1684267389198,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "m9bzjqawy34",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684266056689,
+  "history_end_time" : 1684266056689,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "dprh61qrlfz",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684265995100,
+  "history_end_time" : 1684265995100,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "7exij0v4eys",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684265857018,
+  "history_end_time" : 1684265857018,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ioe38k3n2dy",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684265720539,
+  "history_end_time" : 1684265720539,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vuzuqx8oblg",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684265684580,
+  "history_end_time" : 1684265684580,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "t8e8q7p937j",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264569982,
+  "history_end_time" : 1684264569982,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "dcbawhpr856",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544473,
+  "history_end_time" : 1684264550374,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "40xqca2uq7l",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684263382636,
+  "history_end_time" : 1684263382636,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "axi5tthrfrm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684263250324,
+  "history_end_time" : 1684263250324,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "x4b08aj1ub5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684263086336,
+  "history_end_time" : 1684263086336,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "g657gq0lo2w",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684262746508,
+  "history_end_time" : 1684262746508,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "kbo8w9vvlgi",
+  "history_input" : "from dependency import *\nfrom fetch_data_utils import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_test\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\nSomething went wrong while creating folder\n2023-05-16 18:35:09,904 INFO Welcome to the CDS\n2023-05-16 18:35:09,905 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/satellite-sea-level-global\n2023-05-16 18:35:10,025 INFO Request is queued\n2023-05-16 18:35:11,146 INFO Request is failed\n2023-05-16 18:35:11,146 ERROR Message: the request you have submitted is not valid\n2023-05-16 18:35:11,146 ERROR Reason:  Value 'all' not valid for parameter 'variable', valid values are: daily, monthly_mean\n2023-05-16 18:35:11,146 ERROR   Traceback (most recent call last):\n2023-05-16 18:35:11,146 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:35:11,146 ERROR       result = handle_locally()\n2023-05-16 18:35:11,147 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:35:11,147 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:35:11,147 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 383, in handle_exception\n2023-05-16 18:35:11,147 ERROR       raise exception\n2023-05-16 18:35:11,147 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:35:11,147 ERROR       result = handle_locally()\n2023-05-16 18:35:11,147 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:35:11,147 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:35:11,147 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 365, in handle_exception\n2023-05-16 18:35:11,147 ERROR       raise exception\n2023-05-16 18:35:11,147 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:35:11,147 ERROR       result = handle_locally()\n2023-05-16 18:35:11,148 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:35:11,148 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:35:11,148 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 406, in handle_exception\n2023-05-16 18:35:11,148 ERROR       raise exception\n2023-05-16 18:35:11,148 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:35:11,148 ERROR       result = handle_locally()\n2023-05-16 18:35:11,148 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:35:11,148 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:35:11,148 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:35:11,148 ERROR       raise exception\n2023-05-16 18:35:11,148 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:35:11,148 ERROR       result = handle_locally()\n2023-05-16 18:35:11,149 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:35:11,149 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:35:11,149 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:35:11,149 ERROR       raise exception\n2023-05-16 18:35:11,149 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:35:11,149 ERROR       result = handle_locally()\n2023-05-16 18:35:11,149 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:35:11,149 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:35:11,149 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:35:11,149 ERROR       raise exception\n2023-05-16 18:35:11,149 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:35:11,149 ERROR       result = handle_locally()\n2023-05-16 18:35:11,150 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:35:11,150 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:35:11,150 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:35:11,150 ERROR       raise exception\n2023-05-16 18:35:11,150 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:35:11,150 ERROR       result = handle_locally()\n2023-05-16 18:35:11,150 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 210, in <lambda>\n2023-05-16 18:35:11,150 ERROR       lambda: self.handle_request(context, request_data),\n2023-05-16 18:35:11,150 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsprocessor.py\", line 46, in handle_request\n2023-05-16 18:35:11,150 ERROR       constraint_type_strict)\n2023-05-16 18:35:11,150 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsengines/constraintsengine.py\", line 66, in run\n2023-05-16 18:35:11,150 ERROR       self._check_request_validity(cdsinf, request_params, constraints, constraint_type_strict)\n2023-05-16 18:35:11,150 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsengines/constraintsengine.py\", line 162, in _check_request_validity\n2023-05-16 18:35:11,151 ERROR       \"http://copernicus-climate.eu/exc/constraints-bad-params\")\n2023-05-16 18:35:11,151 ERROR   cdsinf.exceptions.BadRequestException: Value 'all' not valid for parameter 'variable', valid values are: daily, monthly_mean\nSomething went wrong while downloading training data\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/kbo8w9vvlgi/download_and_unzip_data.py\", line 49, in <module>\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/posixpath.py\", line 90, in join\n    genericpath._check_arg_types('join', a, *p)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/genericpath.py\", line 152, in _check_arg_types\n    raise TypeError(f'{funcname}() argument must be str, bytes, or '\nTypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'\n",
+  "history_begin_time" : 1684262105400,
+  "history_end_time" : 1684262111658,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Failed"
+},{
+  "history_id" : "55eof9l3idg",
+  "history_input" : "from dependency import *\nfrom fetch_data_utils import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_test\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\nSomething went wrong while creating folder\n2023-05-16 18:34:50,083 INFO Welcome to the CDS\n2023-05-16 18:34:50,084 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/satellite-sea-level-global\n2023-05-16 18:34:50,207 INFO Request is queued\n2023-05-16 18:34:51,323 INFO Request is running\n2023-05-16 18:34:52,946 INFO Request is failed\n2023-05-16 18:34:52,946 ERROR Message: the request you have submitted is not valid\n2023-05-16 18:34:52,946 ERROR Reason:  Value 'all' not valid for parameter 'variable', valid values are: daily, monthly_mean\n2023-05-16 18:34:52,946 ERROR   Traceback (most recent call last):\n2023-05-16 18:34:52,946 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,946 ERROR       result = handle_locally()\n2023-05-16 18:34:52,946 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,946 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,946 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 383, in handle_exception\n2023-05-16 18:34:52,947 ERROR       raise exception\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,947 ERROR       result = handle_locally()\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,947 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 365, in handle_exception\n2023-05-16 18:34:52,947 ERROR       raise exception\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,947 ERROR       result = handle_locally()\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,947 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,947 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 406, in handle_exception\n2023-05-16 18:34:52,948 ERROR       raise exception\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,948 ERROR       result = handle_locally()\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,948 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:34:52,948 ERROR       raise exception\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,948 ERROR       result = handle_locally()\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,948 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,948 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:34:52,949 ERROR       raise exception\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,949 ERROR       result = handle_locally()\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,949 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:34:52,949 ERROR       raise exception\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,949 ERROR       result = handle_locally()\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:34:52,949 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:34:52,949 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:34:52,950 ERROR       raise exception\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:34:52,950 ERROR       result = handle_locally()\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 210, in <lambda>\n2023-05-16 18:34:52,950 ERROR       lambda: self.handle_request(context, request_data),\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsprocessor.py\", line 46, in handle_request\n2023-05-16 18:34:52,950 ERROR       constraint_type_strict)\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsengines/constraintsengine.py\", line 66, in run\n2023-05-16 18:34:52,950 ERROR       self._check_request_validity(cdsinf, request_params, constraints, constraint_type_strict)\n2023-05-16 18:34:52,950 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsengines/constraintsengine.py\", line 162, in _check_request_validity\n2023-05-16 18:34:52,950 ERROR       \"http://copernicus-climate.eu/exc/constraints-bad-params\")\n2023-05-16 18:34:52,950 ERROR   cdsinf.exceptions.BadRequestException: Value 'all' not valid for parameter 'variable', valid values are: daily, monthly_mean\nSomething went wrong while downloading training data\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/55eof9l3idg/download_and_unzip_data.py\", line 49, in <module>\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/posixpath.py\", line 90, in join\n    genericpath._check_arg_types('join', a, *p)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/genericpath.py\", line 152, in _check_arg_types\n    raise TypeError(f'{funcname}() argument must be str, bytes, or '\nTypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'\n",
+  "history_begin_time" : 1684262085511,
+  "history_end_time" : 1684262093327,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ascv02txczf",
+  "history_input" : "from dependency import *\nfrom fetch_data_utils import *\n\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nprint(current_working_dir)\n\n# Directory names\nroot_dir_name = \"ML_test\"\ntrain_dir_name = \"cds_ssh_1998-2018_10day_interval\"\ntest_dir_name = \"cds_ssh_2019_10day_interval\"\n\n# Build dir paths\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntrain_path = os.path.join(root_path, train_dir_name)\ntest_path= os.path.join(root_path, test_dir_name)\n\n# Check if dir exists\nis_root_dir_exists = os.path.exists(root_path)\nis_train_dir_exists = os.path.exists(train_path)\nis_test_dir_exists = os.path.exists(test_path)\n\n\ndef create_directory(directory_name):\n    try:\n        os.mkdir(directory_name)\n        logger.info(\"Successfully created folder\")\n    except:\n        logger.error(\"Something went wrong while creating folder\")\n\n\n\nif is_root_dir_exists != True:\n    print(root_path)\n    create_directory(root_path)\n    print(\"created:\",root_path)\n    create_directory(train_path)\n    create_directory(test_path)\n    train_file, test_file = download_data()\n\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n\nif is_root_dir_exists and is_train_dir_exists != True:\n    create_directory(\"cds_ssh_1998-2018_10day_interval\")\n    train_file = download_train_data()\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n\nif  is_root_dir_exists and is_test_dir_exists != True:\n    create_directory(\"cds_ssh_2019_10day_interval\")\n    test_file = download_test_data()\n    unzip_file( os.path.join(current_working_dir,test_file), test_path)\n\n",
+  "history_output" : "/home/chetana\nSuccessfully created folder\n2023-05-16 18:30:45,573 INFO Welcome to the CDS\n2023-05-16 18:30:45,573 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/satellite-sea-level-global\n2023-05-16 18:30:45,719 INFO Request is queued\n2023-05-16 18:30:46,836 INFO Request is failed\n2023-05-16 18:30:46,836 ERROR Message: the request you have submitted is not valid\n2023-05-16 18:30:46,836 ERROR Reason:  Value 'all' not valid for parameter 'variable', valid values are: daily, monthly_mean\n2023-05-16 18:30:46,836 ERROR   Traceback (most recent call last):\n2023-05-16 18:30:46,836 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:30:46,836 ERROR       result = handle_locally()\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:30:46,837 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 383, in handle_exception\n2023-05-16 18:30:46,837 ERROR       raise exception\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:30:46,837 ERROR       result = handle_locally()\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:30:46,837 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 365, in handle_exception\n2023-05-16 18:30:46,837 ERROR       raise exception\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:30:46,837 ERROR       result = handle_locally()\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:30:46,837 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 406, in handle_exception\n2023-05-16 18:30:46,837 ERROR       raise exception\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:30:46,837 ERROR       result = handle_locally()\n2023-05-16 18:30:46,837 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:30:46,837 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:30:46,838 ERROR       raise exception\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:30:46,838 ERROR       result = handle_locally()\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:30:46,838 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:30:46,838 ERROR       raise exception\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:30:46,838 ERROR       result = handle_locally()\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:30:46,838 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:30:46,838 ERROR       raise exception\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:30:46,838 ERROR       result = handle_locally()\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 252, in <lambda>\n2023-05-16 18:30:46,838 ERROR       lambda: self.handle_exception(context, e),\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 132, in handle_exception\n2023-05-16 18:30:46,838 ERROR       raise exception\n2023-05-16 18:30:46,838 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 163, in _consume\n2023-05-16 18:30:46,838 ERROR       result = handle_locally()\n2023-05-16 18:30:46,839 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/dispatcher.py\", line 210, in <lambda>\n2023-05-16 18:30:46,839 ERROR       lambda: self.handle_request(context, request_data),\n2023-05-16 18:30:46,839 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsprocessor.py\", line 46, in handle_request\n2023-05-16 18:30:46,839 ERROR       constraint_type_strict)\n2023-05-16 18:30:46,839 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsengines/constraintsengine.py\", line 66, in run\n2023-05-16 18:30:46,839 ERROR       self._check_request_validity(cdsinf, request_params, constraints, constraint_type_strict)\n2023-05-16 18:30:46,839 ERROR     File \"/opt/cds/cdsinf/python/lib/cdsinf/runner/constraintsengines/constraintsengine.py\", line 162, in _check_request_validity\n2023-05-16 18:30:46,839 ERROR       \"http://copernicus-climate.eu/exc/constraints-bad-params\")\n2023-05-16 18:30:46,839 ERROR   cdsinf.exceptions.BadRequestException: Value 'all' not valid for parameter 'variable', valid values are: daily, monthly_mean\nSomething went wrong while downloading training data\nTraceback (most recent call last):\n  File \"/home/chetana/gw-workspace/ascv02txczf/download_and_unzip_data.py\", line 49, in <module>\n    unzip_file( os.path.join(current_working_dir,train_file), train_path)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/posixpath.py\", line 90, in join\n    genericpath._check_arg_types('join', a, *p)\n  File \"/home/chetana/anaconda3/envs/ranjan/lib/python3.10/genericpath.py\", line 152, in _check_arg_types\n    raise TypeError(f'{funcname}() argument must be str, bytes, or '\nTypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'\n",
+  "history_begin_time" : 1684261825517,
+  "history_end_time" : 1684261974118,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
   "history_id" : "5k2hjju9svj",
   "history_input" : "No code saved",
   "history_output" : "Skipped",

@@ -1,0 +1,161 @@
+[{
+  "history_id" : "4blsianrq22",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544432,
+  "history_end_time" : 1684264549354,
+  "history_notes" : null,
+  "history_process" : "0ajbp0",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vpu7mejrmw6",
+  "history_input" : "from matplotlib.animation import ArtistAnimation\nfrom model_components import *\nfrom training_and_plot_utils import *\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel.load_state_dict(torch.load(\"/home/chetana/tensorboard/2023-03-15_03-26/model_ckpt_68.pt\"))\nmodel.eval()\nwith torch.no_grad():\n    fig, ax = plt.subplots(1, 3, figsize=(25, 10))\n    artists = []\n    # loop through all SSH maps and eddy masks in 2019\n    # and run the model to generate predicted eddy masks\n    for n, (ssh_vars, seg_masks, date_indices) in enumerate(val_loader):\n        ssh_vars = ssh_vars.to(device)\n        seg_masks = seg_masks.to(device)\n        # Run the model to generate predictions\n        preds = model(ssh_vars)\n\n        # For each pixel, EddyNet outputs predictions in probabilities,\n        # so choose the channels (0, 1, or 2) with the highest prob.\n        preds = preds.argmax(dim=1)\n\n        # Loop through all SSH maps, eddy masks, and predicted masks\n        # in this minibatch and generate a video\n        preds = preds.cpu().numpy()\n        seg_masks = seg_masks.cpu().numpy()\n        ssh_vars = ssh_vars.cpu().numpy()\n        date_indices = date_indices.cpu().numpy()\n        for i in range(len(ssh_vars)):\n            date, img, mask, pred = date_indices[i], ssh_vars[i], seg_masks[i], preds[i]\n            img1, title1, img2, title2, img3, title3 = plot_eddies_on_axes(\n                date, img, mask, pred, ax[0], ax[1], ax[2]\n            )\n            artists.append([img1, title1, img2, title2, img3, title3])\n            fig.canvas.draw()\n            fig.canvas.flush_events()\n    animation = ArtistAnimation(fig, artists, interval=200, blit=True)\n    plt.close()\n\nprint(os.path.join(tensorboard_dir, \"val_predictions.gif\"))\nanimation.save(os.path.join(tensorboard_dir, \"val_predictions.gif\"), writer=\"pillow\")\n\n# HTML(animation.to_jshtml())\n\n#plot contour\n\np = preds[0].astype(np.uint8)\n\nprint(f\"Number of anticyclonic eddies: {count_eddies(p, eddy_type='anticyclonic')}\")\nprint(f\"Number of cyclonic eddies: {count_eddies(p, eddy_type='cyclonic')}\")\nprint(f\"Number of both eddies: {count_eddies(p, eddy_type='both')}\")\n\n# draw contours on the image\nthr = cv2.threshold(p, 0, 1, cv2.THRESH_BINARY)[1].astype(np.uint8)\ncontours, hierarchy = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\nimg = np.zeros(p.shape, np.uint8)\ncv2.drawContours(img, contours, -1, (255, 255, 255), 1)\nfileName = os.path.join(\"/home/chetana/plots/\",\"contours.png\")\ncv2.imwrite(fileName, img)\nplt.imshow(img, cmap=\"gray\")\nplt.axis(\"off\")\n\n# get average contour area\narea = 0\nfor cnt in contours:\n    area += cv2.contourArea(cnt)\narea /= len(contours)\nprint(f\"Average contour area: {area:.2f} sq. pixels\")\n",
+  "history_output" : "Read 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nRead 24 samples from /home/chetana/ML_eddie/cds_ssh_1998-2018_10day_interval/subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz.\nRead 12 samples from /home/chetana/ML_eddie/cds_ssh_2019_10day_interval/subset_pet_masks_with_adt_2019_lat14N-46N_lon166W-134W.npz.\nTotal number of pixels in training set: 0.39 megapixels across 24 SSH maps\nNumber of pixels that are not eddies: 0.28 megapixels (72.00%)\nNumber of pixels that are anticyclonic eddies: 0.06 megapixels (14.23%)\nNumber of pixels that are cyclonic eddies: 0.05 megapixels (13.77%)\n\n======================================================================\nWriting Tensorboard logs to /home/chetana/tensorboard/2023-05-16_19-15\n======================================================================\n/home/chetana/tensorboard/2023-05-16_19-15/val_predictions.gif\nNumber of anticyclonic eddies: 104\nNumber of cyclonic eddies: 59\nNumber of both eddies: 119\nAverage contour area: 31.92 sq. pixels\n",
+  "history_begin_time" : 1684264545434,
+  "history_end_time" : 1684264567000,
+  "history_notes" : null,
+  "history_process" : "tcr60i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "c74zhy316pi",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1684264550363,
+  "history_notes" : null,
+  "history_process" : "ejp9sg",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4vstjimif83",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1684264550366,
+  "history_notes" : null,
+  "history_process" : "wn1y5m",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "a9rldecfuoy",
+  "history_input" : "# Scripts download and unzip test files\n\n# Scripts download and unzip test files\n\nimport datetime as datetime\nimport os\nfrom fetch_data_utils import *\n\n\nprev_date, prev_month, prev_year = get_dates_with_delta(331)\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nroot_dir_name = \"ML_test\"\ntest_data_store = \"cds_ssh_test_everyday_interval\"\n\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntest_path = os.path.join(root_path, test_data_store)\n\ncreate_directory(root_path)\ncreate_directory(test_path)\n\ntest_zip_file = download_test_date(prev_year, prev_month, prev_date)\nunzip_file(os.path.join(current_working_dir, test_zip_file), test_path)\n\n\n\n",
+  "history_output" : "Something went wrong while creating folder\nSomething went wrong while creating folder\n2023-05-16 19:15:50,097 INFO Welcome to the CDS\n2023-05-16 19:15:50,097 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/satellite-sea-level-global\n2023-05-16 19:15:50,386 INFO Request is completed\n2023-05-16 19:15:50,386 INFO Downloading https://download-0019.copernicus-climate.eu/cache-compute-0019/cache/data7/dataset-satellite-sea-level-global-57fd4559-f8d7-48f8-8d23-54efef0d639e.zip to 2022_06_19_test.zip (9.3M)\n\n  0%|                                               | 0.00/9.28M [00:00<?, ?B/s]\n  0%|                                      | 8.00k/9.28M [00:00<02:06, 76.5kB/s]\n  0%|▏                                      | 34.0k/9.28M [00:00<00:54, 177kB/s]\n  1%|▎                                      | 77.0k/9.28M [00:00<00:34, 281kB/s]\n  2%|▊                                       | 182k/9.28M [00:00<00:16, 562kB/s]\n  3%|█▎                                      | 301k/9.28M [00:00<00:12, 764kB/s]\n  4%|█▊                                      | 420k/9.28M [00:00<00:10, 885kB/s]\n  6%|██▎                                     | 548k/9.28M [00:00<00:09, 990kB/s]\n  7%|██▊                                    | 684k/9.28M [00:00<00:08, 1.08MB/s]\n  8%|███▎                                   | 804k/9.28M [00:00<00:08, 1.10MB/s]\n 10%|███▊                                   | 940k/9.28M [00:01<00:07, 1.15MB/s]\n 11%|████▎                                 | 1.04M/9.28M [00:01<00:07, 1.17MB/s]\n 13%|████▊                                 | 1.17M/9.28M [00:01<00:07, 1.18MB/s]\n 14%|█████▎                                | 1.29M/9.28M [00:01<00:07, 1.19MB/s]\n 15%|█████▊                                | 1.43M/9.28M [00:01<00:06, 1.22MB/s]\n 17%|██████▎                               | 1.55M/9.28M [00:01<00:06, 1.21MB/s]\n 18%|██████▉                               | 1.69M/9.28M [00:01<00:06, 1.24MB/s]\n 20%|███████▍                              | 1.81M/9.28M [00:01<00:06, 1.23MB/s]\n 21%|███████▉                              | 1.94M/9.28M [00:01<00:06, 1.24MB/s]\n 22%|████████▌                             | 2.08M/9.28M [00:02<00:06, 1.26MB/s]\n 24%|█████████                             | 2.21M/9.28M [00:02<00:05, 1.27MB/s]\n 25%|█████████▌                            | 2.34M/9.28M [00:02<00:05, 1.27MB/s]\n 27%|██████████▏                           | 2.47M/9.28M [00:02<00:05, 1.28MB/s]\n 28%|██████████▋                           | 2.61M/9.28M [00:02<00:05, 1.28MB/s]\n 30%|███████████▎                          | 2.75M/9.28M [00:02<00:05, 1.30MB/s]\n 31%|███████████▊                          | 2.88M/9.28M [00:02<00:05, 1.30MB/s]\n 33%|████████████▍                         | 3.02M/9.28M [00:02<00:04, 1.32MB/s]\n 34%|████████████▉                         | 3.16M/9.28M [00:02<00:04, 1.33MB/s]\n 36%|█████████████▍                        | 3.29M/9.28M [00:03<00:04, 1.31MB/s]\n 37%|██████████████                        | 3.44M/9.28M [00:03<00:04, 1.33MB/s]\n 39%|██████████████▋                       | 3.58M/9.28M [00:03<00:04, 1.34MB/s]\n 40%|███████████████▏                      | 3.72M/9.28M [00:03<00:04, 1.34MB/s]\n 42%|███████████████▊                      | 3.86M/9.28M [00:03<00:04, 1.35MB/s]\n 43%|████████████████▍                     | 4.01M/9.28M [00:03<00:04, 1.37MB/s]\n 45%|████████████████▉                     | 4.15M/9.28M [00:03<00:03, 1.37MB/s]\n 46%|█████████████████▌                    | 4.29M/9.28M [00:03<00:03, 1.39MB/s]\n 48%|██████████████████▏                   | 4.44M/9.28M [00:03<00:03, 1.38MB/s]\n 49%|██████████████████▊                   | 4.58M/9.28M [00:04<00:03, 1.40MB/s]\n 51%|███████████████████▎                  | 4.72M/9.28M [00:04<00:03, 1.39MB/s]\n 53%|███████████████████▉                  | 4.87M/9.28M [00:04<00:03, 1.40MB/s]\n 54%|████████████████████▌                 | 5.03M/9.28M [00:04<00:03, 1.43MB/s]\n 56%|█████████████████████▏                | 5.18M/9.28M [00:04<00:03, 1.43MB/s]\n 58%|█████████████████████▊                | 5.33M/9.28M [00:04<00:02, 1.45MB/s]\n 59%|██████████████████████▍               | 5.49M/9.28M [00:04<00:02, 1.47MB/s]\n 61%|███████████████████████▏              | 5.65M/9.28M [00:04<00:02, 1.50MB/s]\n 63%|███████████████████████▊              | 5.81M/9.28M [00:04<00:02, 1.50MB/s]\n 64%|████████████████████████▌             | 5.98M/9.28M [00:04<00:02, 1.55MB/s]\n 66%|█████████████████████████▏            | 6.15M/9.28M [00:05<00:02, 1.56MB/s]\n 68%|█████████████████████████▉            | 6.33M/9.28M [00:05<00:01, 1.61MB/s]\n 70%|██████████████████████████▌           | 6.50M/9.28M [00:05<00:01, 1.63MB/s]\n 72%|███████████████████████████▎          | 6.68M/9.28M [00:05<00:01, 1.66MB/s]\n 74%|████████████████████████████          | 6.87M/9.28M [00:05<00:01, 1.71MB/s]\n 76%|████████████████████████████▉         | 7.05M/9.28M [00:05<00:01, 1.74MB/s]\n 78%|█████████████████████████████▋        | 7.25M/9.28M [00:05<00:01, 1.78MB/s]\n 80%|██████████████████████████████▍       | 7.44M/9.28M [00:05<00:01, 1.81MB/s]\n 82%|███████████████████████████████▎      | 7.65M/9.28M [00:05<00:00, 1.86MB/s]\n 85%|████████████████████████████████▏     | 7.86M/9.28M [00:06<00:00, 1.91MB/s]\n 87%|█████████████████████████████████     | 8.07M/9.28M [00:06<00:00, 1.95MB/s]\n 89%|█████████████████████████████████▉    | 8.29M/9.28M [00:06<00:00, 2.00MB/s]\n 92%|██████████████████████████████████▊   | 8.51M/9.28M [00:06<00:00, 2.03MB/s]\n 94%|███████████████████████████████████▊  | 8.74M/9.28M [00:06<00:00, 2.10MB/s]\n 97%|████████████████████████████████████▊ | 8.97M/9.28M [00:06<00:00, 2.15MB/s]\n 99%|█████████████████████████████████████▊| 9.22M/9.28M [00:06<00:00, 2.21MB/s]\n                                                                                \n2023-05-16 19:15:57,690 INFO Download rate 1.3M/s\n",
+  "history_begin_time" : 1684264545266,
+  "history_end_time" : 1684264558192,
+  "history_notes" : null,
+  "history_process" : "znr9qa",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
+  "history_id" : "tc89c66qpga",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544448,
+  "history_end_time" : 1684264550371,
+  "history_notes" : null,
+  "history_process" : "2x5xrm",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "2tu66red3rm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544452,
+  "history_end_time" : 1684264550372,
+  "history_notes" : null,
+  "history_process" : "n508da",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qk6o9fc4v1w",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544454,
+  "history_end_time" : 1684264550372,
+  "history_notes" : null,
+  "history_process" : "rdt0gy",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qwoaru3tef4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544457,
+  "history_end_time" : 1684264550372,
+  "history_notes" : null,
+  "history_process" : "xdwq7e",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5k12r7e44z5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544460,
+  "history_end_time" : 1684264550372,
+  "history_notes" : null,
+  "history_process" : "5yfzer",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "26fedrhkzv7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544464,
+  "history_end_time" : 1684264550373,
+  "history_notes" : null,
+  "history_process" : "fsy61n",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f9l01p05rqf",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544468,
+  "history_end_time" : 1684264550373,
+  "history_notes" : null,
+  "history_process" : "sq4sw3",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7haq6grsnet",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544470,
+  "history_end_time" : 1684264550373,
+  "history_notes" : null,
+  "history_process" : "shce7j",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "dcbawhpr856",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544473,
+  "history_end_time" : 1684264550374,
+  "history_notes" : null,
+  "history_process" : "dhjb5i",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "yi3c92pbw19",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1684264550374,
+  "history_notes" : null,
+  "history_process" : "f6bwfv",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "at7q753pmhx",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1684264544479,
+  "history_end_time" : 1684264550376,
+  "history_notes" : null,
+  "history_process" : "g7a3zf",
+  "host_id" : "c2lqcn",
+  "indicator" : "Stopped"
+}]
