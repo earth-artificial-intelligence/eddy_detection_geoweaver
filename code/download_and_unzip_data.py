@@ -7,7 +7,7 @@ current_working_dir = os.getcwd()
 print(current_working_dir)
 
 # Directory names
-root_dir_name = "ML_test"
+root_dir_name = root_path
 train_dir_name = "cds_ssh_1998-2018_10day_interval"
 test_dir_name = "cds_ssh_2019_10day_interval"
 

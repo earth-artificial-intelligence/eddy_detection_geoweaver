@@ -2,6 +2,7 @@
 
 from compression_and_segmentation_utils import *
 from fetch_data_utils import *
+from dependency import *
 
 
 prev_date, prev_month, prev_year = get_dates_with_delta(331)
@@ -9,13 +10,13 @@ prev_date, prev_month, prev_year = get_dates_with_delta(331)
 lon_range = (-166, -134)
 lat_range = (14, 46)
 
-data_root = os.path.join(os.path.expanduser("~"), "ML_test")
+data_root = os.path.join(os.path.expanduser("~"), root_path)
 
 test_folder = os.path.join(data_root, "cds_ssh_test_everyday_interval")
 
 file_pattern = "dt_global_twosat_phy_l4_{year:04d}{month:02d}{day:02d}_vDT2021.nc"
 
-print("testdate before:", test_folder)
+#
 
 test_dates, test_files = get_dates_and_files(
     [int(prev_year)], [int(prev_month)], [int(prev_date)], test_folder, file_pattern

@@ -6,10 +6,11 @@ from training_and_plot_utils  import *
 from device_config_and_data_loader import *
 import os
 from fetch_data_utils import *
+from dependency import *
 
 prev_date, prev_month, prev_year = get_dates_with_delta(331)
 
-data_root = os.path.join(os.path.expanduser("~"), "ML_test")
+data_root = os.path.join(os.path.expanduser("~"), root_path)
 
 val_folder = os.path.join(data_root, "cds_ssh_test_everyday_interval")
 

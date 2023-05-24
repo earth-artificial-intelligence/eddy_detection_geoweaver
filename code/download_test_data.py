@@ -5,13 +5,14 @@
 import datetime as datetime
 import os
 from fetch_data_utils import *
+from dependency import *
 
 
 prev_date, prev_month, prev_year = get_dates_with_delta(331)
 
 os.chdir(os.path.expanduser("~"))
 current_working_dir = os.getcwd()
-root_dir_name = "ML_test"
+root_dir_name = root_path
 test_data_store = "cds_ssh_test_everyday_interval"
 
 root_path = os.path.join(current_working_dir, root_dir_name)

@@ -4,11 +4,11 @@ import numpy as np
 from dependency import os
 from device_config_and_data_loader import *
 from convert_to_pytorch_data_loader import *
-
+from dependency import *
 
 # link npz files
 
-data_root = os.path.join(os.path.expanduser("~"), "ML_eddie")
+data_root = os.path.join(os.path.expanduser("~"), root_path)
 train_folder = os.path.join(data_root, "cds_ssh_1998-2018_10day_interval")
 val_folder = os.path.join(data_root, "cds_ssh_2019_10day_interval")
 train_file = os.path.join(train_folder, "subset_pet_masks_with_adt_1998-1999_lat14N-46N_lon166W-134W.npz")
