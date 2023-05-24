@@ -1,4 +1,14 @@
 [{
+  "history_id" : "jfi7fzrquvb",
+  "history_input" : "# Scripts download and unzip test files\n\n# Scripts download and unzip test files\n\nimport datetime as datetime\nimport os\nfrom fetch_data_utils import *\nfrom dependency import *\n\n\nprev_date, prev_month, prev_year = get_dates_with_delta(331)\n\nos.chdir(os.path.expanduser(\"~\"))\ncurrent_working_dir = os.getcwd()\nroot_dir_name = root_path\ntest_data_store = \"cds_ssh_test_everyday_interval\"\n\nroot_path = os.path.join(current_working_dir, root_dir_name)\ntest_path = os.path.join(root_path, test_data_store)\n\ncreate_directory(root_path)\ncreate_directory(test_path)\n\ntest_zip_file = download_test_date(prev_year, prev_month, prev_date)\nunzip_file(os.path.join(current_working_dir, test_zip_file), test_path)\n\n\n\n",
+  "history_output" : "Something went wrong while creating folder\nSomething went wrong while creating folder\n2023-05-24 01:16:37,519 INFO Welcome to the CDS\n2023-05-24 01:16:37,520 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/satellite-sea-level-global\n2023-05-24 01:16:37,681 INFO Request is queued\n2023-05-24 01:16:38,798 INFO Request is running\n2023-05-24 01:16:46,294 INFO Request is completed\n2023-05-24 01:16:46,295 INFO Downloading https://download-0001-clone.copernicus-climate.eu/cache-compute-0001/cache/data2/dataset-satellite-sea-level-global-7d04e20d-79e7-4ece-a102-dfde0ebddd66.zip to 2022_06_27_test.zip (9.3M)\n\n  0%|                                               | 0.00/9.28M [00:00<?, ?B/s]\n  0%|▏                                      | 34.0k/9.28M [00:00<00:52, 185kB/s]\n  1%|▎                                      | 77.0k/9.28M [00:00<00:34, 282kB/s]\n  2%|▊                                       | 182k/9.28M [00:00<00:17, 554kB/s]\n  3%|█▍                                      | 329k/9.28M [00:00<00:11, 844kB/s]\n  6%|██▏                                    | 536k/9.28M [00:00<00:07, 1.21MB/s]\n 10%|███▊                                   | 924k/9.28M [00:00<00:04, 1.99MB/s]\n 15%|█████▋                                | 1.40M/9.28M [00:00<00:02, 2.86MB/s]\n 29%|██████████▊                           | 2.66M/9.28M [00:00<00:01, 5.67MB/s]\n 46%|█████████████████▋                    | 4.31M/9.28M [00:01<00:00, 8.76MB/s]\n 74%|████████████████████████████▏         | 6.90M/9.28M [00:01<00:00, 13.6MB/s]\n100%|█████████████████████████████████████▊| 9.25M/9.28M [00:01<00:00, 16.2MB/s]\n                                                                                \n2023-05-24 01:16:48,847 INFO Download rate 3.6M/s\n",
+  "history_begin_time" : 1684890979197,
+  "history_end_time" : 1684891009865,
+  "history_notes" : null,
+  "history_process" : "znr9qa",
+  "host_id" : "c2lqcn",
+  "indicator" : "Done"
+},{
   "history_id" : "b9fg4qbs1k0",
   "history_input" : "No code saved",
   "history_output" : "Skipped",

@@ -10,3 +10,4 @@ from py_eddy_tracker import data
 from py_eddy_tracker.dataset.grid import RegularGridDataset
 from copy import deepcopy
 
+root_path = "ML_eddis"
